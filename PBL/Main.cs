@@ -22,5 +22,10 @@ namespace PBL
             Login lg = new Login();
             lg.ShowDialog();
         }
+
+        private void mni_mb_Click(object sender, EventArgs e)
+        {
+            pn_main.Controls.Clear();
+        }
     }
 }
