@@ -8,18 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL
+namespace PBL.View
 {
     public partial class Main : Form
     {
         public Main()
         {
             InitializeComponent();
+            pnMain.Controls.Add(new ucTrangChu_Main());
         }
 
-        public void Load_page()
+        private void LoadpnMain(UserControl uc)
         {
-
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(uc);
         }
 
         private void btn_dn_Click(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace PBL
 
         private void mni_mb_Click(object sender, EventArgs e)
         {
-            pn_main.Controls.Clear();
+            pnMain.Controls.Clear();
         }
 
         private void pn_0_Paint(object sender, PaintEventArgs e)
@@ -50,12 +52,22 @@ namespace PBL
 
         private void btn_gh_Click(object sender, EventArgs e)
         {
-
+            LoadpnMain(new ucGioHang_Main());
         }
 
         private void mni_lh_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mniTrangChu_Click(object sender, EventArgs e)
+        {
+            LoadpnMain(new ucTrangChu_Main());
+        }
+
+        private void btn_cn_Click(object sender, EventArgs e)
+        {
+            LoadpnMain(new ucTrangCaNhan_Main());
         }
     }
 }

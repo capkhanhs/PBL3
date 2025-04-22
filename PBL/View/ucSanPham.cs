@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL.View
 {
-    public partial class Us_ctrl_sp : UserControl
+    public partial class ucSanPham : UserControl
     {
-        public Us_ctrl_sp(int mssp)
+        public ucSanPham(int mssp)
         {
             InitializeComponent();
         }

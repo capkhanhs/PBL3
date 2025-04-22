@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace PBL
+namespace PBL.View
 {
     internal static class Program
     {
@@ -13,7 +13,7 @@ namespace PBL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PBL.Main());
+            Application.Run(new Main());
         }
     }
 }

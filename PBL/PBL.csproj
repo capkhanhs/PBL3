@@ -126,17 +126,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\UC_giohang.cs">
+    <Compile Include="View\ucDonHangDaMua_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UC_giohang.Designer.cs">
-      <DependentUpon>UC_giohang.cs</DependentUpon>
+    <Compile Include="View\ucDonHangDaMua_TrangCaNhan_Main.Designer.cs">
+      <DependentUpon>ucDonHangDaMua_TrangCaNhan_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Us_ctrl_sp.cs">
+    <Compile Include="View\ucGioHangItem_GioHang_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Us_ctrl_sp.Designer.cs">
-      <DependentUpon>Us_ctrl_sp.cs</DependentUpon>
+    <Compile Include="View\ucGioHangItem_GioHang_Main.Designer.cs">
+      <DependentUpon>ucGioHangItem_GioHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucThongTin_TrangCaNhan_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucThongTin_TrangCaNhan_Main.Designer.cs">
+      <DependentUpon>ucThongTin_TrangCaNhan_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrangCaNhan_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrangCaNhan_Main.Designer.cs">
+      <DependentUpon>ucTrangCaNhan_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrangChu_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrangChu_Main.Designer.cs">
+      <DependentUpon>ucTrangChu_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucGioHang_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucGioHang_Main.Designer.cs">
+      <DependentUpon>ucGioHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSanPhamItem_TrangChu_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSanPhamItem_TrangChu_Main.Designer.cs">
+      <DependentUpon>ucSanPhamItem_TrangChu_Main.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -149,11 +179,26 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UC_giohang.resx">
-      <DependentUpon>UC_giohang.cs</DependentUpon>
+    <EmbeddedResource Include="View\ucDonHangDaMua_TrangCaNhan_Main.resx">
+      <DependentUpon>ucDonHangDaMua_TrangCaNhan_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Us_ctrl_sp.resx">
-      <DependentUpon>Us_ctrl_sp.cs</DependentUpon>
+    <EmbeddedResource Include="View\ucGioHangItem_GioHang_Main.resx">
+      <DependentUpon>ucGioHangItem_GioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucThongTin_TrangCaNhan_Main.resx">
+      <DependentUpon>ucThongTin_TrangCaNhan_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrangCaNhan_Main.resx">
+      <DependentUpon>ucTrangCaNhan_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrangChu_Main.resx">
+      <DependentUpon>ucTrangChu_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucGioHang_Main.resx">
+      <DependentUpon>ucGioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSanPhamItem_TrangChu_Main.resx">
+      <DependentUpon>ucSanPhamItem_TrangChu_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\PBL3_db_ef.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -312,6 +357,10 @@
       <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
       <LastGenOutput>PBL3_db_ef.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\user-avatar.png" />
+    <None Include="Resources\Wefunction-Woofunction-Newspaper-info.32.png" />
+    <None Include="Resources\thongtin.png" />
+    <None Include="Resources\Erix-Subyarko-Medical-Invoice-Bill-Payment-Billing-Hospital.32.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
