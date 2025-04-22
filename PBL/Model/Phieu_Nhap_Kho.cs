@@ -7,32 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL
+namespace PBL.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Don_Hang
+    public partial class Phieu_Nhap_Kho
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Don_Hang()
+        public Phieu_Nhap_Kho()
         {
-            this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
-            this.Van_Chuyen = new HashSet<Van_Chuyen>();
+            this.Chi_Tiet_Phieu_Nhap = new HashSet<Chi_Tiet_Phieu_Nhap>();
         }
     
-        public string Ma_don_hang { get; set; }
+        public string Ma_phieu { get; set; }
+        public string Ma_ncc { get; set; }
         public string Ma_nguoi_dung { get; set; }
-        public string Ma_dia_chi { get; set; }
-        public Nullable<System.DateTime> Ngay_dat_hang { get; set; }
-        public string Trang_thai_don_hang { get; set; }
-        public string Phuong_thuc_thanh_toan { get; set; }
+        public Nullable<System.DateTime> Ngay_tao { get; set; }
+        public string Tongtien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }
-        public virtual Dia_Chi Dia_Chi { get; set; }
+        public virtual ICollection<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
         public virtual Nguoi_Dung Nguoi_Dung { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Van_Chuyen> Van_Chuyen { get; set; }
+        public virtual Nha_Cung_Cap Nha_Cung_Cap { get; set; }
     }
 }

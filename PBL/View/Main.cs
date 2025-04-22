@@ -17,6 +17,11 @@ namespace PBL
             InitializeComponent();
         }
 
+        public void Load_page()
+        {
+
+        }
+
         private void btn_dn_Click(object sender, EventArgs e)
         {
             Login lg = new Login();
@@ -26,6 +31,31 @@ namespace PBL
         private void mni_mb_Click(object sender, EventArgs e)
         {
             pn_main.Controls.Clear();
+        }
+
+        private void pn_0_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_gh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mni_lh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

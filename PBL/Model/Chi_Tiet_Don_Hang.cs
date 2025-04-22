@@ -7,20 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL
+namespace PBL.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Van_Chuyen
+    public partial class Chi_Tiet_Don_Hang
     {
-        public string Ma_van_don { get; set; }
+        public string Ma_ctdt { get; set; }
         public string Ma_don_hang { get; set; }
-        public Nullable<System.DateTime> Ngay_bat_dau { get; set; }
-        public Nullable<System.DateTime> Ngay_du_kien { get; set; }
-        public string Phi_van_chuyen { get; set; }
-        public string Ghi_chu { get; set; }
+        public string Ma_san_pham { get; set; }
+        public Nullable<int> So_luong { get; set; }
+        public string Gia_ban { get; set; }
+        public string Thanh_tien { get; set; }
     
         public virtual Don_Hang Don_Hang { get; set; }
+        public virtual San_Pham San_Pham { get; set; }
     }
 }

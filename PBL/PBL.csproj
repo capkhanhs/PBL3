@@ -58,87 +58,90 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chi_Tiet_Don_Hang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Chi_Tiet_Don_Hang.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Chi_Tiet_Phieu_Nhap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Chi_Tiet_Phieu_Nhap.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Danh_Muc.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Danh_Muc.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Dia_Chi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Dia_Chi.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Don_Hang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Don_Hang.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Kho_Hang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Kho_Hang.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Model\Nguoi_Dung.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Nha_Cung_Cap.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PBL3_db_ef.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBL3_db_ef.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PBL3_db_ef.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PBL3_db_ef.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Phieu_Nhap_Kho.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\San_Pham.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tai_Khoan.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vai_Tro.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Van_Chuyen.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="View\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="View\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataBase.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Nguoi_Dung.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Nha_Cung_Cap.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Phieu_Nhap_Kho.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="San_Pham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="View\UC_giohang.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="View\UC_giohang.Designer.cs">
+      <DependentUpon>UC_giohang.cs</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="View\Us_ctrl_sp.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="View\Us_ctrl_sp.Designer.cs">
+      <DependentUpon>Us_ctrl_sp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tai_Khoan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vai_Tro.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Van_Chuyen.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -146,12 +149,18 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DataBase.edmx">
+    <EmbeddedResource Include="View\UC_giohang.resx">
+      <DependentUpon>UC_giohang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Us_ctrl_sp.resx">
+      <DependentUpon>Us_ctrl_sp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\PBL3_db_ef.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DataBase.Designer.cs</LastGenOutput>
+      <LastGenOutput>PBL3_db_ef.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataBase.edmx.diagram">
-      <DependentUpon>DataBase.edmx</DependentUpon>
+    <None Include="Model\PBL3_db_ef.edmx.diagram">
+      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -290,19 +299,22 @@
     <None Include="Resources\ThemVaoGio2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\PBL3_db_ef.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataBase.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
+      <LastGenOutput>PBL3_db_ef.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="Model\PBL3_db_ef.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DataBase.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
+      <LastGenOutput>PBL3_db_ef.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

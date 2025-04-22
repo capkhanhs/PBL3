@@ -7,27 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL
+namespace PBL.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Nha_Cung_Cap
+    public partial class Danh_Muc
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Nha_Cung_Cap()
+        public Danh_Muc()
         {
-            this.Phieu_Nhap_Kho = new HashSet<Phieu_Nhap_Kho>();
             this.San_Pham = new HashSet<San_Pham>();
         }
     
-        public string Ma_ncc { get; set; }
-        public string Ma_dia_chi { get; set; }
-        public string Ten_ncc { get; set; }
+        public string Ten_danh_muc { get; set; }
+        public string Mo_ta { get; set; }
     
-        public virtual Dia_Chi Dia_Chi { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phieu_Nhap_Kho> Phieu_Nhap_Kho { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<San_Pham> San_Pham { get; set; }
     }
