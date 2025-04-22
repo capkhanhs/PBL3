@@ -7,21 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PBL
+namespace PBL.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Chi_Tiet_Phieu_Nhap
+    public partial class Tai_Khoan
     {
-        public string Ma_ctpn { get; set; }
-        public string Ma_phieu { get; set; }
-        public string Ma_san_pham { get; set; }
-        public Nullable<int> So_luong { get; set; }
-        public string Gia_nhap { get; set; }
-        public string Thanh_tien { get; set; }
+        public string Tai_khoan1 { get; set; }
+        public string Ma_nguoi_dung { get; set; }
+        public string Mat_khau { get; set; }
     
-        public virtual Phieu_Nhap_Kho Phieu_Nhap_Kho { get; set; }
-        public virtual San_Pham San_Pham { get; set; }
+        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }
