@@ -21,7 +21,7 @@ namespace PBL.View
         private void ucTrangChu_Load()
         {
             flpnLoadSanPham.Controls.Clear();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 13; i++)
             {
                 ucSanPhamItem_TrangChu_Main ucspit = new ucSanPhamItem_TrangChu_Main();
                 flpnLoadSanPham.Controls.Add(ucspit);

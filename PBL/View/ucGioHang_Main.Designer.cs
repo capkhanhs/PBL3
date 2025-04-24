@@ -74,6 +74,7 @@
             // 
             // pnMainGioHang
             // 
+            this.pnMainGioHang.AutoScroll = true;
             this.pnMainGioHang.Location = new System.Drawing.Point(11, 56);
             this.pnMainGioHang.Name = "pnMainGioHang";
             this.pnMainGioHang.Size = new System.Drawing.Size(1389, 572);
@@ -85,13 +86,13 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // uc_GioHang
+            // ucGioHang_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnMainGioHang);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "uc_GioHang";
+            this.Name = "ucGioHang_Main";
             this.Size = new System.Drawing.Size(1403, 631);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

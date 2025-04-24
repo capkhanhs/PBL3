@@ -54,19 +54,20 @@
             // 
             // flpnLoadSanPham
             // 
+            this.flpnLoadSanPham.AutoScroll = true;
             this.flpnLoadSanPham.Location = new System.Drawing.Point(9, 44);
             this.flpnLoadSanPham.Name = "flpnLoadSanPham";
             this.flpnLoadSanPham.Size = new System.Drawing.Size(1391, 584);
             this.flpnLoadSanPham.TabIndex = 1;
             this.flpnLoadSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.flpnLoadSanPham_Paint);
             // 
-            // ucTrangChu
+            // ucTrangChu_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpnLoadSanPham);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "ucTrangChu";
+            this.Name = "ucTrangChu_Main";
             this.Size = new System.Drawing.Size(1403, 631);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();

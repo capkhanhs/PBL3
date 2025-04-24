@@ -31,17 +31,19 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Controls.Add(this.label8);
@@ -67,38 +69,11 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(1305, 99);
+            this.textBox5.Location = new System.Drawing.Point(1297, 99);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(38, 22);
+            this.textBox5.Size = new System.Drawing.Size(22, 22);
             this.textBox5.TabIndex = 6;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(1349, 99);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(30, 23);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "+";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.SystemColors.Control;
-            this.button11.Location = new System.Drawing.Point(1223, 98);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 23);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "Xóa";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(1269, 98);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(30, 23);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "-";
-            this.button12.UseVisualStyleBackColor = true;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -113,19 +88,57 @@
             // pictureBox4
             // 
             this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = global::PBL.Properties.Resources.AirPod;
+            this.pictureBox4.Image = global::PBL.Properties.Resources.user_avatar;
             this.pictureBox4.Location = new System.Drawing.Point(3, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(146, 123);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // ucGioHangItem
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(1325, 99);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(22, 22);
+            this.button10.TabIndex = 5;
+            this.button10.Text = "+";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.Control;
+            this.button11.Location = new System.Drawing.Point(1172, 98);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(91, 23);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "Xóa";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(1269, 98);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(22, 22);
+            this.button12.TabIndex = 3;
+            this.button12.Text = "-";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(157, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Mô tả";
+            // 
+            // ucGioHangItem_GioHang_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel4);
-            this.Name = "ucGioHangItem";
+            this.Name = "ucGioHangItem_GioHang_Main";
             this.Size = new System.Drawing.Size(1389, 138);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -30,15 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pn_0 = new System.Windows.Forms.Panel();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.lb_name = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnMain = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_cn = new System.Windows.Forms.Button();
             this.btn_gh = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.lb_name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mniTrangChu = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_mb = new System.Windows.Forms.ToolStripMenuItem();
             this.xiaoMiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,10 +63,12 @@
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pn_0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_0
@@ -88,72 +88,6 @@
             this.pn_0.Size = new System.Drawing.Size(1403, 88);
             this.pn_0.TabIndex = 0;
             this.pn_0.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_0_Paint);
-            // 
-            // txt_search
-            // 
-            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(387, 7);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(467, 34);
-            this.txt_search.TabIndex = 2;
-            this.txt_search.Tag = "";
-            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
-            // lb_name
-            // 
-            this.lb_name.AutoSize = true;
-            this.lb_name.BackColor = System.Drawing.Color.Transparent;
-            this.lb_name.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(103, 7);
-            this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(210, 31);
-            this.lb_name.TabIndex = 1;
-            this.lb_name.Text = "TheGioiDienTu";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mniTrangChu,
-            this.mni_mb,
-            this.mni_tb,
-            this.mni_lt,
-            this.taiNgheToolStripMenuItem,
-            this.mni_sw,
-            this.mni_pk,
-            this.mni_dc,
-            this.mni_lh});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 52);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1403, 36);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pnMain);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 88);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1403, 631);
-            this.panel1.TabIndex = 1;
-            // 
-            // pnMain
-            // 
-            this.pnMain.AutoScroll = true;
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 0);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1403, 631);
-            this.pnMain.TabIndex = 1;
             // 
             // btn_cn
             // 
@@ -209,6 +143,29 @@
             this.btn_search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_search.UseVisualStyleBackColor = false;
             // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(387, 7);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(467, 34);
+            this.txt_search.TabIndex = 2;
+            this.txt_search.Tag = "";
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
+            // 
+            // lb_name
+            // 
+            this.lb_name.AutoSize = true;
+            this.lb_name.BackColor = System.Drawing.Color.Transparent;
+            this.lb_name.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_name.Location = new System.Drawing.Point(103, 7);
+            this.lb_name.Name = "lb_name";
+            this.lb_name.Size = new System.Drawing.Size(210, 31);
+            this.lb_name.TabIndex = 1;
+            this.lb_name.Text = "TheGioiDienTu";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -220,6 +177,29 @@
             this.pictureBox1.Size = new System.Drawing.Size(180, 55);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mniTrangChu,
+            this.mni_mb,
+            this.mni_tb,
+            this.mni_lt,
+            this.taiNgheToolStripMenuItem,
+            this.mni_sw,
+            this.mni_pk,
+            this.mni_dc,
+            this.mni_lh});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 52);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1403, 36);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // mniTrangChu
             // 
@@ -454,6 +434,26 @@
             this.toolStripMenuItem9.Size = new System.Drawing.Size(267, 32);
             this.toolStripMenuItem9.Text = "Nguyễn Văn Nhuận";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pnMain);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 88);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1403, 631);
+            this.panel1.TabIndex = 1;
+            // 
+            // pnMain
+            // 
+            this.pnMain.AutoScroll = true;
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(0, 0);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(1403, 631);
+            this.pnMain.TabIndex = 1;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,10 +468,10 @@
             this.Text = "Trang Chủ TGDT";
             this.pn_0.ResumeLayout(false);
             this.pn_0.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
