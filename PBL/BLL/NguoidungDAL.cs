@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PBL.DAL;
+using PBL.Model;
 
 namespace PBL.BLL
 {
-    public class TaiKhoanBLL
+    public class NguoidungDAL
     {
-        TaiKhoanDAL tkDAL = new TaiKhoanDAL();
-        private static TaiKhoanBLL _Instance;
-        public static TaiKhoanBLL Instance
+        UserDAL usDAL = new UserDAL();
+        private static NguoidungDAL _Instance;
+        public static NguoidungDAL Instance
         {
             get
             {
                 if (_Instance == null)
                 {
-                    _Instance = new TaiKhoanBLL();
+                    _Instance = new NguoidungDAL();
                 }
                 return _Instance;
             }
@@ -30,9 +31,9 @@ namespace PBL.BLL
                 throw new ArgumentException("Username and password cannot be empty.");
             }
             bool isValid = false;
-            if (tkDAL.GetById(username) != null) 
+            if (usDAL.GetById(username) != null) 
             {
-                if (tkDAL.GetById(username).Mat_khau == password)
+                if (usDAL.GetById(username).password == password)
                 {
                     isValid = true;
                 }
@@ -42,6 +43,19 @@ namespace PBL.BLL
                 throw new UnauthorizedAccessException("Invalid username or password.");
             }
             return isValid;
+        }
+        public string GetMaNguoiDung(string username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                throw new ArgumentException("Username cannot be empty.");
+            }
+            var user = tkDAL.GetById(username);
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User not found.");
+            }
+            return user.Ma_nguoi_dung;
         }
         public void Register(string username, string password)
         {

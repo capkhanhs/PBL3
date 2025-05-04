@@ -58,14 +58,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\TaiKhoanBLL.cs" />
+    <Compile Include="BLL\NguoidungDAL.cs" />
     <Compile Include="DAL\DiaChiDAL.cs" />
     <Compile Include="DAL\DonHangDAL.cs" />
     <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\Repository.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
-    <Compile Include="DAL\TaiKhoanDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="Model\CartItem.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Chi_Tiet_Don_Hang.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
@@ -79,6 +81,9 @@
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Don_Hang.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Gio_hang.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Kho_Hang.cs">
@@ -110,6 +115,9 @@
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\San_Pham.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Tai_Khoan.cs">

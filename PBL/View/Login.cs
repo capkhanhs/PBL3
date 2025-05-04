@@ -28,7 +28,7 @@ namespace PBL.View
         {
             try
             {
-                if (TaiKhoanBLL.Instance.Dang_nhap(txtUsername.Text, txtPassword.Text))
+                if (NguoidungDAL.Instance.Dang_nhap(txtUsername.Text, txtPassword.Text))
                 {
                     Username = txtUsername.Text;
                     this.DialogResult = DialogResult.OK;

@@ -14,11 +14,12 @@ namespace PBL.View
     public partial class Main : Form
     {
         string Manguoidung;
+        string Vaitro;
         public Main(string username)
         {
             InitializeComponent();
             pnMain.Controls.Add(new ucTrangChu_Main());
-            Manguoidung = TaiKhoanBLL.Instance.;
+            Manguoidung = NguoidungDAL.Instance.GetMaNguoiDung(username);
         }
 
         private void LoadpnMain(UserControl uc)
