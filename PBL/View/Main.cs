@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.BLL;
 
 namespace PBL.View
 {
     public partial class Main : Form
     {
-        public Main()
+        string Manguoidung;
+        public Main(string username)
         {
             InitializeComponent();
             pnMain.Controls.Add(new ucTrangChu_Main());
+            Manguoidung = TaiKhoanBLL.Instance.;
         }
 
         private void LoadpnMain(UserControl uc)

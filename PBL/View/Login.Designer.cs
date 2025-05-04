@@ -1,4 +1,4 @@
-﻿namespace PBL
+﻿namespace PBL.View
 {
     partial class Login
     {
@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pn_login = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.txt_pw = new System.Windows.Forms.TextBox();
+            this.btnSignin = new System.Windows.Forms.Button();
+            this.lblForgPw = new System.Windows.Forms.LinkLabel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.pic_pw = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_un = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.pic_0 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_dn = new System.Windows.Forms.Button();
+            this.btnSignup = new System.Windows.Forms.Button();
             this.pn_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,45 +49,61 @@
             // pn_login
             // 
             this.pn_login.BackColor = System.Drawing.Color.Transparent;
-            this.pn_login.Controls.Add(this.btn_dn);
-            this.pn_login.Controls.Add(this.linkLabel1);
-            this.pn_login.Controls.Add(this.txt_pw);
+            this.pn_login.Controls.Add(this.btnSignin);
+            this.pn_login.Controls.Add(this.lblForgPw);
+            this.pn_login.Controls.Add(this.txtPassword);
             this.pn_login.Controls.Add(this.pic_pw);
             this.pn_login.Controls.Add(this.pictureBox1);
-            this.pn_login.Controls.Add(this.txt_un);
-            this.pn_login.Location = new System.Drawing.Point(380, 45);
+            this.pn_login.Controls.Add(this.txtUsername);
+            this.pn_login.Location = new System.Drawing.Point(338, 36);
+            this.pn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_login.Name = "pn_login";
-            this.pn_login.Size = new System.Drawing.Size(282, 195);
+            this.pn_login.Size = new System.Drawing.Size(251, 156);
             this.pn_login.TabIndex = 0;
             // 
-            // linkLabel1
+            // btnSignin
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.AliceBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(123, 123);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(156, 22);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forget Password?";
+            this.btnSignin.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignin.Location = new System.Drawing.Point(73, 124);
+            this.btnSignin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSignin.Name = "btnSignin";
+            this.btnSignin.Size = new System.Drawing.Size(130, 32);
+            this.btnSignin.TabIndex = 6;
+            this.btnSignin.Text = "Đăng Nhập";
+            this.btnSignin.UseVisualStyleBackColor = false;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
-            // txt_pw
+            // lblForgPw
             // 
-            this.txt_pw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pw.Location = new System.Drawing.Point(71, 85);
-            this.txt_pw.Name = "txt_pw";
-            this.txt_pw.PasswordChar = '*';
-            this.txt_pw.Size = new System.Drawing.Size(208, 35);
-            this.txt_pw.TabIndex = 4;
+            this.lblForgPw.AutoSize = true;
+            this.lblForgPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgPw.LinkColor = System.Drawing.Color.AliceBlue;
+            this.lblForgPw.Location = new System.Drawing.Point(109, 98);
+            this.lblForgPw.Name = "lblForgPw";
+            this.lblForgPw.Size = new System.Drawing.Size(130, 18);
+            this.lblForgPw.TabIndex = 5;
+            this.lblForgPw.TabStop = true;
+            this.lblForgPw.Text = "Forget Password?";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(63, 68);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(185, 30);
+            this.txtPassword.TabIndex = 4;
             // 
             // pic_pw
             // 
             this.pic_pw.BackgroundImage = global::PBL.Properties.Resources.Password;
             this.pic_pw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_pw.Location = new System.Drawing.Point(0, 70);
+            this.pic_pw.Location = new System.Drawing.Point(0, 56);
+            this.pic_pw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_pw.Name = "pic_pw";
-            this.pic_pw.Size = new System.Drawing.Size(65, 50);
+            this.pic_pw.Size = new System.Drawing.Size(58, 40);
             this.pic_pw.TabIndex = 3;
             this.pic_pw.TabStop = false;
             // 
@@ -94,19 +111,21 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(58, 34);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // txt_un
+            // txtUsername
             // 
-            this.txt_un.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_un.Location = new System.Drawing.Point(71, 11);
-            this.txt_un.Name = "txt_un";
-            this.txt_un.Size = new System.Drawing.Size(208, 35);
-            this.txt_un.TabIndex = 0;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(63, 9);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(185, 30);
+            this.txtUsername.TabIndex = 0;
             // 
             // pic_0
             // 
@@ -114,8 +133,9 @@
             this.pic_0.BackgroundImage = global::PBL.Properties.Resources.Icon;
             this.pic_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pic_0.Location = new System.Drawing.Point(-1, -1);
+            this.pic_0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_0.Name = "pic_0";
-            this.pic_0.Size = new System.Drawing.Size(392, 274);
+            this.pic_0.Size = new System.Drawing.Size(348, 219);
             this.pic_0.TabIndex = 1;
             this.pic_0.TabStop = false;
             // 
@@ -124,35 +144,40 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::PBL.Properties.Resources.logo1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 246);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 197);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(432, 101);
+            this.pictureBox2.Size = new System.Drawing.Size(384, 81);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // btn_dn
+            // btnSignup
             // 
-            this.btn_dn.BackColor = System.Drawing.Color.Transparent;
-            this.btn_dn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dn.Location = new System.Drawing.Point(82, 155);
-            this.btn_dn.Name = "btn_dn";
-            this.btn_dn.Size = new System.Drawing.Size(146, 40);
-            this.btn_dn.TabIndex = 6;
-            this.btn_dn.Text = "Đăng Nhập";
-            this.btn_dn.UseVisualStyleBackColor = false;
+            this.btnSignup.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignup.Location = new System.Drawing.Point(411, 207);
+            this.btnSignup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(130, 32);
+            this.btnSignup.TabIndex = 7;
+            this.btnSignup.Text = "Đăng Ký";
+            this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::PBL.Properties.Resources.WallPaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(685, 335);
+            this.ClientSize = new System.Drawing.Size(609, 268);
+            this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pic_0);
             this.Controls.Add(this.pn_login);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Đăng Nhập";
             this.pn_login.ResumeLayout(false);
@@ -168,13 +193,14 @@
         #endregion
 
         private System.Windows.Forms.Panel pn_login;
-        private System.Windows.Forms.TextBox txt_un;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pic_pw;
-        private System.Windows.Forms.TextBox txt_pw;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pic_0;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lblForgPw;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btn_dn;
+        private System.Windows.Forms.Button btnSignin;
+        private System.Windows.Forms.Button btnSignup;
     }
 }

@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSanPhamItem_TrangChu_Main));
             this.panel5 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lblGiaSP = new System.Windows.Forms.Label();
+            this.lblTenSP = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -51,8 +51,8 @@
             this.panel5.Controls.Add(this.label14);
             this.panel5.Controls.Add(this.label15);
             this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.label17);
-            this.panel5.Controls.Add(this.label18);
+            this.panel5.Controls.Add(this.lblGiaSP);
+            this.panel5.Controls.Add(this.lblTenSP);
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
@@ -70,6 +70,17 @@
             this.label13.Size = new System.Drawing.Size(52, 25);
             this.label13.TabIndex = 7;
             this.label13.Text = "10%";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(172, 227);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(58, 50);
+            this.button3.TabIndex = 6;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -101,37 +112,26 @@
             this.label16.TabIndex = 3;
             this.label16.Text = "6.7 inch";
             // 
-            // label17
+            // lblGiaSP
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(22, 254);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 25);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "25.990.000đ";
+            this.lblGiaSP.AutoSize = true;
+            this.lblGiaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaSP.ForeColor = System.Drawing.Color.Red;
+            this.lblGiaSP.Location = new System.Drawing.Point(22, 254);
+            this.lblGiaSP.Name = "lblGiaSP";
+            this.lblGiaSP.Size = new System.Drawing.Size(121, 25);
+            this.lblGiaSP.TabIndex = 2;
+            this.lblGiaSP.Text = "25.990.000đ";
             // 
-            // label18
+            // lblTenSP
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(20, 174);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(177, 25);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Iphone 15 Pro Max";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(172, 227);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(58, 50);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = false;
+            this.lblTenSP.AutoSize = true;
+            this.lblTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSP.Location = new System.Drawing.Point(20, 174);
+            this.lblTenSP.Name = "lblTenSP";
+            this.lblTenSP.Size = new System.Drawing.Size(177, 25);
+            this.lblTenSP.TabIndex = 1;
+            this.lblTenSP.Text = "Iphone 15 Pro Max";
             // 
             // pictureBox4
             // 
@@ -145,12 +145,12 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // uc_SanPhamItem
+            // ucSanPhamItem_TrangChu_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel5);
-            this.Name = "uc_SanPhamItem";
+            this.Name = "ucSanPhamItem_TrangChu_Main";
             this.Size = new System.Drawing.Size(263, 284);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -167,8 +167,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblGiaSP;
+        private System.Windows.Forms.Label lblTenSP;
         private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

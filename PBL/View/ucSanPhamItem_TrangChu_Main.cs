@@ -12,9 +12,11 @@ namespace PBL.View
 {
     public partial class ucSanPhamItem_TrangChu_Main : UserControl
     {
-        public ucSanPhamItem_TrangChu_Main()
+        public ucSanPhamItem_TrangChu_Main(string TenSanPham, string GiaSanPham)
         {
             InitializeComponent();
+            lblTenSP.Text = TenSanPham;
+            lblGiaSP.Text = GiaSanPham;
         }
     }
 }
