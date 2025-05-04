@@ -19,6 +19,7 @@ namespace PBL.Model
         {
             this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
             this.Chi_Tiet_Phieu_Nhap = new HashSet<Chi_Tiet_Phieu_Nhap>();
+            this.CartItems = new HashSet<CartItem>();
         }
     
         public string Ma_san_pham { get; set; }
@@ -35,5 +36,7 @@ namespace PBL.Model
         public virtual ICollection<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
         public virtual Danh_Muc Danh_Muc { get; set; }
         public virtual Nha_Cung_Cap Nha_Cung_Cap { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CartItem> CartItems { get; set; }
     }
 }

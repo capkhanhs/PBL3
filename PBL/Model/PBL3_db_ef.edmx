@@ -88,8 +88,7 @@
           <Property Name="Sdt" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Ma_vai_tro" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Gioi_tinh" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="nguoiDung_diaChi">
@@ -532,7 +531,7 @@
           <NavigationProperty Name="Don_Hang" Relationship="Self.FK__Don_Hang__Ma_dia__7F2BE32F" FromRole="Dia_Chi" ToRole="Don_Hang" />
           <NavigationProperty Name="Kho_Hang" Relationship="Self.FK__Kho_Hang__Ma_dia__778AC167" FromRole="Dia_Chi" ToRole="Kho_Hang" />
           <NavigationProperty Name="Nha_Cung_Cap" Relationship="Self.FK__Nha_Cung___Ma_di__71D1E811" FromRole="Dia_Chi" ToRole="Nha_Cung_Cap" />
-          <NavigationProperty Name="Nguoi_Dung" Relationship="Self.nguoiDung_diaChi" FromRole="Dia_Chi" ToRole="Nguoi_Dung" />
+          <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_Model.nguoiDung_diaChi" FromRole="Dia_Chi" ToRole="Nguoi_Dung" />
         </EntityType>
         <EntityType Name="Don_Hang">
           <Key>
@@ -546,8 +545,8 @@
           <Property Name="Phuong_thuc_thanh_toan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Chi_Tiet_Don_Hang" Relationship="Self.FK__Chi_Tiet___Ma_do__02084FDA" FromRole="Don_Hang" ToRole="Chi_Tiet_Don_Hang" />
           <NavigationProperty Name="Dia_Chi" Relationship="Self.FK__Don_Hang__Ma_dia__7F2BE32F" FromRole="Don_Hang" ToRole="Dia_Chi" />
-          <NavigationProperty Name="Nguoi_Dung" Relationship="Self.FK__Don_Hang__Ma_ngu__7E37BEF6" FromRole="Don_Hang" ToRole="Nguoi_Dung" />
           <NavigationProperty Name="Van_Chuyen" Relationship="Self.FK__Van_Chuye__Ma_do__05D8E0BE" FromRole="Don_Hang" ToRole="Van_Chuyen" />
+          <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_Model.FK__Don_Hang__Ma_ngu__7E37BEF6" FromRole="Don_Hang" ToRole="Nguoi_Dung" />
         </EntityType>
         <EntityType Name="Kho_Hang">
           <Key>
@@ -556,26 +555,6 @@
           <Property Name="Ma_kho" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Ma_dia_chi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Dia_Chi" Relationship="Self.FK__Kho_Hang__Ma_dia__778AC167" FromRole="Kho_Hang" ToRole="Dia_Chi" />
-        </EntityType>
-        <EntityType Name="Nguoi_Dung">
-          <Key>
-            <PropertyRef Name="Ma_nguoi_dung" />
-          </Key>
-          <Property Name="Ma_nguoi_dung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Ho_va_ten" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Don_Hang" Relationship="Self.FK__Don_Hang__Ma_ngu__7E37BEF6" FromRole="Nguoi_Dung" ToRole="Don_Hang" />
-          <NavigationProperty Name="Phieu_Nhap_Kho" Relationship="Self.FK__Phieu_Nha__Ma_ng__09A971A2" FromRole="Nguoi_Dung" ToRole="Phieu_Nhap_Kho" />
-          <NavigationProperty Name="Tai_Khoan" Relationship="Self.FK__Tai_Khoan__Ma_ng__74AE54BC" FromRole="Nguoi_Dung" ToRole="Tai_Khoan" />
-          <NavigationProperty Name="Dia_Chi" Relationship="Self.nguoiDung_diaChi" FromRole="Nguoi_Dung" ToRole="Dia_Chi" />
-          <NavigationProperty Name="Vai_Tro" Relationship="Self.nguoiDung_vaiTro" FromRole="Nguoi_Dung" ToRole="Vai_Tro" />
-          <Property Name="Ma_vai_tro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="Gioi_tinh" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Gio_hang" Relationship="PBL3_Model.FK__Gio_hang__Ma_ngu__3F115E1A" FromRole="Nguoi_Dung" ToRole="Gio_hang" />
-          <NavigationProperty Name="Vai_Tro1" Relationship="PBL3_Model.FK_NguoiDung_VaiTro" FromRole="Nguoi_Dung" ToRole="Vai_Tro" />
         </EntityType>
         <EntityType Name="Nha_Cung_Cap">
           <Key>
@@ -598,8 +577,8 @@
           <Property Name="Ngay_tao" Type="DateTime" Precision="3" />
           <Property Name="Tongtien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Chi_Tiet_Phieu_Nhap" Relationship="Self.FK__Chi_Tiet___Ma_ph__0C85DE4D" FromRole="Phieu_Nhap_Kho" ToRole="Chi_Tiet_Phieu_Nhap" />
-          <NavigationProperty Name="Nguoi_Dung" Relationship="Self.FK__Phieu_Nha__Ma_ng__09A971A2" FromRole="Phieu_Nhap_Kho" ToRole="Nguoi_Dung" />
           <NavigationProperty Name="Nha_Cung_Cap" Relationship="Self.FK__Phieu_Nha__Ma_nc__08B54D69" FromRole="Phieu_Nhap_Kho" ToRole="Nha_Cung_Cap" />
+          <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_Model.FK__Phieu_Nha__Ma_ng__09A971A2" FromRole="Phieu_Nhap_Kho" ToRole="Nguoi_Dung" />
         </EntityType>
         <EntityType Name="San_Pham">
           <Key>
@@ -618,15 +597,6 @@
           <NavigationProperty Name="Nha_Cung_Cap" Relationship="Self.FK__San_Pham__Ma_ncc__7B5B524B" FromRole="San_Pham" ToRole="Nha_Cung_Cap" />
           <NavigationProperty Name="CartItems" Relationship="PBL3_Model.FK__CartItems__Ma_sa__43D61337" FromRole="San_Pham" ToRole="CartItem" />
         </EntityType>
-        <EntityType Name="Tai_Khoan">
-          <Key>
-            <PropertyRef Name="Tai_khoan1" />
-          </Key>
-          <Property Name="Tai_khoan1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Ma_nguoi_dung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Mat_khau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Nguoi_Dung" Relationship="Self.FK__Tai_Khoan__Ma_ng__74AE54BC" FromRole="Tai_Khoan" ToRole="Nguoi_Dung" />
-        </EntityType>
         <EntityType Name="Vai_Tro">
           <Key>
             <PropertyRef Name="Ma_vai_tro" />
@@ -634,8 +604,7 @@
           <Property Name="Ma_vai_tro" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Ten_vai_tro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Mo_ta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Nguoi_Dung" Relationship="Self.nguoiDung_vaiTro" FromRole="Vai_Tro" ToRole="Nguoi_Dung" />
-          <NavigationProperty Name="Nguoi_Dung1" Relationship="PBL3_Model.FK_NguoiDung_VaiTro" FromRole="Vai_Tro" ToRole="Nguoi_Dung" />
+          <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_Model.FK_NguoiDung_VaiTro" FromRole="Vai_Tro" ToRole="Nguoi_Dung" />
         </EntityType>
         <EntityType Name="Van_Chuyen">
           <Key>
@@ -745,18 +714,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Don_Hang__Ma_ngu__7E37BEF6">
-          <End Role="Nguoi_Dung" Type="Self.Nguoi_Dung" Multiplicity="0..1" />
-          <End Role="Don_Hang" Type="Self.Don_Hang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Nguoi_Dung">
-              <PropertyRef Name="Ma_nguoi_dung" />
-            </Principal>
-            <Dependent Role="Don_Hang">
-              <PropertyRef Name="Ma_nguoi_dung" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Van_Chuye__Ma_do__05D8E0BE">
           <End Role="Don_Hang" Type="Self.Don_Hang" Multiplicity="0..1" />
           <End Role="Van_Chuyen" Type="Self.Van_Chuyen" Multiplicity="*" />
@@ -766,30 +723,6 @@
             </Principal>
             <Dependent Role="Van_Chuyen">
               <PropertyRef Name="Ma_don_hang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Phieu_Nha__Ma_ng__09A971A2">
-          <End Role="Nguoi_Dung" Type="Self.Nguoi_Dung" Multiplicity="0..1" />
-          <End Role="Phieu_Nhap_Kho" Type="Self.Phieu_Nhap_Kho" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Nguoi_Dung">
-              <PropertyRef Name="Ma_nguoi_dung" />
-            </Principal>
-            <Dependent Role="Phieu_Nhap_Kho">
-              <PropertyRef Name="Ma_nguoi_dung" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Tai_Khoan__Ma_ng__74AE54BC">
-          <End Role="Nguoi_Dung" Type="Self.Nguoi_Dung" Multiplicity="0..1" />
-          <End Role="Tai_Khoan" Type="Self.Tai_Khoan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Nguoi_Dung">
-              <PropertyRef Name="Ma_nguoi_dung" />
-            </Principal>
-            <Dependent Role="Tai_Khoan">
-              <PropertyRef Name="Ma_nguoi_dung" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -817,14 +750,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="nguoiDung_diaChi">
-          <End Role="Dia_Chi" Type="Self.Dia_Chi" Multiplicity="*" />
-          <End Role="Nguoi_Dung" Type="Self.Nguoi_Dung" Multiplicity="*" />
-        </Association>
-        <Association Name="nguoiDung_vaiTro">
-          <End Role="Nguoi_Dung" Type="Self.Nguoi_Dung" Multiplicity="*" />
-          <End Role="Vai_Tro" Type="Self.Vai_Tro" Multiplicity="*" />
-        </Association>
         <EntityContainer Name="PBL3_azure_databaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Chi_Tiet_Don_Hang" EntityType="Self.Chi_Tiet_Don_Hang" />
           <EntitySet Name="Chi_Tiet_Phieu_Nhap" EntityType="Self.Chi_Tiet_Phieu_Nhap" />
@@ -832,11 +757,9 @@
           <EntitySet Name="Dia_Chi" EntityType="Self.Dia_Chi" />
           <EntitySet Name="Don_Hang" EntityType="Self.Don_Hang" />
           <EntitySet Name="Kho_Hang" EntityType="Self.Kho_Hang" />
-          <EntitySet Name="Nguoi_Dung" EntityType="Self.Nguoi_Dung" />
           <EntitySet Name="Nha_Cung_Cap" EntityType="Self.Nha_Cung_Cap" />
           <EntitySet Name="Phieu_Nhap_Kho" EntityType="Self.Phieu_Nhap_Kho" />
           <EntitySet Name="San_Pham" EntityType="Self.San_Pham" />
-          <EntitySet Name="Tai_Khoan" EntityType="Self.Tai_Khoan" />
           <EntitySet Name="Vai_Tro" EntityType="Self.Vai_Tro" />
           <EntitySet Name="Van_Chuyen" EntityType="Self.Van_Chuyen" />
           <AssociationSet Name="FK__Chi_Tiet___Ma_do__02084FDA" Association="Self.FK__Chi_Tiet___Ma_do__02084FDA">
@@ -871,21 +794,9 @@
             <End Role="Dia_Chi" EntitySet="Dia_Chi" />
             <End Role="Nha_Cung_Cap" EntitySet="Nha_Cung_Cap" />
           </AssociationSet>
-          <AssociationSet Name="FK__Don_Hang__Ma_ngu__7E37BEF6" Association="Self.FK__Don_Hang__Ma_ngu__7E37BEF6">
-            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
-            <End Role="Don_Hang" EntitySet="Don_Hang" />
-          </AssociationSet>
           <AssociationSet Name="FK__Van_Chuye__Ma_do__05D8E0BE" Association="Self.FK__Van_Chuye__Ma_do__05D8E0BE">
             <End Role="Don_Hang" EntitySet="Don_Hang" />
             <End Role="Van_Chuyen" EntitySet="Van_Chuyen" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Phieu_Nha__Ma_ng__09A971A2" Association="Self.FK__Phieu_Nha__Ma_ng__09A971A2">
-            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
-            <End Role="Phieu_Nhap_Kho" EntitySet="Phieu_Nhap_Kho" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Tai_Khoan__Ma_ng__74AE54BC" Association="Self.FK__Tai_Khoan__Ma_ng__74AE54BC">
-            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
-            <End Role="Tai_Khoan" EntitySet="Tai_Khoan" />
           </AssociationSet>
           <AssociationSet Name="FK__Phieu_Nha__Ma_nc__08B54D69" Association="Self.FK__Phieu_Nha__Ma_nc__08B54D69">
             <End Role="Nha_Cung_Cap" EntitySet="Nha_Cung_Cap" />
@@ -894,14 +805,6 @@
           <AssociationSet Name="FK__San_Pham__Ma_ncc__7B5B524B" Association="Self.FK__San_Pham__Ma_ncc__7B5B524B">
             <End Role="Nha_Cung_Cap" EntitySet="Nha_Cung_Cap" />
             <End Role="San_Pham" EntitySet="San_Pham" />
-          </AssociationSet>
-          <AssociationSet Name="nguoiDung_diaChi" Association="Self.nguoiDung_diaChi">
-            <End Role="Dia_Chi" EntitySet="Dia_Chi" />
-            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
-          </AssociationSet>
-          <AssociationSet Name="nguoiDung_vaiTro" Association="Self.nguoiDung_vaiTro">
-            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
-            <End Role="Vai_Tro" EntitySet="Vai_Tro" />
           </AssociationSet>
           <EntitySet Name="CartItems" EntityType="PBL3_Model.CartItem" />
           <EntitySet Name="Gio_hang" EntityType="PBL3_Model.Gio_hang" />
@@ -914,15 +817,28 @@
             <End Role="San_Pham" EntitySet="San_Pham" />
             <End Role="CartItem" EntitySet="CartItems" />
           </AssociationSet>
+          <EntitySet Name="Nguoi_Dung" EntityType="PBL3_Model.Nguoi_Dung" />
+          <AssociationSet Name="FK__Don_Hang__Ma_ngu__7E37BEF6" Association="PBL3_Model.FK__Don_Hang__Ma_ngu__7E37BEF6">
+            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
+            <End Role="Don_Hang" EntitySet="Don_Hang" />
+          </AssociationSet>
           <AssociationSet Name="FK__Gio_hang__Ma_ngu__3F115E1A" Association="PBL3_Model.FK__Gio_hang__Ma_ngu__3F115E1A">
             <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
             <End Role="Gio_hang" EntitySet="Gio_hang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Phieu_Nha__Ma_ng__09A971A2" Association="PBL3_Model.FK__Phieu_Nha__Ma_ng__09A971A2">
+            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
+            <End Role="Phieu_Nhap_Kho" EntitySet="Phieu_Nhap_Kho" />
           </AssociationSet>
           <AssociationSet Name="FK_NguoiDung_VaiTro" Association="PBL3_Model.FK_NguoiDung_VaiTro">
             <End Role="Vai_Tro" EntitySet="Vai_Tro" />
             <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
           </AssociationSet>
-        </EntityContainer>
+          <AssociationSet Name="nguoiDung_diaChi" Association="PBL3_Model.nguoiDung_diaChi">
+            <End Role="Dia_Chi" EntitySet="Dia_Chi" />
+            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="CartItem">
           <Key>
             <PropertyRef Name="Ma_gio_hang" />
@@ -977,6 +893,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Nguoi_Dung">
+          <Key>
+            <PropertyRef Name="Ma_nguoi_dung" />
+          </Key>
+          <Property Name="Ma_nguoi_dung" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ho_va_ten" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Sdt" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ma_vai_tro" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gioi_tinh" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Don_Hang" Relationship="PBL3_Model.FK__Don_Hang__Ma_ngu__7E37BEF6" FromRole="Nguoi_Dung" ToRole="Don_Hang" />
+          <NavigationProperty Name="Gio_hang" Relationship="PBL3_Model.FK__Gio_hang__Ma_ngu__3F115E1A" FromRole="Nguoi_Dung" ToRole="Gio_hang" />
+          <NavigationProperty Name="Phieu_Nhap_Kho" Relationship="PBL3_Model.FK__Phieu_Nha__Ma_ng__09A971A2" FromRole="Nguoi_Dung" ToRole="Phieu_Nhap_Kho" />
+          <NavigationProperty Name="Vai_Tro" Relationship="PBL3_Model.FK_NguoiDung_VaiTro" FromRole="Nguoi_Dung" ToRole="Vai_Tro" />
+          <NavigationProperty Name="Dia_Chi" Relationship="PBL3_Model.nguoiDung_diaChi" FromRole="Nguoi_Dung" ToRole="Dia_Chi" />
+        </EntityType>
+        <Association Name="FK__Don_Hang__Ma_ngu__7E37BEF6">
+          <End Type="PBL3_Model.Nguoi_Dung" Role="Nguoi_Dung" Multiplicity="0..1" />
+          <End Type="PBL3_Model.Don_Hang" Role="Don_Hang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nguoi_Dung">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Principal>
+            <Dependent Role="Don_Hang">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Gio_hang__Ma_ngu__3F115E1A">
           <End Type="PBL3_Model.Nguoi_Dung" Role="Nguoi_Dung" Multiplicity="0..1" />
           <End Type="PBL3_Model.Gio_hang" Role="Gio_hang" Multiplicity="*" />
@@ -985,6 +930,18 @@
               <PropertyRef Name="Ma_nguoi_dung" />
             </Principal>
             <Dependent Role="Gio_hang">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Phieu_Nha__Ma_ng__09A971A2">
+          <End Type="PBL3_Model.Nguoi_Dung" Role="Nguoi_Dung" Multiplicity="0..1" />
+          <End Type="PBL3_Model.Phieu_Nhap_Kho" Role="Phieu_Nhap_Kho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nguoi_Dung">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Principal>
+            <Dependent Role="Phieu_Nhap_Kho">
               <PropertyRef Name="Ma_nguoi_dung" />
             </Dependent>
           </ReferentialConstraint>
@@ -1001,7 +958,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="nguoiDung_diaChi">
+          <End Type="PBL3_Model.Dia_Chi" Role="Dia_Chi" Multiplicity="*" />
+          <End Type="PBL3_Model.Nguoi_Dung" Role="Nguoi_Dung" Multiplicity="*" />
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1071,20 +1032,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Nguoi_Dung">
-            <EntityTypeMapping TypeName="PBL3_Model.Nguoi_Dung">
-              <MappingFragment StoreEntitySet="Nguoi_Dung">
-                <ScalarProperty Name="Gioi_tinh" ColumnName="Gioi_tinh" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="Ma_vai_tro" ColumnName="Ma_vai_tro" />
-                <ScalarProperty Name="Ma_nguoi_dung" ColumnName="Ma_nguoi_dung" />
-                <ScalarProperty Name="Ho_va_ten" ColumnName="Ho_va_ten" />
-                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Nha_Cung_Cap">
             <EntityTypeMapping TypeName="PBL3_Model.Nha_Cung_Cap">
               <MappingFragment StoreEntitySet="Nha_Cung_Cap">
@@ -1139,14 +1086,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="nguoiDung_diaChi" TypeName="PBL3_Model.nguoiDung_diaChi" StoreEntitySet="nguoiDung_diaChi">
-            <EndProperty Name="Dia_Chi">
-              <ScalarProperty Name="Ma_dia_chi" ColumnName="Ma_dia_chi" />
-            </EndProperty>
-            <EndProperty Name="Nguoi_Dung">
-              <ScalarProperty Name="Ma_nguoi_dung" ColumnName="Ma_nguoi_dung" />
-            </EndProperty>
-          </AssociationSetMapping>
           <EntitySetMapping Name="CartItems">
             <EntityTypeMapping TypeName="PBL3_Model.CartItem">
               <MappingFragment StoreEntitySet="CartItems">
@@ -1175,6 +1114,27 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Nguoi_Dung">
+            <EntityTypeMapping TypeName="PBL3_Model.Nguoi_Dung">
+              <MappingFragment StoreEntitySet="Nguoi_Dung">
+                <ScalarProperty Name="Gioi_tinh" ColumnName="Gioi_tinh" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="Ma_vai_tro" ColumnName="Ma_vai_tro" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Ho_va_ten" ColumnName="Ho_va_ten" />
+                <ScalarProperty Name="Ma_nguoi_dung" ColumnName="Ma_nguoi_dung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="nguoiDung_diaChi" TypeName="PBL3_Model.nguoiDung_diaChi" StoreEntitySet="nguoiDung_diaChi">
+            <EndProperty Name="Nguoi_Dung">
+              <ScalarProperty Name="Ma_nguoi_dung" ColumnName="Ma_nguoi_dung" />
+            </EndProperty>
+            <EndProperty Name="Dia_Chi">
+              <ScalarProperty Name="Ma_dia_chi" ColumnName="Ma_dia_chi" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

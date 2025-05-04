@@ -12,12 +12,12 @@ namespace PBL.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Tai_Khoan
+    public partial class sysdiagram
     {
-        public string Tai_khoan1 { get; set; }
-        public string Ma_nguoi_dung { get; set; }
-        public string Mat_khau { get; set; }
-    
-        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -78,7 +78,6 @@
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Name = "testdbform";
-            this.Text = "testdbform";
             this.ResumeLayout(false);
 
         }

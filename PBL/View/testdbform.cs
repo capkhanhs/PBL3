@@ -14,6 +14,7 @@ namespace PBL.View
 {
     public partial class testdbform : Form
     {
+
         public testdbform()
         {
             PBL3_azure_databaseEntities db = new PBL3_azure_databaseEntities();

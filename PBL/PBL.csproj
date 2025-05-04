@@ -120,9 +120,6 @@
     <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Tai_Khoan.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Vai_Tro.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>

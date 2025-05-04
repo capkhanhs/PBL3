@@ -31,9 +31,10 @@ namespace PBL.BLL
                 throw new ArgumentException("Username and password cannot be empty.");
             }
             bool isValid = false;
-            if (usDAL.GetById(username) != null) 
+            var user = usDAL.GetById(username);
+            if (user != null) 
             {
-                if (usDAL.GetById(username).password == password)
+                if (user.password == password)
                 {
                     isValid = true;
                 }
@@ -50,17 +51,35 @@ namespace PBL.BLL
             {
                 throw new ArgumentException("Username cannot be empty.");
             }
-            var user = tkDAL.GetById(username);
+            var user = usDAL.GetById(username);
             if (user == null)
             {
                 throw new KeyNotFoundException("User not found.");
             }
             return user.Ma_nguoi_dung;
         }
-        public void Register(string username, string password)
+        public void Register(string username, string password, string mavaitro, string sdt, string HovaTen, bool gioitinh)
         {
-            // Implement your registration logic here
-            // For example, save the user to a database or a list of users
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                throw new ArgumentException("Username and password cannot be empty.");
+            }
+            var user = usDAL.GetById(username);
+            if (user != null)
+            {
+                throw new InvalidOperationException("Username already exists.");
+            }
+            Nguoi_Dung newUser = new Nguoi_Dung
+            {
+                Ma_nguoi_dung = username,
+                password = password,
+                Ma_vai_tro = mavaitro,
+                Gioi_tinh = gioitinh,
+                Sdt = sdt,
+                Ho_va_ten = HovaTen,
+
+            };
+            usDAL.Add(newUser);
         }
     }
 }

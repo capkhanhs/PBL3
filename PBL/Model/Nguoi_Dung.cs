@@ -18,26 +18,27 @@ namespace PBL.Model
         public Nguoi_Dung()
         {
             this.Don_Hang = new HashSet<Don_Hang>();
+            this.Gio_hang = new HashSet<Gio_hang>();
             this.Phieu_Nhap_Kho = new HashSet<Phieu_Nhap_Kho>();
-            this.Tai_Khoan = new HashSet<Tai_Khoan>();
             this.Dia_Chi = new HashSet<Dia_Chi>();
-            this.Vai_Tro = new HashSet<Vai_Tro>();
         }
     
         public string Ma_nguoi_dung { get; set; }
         public string Ho_va_ten { get; set; }
         public string Sdt { get; set; }
         public string Email { get; set; }
+        public string Ma_vai_tro { get; set; }
+        public string password { get; set; }
+        public bool Gioi_tinh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Don_Hang> Don_Hang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phieu_Nhap_Kho> Phieu_Nhap_Kho { get; set; }
+        public virtual ICollection<Gio_hang> Gio_hang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tai_Khoan> Tai_Khoan { get; set; }
+        public virtual ICollection<Phieu_Nhap_Kho> Phieu_Nhap_Kho { get; set; }
+        public virtual Vai_Tro Vai_Tro { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dia_Chi> Dia_Chi { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vai_Tro> Vai_Tro { get; set; }
     }
 }
