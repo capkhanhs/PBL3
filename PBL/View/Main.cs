@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.BLL;
 
 namespace PBL.View
 {
     public partial class Main : Form
     {
-        public Main()
+        string Manguoidung;
+        string Vaitro;
+        public Main(string username)
         {
             InitializeComponent();
             pnMain.Controls.Add(new ucTrangChu_Main());
+            Manguoidung = username;
         }
 
         private void LoadpnMain(UserControl uc)
@@ -52,7 +56,7 @@ namespace PBL.View
 
         private void btn_gh_Click(object sender, EventArgs e)
         {
-            LoadpnMain(new ucGioHang_Main());
+            LoadpnMain(new ucGioHang_Main(Manguoidung));
         }
 
         private void mni_lh_Click(object sender, EventArgs e)

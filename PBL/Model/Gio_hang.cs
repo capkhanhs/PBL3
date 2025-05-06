@@ -12,23 +12,19 @@ namespace PBL.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Phieu_Nhap_Kho
+    public partial class Gio_hang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Phieu_Nhap_Kho()
+        public Gio_hang()
         {
-            this.Chi_Tiet_Phieu_Nhap = new HashSet<Chi_Tiet_Phieu_Nhap>();
+            this.CartItems = new HashSet<CartItem>();
         }
     
-        public string Ma_phieu { get; set; }
-        public string Ma_ncc { get; set; }
+        public string Ma_gio_hang { get; set; }
         public string Ma_nguoi_dung { get; set; }
-        public Nullable<System.DateTime> Ngay_tao { get; set; }
-        public string Tongtien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
-        public virtual Nha_Cung_Cap Nha_Cung_Cap { get; set; }
+        public virtual ICollection<CartItem> CartItems { get; set; }
         public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }

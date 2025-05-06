@@ -12,12 +12,13 @@ namespace PBL.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Tai_Khoan
+    public partial class CartItem
     {
-        public string Tai_khoan1 { get; set; }
-        public string Ma_nguoi_dung { get; set; }
-        public string Mat_khau { get; set; }
+        public string Ma_gio_hang { get; set; }
+        public string Ma_san_pham { get; set; }
+        public Nullable<int> Quantity { get; set; }
     
-        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
+        public virtual Gio_hang Gio_hang { get; set; }
+        public virtual San_Pham San_Pham { get; set; }
     }
 }

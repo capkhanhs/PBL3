@@ -17,6 +17,7 @@ namespace PBL.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public San_Pham()
         {
+            this.CartItems = new HashSet<CartItem>();
             this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
             this.Chi_Tiet_Phieu_Nhap = new HashSet<Chi_Tiet_Phieu_Nhap>();
         }
@@ -28,7 +29,10 @@ namespace PBL.Model
         public string Gia_sp { get; set; }
         public string Mo_ta_sp { get; set; }
         public string Chi_tiet_san_pham { get; set; }
+        public Nullable<int> So_luong { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CartItem> CartItems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

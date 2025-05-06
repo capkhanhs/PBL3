@@ -7,18 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.BLL;
 
 namespace PBL.View
 {
     public partial class ucGioHang_Main : UserControl
     {
-        public ucGioHang_Main()
+        private string manguoidung;
+        CartItemBLL cartItemBLL = new CartItemBLL();
+        public ucGioHang_Main(string manguoidung)
         {
             InitializeComponent();
-            for(int i = 0; i < 10; i++)
+            this.manguoidung = manguoidung;
+            LoadCart();
+        }
+
+        public void LoadCart()
+        {
+            pnMainGioHang.Controls.Clear();
+            var cartItems = cartItemBLL.GetAllCart(manguoidung);
+            foreach (var item in cartItems)
             {
-                ucGioHangItem_GioHang_Main ucgh = new ucGioHangItem_GioHang_Main();
-                pnMainGioHang.Controls.Add(ucgh);
+                ucGioHangItem_GioHang_Main ucGioHangItem = new ucGioHangItem_GioHang_Main((int)item.Quantity, item.Ma_san_pham);
+                pnMainGioHang.Controls.Add(ucGioHangItem);
             }
         }
 
