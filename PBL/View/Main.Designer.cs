@@ -85,7 +85,7 @@
             this.pn_0.Location = new System.Drawing.Point(0, 0);
             this.pn_0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_0.Name = "pn_0";
-            this.pn_0.Size = new System.Drawing.Size(1403, 88);
+            this.pn_0.Size = new System.Drawing.Size(1388, 88);
             this.pn_0.TabIndex = 0;
             this.pn_0.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_0_Paint);
             // 
@@ -196,7 +196,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 52);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1403, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1388, 36);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -441,7 +441,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 88);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1403, 631);
+            this.panel1.Size = new System.Drawing.Size(1388, 609);
             this.panel1.TabIndex = 1;
             // 
             // pnMain
@@ -451,14 +451,14 @@
             this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1403, 631);
+            this.pnMain.Size = new System.Drawing.Size(1388, 609);
             this.pnMain.TabIndex = 1;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1403, 719);
+            this.ClientSize = new System.Drawing.Size(1388, 697);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

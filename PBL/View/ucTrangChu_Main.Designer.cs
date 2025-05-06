@@ -39,7 +39,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1400, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1385, 38);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -57,7 +57,7 @@
             this.flpnLoadSanPham.AutoScroll = true;
             this.flpnLoadSanPham.Location = new System.Drawing.Point(9, 44);
             this.flpnLoadSanPham.Name = "flpnLoadSanPham";
-            this.flpnLoadSanPham.Size = new System.Drawing.Size(1391, 584);
+            this.flpnLoadSanPham.Size = new System.Drawing.Size(1376, 584);
             this.flpnLoadSanPham.TabIndex = 1;
             this.flpnLoadSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.flpnLoadSanPham_Paint);
             // 
@@ -68,7 +68,7 @@
             this.Controls.Add(this.flpnLoadSanPham);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ucTrangChu_Main";
-            this.Size = new System.Drawing.Size(1403, 631);
+            this.Size = new System.Drawing.Size(1392, 631);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -21,14 +21,15 @@ namespace PBL.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Register register = new Register();
+            register.ShowDialog();
         }
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
             try
             {
-                if (NguoidungDAL.Instance.Dang_nhap(txtUsername.Text, txtPassword.Text))
+                if (NguoidungBLL.Instance.Dang_nhap(txtUsername.Text, txtPassword.Text))
                 {
                     Username = txtUsername.Text;
                     this.DialogResult = DialogResult.OK;
@@ -38,6 +39,20 @@ namespace PBL.View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_hienmk_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0') // đang hiện mật khẩu
+            {
+                txtPassword.PasswordChar = '*';   // ẩn mật khẩu
+                btn_hienmk.Text = "Hiện";         // đổi chữ nút nếu muốn
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0';  // hiện mật khẩu
+                btn_hienmk.Text = "Ẩn";           // đổi chữ nút nếu muốn
             }
         }
     }

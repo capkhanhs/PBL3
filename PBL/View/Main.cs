@@ -19,7 +19,7 @@ namespace PBL.View
         {
             InitializeComponent();
             pnMain.Controls.Add(new ucTrangChu_Main());
-            Manguoidung = NguoidungDAL.Instance.GetMaNguoiDung(username);
+            Manguoidung = username;
         }
 
         private void LoadpnMain(UserControl uc)
@@ -56,7 +56,7 @@ namespace PBL.View
 
         private void btn_gh_Click(object sender, EventArgs e)
         {
-            LoadpnMain(new ucGioHang_Main());
+            LoadpnMain(new ucGioHang_Main(Manguoidung));
         }
 
         private void mni_lh_Click(object sender, EventArgs e)

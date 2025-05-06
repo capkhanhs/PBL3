@@ -29,109 +29,110 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMoTa = new System.Windows.Forms.Label();
+            this.lblGiaSP = new System.Windows.Forms.Label();
+            this.txtSoluong = new System.Windows.Forms.TextBox();
+            this.lblTenSanPham = new System.Windows.Forms.Label();
+            this.picboxSP = new System.Windows.Forms.PictureBox();
+            this.btnTang = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnGiam = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.button10);
-            this.panel4.Controls.Add(this.button11);
-            this.panel4.Controls.Add(this.button12);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.lblMoTa);
+            this.panel4.Controls.Add(this.lblGiaSP);
+            this.panel4.Controls.Add(this.txtSoluong);
+            this.panel4.Controls.Add(this.lblTenSanPham);
+            this.panel4.Controls.Add(this.picboxSP);
+            this.panel4.Controls.Add(this.btnTang);
+            this.panel4.Controls.Add(this.btnXoa);
+            this.panel4.Controls.Add(this.btnGiam);
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1383, 129);
+            this.panel4.Size = new System.Drawing.Size(1354, 129);
             this.panel4.TabIndex = 9;
             // 
-            // label7
+            // lblMoTa
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1218, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 29);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "25.999.000";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.lblMoTa.AutoSize = true;
+            this.lblMoTa.Location = new System.Drawing.Point(157, 41);
+            this.lblMoTa.Name = "lblMoTa";
+            this.lblMoTa.Size = new System.Drawing.Size(40, 16);
+            this.lblMoTa.TabIndex = 8;
+            this.lblMoTa.Text = "Mô tả";
             // 
-            // textBox5
+            // lblGiaSP
             // 
-            this.textBox5.Location = new System.Drawing.Point(1297, 99);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(22, 22);
-            this.textBox5.TabIndex = 6;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblGiaSP.AutoSize = true;
+            this.lblGiaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiaSP.Location = new System.Drawing.Point(1166, 3);
+            this.lblGiaSP.Name = "lblGiaSP";
+            this.lblGiaSP.Size = new System.Drawing.Size(139, 29);
+            this.lblGiaSP.TabIndex = 7;
+            this.lblGiaSP.Text = "25.999.000";
+            this.lblGiaSP.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label8
+            // txtSoluong
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(155, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 29);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Tên Sản Phẩm";
+            this.txtSoluong.Location = new System.Drawing.Point(1245, 99);
+            this.txtSoluong.Name = "txtSoluong";
+            this.txtSoluong.Size = new System.Drawing.Size(22, 22);
+            this.txtSoluong.TabIndex = 6;
+            this.txtSoluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox4
+            // lblTenSanPham
             // 
-            this.pictureBox4.ErrorImage = null;
-            this.pictureBox4.Image = global::PBL.Properties.Resources.user_avatar;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(146, 123);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.lblTenSanPham.AutoSize = true;
+            this.lblTenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenSanPham.Location = new System.Drawing.Point(155, 3);
+            this.lblTenSanPham.Name = "lblTenSanPham";
+            this.lblTenSanPham.Size = new System.Drawing.Size(184, 29);
+            this.lblTenSanPham.TabIndex = 1;
+            this.lblTenSanPham.Text = "Tên Sản Phẩm";
             // 
-            // button10
+            // picboxSP
             // 
-            this.button10.Location = new System.Drawing.Point(1325, 99);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(22, 22);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "+";
-            this.button10.UseVisualStyleBackColor = true;
+            this.picboxSP.ErrorImage = null;
+            this.picboxSP.Image = global::PBL.Properties.Resources.user_avatar;
+            this.picboxSP.Location = new System.Drawing.Point(3, 3);
+            this.picboxSP.Name = "picboxSP";
+            this.picboxSP.Size = new System.Drawing.Size(146, 123);
+            this.picboxSP.TabIndex = 0;
+            this.picboxSP.TabStop = false;
             // 
-            // button11
+            // btnTang
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.Control;
-            this.button11.Location = new System.Drawing.Point(1172, 98);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(91, 23);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "Xóa";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnTang.Location = new System.Drawing.Point(1273, 99);
+            this.btnTang.Name = "btnTang";
+            this.btnTang.Size = new System.Drawing.Size(22, 22);
+            this.btnTang.TabIndex = 5;
+            this.btnTang.Text = "+";
+            this.btnTang.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnXoa
             // 
-            this.button12.Location = new System.Drawing.Point(1269, 98);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(22, 22);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "-";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnXoa.BackColor = System.Drawing.SystemColors.Control;
+            this.btnXoa.Location = new System.Drawing.Point(1120, 98);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(91, 23);
+            this.btnXoa.TabIndex = 4;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.button11_Click);
             // 
-            // label1
+            // btnGiam
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Mô tả";
+            this.btnGiam.Location = new System.Drawing.Point(1217, 98);
+            this.btnGiam.Name = "btnGiam";
+            this.btnGiam.Size = new System.Drawing.Size(22, 22);
+            this.btnGiam.TabIndex = 3;
+            this.btnGiam.Text = "-";
+            this.btnGiam.UseVisualStyleBackColor = true;
             // 
             // ucGioHangItem_GioHang_Main
             // 
@@ -139,10 +140,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel4);
             this.Name = "ucGioHangItem_GioHang_Main";
-            this.Size = new System.Drawing.Size(1389, 138);
+            this.Size = new System.Drawing.Size(1360, 138);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxSP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,13 +151,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGiaSP;
+        private System.Windows.Forms.TextBox txtSoluong;
+        private System.Windows.Forms.Button btnTang;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnGiam;
+        private System.Windows.Forms.Label lblTenSanPham;
+        private System.Windows.Forms.PictureBox picboxSP;
+        private System.Windows.Forms.Label lblMoTa;
     }
 }

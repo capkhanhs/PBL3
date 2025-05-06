@@ -39,6 +39,7 @@
             this.pic_0 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSignup = new System.Windows.Forms.Button();
+            this.btn_hienmk = new System.Windows.Forms.Button();
             this.pn_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +50,7 @@
             // pn_login
             // 
             this.pn_login.BackColor = System.Drawing.Color.Transparent;
+            this.pn_login.Controls.Add(this.btn_hienmk);
             this.pn_login.Controls.Add(this.btnSignin);
             this.pn_login.Controls.Add(this.lblForgPw);
             this.pn_login.Controls.Add(this.txtPassword);
@@ -164,6 +166,16 @@
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_hienmk
+            // 
+            this.btn_hienmk.Location = new System.Drawing.Point(197, 68);
+            this.btn_hienmk.Name = "btn_hienmk";
+            this.btn_hienmk.Size = new System.Drawing.Size(51, 30);
+            this.btn_hienmk.TabIndex = 7;
+            this.btn_hienmk.Text = "Hiện";
+            this.btn_hienmk.UseVisualStyleBackColor = true;
+            this.btn_hienmk.Click += new System.EventHandler(this.btn_hienmk_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,5 +214,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSignin;
         private System.Windows.Forms.Button btnSignup;
+        private System.Windows.Forms.Button btn_hienmk;
     }
 }

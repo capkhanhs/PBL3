@@ -33,12 +33,11 @@ namespace PBL.Model
         public virtual DbSet<Kho_Hang> Kho_Hang { get; set; }
         public virtual DbSet<Nha_Cung_Cap> Nha_Cung_Cap { get; set; }
         public virtual DbSet<Phieu_Nhap_Kho> Phieu_Nhap_Kho { get; set; }
-        public virtual DbSet<San_Pham> San_Pham { get; set; }
         public virtual DbSet<Vai_Tro> Vai_Tro { get; set; }
         public virtual DbSet<Van_Chuyen> Van_Chuyen { get; set; }
         public virtual DbSet<CartItem> CartItems { get; set; }
         public virtual DbSet<Gio_hang> Gio_hang { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Nguoi_Dung> Nguoi_Dung { get; set; }
+        public virtual DbSet<San_Pham> San_Pham { get; set; }
     }
 }

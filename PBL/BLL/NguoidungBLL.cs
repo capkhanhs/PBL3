@@ -8,17 +8,17 @@ using PBL.Model;
 
 namespace PBL.BLL
 {
-    public class NguoidungDAL
+    public class NguoidungBLL
     {
         UserDAL usDAL = new UserDAL();
-        private static NguoidungDAL _Instance;
-        public static NguoidungDAL Instance
+        private static NguoidungBLL _Instance;
+        public static NguoidungBLL Instance
         {
             get
             {
                 if (_Instance == null)
                 {
-                    _Instance = new NguoidungDAL();
+                    _Instance = new NguoidungBLL();
                 }
                 return _Instance;
             }
@@ -60,9 +60,9 @@ namespace PBL.BLL
         }
         public void Register(string username, string password, string mavaitro, string sdt, string HovaTen, bool gioitinh)
         {
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(HovaTen) || string.IsNullOrEmpty(sdt) || string.IsNullOrEmpty(mavaitro))
             {
-                throw new ArgumentException("Username and password cannot be empty.");
+                throw new ArgumentException("Vui lòng nhập đầy đủ thông tin");
             }
             var user = usDAL.GetById(username);
             if (user != null)
@@ -76,10 +76,10 @@ namespace PBL.BLL
                 Ma_vai_tro = mavaitro,
                 Gioi_tinh = gioitinh,
                 Sdt = sdt,
-                Ho_va_ten = HovaTen,
-
+                Ho_va_ten = HovaTen
             };
             usDAL.Add(newUser);
+            usDAL.Save();
         }
     }
 }
