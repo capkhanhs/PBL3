@@ -103,6 +103,16 @@ namespace PBL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dienthoaitest {
+            get {
+                object obj = ResourceManager.GetObject("dienthoaitest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Erix_Subyarko_Medical_Invoice_Bill_Payment_Billing_Hospital_32 {
             get {
                 object obj = ResourceManager.GetObject("Erix-Subyarko-Medical-Invoice-Bill-Payment-Billing-Hospital.32", resourceCulture);
@@ -186,6 +196,56 @@ namespace PBL.Properties {
         internal static System.Drawing.Bitmap Laptop {
             get {
                 object obj = ResourceManager.GetObject("Laptop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptopacertest {
+            get {
+                object obj = ResourceManager.GetObject("laptopacertest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptoplenovotest {
+            get {
+                object obj = ResourceManager.GetObject("laptoplenovotest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptoploq {
+            get {
+                object obj = ResourceManager.GetObject("laptoploq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptopmsi {
+            get {
+                object obj = ResourceManager.GetObject("laptopmsi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laptopnitrotest {
+            get {
+                object obj = ResourceManager.GetObject("laptopnitrotest", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

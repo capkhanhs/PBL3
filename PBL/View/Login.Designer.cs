@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pn_login = new System.Windows.Forms.Panel();
+            this.btn_hienmk = new System.Windows.Forms.Button();
             this.btnSignin = new System.Windows.Forms.Button();
             this.lblForgPw = new System.Windows.Forms.LinkLabel();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.pic_0 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSignup = new System.Windows.Forms.Button();
-            this.btn_hienmk = new System.Windows.Forms.Button();
             this.pn_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +62,16 @@
             this.pn_login.Name = "pn_login";
             this.pn_login.Size = new System.Drawing.Size(251, 156);
             this.pn_login.TabIndex = 0;
+            // 
+            // btn_hienmk
+            // 
+            this.btn_hienmk.Location = new System.Drawing.Point(197, 68);
+            this.btn_hienmk.Name = "btn_hienmk";
+            this.btn_hienmk.Size = new System.Drawing.Size(51, 30);
+            this.btn_hienmk.TabIndex = 7;
+            this.btn_hienmk.Text = "Hiện";
+            this.btn_hienmk.UseVisualStyleBackColor = true;
+            this.btn_hienmk.Click += new System.EventHandler(this.btn_hienmk_Click);
             // 
             // btnSignin
             // 
@@ -97,6 +107,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(185, 30);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.Text = "123456";
             // 
             // pic_pw
             // 
@@ -128,6 +139,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(185, 30);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "ND001";
             // 
             // pic_0
             // 
@@ -165,16 +177,6 @@
             this.btnSignup.Text = "Đăng Ký";
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_hienmk
-            // 
-            this.btn_hienmk.Location = new System.Drawing.Point(197, 68);
-            this.btn_hienmk.Name = "btn_hienmk";
-            this.btn_hienmk.Size = new System.Drawing.Size(51, 30);
-            this.btn_hienmk.TabIndex = 7;
-            this.btn_hienmk.Text = "Hiện";
-            this.btn_hienmk.UseVisualStyleBackColor = true;
-            this.btn_hienmk.Click += new System.EventHandler(this.btn_hienmk_Click);
             // 
             // Login
             // 

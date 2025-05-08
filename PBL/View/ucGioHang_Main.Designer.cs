@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.lbl_diachinhanhang = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pnMainGioHang = new System.Windows.Forms.FlowLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -42,30 +41,23 @@
             // lbl_diachinhanhang
             // 
             this.lbl_diachinhanhang.AutoSize = true;
-            this.lbl_diachinhanhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_diachinhanhang.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_diachinhanhang.Location = new System.Drawing.Point(3, 0);
             this.lbl_diachinhanhang.Name = "lbl_diachinhanhang";
-            this.lbl_diachinhanhang.Size = new System.Drawing.Size(282, 36);
+            this.lbl_diachinhanhang.Size = new System.Drawing.Size(266, 41);
             this.lbl_diachinhanhang.TabIndex = 0;
-            this.lbl_diachinhanhang.Text = "Địa chỉ nhận hàng:";
+            this.lbl_diachinhanhang.Text = "Giỏ hàng của bạn";
             this.lbl_diachinhanhang.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.lbl_diachinhanhang);
-            this.flowLayoutPanel1.Controls.Add(this.textBox1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 13);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1383, 37);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(291, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(440, 22);
-            this.textBox1.TabIndex = 1;
             // 
             // fileSystemWatcher1
             // 
@@ -75,9 +67,10 @@
             // pnMainGioHang
             // 
             this.pnMainGioHang.AutoScroll = true;
-            this.pnMainGioHang.Location = new System.Drawing.Point(11, 56);
+            this.pnMainGioHang.BackColor = System.Drawing.Color.White;
+            this.pnMainGioHang.Location = new System.Drawing.Point(3, 56);
             this.pnMainGioHang.Name = "pnMainGioHang";
-            this.pnMainGioHang.Size = new System.Drawing.Size(1375, 572);
+            this.pnMainGioHang.Size = new System.Drawing.Size(1383, 572);
             this.pnMainGioHang.TabIndex = 2;
             // 
             // contextMenuStrip1
@@ -105,7 +98,6 @@
 
         private System.Windows.Forms.Label lbl_diachinhanhang;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.FlowLayoutPanel pnMainGioHang;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

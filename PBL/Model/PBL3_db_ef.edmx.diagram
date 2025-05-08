@@ -31,7 +31,7 @@
         <AssociationConnector Association="PBL3_Model.FK__Phieu_Nha__Ma_ng__09A971A2" />
         <AssociationConnector Association="PBL3_Model.FK_NguoiDung_VaiTro" />
         <AssociationConnector Association="PBL3_Model.nguoiDung_diaChi" />
-        <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="8.25" PointY="19.5" />
+        <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="8.25" PointY="19.375" />
         <AssociationConnector Association="PBL3_Model.FK__CartItems__Ma_sa__43D61337" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__0D7A0286" />

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\CartItemBLL.cs" />
+    <Compile Include="BLL\DiaChiBLL.cs" />
     <Compile Include="BLL\GioHangBLL.cs" />
     <Compile Include="BLL\NguoidungBLL.cs" />
     <Compile Include="BLL\SanphamBLL.cs" />
@@ -156,6 +157,12 @@
     <Compile Include="View\testdbform.Designer.cs">
       <DependentUpon>testdbform.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucDatHang_GioHang_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucDatHang_GioHang_Main.Designer.cs">
+      <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucDonHangDaMua_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\testdbform.resx">
       <DependentUpon>testdbform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
+      <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDonHangDaMua_TrangCaNhan_Main.resx">
       <DependentUpon>ucDonHangDaMua_TrangCaNhan_Main.cs</DependentUpon>
@@ -393,6 +403,14 @@
       <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
       <LastGenOutput>PBL3_db_ef.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\laptopnitrotest.png" />
+    <None Include="Resources\laptopmsi.png" />
+    <None Include="Resources\laptoploq.png" />
+    <None Include="Resources\dienthoaitest.png" />
+    <None Include="Resources\laptoplenovotest.png" />
+    <Content Include="Resources\laptopacertest.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\user-avatar.png" />
     <None Include="Resources\Wefunction-Woofunction-Newspaper-info.32.png" />
     <None Include="Resources\thongtin.png" />
@@ -408,4 +426,8 @@
     <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Resources\*.*" "$(TargetDir)Resources\" /Y /I /S
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>

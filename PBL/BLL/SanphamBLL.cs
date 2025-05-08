@@ -50,6 +50,24 @@ namespace PBL.BLL
             }
             return list;
         }
+
+        public San_Pham Find(string masp)
+        {
+            if (string.IsNullOrEmpty(masp))
+            {
+                throw new Exception("Mã sản phẩm không được để trống");
+            }
+            else
+            {
+                San_Pham sp = spDAL.GetById(masp);
+                if (sp == null)
+                {
+                    throw new Exception("Sản phẩm không tồn tại");
+                }
+                return spDAL.GetById(sp.Ma_san_pham);
+
+            }
+        }
         public void ThemSP(string masp, string tensp, string mancc, string tenDM, string giaSP, string Mo_ta_sp, string chi_tiet_sp, string picfilename)
         {
             if (string.IsNullOrEmpty(masp) || string.IsNullOrEmpty(tensp) || string.IsNullOrEmpty(mancc) || string.IsNullOrEmpty(tenDM) || string.IsNullOrEmpty(giaSP))

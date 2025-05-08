@@ -18,8 +18,8 @@ namespace PBL.View
         public Main(string username)
         {
             InitializeComponent();
-            pnMain.Controls.Add(new ucTrangChu_Main());
             Manguoidung = username;
+            pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
 
         private void LoadpnMain(UserControl uc)
@@ -66,7 +66,7 @@ namespace PBL.View
 
         private void mniTrangChu_Click(object sender, EventArgs e)
         {
-            LoadpnMain(new ucTrangChu_Main());
+            LoadpnMain(new ucTrangChu_Main(Manguoidung));
         }
 
         private void btn_cn_Click(object sender, EventArgs e)
