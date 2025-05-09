@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pn_0 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pn_KhungAdmin = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_cn = new System.Windows.Forms.Button();
             this.btn_gh = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
@@ -74,6 +78,10 @@
             // pn_0
             // 
             this.pn_0.BackColor = System.Drawing.Color.Gold;
+            this.pn_0.Controls.Add(this.flowLayoutPanel1);
+            this.pn_0.Controls.Add(this.pn_KhungAdmin);
+            this.pn_0.Controls.Add(this.panel3);
+            this.pn_0.Controls.Add(this.panel2);
             this.pn_0.Controls.Add(this.btn_cn);
             this.pn_0.Controls.Add(this.btn_gh);
             this.pn_0.Controls.Add(this.btn_search);
@@ -88,6 +96,35 @@
             this.pn_0.Size = new System.Drawing.Size(1388, 88);
             this.pn_0.TabIndex = 0;
             this.pn_0.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_0_Paint);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(228, 88);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1144, 609);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // pn_KhungAdmin
+            // 
+            this.pn_KhungAdmin.Location = new System.Drawing.Point(241, 88);
+            this.pn_KhungAdmin.Name = "pn_KhungAdmin";
+            this.pn_KhungAdmin.Size = new System.Drawing.Size(1144, 609);
+            this.pn_KhungAdmin.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(420, 88);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(448, 147);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(387, 88);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1144, 606);
+            this.panel2.TabIndex = 0;
             // 
             // btn_cn
             // 
@@ -446,13 +483,13 @@
             // 
             // pnMain
             // 
-            this.pnMain.AutoScroll = true;
             this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1388, 609);
             this.pnMain.TabIndex = 1;
+            this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
             // 
             // Main
             // 
@@ -514,6 +551,10 @@
         private System.Windows.Forms.FlowLayoutPanel pnMain;
         private System.Windows.Forms.Button btn_cn;
         private System.Windows.Forms.ToolStripMenuItem mniTrangChu;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pn_KhungAdmin;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

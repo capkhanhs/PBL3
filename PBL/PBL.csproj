@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -130,6 +131,18 @@
     <Compile Include="Model\Van_Chuyen.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\ChinhSua_ThemSanPham_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChinhSua_ThemSanPham_Admin.Designer.cs">
+      <DependentUpon>ChinhSua_ThemSanPham_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChinhSua_ThemTaiKhoan_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChinhSua_ThemTaiKhoan_Admin.Designer.cs">
+      <DependentUpon>ChinhSua_ThemTaiKhoan_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,17 +169,83 @@
     <Compile Include="View\testdbform.Designer.cs">
       <DependentUpon>testdbform.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucAdmin.Designer.cs">
+      <DependentUpon>ucAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCaNhan_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCaNhan_Admin.Designer.cs">
+      <DependentUpon>ucCaNhan_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucChinhSua_ThemSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucChinhSua_ThemSanPham.Designer.cs">
+      <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucDonHangDaMua_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucDonHangDaMua_TrangCaNhan_Main.Designer.cs">
       <DependentUpon>ucDonHangDaMua_TrangCaNhan_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucDonHangHeThong_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucDonHangHeThong_Admin.Designer.cs">
+      <DependentUpon>ucDonHangHeThong_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucGioHangItem_GioHang_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucGioHangItem_GioHang_Main.Designer.cs">
       <DependentUpon>ucGioHangItem_GioHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucHienThiKhoHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucHienThiKhoHang.Designer.cs">
+      <DependentUpon>ucHienThiKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucHienThiSanPham_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucHienThiSanPham_Admin.Designer.cs">
+      <DependentUpon>ucHienThiSanPham_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucHienThiTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucHienThiTaiKhoan.Designer.cs">
+      <DependentUpon>ucHienThiTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucNhanVienBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucNhanVienBanHang.Designer.cs">
+      <DependentUpon>ucNhanVienBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSanPhamDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSanPhamDonHang.Designer.cs">
+      <DependentUpon>ucSanPhamDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSanPham_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSanPham_Admin.Designer.cs">
+      <DependentUpon>ucSanPham_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTaiKhoan_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTaiKhoan_Admin.Designer.cs">
+      <DependentUpon>ucTaiKhoan_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucThongTin_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +277,24 @@
     <Compile Include="View\ucSanPhamItem_TrangChu_Main.Designer.cs">
       <DependentUpon>ucSanPhamItem_TrangChu_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucXemChiTietDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucXemChiTietDonHang.Designer.cs">
+      <DependentUpon>ucXemChiTietDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucXemChiTietSanPham_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucXemChiTietSanPham_Admin.Designer.cs">
+      <DependentUpon>ucXemChiTietSanPham_Admin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\ChinhSua_ThemSanPham_Admin.resx">
+      <DependentUpon>ChinhSua_ThemSanPham_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChinhSua_ThemTaiKhoan_Admin.resx">
+      <DependentUpon>ChinhSua_ThemTaiKhoan_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,11 +312,44 @@
     <EmbeddedResource Include="View\testdbform.resx">
       <DependentUpon>testdbform.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucAdmin.resx">
+      <DependentUpon>ucAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCaNhan_Admin.resx">
+      <DependentUpon>ucCaNhan_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucChinhSua_ThemSanPham.resx">
+      <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucDonHangDaMua_TrangCaNhan_Main.resx">
       <DependentUpon>ucDonHangDaMua_TrangCaNhan_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucDonHangHeThong_Admin.resx">
+      <DependentUpon>ucDonHangHeThong_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucGioHangItem_GioHang_Main.resx">
       <DependentUpon>ucGioHangItem_GioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucHienThiKhoHang.resx">
+      <DependentUpon>ucHienThiKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucHienThiSanPham_Admin.resx">
+      <DependentUpon>ucHienThiSanPham_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucHienThiTaiKhoan.resx">
+      <DependentUpon>ucHienThiTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucNhanVienBanHang.resx">
+      <DependentUpon>ucNhanVienBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSanPhamDonHang.resx">
+      <DependentUpon>ucSanPhamDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSanPham_Admin.resx">
+      <DependentUpon>ucSanPham_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTaiKhoan_Admin.resx">
+      <DependentUpon>ucTaiKhoan_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucThongTin_TrangCaNhan_Main.resx">
       <DependentUpon>ucThongTin_TrangCaNhan_Main.cs</DependentUpon>
@@ -235,6 +365,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucSanPhamItem_TrangChu_Main.resx">
       <DependentUpon>ucSanPhamItem_TrangChu_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucXemChiTietDonHang.resx">
+      <DependentUpon>ucXemChiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucXemChiTietSanPham_Admin.resx">
+      <DependentUpon>ucXemChiTietSanPham_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\PBL3_db_ef.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
