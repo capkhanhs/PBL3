@@ -24,9 +24,9 @@ namespace PBL.DAL
             return dbSet.ToList();
         }
         //Lấy dữ liệu theo id
-        public T GetById(object id)
+        public T GetById(params object[] keyValues)
         {
-            return dbSet.Find(id);
+            return dbSet.Find(keyValues);
         }
 
         //Thêm đối tượng T vào DB

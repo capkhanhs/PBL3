@@ -29,7 +29,6 @@ namespace PBL.Model
         public virtual DbSet<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }
         public virtual DbSet<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
         public virtual DbSet<Danh_Muc> Danh_Muc { get; set; }
-        public virtual DbSet<Dia_Chi> Dia_Chi { get; set; }
         public virtual DbSet<Don_Hang> Don_Hang { get; set; }
         public virtual DbSet<Gio_hang> Gio_hang { get; set; }
         public virtual DbSet<Kho_Hang> Kho_Hang { get; set; }
@@ -39,5 +38,7 @@ namespace PBL.Model
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Vai_Tro> Vai_Tro { get; set; }
         public virtual DbSet<Van_Chuyen> Van_Chuyen { get; set; }
+        public virtual DbSet<Dia_Chi> Dia_Chi { get; set; }
+        public virtual DbSet<nguoiDung_diaChi> nguoiDung_diaChi { get; set; }
     }
 }

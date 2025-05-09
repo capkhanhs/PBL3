@@ -68,6 +68,7 @@
     <Compile Include="BLL\DonHangBLL.cs" />
     <Compile Include="BLL\GioHangBLL.cs" />
     <Compile Include="BLL\NguoidungBLL.cs" />
+    <Compile Include="BLL\NguoiDungDiaChiBLL.cs" />
     <Compile Include="BLL\SanphamBLL.cs" />
     <Compile Include="BLL\VaitroBLL.cs" />
     <Compile Include="DAL\CartItemDAL.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="DAL\DonHangDAL.cs" />
     <Compile Include="DAL\GioHangDAL.cs" />
     <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\NguoiDungDiaChiDAL.cs" />
     <Compile Include="DAL\Repository.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
@@ -106,6 +108,9 @@
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MyDbConfiguration.cs" />
+    <Compile Include="Model\nguoiDung_diaChi.cs">
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Nguoi_Dung.cs">
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
@@ -163,10 +168,6 @@
     </Compile>
     <Compile Include="View\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\testdbform.cs" />
-    <Compile Include="View\testdbform.Designer.cs">
-      <DependentUpon>testdbform.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TestTK.cs">
       <SubType>Form</SubType>
@@ -259,9 +260,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\testdbform.resx">
-      <DependentUpon>testdbform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>

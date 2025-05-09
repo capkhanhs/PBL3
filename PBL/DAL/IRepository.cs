@@ -9,7 +9,7 @@ namespace PBL.DAL
     public interface IRepository<T>
     {
         List<T> GetAll();
-        T GetById(object id);
+        T GetById(params object[] keyValues);
         void Add(T entity);
         void Update(T entity);
         void Delete(object id);

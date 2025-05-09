@@ -50,11 +50,34 @@ namespace PBL.BLL
             }
         }
 
+        private string GenerateNewMaDC(List<Dia_Chi> list)
+        {
+            int maxNumber = 0;
+            foreach (var dc in list)
+            {
+                if (dc.Ma_dia_chi != null && dc.Ma_dia_chi.StartsWith("DC"))
+                {
+                    string numPart = dc.Ma_dia_chi.Substring(2);
+                    if (int.TryParse(numPart, out int number))
+                    {
+                        if (number > maxNumber)
+                            maxNumber = number;
+                    }
+                }
+            }
+            return "DC" + (maxNumber + 1).ToString("D2");
+        }
+
+
         public void Add(Dia_Chi diaChi)
         {
             try
             {
+                List<Dia_Chi> list = diachidal.GetAll(); // hoặc dùng GetLast() nếu có
+                string newID = GenerateNewMaDC(list);
+                diaChi.Ma_dia_chi = newID;
                 diachidal.Add(diaChi);
+                diachidal.Save();
             }
             catch (Exception ex)
             {
