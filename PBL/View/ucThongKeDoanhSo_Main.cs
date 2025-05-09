@@ -53,7 +53,23 @@ namespace PBL.View
                 });
             }
 
-            dataGridView1.DataSource = data;
+            // Xóa các cột hiện có
+            dataGridView1.Columns.Clear();
+
+            // Thêm chỉ các cột bạn muốn
+            dataGridView1.Columns.Add("SanPham", "Sản phẩm");
+            dataGridView1.Columns.Add("DoanhSo", "Doanh số");
+            dataGridView1.Columns.Add("ChiPhi", "Chi phí");
+            dataGridView1.Columns.Add("LoiNhuan", "Lợi nhuận");
+
+            // Xóa các hàng
+            dataGridView1.Rows.Clear();
+
+            // Thêm dữ liệu thủ công
+            foreach (var item in data)
+            {
+                dataGridView1.Rows.Add(item.SanPham, item.DoanhSo, item.ChiPhi, item.LoiNhuan);
+            }
         }
     }
 }
