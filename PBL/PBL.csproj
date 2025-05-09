@@ -42,6 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -60,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BLL\CartItemBLL.cs" />
     <Compile Include="BLL\DiaChiBLL.cs" />
+    <Compile Include="BLL\DonHangBLL.cs" />
     <Compile Include="BLL\GioHangBLL.cs" />
     <Compile Include="BLL\NguoidungBLL.cs" />
     <Compile Include="BLL\SanphamBLL.cs" />
@@ -88,6 +92,7 @@
     <Compile Include="Model\Dia_Chi.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\District.cs" />
     <Compile Include="Model\Don_Hang.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
@@ -122,6 +127,7 @@
     <Compile Include="Model\Phieu_Nhap_Kho.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Province.cs" />
     <Compile Include="Model\San_Pham.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
@@ -131,6 +137,7 @@
     <Compile Include="Model\Van_Chuyen.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Ward.cs" />
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,11 +275,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="tinh_tp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xa_phuong.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="quan_huyen.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\username.ico" />
   </ItemGroup>
   <ItemGroup>
