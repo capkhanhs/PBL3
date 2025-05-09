@@ -33,6 +33,8 @@
         <EntityTypeShape EntityType="PBL3_Model.sysdiagram" Width="1.5" PointX="10.375" PointY="0.75" />
         <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Don_Hang" Width="1.5" PointX="17" PointY="7.5" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_do__02084FDA" />
+        <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="8.25" PointY="19.375" />
+        <AssociationConnector Association="PBL3_Model.FK__CartItems__Ma_sa__43D61337" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" />
       </Diagram>
     </edmx:Diagrams>

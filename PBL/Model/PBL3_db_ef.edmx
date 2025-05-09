@@ -811,6 +811,12 @@
           <Property Name="Thanh_tien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Don_Hang" Relationship="PBL3_Model.FK__Chi_Tiet___Ma_do__02084FDA" FromRole="Chi_Tiet_Don_Hang" ToRole="Don_Hang" />
           <NavigationProperty Name="San_Pham" Relationship="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" FromRole="Chi_Tiet_Don_Hang" ToRole="San_Pham" />
+          <Property Name="PictureFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CartItems" Relationship="PBL3_Model.FK__CartItems__Ma_sa__43D61337" FromRole="San_Pham" ToRole="CartItem" />
+          <NavigationProperty Name="Chi_Tiet_Don_Hang" Relationship="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" FromRole="San_Pham" ToRole="Chi_Tiet_Don_Hang" />
+          <NavigationProperty Name="Chi_Tiet_Phieu_Nhap" Relationship="PBL3_Model.FK__Chi_Tiet___Ma_sa__0D7A0286" FromRole="San_Pham" ToRole="Chi_Tiet_Phieu_Nhap" />
+          <NavigationProperty Name="Danh_Muc" Relationship="PBL3_Model.FK__San_Pham__Ten_da__7A672E12" FromRole="San_Pham" ToRole="Danh_Muc" />
+          <NavigationProperty Name="Nha_Cung_Cap" Relationship="PBL3_Model.FK__San_Pham__Ma_ncc__7B5B524B" FromRole="San_Pham" ToRole="Nha_Cung_Cap" />
         </EntityType>
         <Association Name="FK__Chi_Tiet___Ma_do__02084FDA">
           <End Type="PBL3_Model.Don_Hang" Role="Don_Hang" Multiplicity="1" />
@@ -990,6 +996,10 @@
               <MappingFragment StoreEntitySet="Chi_Tiet_Don_Hang">
                 <ScalarProperty Name="Thanh_tien" ColumnName="Thanh_tien" />
                 <ScalarProperty Name="Gia_ban" ColumnName="Gia_ban" />
+          <EntitySetMapping Name="San_Pham">
+            <EntityTypeMapping TypeName="PBL3_Model.San_Pham">
+              <MappingFragment StoreEntitySet="San_Pham">
+                <ScalarProperty Name="PictureFileName" ColumnName="PictureFileName" />
                 <ScalarProperty Name="So_luong" ColumnName="So_luong" />
                 <ScalarProperty Name="Ma_san_pham" ColumnName="Ma_san_pham" />
                 <ScalarProperty Name="Ma_don_hang" ColumnName="Ma_don_hang" />
