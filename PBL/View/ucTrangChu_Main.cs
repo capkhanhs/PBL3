@@ -15,10 +15,13 @@ namespace PBL.View
     public partial class ucTrangChu_Main : UserControl
     {
         SanPhamDAL sp = new SanPhamDAL();
-        public ucTrangChu_Main()
+        string manguoidung;
+        public ucTrangChu_Main(string manguoidung)
         {
             InitializeComponent();
+            this.manguoidung = manguoidung;
             ucTrangChu_Load();
+
         }
         
         private void ucTrangChu_Load()
@@ -26,7 +29,7 @@ namespace PBL.View
             flpnLoadSanPham.Controls.Clear();
             sp.GetAll().ForEach(x =>
             {
-                ucSanPhamItem_TrangChu_Main item = new ucSanPhamItem_TrangChu_Main(x.Ten_sp, x.Gia_sp.ToString());
+                ucSanPhamItem_TrangChu_Main item = new ucSanPhamItem_TrangChu_Main(x.Ma_san_pham,manguoidung);
                 flpnLoadSanPham.Controls.Add(item);
             });
         }

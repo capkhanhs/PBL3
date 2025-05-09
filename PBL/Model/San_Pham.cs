@@ -30,6 +30,7 @@ namespace PBL.Model
         public string Mo_ta_sp { get; set; }
         public string Chi_tiet_san_pham { get; set; }
         public Nullable<int> So_luong { get; set; }
+        public string PictureFileName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CartItem> CartItems { get; set; }

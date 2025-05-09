@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PBL.BLL
 {
@@ -21,9 +22,26 @@ namespace PBL.BLL
             private set { }
         }
 
-        public void AddCart(string cartId, string SPID, int soluong)
+        public long Tinhtong(string manguoidung)
         {
+            long total = 0;
+            foreach (var item in CartItemBLL.Instance.GetAllCart(manguoidung))
+            {
+                try
+                {
+                    var sanpham = SanphamBLL.Instance().GetAll().FirstOrDefault(x => x.Ma_san_pham == item.Ma_san_pham);
+                    if (sanpham != null)
+                    {
+                        total += (long)(item.Quantity * int.Parse(sanpham.Gia_sp));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(item.Ma_san_pham, item.Ma_gio_hang);
+                }
 
+            }
+            return total;
         }
     }
 }

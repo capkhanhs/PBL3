@@ -128,6 +128,7 @@
           <Property Name="Mo_ta_sp" Type="nvarchar(max)" />
           <Property Name="Chi_tiet_san_pham" Type="nvarchar(max)" />
           <Property Name="So_luong" Type="int" />
+          <Property Name="PictureFileName" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Vai_Tro">
           <Key>
@@ -874,6 +875,7 @@
           <Property Name="Mo_ta_sp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Chi_tiet_san_pham" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="So_luong" Type="Int32" />
+          <Property Name="PictureFileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CartItems" Relationship="PBL3_Model.FK__CartItems__Ma_sa__43D61337" FromRole="San_Pham" ToRole="CartItem" />
           <NavigationProperty Name="Chi_Tiet_Don_Hang" Relationship="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" FromRole="San_Pham" ToRole="Chi_Tiet_Don_Hang" />
           <NavigationProperty Name="Chi_Tiet_Phieu_Nhap" Relationship="PBL3_Model.FK__Chi_Tiet___Ma_sa__0D7A0286" FromRole="San_Pham" ToRole="Chi_Tiet_Phieu_Nhap" />
@@ -1091,6 +1093,7 @@
           <EntitySetMapping Name="San_Pham">
             <EntityTypeMapping TypeName="PBL3_Model.San_Pham">
               <MappingFragment StoreEntitySet="San_Pham">
+                <ScalarProperty Name="PictureFileName" ColumnName="PictureFileName" />
                 <ScalarProperty Name="So_luong" ColumnName="So_luong" />
                 <ScalarProperty Name="Chi_tiet_san_pham" ColumnName="Chi_tiet_san_pham" />
                 <ScalarProperty Name="Mo_ta_sp" ColumnName="Mo_ta_sp" />

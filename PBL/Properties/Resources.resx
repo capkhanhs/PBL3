@@ -127,6 +127,9 @@
   <data name="Dell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Wefunction-Woofunction-Newspaper-info.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wefunction-Woofunction-Newspaper-info.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="userName" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userName2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +181,23 @@
   <data name="Giohang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Giohang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dienthoaitest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dienthoaitest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AirPod" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AirPod.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Samsung" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Samsung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laptoplenovotest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptoplenovotest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laptoploq" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptoploq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="laptopmsi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptopmsi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="XiaoMi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\XiaoMi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +211,8 @@
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Samsung" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Samsung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user-avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,13 +232,13 @@
   <data name="SmartWatch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SmartWatch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="laptopacertest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptopacertest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WallPaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WallPaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Wefunction-Woofunction-Newspaper-info.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wefunction-Woofunction-Newspaper-info.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="laptopnitrotest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptopnitrotest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
