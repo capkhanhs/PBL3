@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="81e45b4de2ec4a738397df36c971c218" Name="Diagram1" ZoomLevel="109">
-        <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Don_Hang" Width="1.5" PointX="10.5" PointY="13.75" IsExpanded="true" />
+      <Diagram DiagramId="81e45b4de2ec4a738397df36c971c218" Name="Diagram1" ZoomLevel="116">
+        <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Don_Hang" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="10.5" PointY="18.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3_Model.Danh_Muc" Width="1.5" PointX="6" PointY="22.625" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3_Model.Dia_Chi" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
@@ -31,7 +31,7 @@
         <AssociationConnector Association="PBL3_Model.FK__Phieu_Nha__Ma_ng__09A971A2" />
         <AssociationConnector Association="PBL3_Model.FK_NguoiDung_VaiTro" />
         <AssociationConnector Association="PBL3_Model.nguoiDung_diaChi" />
-        <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="8.25" PointY="19.375" />
+        <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="3.5" PointY="14" />
         <AssociationConnector Association="PBL3_Model.FK__CartItems__Ma_sa__43D61337" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__0D7A0286" />

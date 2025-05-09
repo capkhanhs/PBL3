@@ -18,27 +18,31 @@ namespace PBL.DAL
             context = new PBL3_azure_databaseEntities();
             dbSet = context.Set<T>();
         }
+        //Lấy tất cả dữ liệu theo kiểu T
         public List<T> GetAll()
         {
             return dbSet.ToList();
         }
-
+        //Lấy dữ liệu theo id
         public T GetById(object id)
         {
             return dbSet.Find(id);
         }
 
+        //Thêm đối tượng T vào DB
         public void Add(T entity)
         {
             dbSet.Add(entity);
         }
 
+        //Cập nhật đối tượng T vào DB
         public void Update(T entity)
         {
             dbSet.Attach(entity);
             context.Entry(entity).State = EntityState.Modified;
         }
 
+        //Xóa đối tượng T khỏi DB
         public void Delete(object id)
         {
             T entity = dbSet.Find(id);
@@ -48,6 +52,7 @@ namespace PBL.DAL
             }
         }
 
+        //Lưu thay đổi vào DB
         public void Save()
         {
             context.SaveChanges();
