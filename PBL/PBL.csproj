@@ -98,10 +98,10 @@
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MyDbConfiguration.cs" />
-    <Compile Include="Model\Nguoi_Dung.cs">
+    <Compile Include="Model\nguoiDung_diaChi.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Nha_Cung_Cap.cs">
+    <Compile Include="Model\Nguoi_Dung.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PBL3_db_ef.Context.cs">
@@ -123,6 +123,9 @@
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\San_Pham.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Vai_Tro.cs">

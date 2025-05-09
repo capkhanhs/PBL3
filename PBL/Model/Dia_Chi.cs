@@ -19,24 +19,20 @@ namespace PBL.Model
         {
             this.Don_Hang = new HashSet<Don_Hang>();
             this.Kho_Hang = new HashSet<Kho_Hang>();
-            this.Nha_Cung_Cap = new HashSet<Nha_Cung_Cap>();
-            this.Nguoi_Dung = new HashSet<Nguoi_Dung>();
+            this.nguoiDung_diaChi = new HashSet<nguoiDung_diaChi>();
         }
     
         public string Ma_dia_chi { get; set; }
         public string Tinh_ThanhPho { get; set; }
         public string Quan_Huyen { get; set; }
         public string Xa_Phuong { get; set; }
-        public string Duong { get; set; }
-        public Nullable<int> So_nha { get; set; }
+        public string Chi_tiet { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Don_Hang> Don_Hang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kho_Hang> Kho_Hang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Nha_Cung_Cap> Nha_Cung_Cap { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Nguoi_Dung> Nguoi_Dung { get; set; }
+        public virtual ICollection<nguoiDung_diaChi> nguoiDung_diaChi { get; set; }
     }
 }

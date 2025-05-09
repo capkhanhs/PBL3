@@ -75,7 +75,6 @@ namespace PBL.BLL
                 password = password,
                 Ma_vai_tro = mavaitro,
                 Gioi_tinh = gioitinh,
-                Sdt = sdt,
                 Ho_va_ten = HovaTen
             };
             usDAL.Add(newUser);

@@ -21,14 +21,12 @@ namespace PBL.Model
         }
     
         public string Ma_phieu { get; set; }
-        public string Ma_ncc { get; set; }
         public string Ma_nguoi_dung { get; set; }
         public Nullable<System.DateTime> Ngay_tao { get; set; }
         public string Tongtien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
-        public virtual Nha_Cung_Cap Nha_Cung_Cap { get; set; }
         public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }
