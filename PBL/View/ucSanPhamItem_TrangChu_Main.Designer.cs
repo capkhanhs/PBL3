@@ -37,6 +37,8 @@
             this.btn_themvaogio = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_soluong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbox_sp)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +127,8 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lbl_soluong);
+            this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.btn_themvaogio);
             this.panel5.Controls.Add(this.label14);
@@ -139,6 +143,24 @@
             this.panel5.Size = new System.Drawing.Size(421, 499);
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(194, 461);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Số lượng:";
+            // 
+            // lbl_soluong
+            // 
+            this.lbl_soluong.AutoSize = true;
+            this.lbl_soluong.Location = new System.Drawing.Point(264, 461);
+            this.lbl_soluong.Name = "lbl_soluong";
+            this.lbl_soluong.Size = new System.Drawing.Size(44, 16);
+            this.lbl_soluong.TabIndex = 9;
+            this.lbl_soluong.Text = "label2";
             // 
             // ucSanPhamItem_TrangChu_Main
             // 
@@ -164,5 +186,7 @@
         private System.Windows.Forms.Button btn_themvaogio;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_soluong;
     }
 }

@@ -99,6 +99,7 @@
             this.CBB_QH.Size = new System.Drawing.Size(369, 33);
             this.CBB_QH.TabIndex = 5;
             this.CBB_QH.Text = "Quận/ Huyện";
+            this.CBB_QH.SelectedIndexChanged += new System.EventHandler(this.CBB_QH_SelectedIndexChanged);
             // 
             // CBB_PX
             // 
@@ -239,6 +240,7 @@
             this.CBB_TinhThanh.Size = new System.Drawing.Size(368, 33);
             this.CBB_TinhThanh.TabIndex = 4;
             this.CBB_TinhThanh.Text = "Tỉnh/ Thành phố";
+            this.CBB_TinhThanh.SelectedIndexChanged += new System.EventHandler(this.CBB_TinhThanh_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 

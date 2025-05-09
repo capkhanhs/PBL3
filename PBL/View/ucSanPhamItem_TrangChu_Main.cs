@@ -32,6 +32,7 @@ namespace PBL.View
                 lblTenSP.Text = sp.Ten_sp;
                 lblGiaSP.Text = sp.Gia_sp.ToString();
                 lbl_Mota.Text = sp.Mo_ta_sp;
+                lbl_soluong.Text = sp.So_luong.ToString();
                 string imagePath = Path.Combine(Application.StartupPath, "Resources", sp.PictureFileName);
                 ptbox_sp.SizeMode = PictureBoxSizeMode.StretchImage;
                 if (File.Exists(imagePath))
