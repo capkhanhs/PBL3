@@ -31,19 +31,36 @@ namespace PBL.BLL
                 return ChiTietDonHangDAL.GetAll();
         }
 
-        //Lấy danh sách chi tiết đơn hàng theo mã đơn hàng
+        //Lấy danh sách chi tiết đơn hàng theo mã đơn hàng và đã gom theo danh mục
         public List<Model.Chi_Tiet_Don_Hang> GetByMaDH(List<Don_Hang> dh)
         {
-            List<Model.Chi_Tiet_Don_Hang> list = new List<Model.Chi_Tiet_Don_Hang>();
-            foreach (var item in dh)
-            {
-                var list1 = ChiTietDonHangDAL.GetAll().Where(x => x.Ma_don_hang == item.Ma_don_hang).ToList();
-                if (list1.Count > 0)
+                List<Model.Chi_Tiet_Don_Hang> list_ctdh = new List<Model.Chi_Tiet_Don_Hang>();
+                foreach (var item in dh)
                 {
-                    list.AddRange(list1);
+                    var li = ChiTietDonHangDAL.GetAll().Where(x => x.Ma_don_hang == item.Ma_don_hang).ToList();
+                    if (li.Count > 0)
+                    {
+                        list_ctdh.AddRange(li);
+                    }
                 }
-            }
-            return list;
+
+                //List<San_Pham> listSP = new List<San_Pham>();   
+                //List<Danh_Muc> listDM = new List<Danh_Muc>();
+
+                var li_gr = list_ctdh.GroupBy(x => x.San_Pham.Danh_Muc.Ten_danh_muc)
+                .Select(g => new Chi_Tiet_Don_Hang()
+                {
+                    Ma_don_hang = g.FirstOrDefault().Ma_don_hang,
+                    Ma_san_pham = g.FirstOrDefault().Ma_san_pham,
+                    So_luong = g.Sum(x => x.So_luong),
+                    Gia_ban = g.FirstOrDefault().Gia_ban,
+                   
+                })
+                .ToList();
+
+        
+            return li_gr;
         }
+
     }
 }

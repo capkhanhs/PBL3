@@ -6,15 +6,15 @@
     <edmx:Diagrams>
       <Diagram DiagramId="36d4c6e3614e444c8dcb752b53e657de" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="PBL3_db_ef.CartItem" Width="1.5" PointX="10.25" PointY="11.25" />
-        <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Don_Hang" Width="1.5" PointX="5.875" PointY="4.625" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Don_Hang" Width="1.5" PointX="7.625" PointY="16" />
         <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="10.25" PointY="7.25" />
-        <EntityTypeShape EntityType="PBL3_db_ef.Danh_Muc" Width="1.5" PointX="0.5" PointY="16" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Danh_Muc" Width="1.5" PointX="0.875" PointY="16.25" />
         <EntityTypeShape EntityType="PBL3_db_ef.Don_Hang" Width="1.5" PointX="2.75" PointY="8.25" />
         <EntityTypeShape EntityType="PBL3_db_ef.Gio_hang" Width="1.5" PointX="8" PointY="10.375" />
         <EntityTypeShape EntityType="PBL3_db_ef.Kho_Hang" Width="1.5" PointX="2.75" PointY="12.625" />
         <EntityTypeShape EntityType="PBL3_db_ef.Nguoi_Dung" Width="1.5" PointX="1.25" PointY="4.75" />
         <EntityTypeShape EntityType="PBL3_db_ef.Phieu_Nhap_Kho" Width="1.5" PointX="8" PointY="7.375" />
-        <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="2.75" PointY="15.125" />
+        <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="2.875" PointY="15.375" />
         <EntityTypeShape EntityType="PBL3_db_ef.sysdiagram" Width="1.5" PointX="0.5" PointY="2.125" />
         <EntityTypeShape EntityType="PBL3_db_ef.Vai_Tro" Width="1.5" PointX="3.5" PointY="1.875" />
         <EntityTypeShape EntityType="PBL3_db_ef.Van_Chuyen" Width="1.5" PointX="5" PointY="12.75" />

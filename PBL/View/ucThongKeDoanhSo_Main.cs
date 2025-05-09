@@ -46,7 +46,7 @@ namespace PBL.View
 
                 data.Add(new
                 {
-                    SanPham = i.San_Pham.Mo_ta_sp,
+                    DanhMucSanPham = i.San_Pham.Ten_danh_muc,
                     DoanhSo = soLuong,
                     ChiPhi = giaBan,
                     LoiNhuan = loiNhuan
@@ -57,7 +57,7 @@ namespace PBL.View
             dataGridView1.Columns.Clear();
 
             // Thêm chỉ các cột bạn muốn
-            dataGridView1.Columns.Add("SanPham", "Sản phẩm");
+            dataGridView1.Columns.Add("DanhMucSanPham", "Danh Mục Sản phẩm");
             dataGridView1.Columns.Add("DoanhSo", "Doanh số");
             dataGridView1.Columns.Add("ChiPhi", "Chi phí");
             dataGridView1.Columns.Add("LoiNhuan", "Lợi nhuận");
@@ -68,7 +68,7 @@ namespace PBL.View
             // Thêm dữ liệu thủ công
             foreach (var item in data)
             {
-                dataGridView1.Rows.Add(item.SanPham, item.DoanhSo, item.ChiPhi, item.LoiNhuan);
+                dataGridView1.Rows.Add(item.DanhMucSanPham, item.DoanhSo, item.ChiPhi, item.LoiNhuan);
             }
         }
     }
