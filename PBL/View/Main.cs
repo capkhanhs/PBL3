@@ -71,7 +71,7 @@ namespace PBL.View
 
         private void btn_cn_Click(object sender, EventArgs e)
         {
-            LoadpnMain(new ucTrangCaNhan_Main());
+            LoadpnMain(new ucTrangCaNhan_Main(Manguoidung));
         }
     }
 }

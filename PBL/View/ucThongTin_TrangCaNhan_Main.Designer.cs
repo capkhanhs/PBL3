@@ -30,7 +30,7 @@
         {
             this.btn_EditTT = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
-            this.Txt_SN_TD = new System.Windows.Forms.TextBox();
+            this.txt_ChiTiet = new System.Windows.Forms.TextBox();
             this.CBB_QH = new System.Windows.Forms.ComboBox();
             this.CBB_PX = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -79,15 +79,16 @@
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "CẬP NHẬT";
             this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // Txt_SN_TD
+            // txt_ChiTiet
             // 
-            this.Txt_SN_TD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_SN_TD.Location = new System.Drawing.Point(377, 54);
-            this.Txt_SN_TD.Name = "Txt_SN_TD";
-            this.Txt_SN_TD.Size = new System.Drawing.Size(369, 30);
-            this.Txt_SN_TD.TabIndex = 3;
-            this.Txt_SN_TD.Text = "Số Nhà, Tên Đường*";
+            this.txt_ChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ChiTiet.Location = new System.Drawing.Point(377, 54);
+            this.txt_ChiTiet.Name = "txt_ChiTiet";
+            this.txt_ChiTiet.Size = new System.Drawing.Size(369, 30);
+            this.txt_ChiTiet.TabIndex = 3;
+            this.txt_ChiTiet.Text = "Chi tiết";
             // 
             // CBB_QH
             // 
@@ -214,7 +215,7 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.Txt_SN_TD, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.txt_ChiTiet, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.CBB_TinhThanh, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.CBB_QH, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.CBB_PX, 0, 1);
@@ -279,7 +280,7 @@
 
         private System.Windows.Forms.Button btn_EditTT;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.TextBox Txt_SN_TD;
+        private System.Windows.Forms.TextBox txt_ChiTiet;
         private System.Windows.Forms.ComboBox CBB_QH;
         private System.Windows.Forms.ComboBox CBB_PX;
         private System.Windows.Forms.Label label5;

@@ -24,26 +24,34 @@ namespace PBL.BLL
             }
         }
 
+        //Hàm đăng nhập
         public bool Dang_nhap(string username, string password)
         {
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            try
             {
-                throw new ArgumentException("Username and password cannot be empty.");
-            }
-            bool isValid = false;
-            var user = usDAL.GetById(username);
-            if (user != null) 
-            {
-                if (user.password == password)
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    isValid = true;
+                    throw new ArgumentException("Username and password cannot be empty.");
                 }
+                bool isValid = false;
+                var user = usDAL.GetById(username);
+                if (user != null)
+                {
+                    if (user.password == password)
+                    {
+                        isValid = true;
+                    }
+                }
+                if (!isValid)
+                {
+                    throw new UnauthorizedAccessException("Invalid username or password.");
+                }
+                return isValid;
             }
-            if (!isValid)
+            catch (Exception ex)
             {
-                throw new UnauthorizedAccessException("Invalid username or password.");
+                throw new Exception("Login failed: " + ex.Message);
             }
-            return isValid;
         }
         public string GetMaNguoiDung(string username)
         {
@@ -75,7 +83,6 @@ namespace PBL.BLL
                 password = password,
                 Ma_vai_tro = mavaitro,
                 Gioi_tinh = gioitinh,
-                Sdt = sdt,
                 Ho_va_ten = HovaTen
             };
             usDAL.Add(newUser);
