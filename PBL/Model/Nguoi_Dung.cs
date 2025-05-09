@@ -25,7 +25,6 @@ namespace PBL.Model
     
         public string Ma_nguoi_dung { get; set; }
         public string Ho_va_ten { get; set; }
-        public string Sdt { get; set; }
         public string Ma_vai_tro { get; set; }
         public string password { get; set; }
         public bool Gioi_tinh { get; set; }

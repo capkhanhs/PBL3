@@ -109,9 +109,6 @@
     <Compile Include="Model\Nguoi_Dung.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Nha_Cung_Cap.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\PBL3_db_ef.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +129,9 @@
     </Compile>
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\San_Pham.cs">
+      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Vai_Tro.cs">

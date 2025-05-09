@@ -14,7 +14,6 @@ namespace PBL.Model
     
     public partial class Chi_Tiet_Don_Hang
     {
-        public string Ma_ctdt { get; set; }
         public string Ma_don_hang { get; set; }
         public string Ma_san_pham { get; set; }
         public Nullable<int> So_luong { get; set; }
