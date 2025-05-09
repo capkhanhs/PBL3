@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="36d4c6e3614e444c8dcb752b53e657de" Name="Diagram1">
+      <Diagram DiagramId="36d4c6e3614e444c8dcb752b53e657de" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="PBL3_db_ef.CartItem" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Don_Hang" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="10.5" PointY="9.625" IsExpanded="true" />
