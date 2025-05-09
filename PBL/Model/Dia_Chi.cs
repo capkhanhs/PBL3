@@ -19,7 +19,7 @@ namespace PBL.Model
         {
             this.Don_Hang = new HashSet<Don_Hang>();
             this.Kho_Hang = new HashSet<Kho_Hang>();
-            this.Nguoi_Dung = new HashSet<Nguoi_Dung>();
+            this.nguoiDung_diaChi = new HashSet<nguoiDung_diaChi>();
         }
     
         public string Ma_dia_chi { get; set; }
@@ -33,6 +33,6 @@ namespace PBL.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kho_Hang> Kho_Hang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Nguoi_Dung> Nguoi_Dung { get; set; }
+        public virtual ICollection<nguoiDung_diaChi> nguoiDung_diaChi { get; set; }
     }
 }

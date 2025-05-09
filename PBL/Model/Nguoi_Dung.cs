@@ -20,7 +20,7 @@ namespace PBL.Model
             this.Don_Hang = new HashSet<Don_Hang>();
             this.Gio_hang = new HashSet<Gio_hang>();
             this.Phieu_Nhap_Kho = new HashSet<Phieu_Nhap_Kho>();
-            this.Dia_Chi = new HashSet<Dia_Chi>();
+            this.nguoiDung_diaChi = new HashSet<nguoiDung_diaChi>();
         }
     
         public string Ma_nguoi_dung { get; set; }
@@ -37,6 +37,6 @@ namespace PBL.Model
         public virtual ICollection<Phieu_Nhap_Kho> Phieu_Nhap_Kho { get; set; }
         public virtual Vai_Tro Vai_Tro { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dia_Chi> Dia_Chi { get; set; }
+        public virtual ICollection<nguoiDung_diaChi> nguoiDung_diaChi { get; set; }
     }
 }
