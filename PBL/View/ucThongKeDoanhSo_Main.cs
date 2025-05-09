@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL.BLL;
 using PBL.Model;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace PBL.View
 {
@@ -22,7 +23,7 @@ namespace PBL.View
         private void chart1_Click(object sender, EventArgs e)
         {
 
-        }
+        }   
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
@@ -31,24 +32,46 @@ namespace PBL.View
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DateTime dt_bd = dateTimePicker1.Value;
+            DateTime dt_kt = dateTimePicker2.Value;
+
+            int tongLoiNhuan = 0;
+            int soDonHang = 0;
+            int tongDanhSo = 0;
+
+            if(dt_bd > dt_kt)
+            {
+                MessageBox.Show(
+                    "Ngày bắt đầu không được lớn hơn ngày kết thúc",
+                    "Thông Báo Lỗi!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+                return;
+            }    
+
             List<Don_Hang> donHang = PBL.BLL.DonHangBLL.Instance.Get_DH_ThanhCong();
-            List<Chi_Tiet_Don_Hang> chiTietDonHang = PBL.BLL.ChiTietDonHangBLL.Instance.GetByMaDH(donHang);
+            List<San_Pham> sanPham = PBL.BLL.ChiTietDonHangBLL.Instance.GetByMaDH(donHang,dt_bd, dt_kt);
 
             List<dynamic> data = new List<dynamic>();
-            foreach (var i in chiTietDonHang)
+            foreach (var i in sanPham)
             {
                 
-                int giaBan = Convert.ToInt32(i.Gia_ban);
+                int giaBan = Convert.ToInt32(i.Gia_sp);
                 int soLuong = i.So_luong ?? 0;
 
                 // Calculate LoiNhuan
-                var loiNhuan = giaBan * soLuong * 0.1m;
+                int loiNhuan = Convert.ToInt32(giaBan * soLuong * 0.1m);
+
+                tongLoiNhuan += loiNhuan;
+                soDonHang += 1;
+                tongDanhSo += soLuong;
 
                 data.Add(new
                 {
-                    DanhMucSanPham = i.San_Pham.Ten_danh_muc,
+                    SanPham = i.Ten_sp,
                     DoanhSo = soLuong,
-                    ChiPhi = giaBan,
+                    GiaBan = giaBan,
                     LoiNhuan = loiNhuan
                 });
             }
@@ -57,9 +80,9 @@ namespace PBL.View
             dataGridView1.Columns.Clear();
 
             // Thêm chỉ các cột bạn muốn
-            dataGridView1.Columns.Add("DanhMucSanPham", "Danh Mục Sản phẩm");
+            dataGridView1.Columns.Add("SanPham", "Sản phẩm");
             dataGridView1.Columns.Add("DoanhSo", "Doanh số");
-            dataGridView1.Columns.Add("ChiPhi", "Chi phí");
+            dataGridView1.Columns.Add("GiaBan", "Giá bán lẻ");
             dataGridView1.Columns.Add("LoiNhuan", "Lợi nhuận");
 
             // Xóa các hàng
@@ -68,8 +91,11 @@ namespace PBL.View
             // Thêm dữ liệu thủ công
             foreach (var item in data)
             {
-                dataGridView1.Rows.Add(item.DanhMucSanPham, item.DoanhSo, item.ChiPhi, item.LoiNhuan);
+                dataGridView1.Rows.Add(item.SanPham, item.DoanhSo, item.GiaBan, item.LoiNhuan);
             }
+
+
+            
         }
     }
 }

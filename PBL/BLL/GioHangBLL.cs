@@ -29,7 +29,7 @@ namespace PBL.BLL
             {
                 try
                 {
-                    var sanpham = SanphamBLL.Instance().GetAll().FirstOrDefault(x => x.Ma_san_pham == item.Ma_san_pham);
+                    var sanpham = SanphamBLL.Instance.GetAll().FirstOrDefault(x => x.Ma_san_pham == item.Ma_san_pham);
                     if (sanpham != null)
                     {
                         total += (long)(item.Quantity * int.Parse(sanpham.Gia_sp));

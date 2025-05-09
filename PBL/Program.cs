@@ -13,12 +13,12 @@ namespace PBL.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Login login = new Login();
-            //if (login.ShowDialog() == DialogResult.OK)
-            //{
-            //    Application.Run(new Main(login.Username));
-            //}
-            Application.Run(new TestTK());
+            Login login = new Login();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Main(login.Username));
+            }
+            //Application.Run(new TestTK());
         }
     }
 }

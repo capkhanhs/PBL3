@@ -26,7 +26,7 @@ namespace PBL.View
 
         public void LoadSP()
         {
-            var sp = SanphamBLL.Instance().GetAll().FirstOrDefault(x => x.Ma_san_pham == msp);
+            var sp = SanphamBLL.Instance.GetAll().FirstOrDefault(x => x.Ma_san_pham == msp);
             if (sp != null)
             {
                 lblTenSP.Text = sp.Ten_sp;
