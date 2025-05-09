@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -168,6 +169,30 @@
     <Compile Include="View\ucGioHangItem_GioHang_Main.Designer.cs">
       <DependentUpon>ucGioHangItem_GioHang_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucHoaDon.Designer.cs">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucQuanLyNhapXuatKho_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucQuanLyNhapXuatKho_Main.Designer.cs">
+      <DependentUpon>ucQuanLyNhapXuatKho_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucQuanLyVanChuyen_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucQuanLyVanChuyen_Main.Designer.cs">
+      <DependentUpon>ucQuanLyVanChuyen_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucThongKeDoanhSo_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucThongKeDoanhSo_Main.Designer.cs">
+      <DependentUpon>ucThongKeDoanhSo_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucThongTin_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -220,6 +245,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucGioHangItem_GioHang_Main.resx">
       <DependentUpon>ucGioHangItem_GioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucHoaDon.resx">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucQuanLyNhapXuatKho_Main.resx">
+      <DependentUpon>ucQuanLyNhapXuatKho_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucQuanLyVanChuyen_Main.resx">
+      <DependentUpon>ucQuanLyVanChuyen_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucThongKeDoanhSo_Main.resx">
+      <DependentUpon>ucThongKeDoanhSo_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucThongTin_TrangCaNhan_Main.resx">
       <DependentUpon>ucThongTin_TrangCaNhan_Main.cs</DependentUpon>
