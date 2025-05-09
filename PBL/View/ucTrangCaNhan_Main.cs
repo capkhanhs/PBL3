@@ -12,9 +12,11 @@ namespace PBL.View
 {
     public partial class ucTrangCaNhan_Main : UserControl
     {
-        public ucTrangCaNhan_Main()
+        private string manguoidung;
+        public ucTrangCaNhan_Main(string manguoidung)
         {
             InitializeComponent();
+            this.manguoidung = manguoidung;
             Load_Page(new ucDonHangDaMua_TrangCaNhan_Main());
         }
 
@@ -32,7 +34,7 @@ namespace PBL.View
 
         private void btn_TT_DC_Click(object sender, EventArgs e)
         {
-            Load_Page(new ucThongTin_TrangCaNhan_Main());
+            Load_Page(new ucThongTin_TrangCaNhan_Main(manguoidung));
         }
     }
 }

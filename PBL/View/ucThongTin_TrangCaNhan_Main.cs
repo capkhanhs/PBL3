@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using PBL.BLL;
 using PBL.Model;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -19,7 +20,7 @@ namespace PBL.View
         Dictionary<string, Province> provinces;
         Dictionary<string, District> districts;
         Dictionary<string, Ward> wards;
-        public ucThongTin_TrangCaNhan_Main()
+        public ucThongTin_TrangCaNhan_Main(string manguoidung)
         {
             InitializeComponent();
             LoadAllData();
@@ -76,6 +77,17 @@ namespace PBL.View
             CBB_PX.DataSource = filteredWards;
             CBB_PX.DisplayMember = "name";
             CBB_PX.ValueMember = "code";
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            Dia_Chi dia_Chi = new Dia_Chi();
+            dia_Chi.Tinh_ThanhPho = ((Province)CBB_PX.SelectedItem).name;
+            dia_Chi.Quan_Huyen = ((District)CBB_QH.SelectedItem).name;
+            dia_Chi.Xa_Phuong = ((Ward)CBB_PX.SelectedItem).name;
+            dia_Chi.Chi_tiet = txt_ChiTiet.Text;
+            DiaChiBLL.Instance.Add(dia_Chi);
+
         }
     }
 }

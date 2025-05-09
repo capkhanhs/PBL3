@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="36d4c6e3614e444c8dcb752b53e657de" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="PBL3_db_ef.CartItem" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Don_Hang" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="10.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Danh_Muc" Width="1.5" PointX="0.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Dia_Chi" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Don_Hang" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Gio_hang" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Kho_Hang" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Nguoi_Dung" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Phieu_Nhap_Kho" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.sysdiagram" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Vai_Tro" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Van_Chuyen" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_gi__42E1EEFE" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_sa__43D61337" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_do__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_sa__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_ph__0C85DE4D" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_sa__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__San_Pham__Ten_da__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Don_Hang__Ma_dia__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Kho_Hang__Ma_dia__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Don_Hang__Ma_ngu__7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Gio_hang__Ma_ngu__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Phieu_Nha__Ma_ng__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.FK_NguoiDung_VaiTro" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL3_db_ef.nguoiDung_diaChi" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

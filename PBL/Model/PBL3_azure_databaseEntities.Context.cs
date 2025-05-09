@@ -13,10 +13,10 @@ namespace PBL.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PBL3_azure_databaseEntities : DbContext
+    public partial class PBL3_azure_databaseEntities2 : DbContext
     {
-        public PBL3_azure_databaseEntities()
-            : base("name=PBL3_azure_databaseEntities")
+        public PBL3_azure_databaseEntities2()
+            : base("name=PBL3_azure_databaseEntities2")
         {
         }
     

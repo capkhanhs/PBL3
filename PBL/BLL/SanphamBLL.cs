@@ -91,7 +91,6 @@ namespace PBL.BLL
                 San_Pham sp = new San_Pham();
                 sp.Ma_san_pham = masp;
                 sp.Ten_sp = tensp;
-                sp.Ma_ncc = mancc;
                 sp.Ten_danh_muc = tenDM;
                 sp.Gia_sp = giaSP;
                 sp.Mo_ta_sp = Mo_ta_sp;

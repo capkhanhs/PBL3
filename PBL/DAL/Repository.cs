@@ -11,11 +11,11 @@ namespace PBL.DAL
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected readonly PBL3_azure_databaseEntities context;
+        protected readonly PBL3_azure_databaseEntities2 context;
         protected readonly DbSet<T> dbSet;
         public Repository()
         {
-            context = new PBL3_azure_databaseEntities();
+            context = new PBL3_azure_databaseEntities2();
             dbSet = context.Set<T>();
         }
         //Lấy tất cả dữ liệu theo kiểu T

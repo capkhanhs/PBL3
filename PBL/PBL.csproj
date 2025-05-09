@@ -81,64 +81,67 @@
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DAL\VaitroDAL.cs" />
     <Compile Include="Model\CartItem.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Chi_Tiet_Don_Hang.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Chi_Tiet_Phieu_Nhap.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Danh_Muc.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Dia_Chi.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\District.cs" />
     <Compile Include="Model\Don_Hang.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Gio_hang.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Kho_Hang.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\MyDbConfiguration.cs" />
     <Compile Include="Model\Nguoi_Dung.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PBL3_db_ef.Context.cs">
+    <Compile Include="Model\PBL3_azure_databaseEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PBL3_db_ef.Context.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PBL3_db_ef.cs">
+    <Compile Include="Model\PBL3_azure_databaseEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\PBL3_db_ef.Designer.cs">
+    <Compile Include="Model\PBL3_azure_databaseEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Phieu_Nhap_Kho.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\San_Pham.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagram.cs">
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>PBL3_db_ef.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Vai_Tro.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Van_Chuyen.cs">
-      <DependentUpon>PBL3_db_ef.tt</DependentUpon>
+      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ward.cs" />
     <Compile Include="View\Login.cs">
@@ -161,9 +164,7 @@
     <Compile Include="View\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\testdbform.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="View\testdbform.cs" />
     <Compile Include="View\testdbform.Designer.cs">
       <DependentUpon>testdbform.cs</DependentUpon>
     </Compile>
@@ -298,12 +299,12 @@
     <EmbeddedResource Include="View\ucSanPhamItem_TrangChu_Main.resx">
       <DependentUpon>ucSanPhamItem_TrangChu_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\PBL3_db_ef.edmx">
+    <EntityDeploy Include="Model\PBL3_azure_databaseEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PBL3_db_ef.Designer.cs</LastGenOutput>
+      <LastGenOutput>PBL3_azure_databaseEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\PBL3_db_ef.edmx.diagram">
-      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
+    <None Include="Model\PBL3_azure_databaseEntities.edmx.diagram">
+      <DependentUpon>PBL3_azure_databaseEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -320,6 +321,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="Model\PBL3_azure_databaseEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PBL3_azure_databaseEntities.edmx</DependentUpon>
+      <LastGenOutput>PBL3_azure_databaseEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\PBL3_azure_databaseEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PBL3_azure_databaseEntities.edmx</DependentUpon>
+      <LastGenOutput>PBL3_azure_databaseEntities.cs</LastGenOutput>
+    </Content>
     <Content Include="tinh_tp.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -454,16 +465,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\PBL3_db_ef.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
-      <LastGenOutput>PBL3_db_ef.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\PBL3_db_ef.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PBL3_db_ef.edmx</DependentUpon>
-      <LastGenOutput>PBL3_db_ef.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\laptopnitrotest.png" />
     <None Include="Resources\laptopmsi.png" />
     <None Include="Resources\laptoploq.png" />
