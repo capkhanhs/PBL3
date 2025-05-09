@@ -18,13 +18,12 @@ namespace PBL.Model
         public San_Pham()
         {
             this.CartItems = new HashSet<CartItem>();
-            this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
             this.Chi_Tiet_Phieu_Nhap = new HashSet<Chi_Tiet_Phieu_Nhap>();
+            this.Chi_Tiet_Don_Hang = new HashSet<Chi_Tiet_Don_Hang>();
         }
     
         public string Ma_san_pham { get; set; }
         public string Ten_danh_muc { get; set; }
-        public string Ma_ncc { get; set; }
         public string Ten_sp { get; set; }
         public string Gia_sp { get; set; }
         public string Mo_ta_sp { get; set; }
@@ -35,10 +34,9 @@ namespace PBL.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CartItem> CartItems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
         public virtual Danh_Muc Danh_Muc { get; set; }
-        public virtual Nha_Cung_Cap Nha_Cung_Cap { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }
     }
 }

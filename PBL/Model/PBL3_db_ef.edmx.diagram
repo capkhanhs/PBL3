@@ -4,39 +4,38 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="81e45b4de2ec4a738397df36c971c218" Name="Diagram1" ZoomLevel="109">
-        <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Don_Hang" Width="1.5" PointX="10.5" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="10.5" PointY="18.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Danh_Muc" Width="1.5" PointX="6" PointY="22.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Dia_Chi" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Don_Hang" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Kho_Hang" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Nha_Cung_Cap" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Phieu_Nhap_Kho" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Vai_Tro" Width="1.5" PointX="6.75" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PBL3_Model.Van_Chuyen" Width="1.5" PointX="7.5" PointY="12.75" IsExpanded="true" />
-        <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_do__02084FDA" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_ph__0C85DE4D" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_Model.FK__Don_Hang__Ma_dia__7F2BE32F" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_Model.FK__Kho_Hang__Ma_dia__778AC167" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_Model.FK__Nha_Cung___Ma_di__71D1E811" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_Model.FK__Van_Chuye__Ma_do__05D8E0BE" ManuallyRouted="false" />
-        <AssociationConnector Association="PBL3_Model.FK__Phieu_Nha__Ma_nc__08B54D69" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="PBL3_Model.CartItem" Width="1.5" PointX="10.875" PointY="10.625" />
-        <EntityTypeShape EntityType="PBL3_Model.Gio_hang" Width="1.5" PointX="5.625" PointY="6" />
+      <Diagram DiagramId="81e45b4de2ec4a738397df36c971c218" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="PBL3_Model.CartItem" Width="1.5" PointX="7.5" PointY="2.5" />
+        <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="7.5" PointY="9" />
+        <EntityTypeShape EntityType="PBL3_Model.Danh_Muc" Width="1.5" PointX="10.375" PointY="12.875" />
+        <EntityTypeShape EntityType="PBL3_Model.Don_Hang" Width="1.5" PointX="11.5" PointY="6.25" />
+        <EntityTypeShape EntityType="PBL3_Model.Gio_hang" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="PBL3_Model.Kho_Hang" Width="1.5" PointX="3" PointY="13.25" />
+        <EntityTypeShape EntityType="PBL3_Model.Phieu_Nhap_Kho" Width="1.5" PointX="5.25" PointY="9.125" />
+        <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PBL3_Model.Vai_Tro" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="PBL3_Model.Van_Chuyen" Width="1.5" PointX="7.5" PointY="5.75" />
         <AssociationConnector Association="PBL3_Model.FK__CartItems__Ma_gi__42E1EEFE" />
-        <EntityTypeShape EntityType="PBL3_Model.Nguoi_Dung" Width="1.5" PointX="13" PointY="13.5" />
+        <AssociationConnector Association="PBL3_Model.FK__CartItems__Ma_sa__43D61337" />
+        <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_ph__0C85DE4D" />
+        <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__0D7A0286" />
+        <AssociationConnector Association="PBL3_Model.FK__San_Pham__Ten_da__7A672E12" />
+        <AssociationConnector Association="PBL3_Model.FK__Van_Chuye__Ma_do__05D8E0BE" />
+        <EntityTypeShape EntityType="PBL3_Model.Dia_Chi" Width="1.5" PointX="0.875" PointY="8.25" />
+        <AssociationConnector Association="PBL3_Model.FK__Don_Hang__Ma_dia__7F2BE32F" />
+        <AssociationConnector Association="PBL3_Model.FK__Kho_Hang__Ma_dia__778AC167" />
+        <EntityTypeShape EntityType="PBL3_Model.Nguoi_Dung" Width="1.5" PointX="3.125" PointY="0.75" />
         <AssociationConnector Association="PBL3_Model.FK__Don_Hang__Ma_ngu__7E37BEF6" />
         <AssociationConnector Association="PBL3_Model.FK__Gio_hang__Ma_ngu__3F115E1A" />
         <AssociationConnector Association="PBL3_Model.FK__Phieu_Nha__Ma_ng__09A971A2" />
         <AssociationConnector Association="PBL3_Model.FK_NguoiDung_VaiTro" />
         <AssociationConnector Association="PBL3_Model.nguoiDung_diaChi" />
+        <EntityTypeShape EntityType="PBL3_Model.sysdiagram" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PBL3_Model.Chi_Tiet_Don_Hang" Width="1.5" PointX="17" PointY="7.5" />
+        <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_do__02084FDA" />
         <EntityTypeShape EntityType="PBL3_Model.San_Pham" Width="1.5" PointX="8.25" PointY="19.375" />
         <AssociationConnector Association="PBL3_Model.FK__CartItems__Ma_sa__43D61337" />
         <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__02FC7413" />
-        <AssociationConnector Association="PBL3_Model.FK__Chi_Tiet___Ma_sa__0D7A0286" />
-        <AssociationConnector Association="PBL3_Model.FK__San_Pham__Ten_da__7A672E12" />
-        <AssociationConnector Association="PBL3_Model.FK__San_Pham__Ma_ncc__7B5B524B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
