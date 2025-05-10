@@ -32,8 +32,8 @@ namespace PBL.BLL
                 return ChiTietDonHangDAL.GetAll();
         }
 
-        //Lấy danh sách chi tiết đơn hàng theo mã đơn hàng và đã gom theo danh mục
-        public List<Model.San_Pham> GetByMaDH(List<Don_Hang> dh, DateTime start, DateTime end)
+        //Lấy danh sách chi tiết đơn hàng theo mã đơn hàng và đã gom theo ma SanPham
+        public List<Model.San_Pham> GetSP_grByMaDH(List<Don_Hang> dh, DateTime start, DateTime end)
         {
                 List<Model.Chi_Tiet_Don_Hang> list_ctdh = new List<Model.Chi_Tiet_Don_Hang>();
                 foreach (var item in dh)
@@ -70,5 +70,61 @@ namespace PBL.BLL
             return li_sp;
         }
 
+        //Lấy danh sách chi tiết đơn hàng theo mã đơn hàng và đã gom theo danh mục
+        public Dictionary<int, List<Model.San_Pham>> GetSP_grByDanhMuc(List<Don_Hang> dh, int year)
+        {
+            Dictionary<int, List<Model.San_Pham>> result = new Dictionary<int, List<Model.San_Pham>>();
+            // key: tháng, value: danh sách sản phẩm
+
+            for (int month = 1; month <= 12; month++)
+            {
+                DateTime start = new DateTime(year, month, 1);
+                DateTime end = new DateTime(year, month, DateTime.DaysInMonth(year, month)); // Ngày cuối cùng của tháng
+
+                List<Model.Chi_Tiet_Don_Hang> list_ctdh = new List<Model.Chi_Tiet_Don_Hang>();
+
+                //lọc đơn hàng trong các tháng
+                foreach (var i in dh)
+                {
+                    if (i.Ngay_dat_hang >= start && i.Ngay_dat_hang <= end)
+                    {
+                        var li = ChiTietDonHangDAL.GetAll().Where(x => x.Ma_don_hang == i.Ma_don_hang).ToList();
+                        if (li.Count > 0)
+                        {
+                            list_ctdh.AddRange(li);
+                        }
+                    }
+                }
+
+                //Nhóm lại theo danh mục cho tháng đó
+                List<San_Pham> li_sp = list_ctdh.GroupBy(x => x.San_Pham.Ten_danh_muc).Select(g =>
+                {
+                    var first = g.First(); // lấy sản phẩm đầu tiên của nhóm
+                    return new San_Pham
+                    {
+                        Ma_san_pham = first.San_Pham.Ma_san_pham,
+                        Ten_danh_muc = first.San_Pham.Ten_danh_muc,
+                        Ten_sp = first.San_Pham.Ten_sp, // Tên theo danh mục
+                        Gia_sp = g.Sum(x => Convert.ToInt32(x.Gia_ban) * x.So_luong).ToString(),
+                        Mo_ta_sp = first.San_Pham.Mo_ta_sp,
+                        Chi_tiet_san_pham = first.San_Pham.Chi_tiet_san_pham,
+                        So_luong = g.Sum(x => x.So_luong),
+                        PictureFileName = first.San_Pham.PictureFileName
+                    };
+                }).ToList();
+
+                //Thêm vào dictionary
+                result.Add(month, li_sp);
+
+                //In test
+                foreach (var item in li_sp)
+                {
+                    Console.WriteLine(item.Ten_danh_muc + " - " + item.Gia_sp);
+                }
+            } 
+
+            return result;
+
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace PBL.View
+﻿using System;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace PBL.View
 {
     partial class ucThongKeDoanhSo_Main
     {
@@ -38,6 +41,10 @@
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -56,10 +63,6 @@
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -97,6 +100,30 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1317, 228);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Sản phẩm";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Doanh số";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Giá bán lẻ";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Lợi nhuận";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
             // 
             // panel6
             // 
@@ -263,16 +290,16 @@
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Điện Thoại";
+            series1.Name = "Điện thoại";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Laptop";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
-            series3.Name = "Máy Tính Bảng";
+            series3.Name = "Máy tính bảng";
             series4.ChartArea = "ChartArea1";
             series4.Legend = "Legend1";
-            series4.Name = "Tai Nghe";
+            series4.Name = "Tai nghe";
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
             series5.Name = "SmartWatch";
@@ -285,7 +312,7 @@
             this.chart.TabIndex = 2;
             this.chart.Text = "chart";
             title1.Name = "Title";
-            title1.Text = "Biểu Đồ Thống Kê Năm 2025";
+            title1.Text = "Biểu Đồ Thống Kê Năm Nay";
             this.chart.Titles.Add(title1);
             // 
             // panel4
@@ -306,30 +333,6 @@
             this.label1.Size = new System.Drawing.Size(209, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông kê doanh số";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Sản phẩm";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Doanh số";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Giá bán lẻ";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Lợi nhuận";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
             // 
             // ucThongKeDoanhSo_Main
             // 
