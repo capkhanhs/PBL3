@@ -12,13 +12,16 @@ namespace PBL.BLL
     {
         SanPhamDAL spDAL = new SanPhamDAL();
         private static SanphamBLL _Instance;
-        public static SanphamBLL Instance()
+        public static SanphamBLL Instance
         {
-            if (_Instance == null)
+            get
             {
-                _Instance = new SanphamBLL();
+                if (_Instance == null)
+                {
+                    _Instance = new SanphamBLL();
+                }
+                return _Instance;
             }
-            return _Instance;
         }
         public List<San_Pham> GetAll()
         {
@@ -103,6 +106,29 @@ namespace PBL.BLL
             {
                 throw new Exception("Mã sản phẩm đã tồn tại");
             }
+        }
+
+        //Hàm nhận vào 1 List sản phẩm và đưa ra tên sản phẩm bán chạy nhất -> sử dụng bên thống kê
+        public string GetSPBanChay(List<San_Pham> list)
+        {
+            if (list == null || list.Count == 0)
+            {
+                return "";
+            }
+            try
+            {
+                //Sx ds theo số lượng giảm dần, lấy sản phẩm đầu tiên
+                var spBanChay = list.OrderByDescending(x => x.So_luong).FirstOrDefault();
+                if (spBanChay != null && !string.IsNullOrWhiteSpace(spBanChay.Ten_sp))
+                {
+                    return spBanChay.Ten_sp;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi lấy sản phẩm bán chạy: " + ex.Message);
+            }
+            return "";
         }
     }
 }

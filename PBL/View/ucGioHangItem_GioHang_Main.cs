@@ -25,7 +25,7 @@ namespace PBL.View
 
         public void LoadData()
         {
-            var sp = SanphamBLL.Instance().Find(cartitem.Ma_san_pham);
+            var sp = SanphamBLL.Instance.Find(masanpham);
             if (sp != null)
             {
                 lblTenSanPham.Text = sp.Ten_sp;
