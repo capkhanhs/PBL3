@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="PBL3_db_ef.Don_Hang" Width="1.5" PointX="11.875" PointY="13.75" />
         <EntityTypeShape EntityType="PBL3_db_ef.Gio_hang" Width="1.5" PointX="8" PointY="10.375" />
         <EntityTypeShape EntityType="PBL3_db_ef.Kho_Hang" Width="1.5" PointX="2.75" PointY="12.625" />
-        <EntityTypeShape EntityType="PBL3_db_ef.Nguoi_Dung" Width="1.5" PointX="1.25" PointY="4.75" />
         <EntityTypeShape EntityType="PBL3_db_ef.Phieu_Nhap_Kho" Width="1.5" PointX="8" PointY="7.375" />
         <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="2.875" PointY="15.375" />
         <EntityTypeShape EntityType="PBL3_db_ef.sysdiagram" Width="1.5" PointX="0.5" PointY="2.125" />
@@ -25,17 +24,14 @@
         <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_ph__0C85DE4D" />
         <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_sa__0D7A0286" />
         <AssociationConnector Association="PBL3_db_ef.FK__San_Pham__Ten_da__7A672E12" />
-        <AssociationConnector Association="PBL3_db_ef.FK__Don_Hang__Ma_ngu__7E37BEF6" />
         <AssociationConnector Association="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" />
-        <AssociationConnector Association="PBL3_db_ef.FK__Gio_hang__Ma_ngu__3F115E1A" />
-        <AssociationConnector Association="PBL3_db_ef.FK__Phieu_Nha__Ma_ng__09A971A2" />
-        <AssociationConnector Association="PBL3_db_ef.FK_NguoiDung_VaiTro" />
         <EntityTypeShape EntityType="PBL3_db_ef.Dia_Chi" Width="1.5" PointX="0.75" PointY="10" />
         <EntityTypeShape EntityType="PBL3_db_ef.nguoiDung_diaChi" Width="1.5" PointX="5.75" PointY="8.625" />
         <AssociationConnector Association="PBL3_db_ef.FK__Don_Hang__Ma_dia__7F2BE32F" />
         <AssociationConnector Association="PBL3_db_ef.FK__Kho_Hang__Ma_dia__778AC167" />
         <AssociationConnector Association="PBL3_db_ef.FK__nguoiDung__Ma_di__114A936A" />
-        <AssociationConnector Association="PBL3_db_ef.FK__nguoiDung__Ma_ng__10566F31" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Nguoi_Dung" Width="1.5" PointX="5.75" PointY="1.625" />
+        <AssociationConnector Association="PBL3_db_ef.FK_NguoiDung_VaiTro" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

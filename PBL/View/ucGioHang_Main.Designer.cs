@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lbl_diachinhanhang = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.pnMainGioHang = new System.Windows.Forms.FlowLayoutPanel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_diachinhanhang
@@ -59,11 +55,6 @@
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // pnMainGioHang
             // 
             this.pnMainGioHang.AutoScroll = true;
@@ -72,12 +63,6 @@
             this.pnMainGioHang.Name = "pnMainGioHang";
             this.pnMainGioHang.Size = new System.Drawing.Size(1383, 572);
             this.pnMainGioHang.TabIndex = 2;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // ucGioHang_Main
             // 
@@ -89,7 +74,6 @@
             this.Size = new System.Drawing.Size(1389, 631);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,8 +82,6 @@
 
         private System.Windows.Forms.Label lbl_diachinhanhang;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.FlowLayoutPanel pnMainGioHang;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

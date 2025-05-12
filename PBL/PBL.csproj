@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -149,6 +152,18 @@
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ward.cs" />
+    <Compile Include="View\CapNhatDiaChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CapNhatDiaChi.Designer.cs">
+      <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DatHang.Designer.cs">
+      <DependentUpon>DatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,11 +190,29 @@
     <Compile Include="View\TestTK.Designer.cs">
       <DependentUpon>TestTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucCapNhatDiaChi_TrangCaNhan_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCapNhatDiaChi_TrangCaNhan_Main.Designer.cs">
+      <DependentUpon>ucCapNhatDiaChi_TrangCaNhan_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucDatHang_GioHang_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucDatHang_GioHang_Main.Designer.cs">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTinhtong_GioHang_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTinhtong_GioHang_Main.Designer.cs">
+      <DependentUpon>ucTinhtong_GioHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucDiaChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucDiaChi.Designer.cs">
+      <DependentUpon>ucDiaChi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucDonHangDaMua_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
@@ -247,6 +280,12 @@
     <Compile Include="View\ucSanPhamItem_TrangChu_Main.Designer.cs">
       <DependentUpon>ucSanPhamItem_TrangChu_Main.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CapNhatDiaChi.resx">
+      <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DatHang.resx">
+      <DependentUpon>DatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,8 +300,17 @@
     <EmbeddedResource Include="View\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCapNhatDiaChi_TrangCaNhan_Main.resx">
+      <DependentUpon>ucCapNhatDiaChi_TrangCaNhan_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTinhtong_GioHang_Main.resx">
+      <DependentUpon>ucTinhtong_GioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucDiaChi.resx">
+      <DependentUpon>ucDiaChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDonHangDaMua_TrangCaNhan_Main.resx">
       <DependentUpon>ucDonHangDaMua_TrangCaNhan_Main.cs</DependentUpon>

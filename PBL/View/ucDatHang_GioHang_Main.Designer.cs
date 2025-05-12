@@ -28,155 +28,286 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_gia = new System.Windows.Forms.Label();
-            this.lbl_phivc = new System.Windows.Forms.Label();
-            this.lbl_giamgia = new System.Windows.Forms.Label();
+            this.flpnmain = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cbbDiaChi = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbl_tong = new System.Windows.Forms.Label();
-            this.btn_thanhtoan = new System.Windows.Forms.Button();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdbThanhtoanonline = new System.Windows.Forms.RadioButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.flpnmain.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // flpnmain
+            // 
+            this.flpnmain.BackColor = System.Drawing.Color.White;
+            this.flpnmain.Controls.Add(this.panel1);
+            this.flpnmain.Controls.Add(this.panel2);
+            this.flpnmain.Controls.Add(this.panel3);
+            this.flpnmain.Controls.Add(this.panel4);
+            this.flpnmain.Controls.Add(this.flowLayoutPanel2);
+            this.flpnmain.Controls.Add(this.panel5);
+            this.flpnmain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpnmain.Location = new System.Drawing.Point(0, 0);
+            this.flpnmain.Name = "flpnmain";
+            this.flpnmain.Size = new System.Drawing.Size(1389, 631);
+            this.flpnmain.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1383, 37);
+            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(257, 37);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, -4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(181, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tạm tính:";
+            this.label1.Text = "Thanh Toán";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(3, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1383, 34);
+            this.panel2.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(257, 79);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Phí vận chuyển:";
+            this.label2.Size = new System.Drawing.Size(233, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "1. Thông tin nhận hàng";
             // 
-            // label3
+            // panel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(257, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Giảm giá:";
+            this.panel3.Controls.Add(this.cbbDiaChi);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtSDT);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtHoTen);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(3, 86);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1383, 134);
+            this.panel3.TabIndex = 2;
             // 
-            // lbl_gia
+            // cbbDiaChi
             // 
-            this.lbl_gia.AutoSize = true;
-            this.lbl_gia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_gia.Location = new System.Drawing.Point(1022, 37);
-            this.lbl_gia.Name = "lbl_gia";
-            this.lbl_gia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_gia.Size = new System.Drawing.Size(35, 20);
-            this.lbl_gia.TabIndex = 3;
-            this.lbl_gia.Text = "Giá";
-            this.lbl_gia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbbDiaChi.FormattingEnabled = true;
+            this.cbbDiaChi.Location = new System.Drawing.Point(10, 104);
+            this.cbbDiaChi.Name = "cbbDiaChi";
+            this.cbbDiaChi.Size = new System.Drawing.Size(668, 24);
+            this.cbbDiaChi.TabIndex = 7;
             // 
-            // lbl_phivc
+            // label5
             // 
-            this.lbl_phivc.AutoSize = true;
-            this.lbl_phivc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_phivc.Location = new System.Drawing.Point(1022, 79);
-            this.lbl_phivc.Name = "lbl_phivc";
-            this.lbl_phivc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_phivc.Size = new System.Drawing.Size(55, 20);
-            this.lbl_phivc.TabIndex = 4;
-            this.lbl_phivc.Text = "Phí vc";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 23);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Địa chỉ nhận hàng:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // lbl_giamgia
+            // txtSDT
             // 
-            this.lbl_giamgia.AutoSize = true;
-            this.lbl_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_giamgia.Location = new System.Drawing.Point(1022, 123);
-            this.lbl_giamgia.Name = "lbl_giamgia";
-            this.lbl_giamgia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_giamgia.Size = new System.Drawing.Size(76, 20);
-            this.lbl_giamgia.TabIndex = 5;
-            this.lbl_giamgia.Text = "Giảm giá";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(240, 164);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 1);
-            this.panel1.TabIndex = 6;
+            this.txtSDT.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(684, 38);
+            this.txtSDT.Multiline = true;
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
+            this.txtSDT.Size = new System.Drawing.Size(696, 37);
+            this.txtSDT.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(257, 192);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(682, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 25);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Tổng cộng:";
+            this.label4.Size = new System.Drawing.Size(121, 23);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Số điện thoại:";
             // 
-            // lbl_tong
+            // txtHoTen
             // 
-            this.lbl_tong.AutoSize = true;
-            this.lbl_tong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_tong.Location = new System.Drawing.Point(1017, 192);
-            this.lbl_tong.Name = "lbl_tong";
-            this.lbl_tong.Size = new System.Drawing.Size(62, 25);
-            this.lbl_tong.TabIndex = 8;
-            this.lbl_tong.Text = "Tổng";
+            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(8, 38);
+            this.txtHoTen.Multiline = true;
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.ReadOnly = true;
+            this.txtHoTen.Size = new System.Drawing.Size(670, 37);
+            this.txtHoTen.TabIndex = 3;
             // 
-            // btn_thanhtoan
+            // label3
             // 
-            this.btn_thanhtoan.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_thanhtoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_thanhtoan.ForeColor = System.Drawing.Color.White;
-            this.btn_thanhtoan.Location = new System.Drawing.Point(240, 257);
-            this.btn_thanhtoan.Name = "btn_thanhtoan";
-            this.btn_thanhtoan.Size = new System.Drawing.Size(900, 50);
-            this.btn_thanhtoan.TabIndex = 9;
-            this.btn_thanhtoan.Text = "Tiến hành thanh toán";
-            this.btn_thanhtoan.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Họ và tên:";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Location = new System.Drawing.Point(3, 226);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1383, 34);
+            this.panel4.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(268, 28);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "2. Phương thức thanh toán";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 266);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1383, 83);
+            this.flowLayoutPanel2.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rdbThanhtoanonline);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(675, 78);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.White;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(9, 0);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(316, 32);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Thanh toán khi nhận hàng (COD)";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            // 
+            // rdbThanhtoanonline
+            // 
+            this.rdbThanhtoanonline.AutoSize = true;
+            this.rdbThanhtoanonline.BackColor = System.Drawing.Color.White;
+            this.rdbThanhtoanonline.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbThanhtoanonline.Location = new System.Drawing.Point(7, 38);
+            this.rdbThanhtoanonline.Name = "rdbThanhtoanonline";
+            this.rdbThanhtoanonline.Size = new System.Drawing.Size(190, 32);
+            this.rdbThanhtoanonline.TabIndex = 3;
+            this.rdbThanhtoanonline.TabStop = true;
+            this.rdbThanhtoanonline.Text = "Thanh toán online";
+            this.rdbThanhtoanonline.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(3, 355);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1383, 34);
+            this.panel5.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(225, 28);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "3. Xác nhận đơn hàng ";
             // 
             // ucDatHang_GioHang_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btn_thanhtoan);
-            this.Controls.Add(this.lbl_tong);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbl_giamgia);
-            this.Controls.Add(this.lbl_phivc);
-            this.Controls.Add(this.lbl_gia);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.flpnmain);
             this.Name = "ucDatHang_GioHang_Main";
-            this.Size = new System.Drawing.Size(1380, 333);
-            this.Load += new System.EventHandler(this.ucDatHang_GioHang_Main_Load);
+            this.Size = new System.Drawing.Size(1389, 631);
+            this.flpnmain.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbl_gia;
-        private System.Windows.Forms.Label lbl_phivc;
-        private System.Windows.Forms.Label lbl_giamgia;
+        private System.Windows.Forms.FlowLayoutPanel flpnmain;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_tong;
-        private System.Windows.Forms.Button btn_thanhtoan;
+        private System.Windows.Forms.ComboBox cbbDiaChi;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdbThanhtoanonline;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -85,7 +85,27 @@ namespace PBL.BLL
             }
         }
 
-
+        //Ham sua dia chi
+        public void Update(Dia_Chi diaChi, string madiachi)
+        {
+            try
+            {
+                Dia_Chi existingDiaChi = diachidal.GetById(madiachi);
+                if (existingDiaChi != null)
+                {
+                    existingDiaChi.Tinh_ThanhPho = diaChi.Tinh_ThanhPho;
+                    existingDiaChi.Quan_Huyen = diaChi.Quan_Huyen;
+                    existingDiaChi.Xa_Phuong = diaChi.Xa_Phuong;
+                    existingDiaChi.Chi_tiet = diaChi.Chi_tiet;
+                    diachidal.Update(existingDiaChi);
+                    diachidal.Save();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi cập nhật địa chỉ: " + ex.Message);
+            }
+        }
 
     }
 }

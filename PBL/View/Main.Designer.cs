@@ -56,7 +56,6 @@
             this.xiaoMiToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.appleWatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mni_pk = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_dc = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_lh = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
@@ -190,7 +189,6 @@
             this.mni_lt,
             this.taiNgheToolStripMenuItem,
             this.mni_sw,
-            this.mni_pk,
             this.mni_dc,
             this.mni_lh});
             this.menuStrip1.Location = new System.Drawing.Point(0, 52);
@@ -369,16 +367,6 @@
             this.appleWatchToolStripMenuItem.Size = new System.Drawing.Size(205, 32);
             this.appleWatchToolStripMenuItem.Text = "AppleWatch";
             // 
-            // mni_pk
-            // 
-            this.mni_pk.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mni_pk.Image = global::PBL.Properties.Resources.PhuKien;
-            this.mni_pk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mni_pk.Name = "mni_pk";
-            this.mni_pk.Size = new System.Drawing.Size(126, 32);
-            this.mni_pk.Text = "Phụ Kiện";
-            this.mni_pk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // mni_dc
             // 
             this.mni_dc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -491,7 +479,6 @@
         private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mni_tb;
         private System.Windows.Forms.ToolStripMenuItem mni_sw;
-        private System.Windows.Forms.ToolStripMenuItem mni_pk;
         private System.Windows.Forms.ToolStripMenuItem mni_lt;
         private System.Windows.Forms.ToolStripMenuItem mni_dc;
         private System.Windows.Forms.ToolStripMenuItem mni_lh;
