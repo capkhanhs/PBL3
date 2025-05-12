@@ -25,7 +25,7 @@ namespace PBL.View
 
         public void LoadData()
         {
-            var sp = SanphamBLL.Instance.Find(masanpham);
+            var sp = SanphamBLL.Instance.Find(cartitem.Ma_san_pham);
             if (sp != null)
             {
                 lblTenSanPham.Text = sp.Ten_sp;
@@ -63,7 +63,7 @@ namespace PBL.View
 
         private void btnTang_Click(object sender, EventArgs e)
         {
-            var sp = SanphamBLL.Instance().Find(cartitem.Ma_san_pham);
+            var sp = SanphamBLL.Instance.Find(cartitem.Ma_san_pham);
 
             cartitem.Quantity++;
             txt_soluong.Text = cartitem.Quantity.ToString();
@@ -73,7 +73,7 @@ namespace PBL.View
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
-            var sp = SanphamBLL.Instance().Find(cartitem.Ma_san_pham);
+            var sp = SanphamBLL.Instance.Find(cartitem.Ma_san_pham);
             cartitem.Quantity--;
             if (cartitem.Quantity < 1)
             {

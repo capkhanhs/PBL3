@@ -154,7 +154,7 @@ namespace PBL.BLL
             chiTietDonHang.Ma_don_hang = madonhang;
             chiTietDonHang.Ma_san_pham = masanpham;
             chiTietDonHang.So_luong = soluong;
-            chiTietDonHang.Gia_ban = (double.Parse(SanphamBLL.Instance().Find(masanpham).Gia_sp)*soluong).ToString();
+            chiTietDonHang.Gia_ban = (double.Parse(SanphamBLL.Instance.Find(masanpham).Gia_sp)*soluong).ToString();
             ChiTietDonHangDAL.Add(chiTietDonHang);
             ChiTietDonHangDAL.Save();
         }
