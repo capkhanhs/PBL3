@@ -95,18 +95,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(27, 16);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Username";
+            this.label2.Text = "Sđt";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(61, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 16);
+            this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Password";
+            this.label3.Text = "Mật khẩu";
             // 
             // label4
             // 

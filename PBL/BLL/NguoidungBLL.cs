@@ -152,5 +152,33 @@ namespace PBL.BLL
             usDAL.Add(newUser);
             usDAL.Save();
         }
+
+        //Hàm đổi mật khẩu người dùng
+        public void Doimatkhau(string matkhaucu, string matkhaumoi, string manguoidung)
+        {
+            if (string.IsNullOrEmpty(matkhaucu) || string.IsNullOrEmpty(matkhaumoi))
+            {
+                throw new ArgumentException("Vui lòng nhập đầy đủ thông tin");
+            }
+            var user = usDAL.GetById(manguoidung);
+            bool passwordMatch = BCrypt.Net.BCrypt.Verify(matkhaucu, user.password);
+            if (!passwordMatch)
+            {
+                throw new UnauthorizedAccessException("Mật khẩu không đúng");
+            }
+            else
+            {
+                if (matkhaumoi.Length < 6)
+                {
+                    throw new ArgumentException("Mật khẩu mới phải có ít nhất 6 ký tự");
+                }
+                string salt = BCrypt.Net.BCrypt.GenerateSalt();
+                string hash = BCrypt.Net.BCrypt.HashPassword(matkhaumoi, salt);
+                user.password = hash;
+                usDAL.Update(user);
+                usDAL.Save();
+
+            }
+        }
     }
 }

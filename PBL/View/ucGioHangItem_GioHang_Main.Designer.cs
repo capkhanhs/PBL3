@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_soluong = new System.Windows.Forms.TextBox();
             this.lblMoTa = new System.Windows.Forms.Label();
-            this.lblGiaSP = new System.Windows.Forms.Label();
             this.lblTenSanPham = new System.Windows.Forms.Label();
             this.picboxSP = new System.Windows.Forms.PictureBox();
             this.btnTang = new System.Windows.Forms.Button();
@@ -53,7 +52,6 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txt_soluong);
             this.panel4.Controls.Add(this.lblMoTa);
-            this.panel4.Controls.Add(this.lblGiaSP);
             this.panel4.Controls.Add(this.lblTenSanPham);
             this.panel4.Controls.Add(this.picboxSP);
             this.panel4.Controls.Add(this.btnTang);
@@ -79,11 +77,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(1069, 50);
+            this.label1.Location = new System.Drawing.Point(905, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 29);
+            this.label1.Size = new System.Drawing.Size(199, 29);
             this.label1.TabIndex = 10;
-            this.label1.Text = "25.999.000";
+            this.label1.Text = "25.999.000 VNĐ";
             // 
             // txt_soluong
             // 
@@ -105,17 +103,6 @@
             this.lblMoTa.Size = new System.Drawing.Size(40, 16);
             this.lblMoTa.TabIndex = 8;
             this.lblMoTa.Text = "Mô tả";
-            // 
-            // lblGiaSP
-            // 
-            this.lblGiaSP.AutoSize = true;
-            this.lblGiaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGiaSP.Location = new System.Drawing.Point(840, 53);
-            this.lblGiaSP.Name = "lblGiaSP";
-            this.lblGiaSP.Size = new System.Drawing.Size(139, 29);
-            this.lblGiaSP.TabIndex = 7;
-            this.lblGiaSP.Text = "25.999.000";
-            this.lblGiaSP.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblTenSanPham
             // 
@@ -157,6 +144,7 @@
             this.btnGiam.TabIndex = 3;
             this.btnGiam.Text = "-";
             this.btnGiam.UseVisualStyleBackColor = false;
+            this.btnGiam.Click += new System.EventHandler(this.btnGiam_Click);
             // 
             // panel1
             // 
@@ -185,7 +173,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblGiaSP;
         private System.Windows.Forms.Button btnTang;
         private System.Windows.Forms.Button btnGiam;
         private System.Windows.Forms.Label lblTenSanPham;

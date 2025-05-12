@@ -34,12 +34,12 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pndiachi = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnthemdiachi = new System.Windows.Forms.Button();
-            this.btn_EditTT = new System.Windows.Forms.Button();
+            this.pndiachi = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.llblSua = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -52,10 +52,10 @@
             this.lbl_thongtincanhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_thongtincanhan.Location = new System.Drawing.Point(3, 0);
             this.lbl_thongtincanhan.Name = "lbl_thongtincanhan";
-            this.lbl_thongtincanhan.Size = new System.Drawing.Size(590, 32);
+            this.lbl_thongtincanhan.Size = new System.Drawing.Size(364, 32);
             this.lbl_thongtincanhan.TabIndex = 7;
             this.lbl_thongtincanhan.Text = "Bạn - 0966899203";
-            this.lbl_thongtincanhan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_thongtincanhan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -113,29 +113,11 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.lbl_thongtincanhan);
-            this.flowLayoutPanel1.Controls.Add(this.btn_EditTT);
+            this.flowLayoutPanel1.Controls.Add(this.llblSua);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 38);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(729, 30);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ĐỊA CHỈ NHẬN HÀNG";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pndiachi
-            // 
-            this.pndiachi.Location = new System.Drawing.Point(10, 28);
-            this.pndiachi.Name = "pndiachi";
-            this.pndiachi.Size = new System.Drawing.Size(747, 250);
-            this.pndiachi.TabIndex = 1;
             // 
             // panel1
             // 
@@ -170,22 +152,36 @@
             this.btnthemdiachi.UseVisualStyleBackColor = false;
             this.btnthemdiachi.Click += new System.EventHandler(this.btnthemdiachi_Click);
             // 
-            // btn_EditTT
+            // pndiachi
             // 
-            this.btn_EditTT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_EditTT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EditTT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_EditTT.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btn_EditTT.Image = global::PBL.Properties.Resources.user_avatar;
-            this.btn_EditTT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_EditTT.Location = new System.Drawing.Point(599, 3);
-            this.btn_EditTT.Name = "btn_EditTT";
-            this.btn_EditTT.Size = new System.Drawing.Size(74, 30);
-            this.btn_EditTT.TabIndex = 8;
-            this.btn_EditTT.Text = "Sửa";
-            this.btn_EditTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_EditTT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_EditTT.UseVisualStyleBackColor = true;
+            this.pndiachi.Location = new System.Drawing.Point(3, 28);
+            this.pndiachi.Name = "pndiachi";
+            this.pndiachi.Size = new System.Drawing.Size(747, 250);
+            this.pndiachi.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ĐỊA CHỈ NHẬN HÀNG";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // llblSua
+            // 
+            this.llblSua.AutoSize = true;
+            this.llblSua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblSua.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.llblSua.Location = new System.Drawing.Point(373, 0);
+            this.llblSua.Name = "llblSua";
+            this.llblSua.Size = new System.Drawing.Size(40, 23);
+            this.llblSua.TabIndex = 8;
+            this.llblSua.TabStop = true;
+            this.llblSua.Text = "Sửa";
+            this.llblSua.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblSua_LinkClicked);
             // 
             // ucThongTin_TrangCaNhan_Main
             // 
@@ -198,6 +194,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -206,8 +203,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_EditTT;
         private System.Windows.Forms.Label lbl_thongtincanhan;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -219,5 +214,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnthemdiachi;
+        private System.Windows.Forms.LinkLabel llblSua;
     }
 }

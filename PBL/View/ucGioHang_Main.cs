@@ -27,10 +27,10 @@ namespace PBL.View
             var cartItems = CartItemBLL.Instance.GetAllCart(manguoidung);
             foreach (var item in cartItems)
             {
-                ucGioHangItem_GioHang_Main ucGioHangItem = new ucGioHangItem_GioHang_Main((int)item.Quantity, item.Ma_san_pham);
+                ucGioHangItem_GioHang_Main ucGioHangItem = new ucGioHangItem_GioHang_Main(item);
                 pnMainGioHang.Controls.Add(ucGioHangItem);
             }
-            ucDatHang_GioHang_Main ucDatHang = new ucDatHang_GioHang_Main(manguoidung);
+            ucTinhtong_GioHang_Main ucDatHang = new ucTinhtong_GioHang_Main(manguoidung);
             pnMainGioHang.Controls.Add(ucDatHang);
         }
 

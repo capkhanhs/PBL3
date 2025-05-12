@@ -12,16 +12,15 @@ using PBL.Model;
 
 namespace PBL.View
 {
-    public partial class ucDatHang_GioHang_Main : UserControl
+    public partial class DatHang : Form
     {
         private string manguoidung;
-        public ucDatHang_GioHang_Main(string manguoidung)
+        public DatHang(string manguoidung)
         {
             InitializeComponent();
             this.manguoidung = manguoidung;
             LoadData();
         }
-
         public void LoadData()
         {
             Nguoi_Dung user = NguoidungBLL.Instance.Find(manguoidung);
@@ -56,20 +55,6 @@ namespace PBL.View
             }
             ucTinhtong_GioHang_Main ucDatHang = new ucTinhtong_GioHang_Main(manguoidung);
             flpnmain.Controls.Add(ucDatHang);
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

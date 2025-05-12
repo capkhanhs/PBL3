@@ -57,5 +57,10 @@ namespace PBL.View
             CapNhatDiaChi uc = new CapNhatDiaChi(manguoidung);
             uc.ShowDialog();
         }
+
+        private void llblSua_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

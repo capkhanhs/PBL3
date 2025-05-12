@@ -158,6 +158,12 @@
     <Compile Include="View\CapNhatDiaChi.Designer.cs">
       <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DatHang.Designer.cs">
+      <DependentUpon>DatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,12 @@
     </Compile>
     <Compile Include="View\ucDatHang_GioHang_Main.Designer.cs">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTinhtong_GioHang_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTinhtong_GioHang_Main.Designer.cs">
+      <DependentUpon>ucTinhtong_GioHang_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucDiaChi.cs">
       <SubType>UserControl</SubType>
@@ -271,6 +283,9 @@
     <EmbeddedResource Include="View\CapNhatDiaChi.resx">
       <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DatHang.resx">
+      <DependentUpon>DatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTinhtong_GioHang_Main.resx">
+      <DependentUpon>ucTinhtong_GioHang_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDiaChi.resx">
       <DependentUpon>ucDiaChi.cs</DependentUpon>

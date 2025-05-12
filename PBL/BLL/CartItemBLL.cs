@@ -95,5 +95,21 @@ namespace PBL.BLL
         {
             return ciDAL.GetAll().Where(x => x.Ma_gio_hang == manguoidung).ToList();
         }
+
+        public CartItem GetById (List<string> id)
+        {
+            try
+            {
+                if (id == null || id.Count == 0)
+                {
+                    throw new ArgumentException("ID list cannot be null or empty.");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error getting cart item by ID: " + ex.Message);
+            }
+            return ciDAL.GetById(id);
+        }
     }
 }

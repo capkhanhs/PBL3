@@ -5,11 +5,14 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.DAL;
+using PBL.Model;
 
 namespace PBL.BLL
 {
     public class GioHangBLL
     {
+        GioHangDAL ghDAL = new GioHangDAL();
         private static GioHangBLL _Instance;
         public static GioHangBLL Instance
         {
@@ -42,6 +45,15 @@ namespace PBL.BLL
 
             }
             return total;
+        }
+
+        public void CreateGioHang(string manguoidung)
+        {
+            Gio_hang gh = new Gio_hang();
+            gh.Ma_gio_hang = manguoidung;
+            gh.Ma_nguoi_dung = manguoidung;
+            ghDAL.Add(gh);
+            ghDAL.Save();
         }
     }
 }

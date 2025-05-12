@@ -20,7 +20,12 @@ namespace PBL.View
             InitializeComponent();
             this.madiachi = madiachi;
             Dia_Chi diachi = DiaChiBLL.Instance.Find(madiachi);
-            string diachitxt = diachi.Chi_tiet + ", " + diachi.Xa_Phuong + ", " + diachi.Quan_Huyen + ", " + diachi.Tinh_ThanhPho;
+            string diachitxt = "";
+            if (!string.IsNullOrEmpty(diachi.Chi_tiet))
+            {
+                diachitxt = diachi.Chi_tiet + ", ";
+            }
+            diachitxt +=diachi.Xa_Phuong + ", " + diachi.Quan_Huyen + ", " + diachi.Tinh_ThanhPho;
             lblDiaChi.Text = diachitxt;
         }
 
