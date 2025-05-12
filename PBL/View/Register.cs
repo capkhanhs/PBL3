@@ -35,7 +35,7 @@ namespace PBL.View
                 {
                     throw new Exception("Vui lòng nhập đầy đủ thông tin!");
                 }    
-                NguoidungBLL.Instance.Register(txtusername.Text, txtpassword.Text, cbb_vaitro.SelectedValue.ToString(), txt_sdt.Text, txtname.Text, rdb_male.Checked);
+                NguoidungBLL.Instance.Register(txtusername.Text, txtpassword.Text, cbb_vaitro.SelectedValue.ToString(), txtname.Text, rdb_male.Checked);
                 MessageBox.Show("Đăng ký thành công");
                 this.Close();
             }
@@ -49,5 +49,9 @@ namespace PBL.View
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
-            this.txt_sdt = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.cbb_vaitro = new System.Windows.Forms.ComboBox();
@@ -38,11 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.grb_giotinh = new System.Windows.Forms.GroupBox();
-            this.rdb_male = new System.Windows.Forms.RadioButton();
-            this.rdb_female = new System.Windows.Forms.RadioButton();
             this.hide_rdb = new System.Windows.Forms.RadioButton();
+            this.rdb_female = new System.Windows.Forms.RadioButton();
+            this.rdb_male = new System.Windows.Forms.RadioButton();
             this.btnregister = new System.Windows.Forms.Button();
             this.grb_giotinh.SuspendLayout();
             this.SuspendLayout();
@@ -63,13 +61,6 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(179, 22);
             this.txtusername.TabIndex = 1;
-            // 
-            // txt_sdt
-            // 
-            this.txt_sdt.Location = new System.Drawing.Point(146, 418);
-            this.txt_sdt.Name = "txt_sdt";
-            this.txt_sdt.Size = new System.Drawing.Size(179, 22);
-            this.txt_sdt.TabIndex = 3;
             // 
             // txtname
             // 
@@ -135,15 +126,6 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Vai trò";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(61, 421);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Số điện thoại";
-            // 
             // grb_giotinh
             // 
             this.grb_giotinh.Controls.Add(this.hide_rdb);
@@ -155,26 +137,6 @@
             this.grb_giotinh.TabIndex = 13;
             this.grb_giotinh.TabStop = false;
             this.grb_giotinh.Text = "Giới tính";
-            // 
-            // rdb_male
-            // 
-            this.rdb_male.AutoSize = true;
-            this.rdb_male.Location = new System.Drawing.Point(3, 18);
-            this.rdb_male.Name = "rdb_male";
-            this.rdb_male.Size = new System.Drawing.Size(57, 20);
-            this.rdb_male.TabIndex = 0;
-            this.rdb_male.Text = "Nam";
-            this.rdb_male.UseVisualStyleBackColor = true;
-            // 
-            // rdb_female
-            // 
-            this.rdb_female.AutoSize = true;
-            this.rdb_female.Location = new System.Drawing.Point(112, 18);
-            this.rdb_female.Name = "rdb_female";
-            this.rdb_female.Size = new System.Drawing.Size(45, 20);
-            this.rdb_female.TabIndex = 1;
-            this.rdb_female.Text = "Nữ";
-            this.rdb_female.UseVisualStyleBackColor = true;
             // 
             // hide_rdb
             // 
@@ -188,6 +150,26 @@
             this.hide_rdb.Text = ".";
             this.hide_rdb.UseVisualStyleBackColor = true;
             this.hide_rdb.Visible = false;
+            // 
+            // rdb_female
+            // 
+            this.rdb_female.AutoSize = true;
+            this.rdb_female.Location = new System.Drawing.Point(112, 18);
+            this.rdb_female.Name = "rdb_female";
+            this.rdb_female.Size = new System.Drawing.Size(45, 20);
+            this.rdb_female.TabIndex = 1;
+            this.rdb_female.Text = "Nữ";
+            this.rdb_female.UseVisualStyleBackColor = true;
+            // 
+            // rdb_male
+            // 
+            this.rdb_male.AutoSize = true;
+            this.rdb_male.Location = new System.Drawing.Point(3, 18);
+            this.rdb_male.Name = "rdb_male";
+            this.rdb_male.Size = new System.Drawing.Size(57, 20);
+            this.rdb_male.TabIndex = 0;
+            this.rdb_male.Text = "Nam";
+            this.rdb_male.UseVisualStyleBackColor = true;
             // 
             // btnregister
             // 
@@ -207,7 +189,6 @@
             this.ClientSize = new System.Drawing.Size(546, 596);
             this.Controls.Add(this.btnregister);
             this.Controls.Add(this.grb_giotinh);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -215,7 +196,6 @@
             this.Controls.Add(this.cbb_vaitro);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtname);
-            this.Controls.Add(this.txt_sdt);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label1);
             this.Name = "Register";
@@ -231,7 +211,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtusername;
-        private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.ComboBox cbb_vaitro;
@@ -239,7 +218,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox grb_giotinh;
         private System.Windows.Forms.RadioButton hide_rdb;
         private System.Windows.Forms.RadioButton rdb_female;

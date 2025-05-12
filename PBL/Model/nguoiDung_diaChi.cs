@@ -19,6 +19,5 @@ namespace PBL.Model
         public int MaDCND { get; set; }
     
         public virtual Dia_Chi Dia_Chi { get; set; }
-        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using PBL.DAL;
 using PBL.Model;
@@ -24,6 +25,57 @@ namespace PBL.BLL
             }
         }
 
+        //Ham lấy tất cả người dùng
+        public List<Nguoi_Dung> GetAll()
+        {
+            try
+            {
+                return usDAL.GetAll();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching all users: " + ex.Message);
+            }
+        }
+
+        //Hàm tìm kiếm người dùng theo tên
+        public List<Nguoi_Dung> Search(string name)
+        {
+            try
+            {
+                List<Nguoi_Dung> list = new List<Nguoi_Dung>();
+                foreach (var item in usDAL.GetAll())
+                {
+                    if (item.Ho_va_ten.ToLower().Contains(name.ToLower()))
+                    {
+                        list.Add(item);
+                    }
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error searching users: " + ex.Message);
+            }
+        }
+
+        //Hàm tìm kiếm người dùng theo mã
+        public Nguoi_Dung Find(string ma)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(ma))
+                {
+                    throw new ArgumentException("User ID cannot be empty.");
+                }
+                return usDAL.GetById(ma);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error finding user: " + ex.Message);
+            }
+        }
+
         //Hàm đăng nhập
         public bool Dang_nhap(string username, string password)
         {
@@ -37,14 +89,21 @@ namespace PBL.BLL
                 var user = usDAL.GetById(username);
                 if (user != null)
                 {
-                    if (user.password == password)
+
+                    //bool passwordMatch = BCrypt.Net.BCrypt.Verify(password, user.password);
+                    //if (passwordMatch)
+                    if(user.password == password)
                     {
                         isValid = true;
                     }
                 }
+                else
+                {
+                    throw new KeyNotFoundException("User not found.");
+                }
                 if (!isValid)
                 {
-                    throw new UnauthorizedAccessException("Invalid username or password.");
+                    throw new UnauthorizedAccessException("Wrong password.");
                 }
                 return isValid;
             }
@@ -53,34 +112,39 @@ namespace PBL.BLL
                 throw new Exception("Login failed: " + ex.Message);
             }
         }
-        public string GetMaNguoiDung(string username)
+
+        public static bool IsValidPhoneNumber(string phone)
         {
-            if (string.IsNullOrEmpty(username))
-            {
-                throw new ArgumentException("Username cannot be empty.");
-            }
-            var user = usDAL.GetById(username);
-            if (user == null)
-            {
-                throw new KeyNotFoundException("User not found.");
-            }
-            return user.Ma_nguoi_dung;
+            // Kiểm tra có đúng định dạng: bắt đầu bằng 0 và đủ 10 chữ số
+            return Regex.IsMatch(phone, @"^0\d{9}$");
         }
-        public void Register(string username, string password, string mavaitro, string sdt, string HovaTen, bool gioitinh)
+
+        //Hàm đăng ký
+        public void Register(string username, string password, string mavaitro, string HovaTen, bool gioitinh)
         {
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(HovaTen) || string.IsNullOrEmpty(sdt) || string.IsNullOrEmpty(mavaitro))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(HovaTen) || string.IsNullOrEmpty(mavaitro))
             {
                 throw new ArgumentException("Vui lòng nhập đầy đủ thông tin");
+            }
+            if(password.Length < 6)
+            {
+                throw new ArgumentException("Mật khẩu phải có ít nhất 6 ký tự");
+            }
+            if (!IsValidPhoneNumber(username))
+            {
+                throw new ArgumentException("Số điện thoại không hợp lệ");
             }
             var user = usDAL.GetById(username);
             if (user != null)
             {
                 throw new InvalidOperationException("Username already exists.");
             }
+            string salt = BCrypt.Net.BCrypt.GenerateSalt();
+            string hash = BCrypt.Net.BCrypt.HashPassword(password, salt);
             Nguoi_Dung newUser = new Nguoi_Dung
             {
                 Ma_nguoi_dung = username,
-                password = password,
+                password = hash,
                 Ma_vai_tro = mavaitro,
                 Gioi_tinh = gioitinh,
                 Ho_va_ten = HovaTen
