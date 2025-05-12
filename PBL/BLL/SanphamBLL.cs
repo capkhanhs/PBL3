@@ -111,17 +111,23 @@ namespace PBL.BLL
         //Hàm nhận vào 1 List sản phẩm và đưa ra tên sản phẩm bán chạy nhất -> sử dụng bên thống kê
         public string GetSPBanChay(List<San_Pham> list)
         {
-            if (list.Count == 0)
+            if (list == null || list.Count == 0)
             {
                 return "";
             }
-            //Sx ds theo số lượng giảm dần, lấy sản phẩm đầu tiên
-            var spBanChay = list.OrderByDescending(x => x.So_luong).FirstOrDefault();
-            if (spBanChay != null)
+            try
             {
-                return spBanChay.Ten_sp;
+                //Sx ds theo số lượng giảm dần, lấy sản phẩm đầu tiên
+                var spBanChay = list.OrderByDescending(x => x.So_luong).FirstOrDefault();
+                if (spBanChay != null && !string.IsNullOrWhiteSpace(spBanChay.Ten_sp))
+                {
+                    return spBanChay.Ten_sp;
+                }
             }
-
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi khi lấy sản phẩm bán chạy: " + ex.Message);
+            }
             return "";
         }
     }
