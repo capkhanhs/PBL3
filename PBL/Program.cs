@@ -18,7 +18,6 @@ namespace PBL.View
             {
                 Application.Run(new Main(login.Username));
             }
-            //Application.Run(new TestTK());
         }
     }
 }

@@ -184,12 +184,6 @@
     <Compile Include="View\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TestTK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\TestTK.Designer.cs">
-      <DependentUpon>TestTK.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ucCapNhatDiaChi_TrangCaNhan_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
