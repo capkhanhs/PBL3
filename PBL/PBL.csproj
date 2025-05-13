@@ -107,9 +107,6 @@
     <Compile Include="Model\Gio_hang.cs">
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Kho_Hang.cs">
-      <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\MyDbConfiguration.cs" />
     <Compile Include="Model\nguoiDung_diaChi.cs">
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
@@ -163,6 +160,12 @@
     </Compile>
     <Compile Include="View\DatHang.Designer.cs">
       <DependentUpon>DatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DatHang_ThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DatHang_ThanhToan.Designer.cs">
+      <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
@@ -285,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DatHang.resx">
       <DependentUpon>DatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DatHang_ThanhToan.resx">
+      <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -53,8 +53,18 @@ namespace PBL.View
                 ucGioHangItem_GioHang_Main ucGioHangItem = new ucGioHangItem_GioHang_Main(item);
                 flpnmain.Controls.Add(ucGioHangItem);
             }
-            ucTinhtong_GioHang_Main ucDatHang = new ucTinhtong_GioHang_Main(manguoidung);
-            flpnmain.Controls.Add(ucDatHang);
+            string pttt;
+            if(rdbThanhtoanonline.Checked)
+            {
+                 pttt = "Thanh toán online";
+            }
+            else
+            {
+                 pttt = "Thanh toán khi nhận hàng";
+            }
+
+            DatHang_ThanhToan dh = new DatHang_ThanhToan(manguoidung, cbbDiaChi.SelectedValue.ToString(), pttt);
+            flpnmain.Controls.Add(dh);
         }
     }
 }
