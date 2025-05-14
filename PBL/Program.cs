@@ -11,7 +11,7 @@ namespace PBL.View
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+           Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Login login = new Login();
             if (login.ShowDialog() == DialogResult.OK)

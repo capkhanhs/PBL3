@@ -30,7 +30,7 @@ namespace PBL.View
             {
                 lblTenSanPham.Text = sp.Ten_sp;
                 int giaban = (int)(int.Parse(sp.Gia_sp) * cartitem.Quantity.GetValueOrDefault(1));
-                label1.Text = string.Format("{0:0,0}", int.Parse(sp.Gia_sp)) + " VNĐ";
+                label1.Text = string.Format("{0:0,0}", giaban) + " VNĐ";
                 lblMoTa.Text = sp.Mo_ta_sp;
                 txt_soluong.Text = cartitem.Quantity.GetValueOrDefault(1).ToString();
                 string imagePath = Path.Combine(Application.StartupPath, "Resources", sp.PictureFileName);
@@ -68,7 +68,7 @@ namespace PBL.View
             cartitem.Quantity++;
             txt_soluong.Text = cartitem.Quantity.ToString();
             int giaban = (int)(int.Parse(sp.Gia_sp) * cartitem.Quantity.GetValueOrDefault(1));
-            label1.Text = string.Format("{0:0,0}", int.Parse(sp.Gia_sp)) + " VNĐ";
+            label1.Text = string.Format("{0:0,0}", giaban) + " VNĐ";
         }
 
         private void btnGiam_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace PBL.View
             txt_soluong.Text = cartitem.Quantity.ToString();
             txt_soluong.Text = cartitem.Quantity.ToString();
             int giaban = (int)(int.Parse(sp.Gia_sp) * cartitem.Quantity.GetValueOrDefault(1));
-            label1.Text = string.Format("{0:0,0}", int.Parse(sp.Gia_sp)) + " VNĐ";
+            label1.Text = string.Format("{0:0,0}", giaban) + " VNĐ";
         }
     }
 }
