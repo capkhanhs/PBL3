@@ -7,20 +7,21 @@
       <Diagram DiagramId="36d4c6e3614e444c8dcb752b53e657de" Name="Diagram1" ZoomLevel="101">
         <EntityTypeShape EntityType="PBL3_db_ef.CartItem" Width="1.5" PointX="7.5" PointY="15.5" />
         <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Don_Hang" Width="1.5" PointX="10.5" PointY="10.5" />
-        <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="7.5" PointY="6.125" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Chi_Tiet_Phieu_Nhap" Width="1.5" PointX="9.125" PointY="4.125" />
         <EntityTypeShape EntityType="PBL3_db_ef.Danh_Muc" Width="1.5" PointX="3" PointY="2.625" />
         <EntityTypeShape EntityType="PBL3_db_ef.Dia_Chi" Width="1.5" PointX="3" PointY="11.5" />
         <EntityTypeShape EntityType="PBL3_db_ef.Don_Hang" Width="1.5" PointX="8.25" PointY="10.25" />
         <EntityTypeShape EntityType="PBL3_db_ef.Gio_hang" Width="1.5" PointX="5.25" PointY="15.625" />
         <EntityTypeShape EntityType="PBL3_db_ef.Nguoi_Dung" Width="1.5" PointX="3" PointY="7.25" />
         <EntityTypeShape EntityType="PBL3_db_ef.nguoiDung_diaChi" Width="1.5" PointX="5.25" PointY="9.625" />
-        <EntityTypeShape EntityType="PBL3_db_ef.Phieu_Nhap_Kho" Width="1.5" PointX="5.25" PointY="6.25" />
-        <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="5.25" PointY="1.75" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Phieu_Nhap_Kho" Width="1.5" PointX="5.625" PointY="6.25" />
+        <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="5.375" PointY="2.25" />
         <EntityTypeShape EntityType="PBL3_db_ef.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="PBL3_db_ef.Vai_Tro" Width="1.5" PointX="0.75" PointY="7.75" />
         <EntityTypeShape EntityType="PBL3_db_ef.Van_Chuyen" Width="1.5" PointX="10.5" PointY="13.625" />
         <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_gi__42E1EEFE" />
-        <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_sa__43D61337" />
+        <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_sa__43D61337" ManuallyRouted="false" >
+        </AssociationConnector>
         <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_do__02084FDA" />
         <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_sa__02FC7413" />
         <AssociationConnector Association="PBL3_db_ef.FK__Chi_Tiet___Ma_ph__0C85DE4D" />

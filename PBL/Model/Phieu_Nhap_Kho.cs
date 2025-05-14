@@ -27,5 +27,6 @@ namespace PBL.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_Tiet_Phieu_Nhap> Chi_Tiet_Phieu_Nhap { get; set; }
+        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }
