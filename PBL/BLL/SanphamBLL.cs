@@ -134,7 +134,7 @@ namespace PBL.BLL
                 throw new Exception("Mã sản phẩm đã tồn tại");
             }
         }
-
+        
         //Hàm nhận vào 1 List sản phẩm và đưa ra tên sản phẩm bán chạy nhất -> sử dụng bên thống kê
         public string GetSPBanChay(List<San_Pham> list)
         {

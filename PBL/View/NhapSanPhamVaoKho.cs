@@ -33,32 +33,46 @@ namespace PBL.View
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox2.DataSource = null;
-            comboBox2.Items.Clear();
-
-            var selectedDM = comboBox1.SelectedItem as Danh_Muc; // Lấy đối tượng danh mục được chọn
-            if (selectedDM != null)
+            try
             {
-                string tenDM = selectedDM.Ten_danh_muc;
-                List<San_Pham> li_sp = PBL.BLL.SanphamBLL.Instance.LocTheoDanhMuc(tenDM);
+                comboBox2.DataSource = null;
+                comboBox2.Items.Clear();
 
-                comboBox2.DisplayMember = "Ten_sp";
-                comboBox2.ValueMember = "Ma_sp";
-                comboBox2.DataSource = li_sp; // Gán danh sách sản phẩm vào ComboBox
+                var selectedDM = comboBox1.SelectedItem as Danh_Muc; // Lấy đối tượng danh mục được chọn
+                if (selectedDM != null)
+                {
+                    string tenDM = selectedDM.Ten_danh_muc;
+                    List<San_Pham> li_sp = PBL.BLL.SanphamBLL.Instance.LocTheoDanhMuc(tenDM);
+
+                    comboBox2.DisplayMember = "Ten_sp";
+                    comboBox2.ValueMember = "Ma_sp";
+                    comboBox2.DataSource = li_sp; // Gán danh sách sản phẩm vào ComboBox
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedSP = comboBox2.SelectedItem as San_Pham; // Lấy tên sản phẩm được chọn
-
-            if (selectedSP != null)
+            try
             {
-                San_Pham sp = PBL.BLL.SanphamBLL.Instance.Find_byName(selectedSP.Ten_sp);
-                if (sp != null)
+                var selectedSP = comboBox2.SelectedItem as San_Pham; // Lấy tên sản phẩm được chọn
+
+                if (selectedSP != null)
                 {
-                    textBox1.Text = sp.Gia_sp.ToString();
+                    San_Pham sp = PBL.BLL.SanphamBLL.Instance.Find_byName(selectedSP.Ten_sp);
+                    if (sp != null)
+                    {
+                        textBox1.Text = sp.Gia_sp.ToString();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -90,7 +104,7 @@ namespace PBL.View
                     giaSP
                 );
 
-                MyEvent?.Invoke(ctpn); // Gọi sự kiện để thông báo cho form cha
+                MyEvent?.Invoke(ctpn); // Gọi sự kiện để thông báo và truyền 1 ctpn về cho form cha
 
                 //PBL.BLL.SanphamBLL.Instance.themSoLuong(sp.Ma_san_pham, int.Parse(soLuong));
                 MessageBox.Show(
