@@ -19,7 +19,8 @@ namespace PBL.View
         {
             InitializeComponent();
             Manguoidung = username;
-            pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
+            pnMain.Controls.Add(new ucAdmin());
+            //pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
 
         private void LoadpnMain(UserControl uc)
