@@ -11,14 +11,14 @@ namespace PBL.View
         [STAThread]
         static void Main()
         {
-           Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Login login = new Login();
-            //if (login.ShowDialog() == DialogResult.OK)
-            //{
-            //    Application.Run(new Main(login.Username));
-            //}
-            Application.Run(new Test());
+            Login login = new Login();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Main(login.Username));
+            }
+            //Application.Run(new Test());
         }
     }
 }
