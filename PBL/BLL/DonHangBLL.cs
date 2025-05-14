@@ -4,8 +4,10 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PBL.DAL;
 using PBL.Model;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace PBL.BLL
 {
@@ -95,6 +97,41 @@ namespace PBL.BLL
             {
                 throw new Exception("Đơn hàng không tồn tại");
             }
+        }
+
+        public void DatHang(string manguoidung, string madiachi, string phuongthucthanhtoan)
+        {
+            if(MessageBox.Show("Bạn có chắc chắn muốn đặt hàng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    Don_Hang don_Hang = new Don_Hang();
+                    don_Hang.Ma_don_hang = GenerateNewMaDH(dhdal.GetAll());
+                    don_Hang.Ma_nguoi_dung = manguoidung;
+                    don_Hang.Ngay_dat_hang = DateTime.Now;
+                    don_Hang.Ma_dia_chi = madiachi;
+                    don_Hang.Trang_thai_don_hang = "Đang xử lý";
+                    don_Hang.Phuong_thuc_thanh_toan = phuongthucthanhtoan;
+                    dhdal.Add(don_Hang);
+                    dhdal.Save();
+                    var item = CartItemBLL.Instance.GetAllCart(manguoidung);
+                    foreach (var i in item)
+                    {
+                        int giaban = (int)(int.Parse(SanphamBLL.Instance.Find(i.Ma_san_pham).Gia_sp) * i.Quantity.GetValueOrDefault(1));
+                        ChiTietDonHangBLL.Instance.AddChiTietDonHang(
+                            don_Hang.Ma_don_hang,
+                            i.Ma_san_pham,
+                            i.Quantity.GetValueOrDefault(1),
+                            giaban.ToString()
+                        );
+                    }
+                    MessageBox.Show("Đặt hàng thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi đặt hàng: " + ex.Message);
+                }
+            }    
         }
 
     }
