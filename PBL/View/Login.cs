@@ -55,5 +55,6 @@ namespace PBL.View
                 btn_hienmk.Text = "Ẩn";           // đổi chữ nút nếu muốn
             }
         }
+
     }
 }
