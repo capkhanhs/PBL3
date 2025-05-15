@@ -55,5 +55,10 @@ namespace PBL.View
         {
             LoadPanel(flpn_HienThi, new ucCaNhan_Admin());
         }
+
+        private void btn_TrangChu_Click(object sender, EventArgs e)
+        {
+            //flpn_HienThi.Controls.Add();
+        }
     }
 }

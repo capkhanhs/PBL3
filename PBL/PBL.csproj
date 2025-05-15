@@ -199,12 +199,6 @@
     <Compile Include="View\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TestTK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\TestTK.Designer.cs">
-      <DependentUpon>TestTK.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ucAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +222,12 @@
     </Compile>
     <Compile Include="View\ucChinhSua_ThemSanPham.Designer.cs">
       <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCuSanPham_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCuSanPham_Admin.Designer.cs">
+      <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucDatHang_GioHang_Main.cs">
       <SubType>UserControl</SubType>
@@ -414,6 +414,9 @@
     <EmbeddedResource Include="View\ucChinhSua_ThemSanPham.resx">
       <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCuSanPham_Admin.resx">
+      <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -518,6 +521,7 @@
       <DependentUpon>PBL3_azure_databaseEntities.edmx</DependentUpon>
       <LastGenOutput>PBL3_azure_databaseEntities.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\anh_nen_dang_nhap.png" />
     <Content Include="tinh_tp.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_CaNhan = new System.Windows.Forms.Button();
             this.btn_DonHang = new System.Windows.Forms.Button();
             this.btn_KhoHang = new System.Windows.Forms.Button();
             this.btn_SanPham = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
             this.btn_TrangChu = new System.Windows.Forms.Button();
             this.flpn_HienThi = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_CaNhan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 609);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_CaNhan
+            // 
+            this.btn_CaNhan.Location = new System.Drawing.Point(0, 546);
+            this.btn_CaNhan.Name = "btn_CaNhan";
+            this.btn_CaNhan.Size = new System.Drawing.Size(238, 46);
+            this.btn_CaNhan.TabIndex = 14;
+            this.btn_CaNhan.Text = "Cá nhân";
+            this.btn_CaNhan.UseVisualStyleBackColor = true;
+            this.btn_CaNhan.Click += new System.EventHandler(this.btn_CaNhan_Click);
             // 
             // btn_DonHang
             // 
@@ -113,6 +123,7 @@
             this.btn_TrangChu.TabIndex = 8;
             this.btn_TrangChu.Text = "Trang chủ";
             this.btn_TrangChu.UseVisualStyleBackColor = true;
+            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
             // flpn_HienThi
             // 
@@ -120,16 +131,6 @@
             this.flpn_HienThi.Name = "flpn_HienThi";
             this.flpn_HienThi.Size = new System.Drawing.Size(1144, 609);
             this.flpn_HienThi.TabIndex = 1;
-            // 
-            // btn_CaNhan
-            // 
-            this.btn_CaNhan.Location = new System.Drawing.Point(0, 546);
-            this.btn_CaNhan.Name = "btn_CaNhan";
-            this.btn_CaNhan.Size = new System.Drawing.Size(238, 46);
-            this.btn_CaNhan.TabIndex = 14;
-            this.btn_CaNhan.Text = "Cá nhân";
-            this.btn_CaNhan.UseVisualStyleBackColor = true;
-            this.btn_CaNhan.Click += new System.EventHandler(this.btn_CaNhan_Click);
             // 
             // ucAdmin
             // 
