@@ -90,6 +90,7 @@
             this.btn_AllDH.TabIndex = 0;
             this.btn_AllDH.Text = "Tất cả";
             this.btn_AllDH.UseVisualStyleBackColor = true;
+            this.btn_AllDH.Click += new System.EventHandler(this.btn_AllDH_Click);
             // 
             // btn_XL
             // 

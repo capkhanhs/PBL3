@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdbThanhtoankhinhan = new System.Windows.Forms.RadioButton();
             this.rdbThanhtoanonline = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,18 +68,19 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "3. Xác nhận đơn hàng ";
             // 
-            // radioButton1
+            // rdbThanhtoankhinhan
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.White;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(9, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(316, 32);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Thanh toán khi nhận hàng (COD)";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rdbThanhtoankhinhan.AutoSize = true;
+            this.rdbThanhtoankhinhan.BackColor = System.Drawing.Color.White;
+            this.rdbThanhtoankhinhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbThanhtoankhinhan.Location = new System.Drawing.Point(9, 0);
+            this.rdbThanhtoankhinhan.Name = "rdbThanhtoankhinhan";
+            this.rdbThanhtoankhinhan.Size = new System.Drawing.Size(316, 32);
+            this.rdbThanhtoankhinhan.TabIndex = 2;
+            this.rdbThanhtoankhinhan.TabStop = true;
+            this.rdbThanhtoankhinhan.Text = "Thanh toán khi nhận hàng (COD)";
+            this.rdbThanhtoankhinhan.UseVisualStyleBackColor = false;
+            this.rdbThanhtoankhinhan.CheckedChanged += new System.EventHandler(this.rdbThanhtoankhinhan_CheckedChanged);
             // 
             // rdbThanhtoanonline
             // 
@@ -93,10 +94,11 @@
             this.rdbThanhtoanonline.TabStop = true;
             this.rdbThanhtoanonline.Text = "Thanh toán online";
             this.rdbThanhtoanonline.UseVisualStyleBackColor = false;
+            this.rdbThanhtoanonline.CheckedChanged += new System.EventHandler(this.rdbThanhtoanonline_CheckedChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rdbThanhtoankhinhan);
             this.groupBox1.Controls.Add(this.rdbThanhtoanonline);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
@@ -289,7 +291,7 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdbThanhtoankhinhan;
         private System.Windows.Forms.RadioButton rdbThanhtoanonline;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

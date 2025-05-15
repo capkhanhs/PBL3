@@ -71,8 +71,8 @@ namespace PBL.BLL
                 throw new Exception("Error updating address: " + ex.Message);
             }
         }
-        //Ham kiem tra nguoi dung da co dia chi chua
 
+        //Ham kiem tra nguoi dung da co dia chi chua
         public bool CheckHaveAddress(string manguoidung)
         {
             try
@@ -93,10 +93,10 @@ namespace PBL.BLL
         {
             try
             {
-                var nguoidungdiachi = NguoiDungDiaChiDAL.GetAll().Where(x => x.Ma_nguoi_dung == manguoidung).ToList();
+                List<nguoiDung_diaChi> nguoidungdiachi = NguoiDungDiaChiDAL.GetAll().Where(x => x.Ma_nguoi_dung == manguoidung).ToList();
                 if (nguoidungdiachi != null)
                 {
-                    return nguoidungdiachi.Select(x => x.Dia_Chi).ToList();
+                    return DiaChiBLL.Instance.GetDiaChiByMaNguoiDung(nguoidungdiachi);
                 }
                 return null;
             }

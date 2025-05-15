@@ -101,8 +101,6 @@ namespace PBL.BLL
 
         public void DatHang(string manguoidung, string madiachi, string phuongthucthanhtoan)
         {
-            if(MessageBox.Show("Bạn có chắc chắn muốn đặt hàng không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 try
                 {
                     Don_Hang don_Hang = new Don_Hang();
@@ -126,7 +124,8 @@ namespace PBL.BLL
                         );
                     }
                     MessageBox.Show("Đặt hàng thành công");
-                }
+                    CartItemBLL.Instance.DeleteRange(CartItemBLL.Instance.GetAllCart(manguoidung));
+            }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi đặt hàng: " + ex.Message);
@@ -135,4 +134,3 @@ namespace PBL.BLL
         }
 
     }
-}

@@ -71,6 +71,7 @@
             this.btn_xoa.TabIndex = 11;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // label1
             // 
@@ -94,6 +95,8 @@
             this.txt_soluong.TabIndex = 9;
             this.txt_soluong.Text = "3";
             this.txt_soluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_soluong.TextChanged += new System.EventHandler(this.txt_soluong_TextChanged);
+            this.txt_soluong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_soluong_KeyDown);
             // 
             // lblMoTa
             // 

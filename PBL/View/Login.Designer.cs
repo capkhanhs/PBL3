@@ -139,7 +139,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(185, 30);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Text = "ND001";
+            this.txtUsername.Text = "0395471811";
             // 
             // pic_0
             // 
@@ -176,6 +176,7 @@
             this.btnSignup.TabIndex = 7;
             this.btnSignup.Text = "Đăng Ký";
             this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Visible = false;
             this.btnSignup.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login

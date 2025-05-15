@@ -16,5 +16,10 @@ namespace PBL.View
         {
             InitializeComponent();
         }
+
+        private void btn_AllDH_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

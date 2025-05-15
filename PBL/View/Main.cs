@@ -19,8 +19,8 @@ namespace PBL.View
         {
             InitializeComponent();
             Manguoidung = username;
-            pnMain.Controls.Add(new ucAdmin());
-            //pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
+            //pnMain.Controls.Add(new ucAdmin());
+            pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
 
         private void LoadpnMain(UserControl uc)
@@ -57,6 +57,11 @@ namespace PBL.View
 
         private void btn_gh_Click(object sender, EventArgs e)
         {
+            if(GioHangBLL.Instance.CheckGioHang(Manguoidung) == false)
+            {
+                MessageBox.Show("Giỏ hàng của bạn đang trống");
+                return;
+            }
             LoadpnMain(new ucGioHang_Main(Manguoidung));
         }
 

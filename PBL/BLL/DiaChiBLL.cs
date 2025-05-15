@@ -107,5 +107,27 @@ namespace PBL.BLL
             }
         }
 
+        //Hàm load địa chỉ của 1 người dùng
+        public List<Dia_Chi> GetDiaChiByMaNguoiDung(List<nguoiDung_diaChi> nddc)
+        {
+            try
+            {
+                List<Dia_Chi> list = new List<Dia_Chi>();
+                foreach (var item in nddc)
+                {
+                    Dia_Chi diaChi = diachidal.GetById(item.Ma_dia_chi);
+                    if (diaChi != null)
+                    {
+                        list.Add(diaChi);
+                    }
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi lấy địa chỉ của người dùng: " + ex.Message);
+            }
+        }
+
     }
 }

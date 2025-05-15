@@ -90,9 +90,9 @@ namespace PBL.BLL
                 if (user != null)
                 {
 
-                    //bool passwordMatch = BCrypt.Net.BCrypt.Verify(password, user.password);
-                    //if (passwordMatch)
-                    if(user.password == password)
+                    bool passwordMatch = BCrypt.Net.BCrypt.Verify(password, user.password);
+                    if (passwordMatch)
+                        //if (user.password == password)
                     {
                         isValid = true;
                     }
