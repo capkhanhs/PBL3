@@ -3,6 +3,7 @@ using PBL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -72,6 +73,12 @@ namespace PBL.BLL
         {
             chiTietPhieuNhapDAL.Add(item);
             chiTietPhieuNhapDAL.Save();
+        }
+
+        //Lấy CTPN theo phiếu nhập kho
+        public List<Chi_Tiet_Phieu_Nhap> getCTPN_byMPN(String ma_PNK)
+        {
+            return chiTietPhieuNhapDAL.GetAll().Where(x => x.Ma_phieu == ma_PNK).ToList();
         }
     }
 }

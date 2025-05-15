@@ -63,8 +63,8 @@ namespace PBL.View
                  pttt = "Thanh toán khi nhận hàng";
             }
 
-            DatHang_ThanhToan dh = new DatHang_ThanhToan(manguoidung, cbbDiaChi.SelectedValue.ToString(), pttt);
-            flpnmain.Controls.Add(dh);
+            //DatHang_ThanhToan dh = new DatHang_ThanhToan(manguoidung, cbbDiaChi.SelectedValue.ToString(), pttt);
+            //flpnmain.Controls.Add(dh);
         }
     }
 }

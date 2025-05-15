@@ -12,10 +12,12 @@ using System.Security.Cryptography;
 
 namespace PBL.View
 {
-    public partial class ucQuanLyNhapXuatKho_Main: UserControl
+    public partial class ucQuanLyNhapXuatKho_Main : UserControl
     {
         private Phieu_Nhap_Kho phieu_nhapKho = null;
         private List<Chi_Tiet_Phieu_Nhap> listCTPN = new List<Chi_Tiet_Phieu_Nhap>();
+
+        private bool themSP = true;
 
         private String tongTien = "0";
         public ucQuanLyNhapXuatKho_Main()
@@ -25,6 +27,8 @@ namespace PBL.View
 
         private void button1_Click(object sender, EventArgs e)
         {
+            themSP = true;
+            LoadData();
             try
             {
                 //Tạo 1 phiếu tạm -> để tránh trường hợp mở thêm sản phẩm r hủy -> 1 phiếu tạo kho vô nghĩa đc tạo
@@ -73,6 +77,8 @@ namespace PBL.View
         //Hàm load lại dataGridView
         private void LoadData()
         {
+            khoiTao_datagridview_CTPN();
+
             try
             {
                 dataGridView1.DataSource = null;
@@ -114,6 +120,17 @@ namespace PBL.View
         {
             try
             {
+                if (!themSP)
+                {
+                    MessageBox.Show(
+                        "Không thể sử dụng chức năng này khi đang xem tất cả phiếu nhập kho!",
+                        "Lỗi!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                        );
+                    return;
+                }
+
                 if (listCTPN.Count == 0)
                 {
                     MessageBox.Show(
@@ -154,7 +171,27 @@ namespace PBL.View
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("So Records:" + listCTPN.Count);
+            if (!themSP)
+            {
+                MessageBox.Show(
+                    "Không thể sử dụng chức năng này khi đang xem tất cả phiếu nhập kho!",
+                    "Lỗi!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+                return;
+            }
+
+            if (phieu_nhapKho == null)
+            {
+                MessageBox.Show(
+                    "Chưa có phiếu nhập nào được tạo!",
+                    "Thông Báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                    );
+                return;
+            }
 
             DialogResult result = MessageBox.Show(
                 "Xác Nhận Hủy Phiếu Nhập?\nToàn bộ dữ liệu đã thêm sẽ bị xóa!",
@@ -162,12 +199,147 @@ namespace PBL.View
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
                 );
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 listCTPN.Clear();
                 phieu_nhapKho = null;
                 LoadData();
-            }    
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            themSP = false;
+            khoiTao_datagridview_PNK();
+
+            //Add toàn bộ phiếu nhập
+            try
+            {
+                List<Phieu_Nhap_Kho> listPNK = PBL.BLL.PhieuNhapKhoBLL.Instance.GetAll();
+                dataGridView1.DataSource = listPNK;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (!themSP)
+            {
+                String maPN = dataGridView1.CurrentRow.Cells["Ma_phieu"].Value.ToString();
+                //MessageBox.Show(
+                //    "Mã phiếu nhập: " + maPN,
+                //    "Thông Báo",
+                //    MessageBoxButtons.OK,
+                //    MessageBoxIcon.Information
+                //    );
+
+                khoiTao_datagridview_CTPN();
+                List<Chi_Tiet_Phieu_Nhap> listCTPN = PBL.BLL.ChiTietPhieuNhapBLL.Instance.getCTPN_byMPN(maPN);
+
+                String tongSP = "0";
+                tongTien = "0"; // Reset tổng tiền trước khi tính toán
+
+                dataGridView1.DataSource = listCTPN.Select(ctpn => new
+                {
+                    MaSP = ctpn.Ma_san_pham,
+                    TenSP = PBL.BLL.SanphamBLL.Instance.Find(ctpn.Ma_san_pham).Ten_sp.ToString(),
+                    SoLuong = ctpn.So_luong,
+                    DonGia = ctpn.Gia_nhap,
+                }).ToList();
+
+                foreach (var item in listCTPN)
+                {
+                    //Tính tổng tiền
+                    tongTien = (int.Parse(tongTien) + int.Parse(item.Gia_nhap) * item.So_luong).ToString();
+                    //Tính tổng số lượng sản phẩm
+                    tongSP = (int.Parse(tongSP) + item.So_luong).ToString();
+                }
+
+                //Cập nhật lại tổng tiền và tổng số lượng sản phẩm
+                textBox1.Text = tongTien;
+                textBox2.Text = tongSP;
+            }
+        }
+
+        // Tách thành hai hàm khác nhau cho rõ ràng hơn
+        public void khoiTao_datagridview_PNK()
+        {
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
+            dataGridView1.AutoGenerateColumns = false;
+            //không cho phép sửa dữ liệu trong DataGridView
+            dataGridView1.ReadOnly = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+
+            // Tạo cột cho danh sách phiếu nhập kho
+            DataGridViewTextBoxColumn colMa = new DataGridViewTextBoxColumn();
+            colMa.HeaderText = "Mã Phiếu";
+            colMa.Name = "Ma_phieu";
+            colMa.DataPropertyName = "Ma_phieu";
+
+            DataGridViewTextBoxColumn colMaND = new DataGridViewTextBoxColumn();
+            colMaND.HeaderText = "Mã Người Dùng";
+            colMaND.Name = "Ma_nguoi_dung";
+            colMaND.DataPropertyName = "Ma_nguoi_dung";
+
+            DataGridViewTextBoxColumn colDate = new DataGridViewTextBoxColumn();
+            colDate.HeaderText = "Ngày Tạo";
+            colDate.Name = "Ngay_tao";
+            colDate.DataPropertyName = "Ngay_tao";
+            colDate.DefaultCellStyle.Format = "dd/MM/yyyy";
+
+            DataGridViewTextBoxColumn colTongTien = new DataGridViewTextBoxColumn();
+            colTongTien.HeaderText = "Tổng Tiền";
+            colTongTien.Name = "Tongtien";
+            colTongTien.DataPropertyName = "Tongtien";
+
+            // Thêm vào DataGridView
+            dataGridView1.Columns.Add(colMa);
+            dataGridView1.Columns.Add(colMaND);
+            dataGridView1.Columns.Add(colDate);
+            dataGridView1.Columns.Add(colTongTien);
+        }
+
+        public void khoiTao_datagridview_CTPN()
+        {
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
+            dataGridView1.AutoGenerateColumns = false;
+            //không cho phép sửa dữ liệu trong DataGridView
+            dataGridView1.ReadOnly = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+
+            // Tạo cột cho chi tiết phiếu nhập
+            DataGridViewTextBoxColumn colMaSP = new DataGridViewTextBoxColumn();
+            colMaSP.HeaderText = "Mã Sản Phẩm";
+            colMaSP.Name = "MaSP";
+            colMaSP.DataPropertyName = "MaSP";
+
+            DataGridViewTextBoxColumn colTenSP = new DataGridViewTextBoxColumn();
+            colTenSP.HeaderText = "Tên Sản Phẩm";
+            colTenSP.Name = "TenSP";
+            colTenSP.DataPropertyName = "TenSP";
+
+            DataGridViewTextBoxColumn colSoLuong = new DataGridViewTextBoxColumn();
+            colSoLuong.HeaderText = "Số Lượng";
+            colSoLuong.Name = "SoLuong";
+            colSoLuong.DataPropertyName = "SoLuong";
+
+            DataGridViewTextBoxColumn colDonGia = new DataGridViewTextBoxColumn();
+            colDonGia.HeaderText = "Đơn Giá";
+            colDonGia.Name = "DonGia";
+            colDonGia.DataPropertyName = "DonGia";
+
+            // Thêm vào DataGridView
+            dataGridView1.Columns.Add(colMaSP);
+            dataGridView1.Columns.Add(colTenSP);
+            dataGridView1.Columns.Add(colSoLuong);
+            dataGridView1.Columns.Add(colDonGia);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -158,6 +159,7 @@ namespace PBL.BLL
             return "";
         }
 
+        //Hàm thêm số lượng tùy theo mã sản phẩm
         public void themSoLuong(String maSP, int soLuong)
         {
             if (string.IsNullOrEmpty(maSP))
@@ -180,6 +182,7 @@ namespace PBL.BLL
             }
         }
 
+        //Dùng để update giá sản phẩm theo mã sản phẩm
         public void update_giaSP(String maSP, String Gia)
         {
             if (string.IsNullOrEmpty(Gia))
