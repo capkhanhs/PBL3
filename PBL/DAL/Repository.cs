@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,6 +58,12 @@ namespace PBL.DAL
         public void Save()
         {
             context.SaveChanges();
+        }
+
+        // Hàm Select chung với điều kiện
+        public List<T> Select(Expression<Func<T, bool>> predicate)
+        {
+            return dbSet.Where(predicate).ToList();
         }
     }
 }

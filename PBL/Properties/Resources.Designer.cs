@@ -73,6 +73,16 @@ namespace PBL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anh_nen_dang_nhap {
+            get {
+                object obj = ResourceManager.GetObject("anh_nen_dang_nhap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apple {
             get {
                 object obj = ResourceManager.GetObject("Apple", resourceCulture);

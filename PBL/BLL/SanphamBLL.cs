@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PBL.DAL;
 using PBL.Model;
 
@@ -23,6 +25,9 @@ namespace PBL.BLL
                 return _Instance;
             }
         }
+
+        public object DanhMucBLL { get; private set; }
+
         public List<San_Pham> GetAll()
         {
             return spDAL.GetAll();
@@ -41,6 +46,7 @@ namespace PBL.BLL
             return list;
         }
 
+        //Lấy all SP theo danh mục
         public List<San_Pham> LocTheoDanhMuc(string tenDM)
         {
             List<San_Pham> list = new List<San_Pham>();
@@ -54,6 +60,7 @@ namespace PBL.BLL
             return list;
         }
 
+        //Tìm kiếm sản phẩm theo mã sp
         public San_Pham Find(string masp)
         {
             if (string.IsNullOrEmpty(masp))
@@ -71,6 +78,27 @@ namespace PBL.BLL
 
             }
         }
+
+        //Tìm kiếm sản phẩm theo tên
+        public San_Pham Find_byName(string Name)
+        {
+            if (string.IsNullOrEmpty(Name))
+            {
+                throw new Exception("Mã sản phẩm không được để trống");
+            }
+            else
+            {
+                San_Pham sp = spDAL.GetAll().FirstOrDefault(x => x.Ten_sp.ToLower() == Name.ToLower());
+                if (sp == null)
+                {
+                    throw new Exception("Sản phẩm không tồn tại");
+                }
+                return spDAL.GetById(sp.Ma_san_pham);
+
+            }
+        }
+
+
         public void ThemSP(string masp, string tensp, string mancc, string tenDM, string giaSP, string Mo_ta_sp, string chi_tiet_sp, string picfilename)
         {
             if (string.IsNullOrEmpty(masp) || string.IsNullOrEmpty(tensp) || string.IsNullOrEmpty(mancc) || string.IsNullOrEmpty(tenDM) || string.IsNullOrEmpty(giaSP))
@@ -107,7 +135,7 @@ namespace PBL.BLL
                 throw new Exception("Mã sản phẩm đã tồn tại");
             }
         }
-
+        
         //Hàm nhận vào 1 List sản phẩm và đưa ra tên sản phẩm bán chạy nhất -> sử dụng bên thống kê
         public string GetSPBanChay(List<San_Pham> list)
         {
@@ -129,6 +157,45 @@ namespace PBL.BLL
                 Console.WriteLine("Lỗi khi lấy sản phẩm bán chạy: " + ex.Message);
             }
             return "";
+        }
+
+        //Hàm thêm số lượng tùy theo mã sản phẩm
+        public void themSoLuong(String maSP, int soLuong)
+        {
+            if (string.IsNullOrEmpty(maSP))
+            {
+                throw new Exception("Mã sản phẩm trống");
+            }
+            else
+            {
+                San_Pham sp = spDAL.GetById(maSP);
+                if (sp == null)
+                {
+                    throw new Exception("Sản phẩm không tồn tại");
+                }
+                else
+                {
+                    sp.So_luong += soLuong;
+                    spDAL.Update(sp);
+                    spDAL.Save();
+                }
+            }
+        }
+
+        //Dùng để update giá sản phẩm theo mã sản phẩm
+        public void update_giaSP(String maSP, String Gia)
+        {
+            if (string.IsNullOrEmpty(Gia))
+            {
+                throw new Exception("Giá sản phẩm trống");
+            }
+            else
+            {
+                San_Pham sp = spDAL.GetById(maSP);
+                sp.Gia_sp = Gia;
+                spDAL.Update(sp);
+                spDAL.Save();
+            }
         }
     }
 }

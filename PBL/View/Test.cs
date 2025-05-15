@@ -7,25 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.View;
 
 namespace PBL.View
 {
-    public partial class TestTK : Form
+    public partial class Test : Form
     {
-        public TestTK()
+        public Test()
         {
             InitializeComponent();
-            test();
-        }
-
-        public void test()
-        {
-            ucThongKeDoanhSo_Main uc = new ucThongKeDoanhSo_Main();
-            uc.Dock = DockStyle.Fill;
-            this.Controls.Clear();
+            // Ensure 'UCQuanLyNhapXuatKho_Main' is defined in the 'PBL.View.UC' namespace  
+            ucQuanLyNhapXuatKho_Main uc = new PBL.View.ucQuanLyNhapXuatKho_Main();
             this.Controls.Add(uc);
-            uc.BringToFront();
-            uc.Show();
         }
     }
 }

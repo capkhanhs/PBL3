@@ -229,7 +229,6 @@ namespace PBL.View
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1317, 64);
             this.panel5.TabIndex = 3;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label7
             // 
