@@ -20,10 +20,10 @@ namespace PBL.View
             InitializeComponent();
             Manguoidung = username;
             pnMain.Controls.Add(new ucAdmin());
-            pn_0.Controls.Clear();
-            pn_0.Controls.Add(new ucCongCuSanPham_Admin());
+
             //pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
+
 
         private void LoadpnMain(UserControl uc)
         {

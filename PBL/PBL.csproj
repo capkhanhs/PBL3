@@ -149,6 +149,12 @@
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Ward.cs" />
+    <Compile Include="View\ANH_EM_LAM_ANH_SAN_PHAM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ANH_EM_LAM_ANH_SAN_PHAM.Designer.cs">
+      <DependentUpon>ANH_EM_LAM_ANH_SAN_PHAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CapNhatDiaChi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,11 +229,53 @@
     <Compile Include="View\ucChinhSua_ThemSanPham.Designer.cs">
       <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucConCuTrangChu_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucConCuTrangChu_Admin.Designer.cs">
+      <DependentUpon>ucConCuTrangChu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCu.Designer.cs">
+      <DependentUpon>ucCongCu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCuCaNhan_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCuCaNhan_Admin.Designer.cs">
+      <DependentUpon>ucCongCuCaNhan_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCuDonHang_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCuDonHang_Admin.Designer.cs">
+      <DependentUpon>ucCongCuDonHang_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCuKhoHang_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCuKhoHang_Admin.Designer.cs">
+      <DependentUpon>ucCongCuKhoHang_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCuNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCuNhanVien.Designer.cs">
+      <DependentUpon>ucCongCuNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucCongCuSanPham_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucCongCuSanPham_Admin.Designer.cs">
       <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCongCuTaiKhoan_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCongCuTaiKhoan_Admin.Designer.cs">
+      <DependentUpon>ucCongCuTaiKhoan_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucDatHang_GioHang_Main.cs">
       <SubType>UserControl</SubType>
@@ -343,6 +391,12 @@
     <Compile Include="View\ucTrangCaNhan_Main.Designer.cs">
       <DependentUpon>ucTrangCaNhan_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucTrangChu_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrangChu_Admin.Designer.cs">
+      <DependentUpon>ucTrangChu_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucTrangChu_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -373,6 +427,9 @@
     <Compile Include="View\ucXemChiTietSanPham_Admin.Designer.cs">
       <DependentUpon>ucXemChiTietSanPham_Admin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\ANH_EM_LAM_ANH_SAN_PHAM.resx">
+      <DependentUpon>ANH_EM_LAM_ANH_SAN_PHAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CapNhatDiaChi.resx">
       <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,8 +471,29 @@
     <EmbeddedResource Include="View\ucChinhSua_ThemSanPham.resx">
       <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucConCuTrangChu_Admin.resx">
+      <DependentUpon>ucConCuTrangChu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCu.resx">
+      <DependentUpon>ucCongCu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCuCaNhan_Admin.resx">
+      <DependentUpon>ucCongCuCaNhan_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCuDonHang_Admin.resx">
+      <DependentUpon>ucCongCuDonHang_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCuKhoHang_Admin.resx">
+      <DependentUpon>ucCongCuKhoHang_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCuNhanVien.resx">
+      <DependentUpon>ucCongCuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucCongCuSanPham_Admin.resx">
       <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCongCuTaiKhoan_Admin.resx">
+      <DependentUpon>ucCongCuTaiKhoan_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
       <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
@@ -474,6 +552,9 @@
     <EmbeddedResource Include="View\ucTrangCaNhan_Main.resx">
       <DependentUpon>ucTrangCaNhan_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrangChu_Admin.resx">
+      <DependentUpon>ucTrangChu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucTrangChu_Main.resx">
       <DependentUpon>ucTrangChu_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +603,23 @@
       <LastGenOutput>PBL3_azure_databaseEntities.cs</LastGenOutput>
     </Content>
     <None Include="Resources\anh_nen_dang_nhap.png" />
+    <None Include="Resources\addition.png" />
+    <None Include="Resources\cost.png" />
+    <None Include="Resources\reloading.png" />
+    <None Include="Resources\administrator.png" />
+    <None Include="Resources\rsz_administrator.png" />
+    <None Include="Resources\anh_nen_dang_nhap1.png" />
+    <None Include="Resources\anh_nen_gio_hang_trong.png" />
+    <None Include="Resources\anh_nen_san_pham.jpg" />
+    <None Include="Resources\OIP__1_-removebg-preview.png" />
+    <None Include="Resources\anh_nen_san_pham1.jpg" />
+    <None Include="Resources\OIP__1_-removebg-preview1.png" />
+    <None Include="Resources\anh_nen_san_pham2.jpg" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\check_1.png" />
+    <None Include="Resources\easy-installation.png" />
+    <None Include="Resources\easy-installation _64.png" />
+    <None Include="Resources\rsz_manager.png" />
     <Content Include="tinh_tp.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -12,6 +12,7 @@ namespace PBL.View
 {
     public partial class ucCaNhan_Admin: UserControl
     {
+        private string manguoidung = "0395471811"; // thay đổi để lấy mã người dùng
         public ucCaNhan_Admin()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace PBL.View
 
         private void btn_TT_DC_Click(object sender, EventArgs e)
         {
-            //LoadPanel(pn_HienThiCaNhan, new ucThongTin_TrangCaNhan_Main());
+            LoadPanel(pn_HienThiCaNhan, new ucThongTin_TrangCaNhan_Main(manguoidung));
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)

@@ -29,32 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSanPhamItem_TrangChu_Main));
-            this.ptbox_sp = new System.Windows.Forms.PictureBox();
             this.lblTenSP = new System.Windows.Forms.Label();
             this.lblGiaSP = new System.Windows.Forms.Label();
             this.lbl_Mota = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btn_themvaogio = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbl_soluong = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbox_sp)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_themvaogio = new System.Windows.Forms.Button();
+            this.ptbox_sp = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbox_sp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ptbox_sp
-            // 
-            this.ptbox_sp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ptbox_sp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ptbox_sp.Image = global::PBL.Properties.Resources.laptopnitrotest;
-            this.ptbox_sp.Location = new System.Drawing.Point(0, 0);
-            this.ptbox_sp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ptbox_sp.Name = "ptbox_sp";
-            this.ptbox_sp.Size = new System.Drawing.Size(419, 264);
-            this.ptbox_sp.TabIndex = 0;
-            this.ptbox_sp.TabStop = false;
-            this.ptbox_sp.Click += new System.EventHandler(this.ptbox_sp_Click);
             // 
             // lblTenSP
             // 
@@ -99,18 +86,6 @@
             this.label14.TabIndex = 5;
             this.label14.Text = "Sale:";
             // 
-            // btn_themvaogio
-            // 
-            this.btn_themvaogio.BackColor = System.Drawing.Color.Transparent;
-            this.btn_themvaogio.Image = ((System.Drawing.Image)(resources.GetObject("btn_themvaogio.Image")));
-            this.btn_themvaogio.Location = new System.Drawing.Point(341, 427);
-            this.btn_themvaogio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_themvaogio.Name = "btn_themvaogio";
-            this.btn_themvaogio.Size = new System.Drawing.Size(58, 50);
-            this.btn_themvaogio.TabIndex = 6;
-            this.btn_themvaogio.UseVisualStyleBackColor = false;
-            this.btn_themvaogio.Click += new System.EventHandler(this.button3_Click);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -144,15 +119,6 @@
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 461);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Số lượng:";
-            // 
             // lbl_soluong
             // 
             this.lbl_soluong.AutoSize = true;
@@ -162,6 +128,40 @@
             this.lbl_soluong.TabIndex = 9;
             this.lbl_soluong.Text = "label2";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(194, 461);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Số lượng:";
+            // 
+            // btn_themvaogio
+            // 
+            this.btn_themvaogio.BackColor = System.Drawing.Color.Transparent;
+            this.btn_themvaogio.Image = ((System.Drawing.Image)(resources.GetObject("btn_themvaogio.Image")));
+            this.btn_themvaogio.Location = new System.Drawing.Point(341, 427);
+            this.btn_themvaogio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_themvaogio.Name = "btn_themvaogio";
+            this.btn_themvaogio.Size = new System.Drawing.Size(58, 50);
+            this.btn_themvaogio.TabIndex = 6;
+            this.btn_themvaogio.UseVisualStyleBackColor = false;
+            this.btn_themvaogio.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ptbox_sp
+            // 
+            this.ptbox_sp.BackgroundImage = global::PBL.Properties.Resources.anh_nen_san_pham2;
+            this.ptbox_sp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ptbox_sp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ptbox_sp.Location = new System.Drawing.Point(0, 0);
+            this.ptbox_sp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptbox_sp.Name = "ptbox_sp";
+            this.ptbox_sp.Size = new System.Drawing.Size(419, 264);
+            this.ptbox_sp.TabIndex = 0;
+            this.ptbox_sp.TabStop = false;
+            this.ptbox_sp.Click += new System.EventHandler(this.ptbox_sp_Click);
+            // 
             // ucSanPhamItem_TrangChu_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -169,9 +169,9 @@
             this.Controls.Add(this.panel5);
             this.Name = "ucSanPhamItem_TrangChu_Main";
             this.Size = new System.Drawing.Size(421, 499);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbox_sp)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbox_sp)).EndInit();
             this.ResumeLayout(false);
 
         }

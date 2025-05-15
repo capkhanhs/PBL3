@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pn_HienThiCaNhan = new System.Windows.Forms.Panel();
             this.btn_DonHang = new System.Windows.Forms.Button();
             this.btn_TT_DC = new System.Windows.Forms.Button();
-            this.pn_HienThiCaNhan = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +94,14 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(275, 129);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // pn_HienThiCaNhan
+            // 
+            this.pn_HienThiCaNhan.BackColor = System.Drawing.Color.White;
+            this.pn_HienThiCaNhan.Location = new System.Drawing.Point(336, 65);
+            this.pn_HienThiCaNhan.Name = "pn_HienThiCaNhan";
+            this.pn_HienThiCaNhan.Size = new System.Drawing.Size(761, 459);
+            this.pn_HienThiCaNhan.TabIndex = 5;
+            // 
             // btn_DonHang
             // 
             this.btn_DonHang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -128,14 +136,6 @@
             this.btn_TT_DC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_TT_DC.UseVisualStyleBackColor = true;
             this.btn_TT_DC.Click += new System.EventHandler(this.btn_TT_DC_Click);
-            // 
-            // pn_HienThiCaNhan
-            // 
-            this.pn_HienThiCaNhan.BackColor = System.Drawing.Color.White;
-            this.pn_HienThiCaNhan.Location = new System.Drawing.Point(336, 65);
-            this.pn_HienThiCaNhan.Name = "pn_HienThiCaNhan";
-            this.pn_HienThiCaNhan.Size = new System.Drawing.Size(761, 459);
-            this.pn_HienThiCaNhan.TabIndex = 5;
             // 
             // ucCaNhan_Admin
             // 

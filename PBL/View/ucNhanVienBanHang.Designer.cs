@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn_DonHang = new System.Windows.Forms.Panel();
             this.btn_DonHangChoXuLy = new System.Windows.Forms.Button();
             this.btn_DonHangDaXuLy = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_XemChiTiet = new System.Windows.Forms.Button();
-            this.btn_HuyDonHang = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_SoLuongDonHang = new System.Windows.Forms.Label();
             this.cl_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_GiaTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_NgayDatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_XemChiTiet = new System.Windows.Forms.Button();
+            this.btn_HuyDonHang = new System.Windows.Forms.Button();
+            this.pn_hienthi = new System.Windows.Forms.Panel();
             this.DTP_NgayHienTai = new System.Windows.Forms.DateTimePicker();
+            this.lb_SoLuongDonHang = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pn_hienthi.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_DonHang
@@ -81,7 +82,18 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.CausesValidation = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_MaDH,
             this.cl_MaKH,
@@ -95,6 +107,41 @@
             this.dataGridView1.Size = new System.Drawing.Size(872, 443);
             this.dataGridView1.TabIndex = 0;
             // 
+            // cl_MaDH
+            // 
+            this.cl_MaDH.HeaderText = "Mã đơn hàng";
+            this.cl_MaDH.MinimumWidth = 6;
+            this.cl_MaDH.Name = "cl_MaDH";
+            this.cl_MaDH.ReadOnly = true;
+            // 
+            // cl_MaKH
+            // 
+            this.cl_MaKH.HeaderText = "Mã khách hàng";
+            this.cl_MaKH.MinimumWidth = 6;
+            this.cl_MaKH.Name = "cl_MaKH";
+            this.cl_MaKH.ReadOnly = true;
+            // 
+            // cl_GiaTri
+            // 
+            this.cl_GiaTri.HeaderText = "Tổng đơn hàng";
+            this.cl_GiaTri.MinimumWidth = 6;
+            this.cl_GiaTri.Name = "cl_GiaTri";
+            this.cl_GiaTri.ReadOnly = true;
+            // 
+            // cl_NgayDatHang
+            // 
+            this.cl_NgayDatHang.HeaderText = "Ngày đặt hàng";
+            this.cl_NgayDatHang.MinimumWidth = 6;
+            this.cl_NgayDatHang.Name = "cl_NgayDatHang";
+            this.cl_NgayDatHang.ReadOnly = true;
+            // 
+            // cl_TrangThai
+            // 
+            this.cl_TrangThai.HeaderText = "Trạng thái";
+            this.cl_TrangThai.MinimumWidth = 6;
+            this.cl_TrangThai.Name = "cl_TrangThai";
+            this.cl_TrangThai.ReadOnly = true;
+            // 
             // btn_XemChiTiet
             // 
             this.btn_XemChiTiet.BackColor = System.Drawing.Color.Red;
@@ -106,6 +153,7 @@
             this.btn_XemChiTiet.TabIndex = 3;
             this.btn_XemChiTiet.Text = "Xem chi tiết";
             this.btn_XemChiTiet.UseVisualStyleBackColor = false;
+            this.btn_XemChiTiet.Click += new System.EventHandler(this.btn_XemChiTiet_Click);
             // 
             // btn_HuyDonHang
             // 
@@ -120,39 +168,26 @@
             this.btn_HuyDonHang.UseVisualStyleBackColor = false;
             this.btn_HuyDonHang.Click += new System.EventHandler(this.btn_HuyDonHang_Click);
             // 
-            // panel2
+            // pn_hienthi
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.DTP_NgayHienTai);
-            this.panel2.Controls.Add(this.lb_SoLuongDonHang);
-            this.panel2.Controls.Add(this.btn_HuyDonHang);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btn_XemChiTiet);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(71, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1159, 602);
-            this.panel2.TabIndex = 5;
+            this.pn_hienthi.BackColor = System.Drawing.Color.White;
+            this.pn_hienthi.Controls.Add(this.DTP_NgayHienTai);
+            this.pn_hienthi.Controls.Add(this.lb_SoLuongDonHang);
+            this.pn_hienthi.Controls.Add(this.btn_HuyDonHang);
+            this.pn_hienthi.Controls.Add(this.label2);
+            this.pn_hienthi.Controls.Add(this.btn_XemChiTiet);
+            this.pn_hienthi.Controls.Add(this.label1);
+            this.pn_hienthi.Location = new System.Drawing.Point(71, 4);
+            this.pn_hienthi.Name = "pn_hienthi";
+            this.pn_hienthi.Size = new System.Drawing.Size(1159, 602);
+            this.pn_hienthi.TabIndex = 5;
             // 
-            // label1
+            // DTP_NgayHienTai
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 534);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tổng số lượng đơn hàng:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(429, 292);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Tổng số lượng đơn hàng:";
+            this.DTP_NgayHienTai.Location = new System.Drawing.Point(736, 39);
+            this.DTP_NgayHienTai.Name = "DTP_NgayHienTai";
+            this.DTP_NgayHienTai.Size = new System.Drawing.Size(200, 22);
+            this.DTP_NgayHienTai.TabIndex = 5;
             // 
             // lb_SoLuongDonHang
             // 
@@ -164,52 +199,25 @@
             this.lb_SoLuongDonHang.TabIndex = 2;
             this.lb_SoLuongDonHang.Text = "100";
             // 
-            // cl_MaDH
+            // label2
             // 
-            this.cl_MaDH.HeaderText = "Mã đơn hàng";
-            this.cl_MaDH.MinimumWidth = 6;
-            this.cl_MaDH.Name = "cl_MaDH";
-            this.cl_MaDH.ReadOnly = true;
-            this.cl_MaDH.Width = 125;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(429, 292);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tổng số lượng đơn hàng:";
             // 
-            // cl_MaKH
+            // label1
             // 
-            this.cl_MaKH.HeaderText = "Mã khách hàng";
-            this.cl_MaKH.MinimumWidth = 6;
-            this.cl_MaKH.Name = "cl_MaKH";
-            this.cl_MaKH.ReadOnly = true;
-            this.cl_MaKH.Width = 125;
-            // 
-            // cl_GiaTri
-            // 
-            this.cl_GiaTri.HeaderText = "Tổng đơn hàng";
-            this.cl_GiaTri.MinimumWidth = 6;
-            this.cl_GiaTri.Name = "cl_GiaTri";
-            this.cl_GiaTri.ReadOnly = true;
-            this.cl_GiaTri.Width = 125;
-            // 
-            // cl_NgayDatHang
-            // 
-            this.cl_NgayDatHang.HeaderText = "Ngày đặt hàng";
-            this.cl_NgayDatHang.MinimumWidth = 6;
-            this.cl_NgayDatHang.Name = "cl_NgayDatHang";
-            this.cl_NgayDatHang.ReadOnly = true;
-            this.cl_NgayDatHang.Width = 125;
-            // 
-            // cl_TrangThai
-            // 
-            this.cl_TrangThai.HeaderText = "Trạng thái";
-            this.cl_TrangThai.MinimumWidth = 6;
-            this.cl_TrangThai.Name = "cl_TrangThai";
-            this.cl_TrangThai.ReadOnly = true;
-            this.cl_TrangThai.Width = 125;
-            // 
-            // DTP_NgayHienTai
-            // 
-            this.DTP_NgayHienTai.Location = new System.Drawing.Point(736, 39);
-            this.DTP_NgayHienTai.Name = "DTP_NgayHienTai";
-            this.DTP_NgayHienTai.Size = new System.Drawing.Size(200, 22);
-            this.DTP_NgayHienTai.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 534);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tổng số lượng đơn hàng:";
             // 
             // ucNhanVienBanHang
             // 
@@ -219,13 +227,13 @@
             this.Controls.Add(this.btn_DonHangDaXuLy);
             this.Controls.Add(this.btn_DonHangChoXuLy);
             this.Controls.Add(this.pn_DonHang);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pn_hienthi);
             this.Name = "ucNhanVienBanHang";
             this.Size = new System.Drawing.Size(1388, 609);
             this.Load += new System.EventHandler(this.ucNhanVienBanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pn_hienthi.ResumeLayout(false);
+            this.pn_hienthi.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -238,7 +246,7 @@
         private System.Windows.Forms.Button btn_DonHangDaXuLy;
         private System.Windows.Forms.Button btn_XemChiTiet;
         private System.Windows.Forms.Button btn_HuyDonHang;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pn_hienthi;
         private System.Windows.Forms.Label lb_SoLuongDonHang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

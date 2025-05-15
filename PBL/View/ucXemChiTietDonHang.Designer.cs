@@ -36,19 +36,26 @@
             this.label5 = new System.Windows.Forms.Label();
             this.flpn_HienThiDonHang = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_CapNhatTrangThai = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lb_tenKH = new System.Windows.Forms.Label();
+            this.lb_SoDT = new System.Windows.Forms.Label();
+            this.lb_DiaChi = new System.Windows.Forms.Label();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_TrangThaiDonHang
             // 
-            this.txt_TrangThaiDonHang.Location = new System.Drawing.Point(458, 401);
+            this.txt_TrangThaiDonHang.Location = new System.Drawing.Point(561, 546);
             this.txt_TrangThaiDonHang.Name = "txt_TrangThaiDonHang";
-            this.txt_TrangThaiDonHang.Size = new System.Drawing.Size(171, 22);
+            this.txt_TrangThaiDonHang.Size = new System.Drawing.Size(166, 22);
             this.txt_TrangThaiDonHang.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(370, 408);
+            this.label2.Location = new System.Drawing.Point(473, 553);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 13;
@@ -57,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 408);
+            this.label3.Location = new System.Drawing.Point(117, 553);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 16);
             this.label3.TabIndex = 15;
@@ -67,7 +74,7 @@
             // 
             this.lb_TongSP.AutoSize = true;
             this.lb_TongSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TongSP.Location = new System.Drawing.Point(114, 408);
+            this.lb_TongSP.Location = new System.Drawing.Point(217, 553);
             this.lb_TongSP.Name = "lb_TongSP";
             this.lb_TongSP.Size = new System.Drawing.Size(15, 16);
             this.lb_TongSP.TabIndex = 16;
@@ -77,7 +84,7 @@
             // 
             this.lb_TongDonHang.AutoSize = true;
             this.lb_TongDonHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TongDonHang.Location = new System.Drawing.Point(274, 407);
+            this.lb_TongDonHang.Location = new System.Drawing.Point(377, 552);
             this.lb_TongDonHang.Name = "lb_TongDonHang";
             this.lb_TongDonHang.Size = new System.Drawing.Size(79, 16);
             this.lb_TongDonHang.TabIndex = 18;
@@ -86,7 +93,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(174, 407);
+            this.label5.Location = new System.Drawing.Point(277, 552);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 17;
@@ -95,9 +102,9 @@
             // flpn_HienThiDonHang
             // 
             this.flpn_HienThiDonHang.BackColor = System.Drawing.Color.White;
-            this.flpn_HienThiDonHang.Location = new System.Drawing.Point(4, 4);
+            this.flpn_HienThiDonHang.Location = new System.Drawing.Point(120, 38);
             this.flpn_HienThiDonHang.Name = "flpn_HienThiDonHang";
-            this.flpn_HienThiDonHang.Size = new System.Drawing.Size(829, 391);
+            this.flpn_HienThiDonHang.Size = new System.Drawing.Size(829, 445);
             this.flpn_HienThiDonHang.TabIndex = 19;
             // 
             // btn_CapNhatTrangThai
@@ -105,17 +112,93 @@
             this.btn_CapNhatTrangThai.BackColor = System.Drawing.Color.Red;
             this.btn_CapNhatTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CapNhatTrangThai.ForeColor = System.Drawing.Color.White;
-            this.btn_CapNhatTrangThai.Location = new System.Drawing.Point(660, 401);
+            this.btn_CapNhatTrangThai.Location = new System.Drawing.Point(781, 504);
             this.btn_CapNhatTrangThai.Name = "btn_CapNhatTrangThai";
-            this.btn_CapNhatTrangThai.Size = new System.Drawing.Size(173, 28);
+            this.btn_CapNhatTrangThai.Size = new System.Drawing.Size(168, 39);
             this.btn_CapNhatTrangThai.TabIndex = 20;
             this.btn_CapNhatTrangThai.Text = "Cập nhật";
             this.btn_CapNhatTrangThai.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(117, 502);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Tên khách hàng:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(558, 502);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 16);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Số điện thoại:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(119, 527);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 16);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Địa chỉ giao hàng:";
+            // 
+            // lb_tenKH
+            // 
+            this.lb_tenKH.AutoSize = true;
+            this.lb_tenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tenKH.Location = new System.Drawing.Point(230, 501);
+            this.lb_tenKH.Name = "lb_tenKH";
+            this.lb_tenKH.Size = new System.Drawing.Size(50, 16);
+            this.lb_tenKH.TabIndex = 24;
+            this.lb_tenKH.Text = "label7";
+            // 
+            // lb_SoDT
+            // 
+            this.lb_SoDT.AutoSize = true;
+            this.lb_SoDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_SoDT.Location = new System.Drawing.Point(652, 501);
+            this.lb_SoDT.Name = "lb_SoDT";
+            this.lb_SoDT.Size = new System.Drawing.Size(50, 16);
+            this.lb_SoDT.TabIndex = 25;
+            this.lb_SoDT.Text = "label7";
+            // 
+            // lb_DiaChi
+            // 
+            this.lb_DiaChi.AutoSize = true;
+            this.lb_DiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_DiaChi.Location = new System.Drawing.Point(230, 527);
+            this.lb_DiaChi.Name = "lb_DiaChi";
+            this.lb_DiaChi.Size = new System.Drawing.Size(50, 16);
+            this.lb_DiaChi.TabIndex = 26;
+            this.lb_DiaChi.Text = "label7";
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Thoat.ForeColor = System.Drawing.Color.White;
+            this.btn_Thoat.Location = new System.Drawing.Point(781, 549);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(168, 38);
+            this.btn_Thoat.TabIndex = 27;
+            this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
             // 
             // ucXemChiTietDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_Thoat);
+            this.Controls.Add(this.lb_DiaChi);
+            this.Controls.Add(this.lb_SoDT);
+            this.Controls.Add(this.lb_tenKH);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_CapNhatTrangThai);
             this.Controls.Add(this.flpn_HienThiDonHang);
             this.Controls.Add(this.lb_TongDonHang);
@@ -125,7 +208,7 @@
             this.Controls.Add(this.txt_TrangThaiDonHang);
             this.Controls.Add(this.label2);
             this.Name = "ucXemChiTietDonHang";
-            this.Size = new System.Drawing.Size(851, 438);
+            this.Size = new System.Drawing.Size(1159, 602);
             this.Load += new System.EventHandler(this.ucXemChiTietDonHang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,5 +224,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flpn_HienThiDonHang;
         private System.Windows.Forms.Button btn_CapNhatTrangThai;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lb_tenKH;
+        private System.Windows.Forms.Label lb_SoDT;
+        private System.Windows.Forms.Label lb_DiaChi;
+        private System.Windows.Forms.Button btn_Thoat;
     }
 }

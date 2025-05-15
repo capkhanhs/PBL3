@@ -37,7 +37,13 @@
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
             this.btn_TrangChu = new System.Windows.Forms.Button();
             this.flpn_HienThi = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.flpn_HienThi.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,14 +56,14 @@
             this.panel1.Controls.Add(this.btn_DoanhSo);
             this.panel1.Controls.Add(this.btn_TaiKhoan);
             this.panel1.Controls.Add(this.btn_TrangChu);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, -15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 609);
+            this.panel1.Size = new System.Drawing.Size(247, 624);
             this.panel1.TabIndex = 0;
             // 
             // btn_CaNhan
             // 
-            this.btn_CaNhan.Location = new System.Drawing.Point(0, 546);
+            this.btn_CaNhan.Location = new System.Drawing.Point(0, 530);
             this.btn_CaNhan.Name = "btn_CaNhan";
             this.btn_CaNhan.Size = new System.Drawing.Size(238, 46);
             this.btn_CaNhan.TabIndex = 14;
@@ -67,7 +73,7 @@
             // 
             // btn_DonHang
             // 
-            this.btn_DonHang.Location = new System.Drawing.Point(0, 206);
+            this.btn_DonHang.Location = new System.Drawing.Point(3, 221);
             this.btn_DonHang.Name = "btn_DonHang";
             this.btn_DonHang.Size = new System.Drawing.Size(238, 46);
             this.btn_DonHang.TabIndex = 13;
@@ -77,7 +83,7 @@
             // 
             // btn_KhoHang
             // 
-            this.btn_KhoHang.Location = new System.Drawing.Point(0, 154);
+            this.btn_KhoHang.Location = new System.Drawing.Point(3, 169);
             this.btn_KhoHang.Name = "btn_KhoHang";
             this.btn_KhoHang.Size = new System.Drawing.Size(238, 46);
             this.btn_KhoHang.TabIndex = 12;
@@ -87,7 +93,7 @@
             // 
             // btn_SanPham
             // 
-            this.btn_SanPham.Location = new System.Drawing.Point(0, 54);
+            this.btn_SanPham.Location = new System.Drawing.Point(3, 69);
             this.btn_SanPham.Name = "btn_SanPham";
             this.btn_SanPham.Size = new System.Drawing.Size(238, 44);
             this.btn_SanPham.TabIndex = 9;
@@ -97,7 +103,7 @@
             // 
             // btn_DoanhSo
             // 
-            this.btn_DoanhSo.Location = new System.Drawing.Point(0, 258);
+            this.btn_DoanhSo.Location = new System.Drawing.Point(3, 273);
             this.btn_DoanhSo.Name = "btn_DoanhSo";
             this.btn_DoanhSo.Size = new System.Drawing.Size(238, 46);
             this.btn_DoanhSo.TabIndex = 11;
@@ -107,7 +113,7 @@
             // 
             // btn_TaiKhoan
             // 
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(0, 104);
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(3, 119);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             this.btn_TaiKhoan.Size = new System.Drawing.Size(238, 44);
             this.btn_TaiKhoan.TabIndex = 10;
@@ -117,7 +123,7 @@
             // 
             // btn_TrangChu
             // 
-            this.btn_TrangChu.Location = new System.Drawing.Point(0, 3);
+            this.btn_TrangChu.Location = new System.Drawing.Point(3, 18);
             this.btn_TrangChu.Name = "btn_TrangChu";
             this.btn_TrangChu.Size = new System.Drawing.Size(238, 47);
             this.btn_TrangChu.TabIndex = 8;
@@ -127,10 +133,40 @@
             // 
             // flpn_HienThi
             // 
+            this.flpn_HienThi.Controls.Add(this.panel2);
             this.flpn_HienThi.Location = new System.Drawing.Point(244, 0);
             this.flpn_HienThi.Name = "flpn_HienThi";
             this.flpn_HienThi.Size = new System.Drawing.Size(1144, 609);
             this.flpn_HienThi.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1138, 606);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(373, 429);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(429, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Chào mừng bạn đến với thế giới điện tử";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PBL.Properties.Resources.anh_nen_dang_nhap1;
+            this.pictureBox1.Location = new System.Drawing.Point(169, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(725, 410);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ucAdmin
             // 
@@ -140,7 +176,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucAdmin";
             this.Size = new System.Drawing.Size(1388, 609);
+            this.Load += new System.EventHandler(this.ucAdmin_Load);
             this.panel1.ResumeLayout(false);
+            this.flpn_HienThi.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +197,8 @@
         private System.Windows.Forms.Button btn_TaiKhoan;
         private System.Windows.Forms.Button btn_TrangChu;
         private System.Windows.Forms.Button btn_CaNhan;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

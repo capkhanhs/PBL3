@@ -17,8 +17,15 @@ namespace PBL.View
             InitializeComponent();
         }
 
+        public void Loadpn_0(UserControl uc)
+        {
+            Main main = (Main)this.ParentForm;
+            main.pn_0.Controls.Clear();
+            main.pn_0.Controls.Add(uc);
+        }
         private void ucNhanVienBanHang_Load(object sender, EventArgs e)
         {
+
             DTP_NgayHienTai.Value = DateTime.Now;
             btn_DonHangChoXuLy.Text = "Chưa xử lý " + "3"; //trạng thái đơn hàng chờ xử lý trong database
             btn_DonHangDaXuLy.Text = "Đã xử lý " + "10"; //trạng thái đơn hàng không phải chờ xử lý và không phải đã giao thành công 
@@ -32,6 +39,12 @@ namespace PBL.View
                 MessageBoxButtons.OKCancel,           // Các nút: OK và Cancel
                 MessageBoxIcon.Question               // Icon hình dấu hỏi
             );
+        }
+
+        private void btn_XemChiTiet_Click(object sender, EventArgs e)
+        {
+            pn_hienthi.Controls.Clear();
+            pn_hienthi.Controls.Add(new ucXemChiTietDonHang());
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn_DonHang = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cl_MaDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,12 +43,14 @@
             this.btn_DangGH = new System.Windows.Forms.Button();
             this.btn_XemChiTietDonHang = new System.Windows.Forms.Button();
             this.btn_TatCaDH = new System.Windows.Forms.Button();
+            this.pn_DonHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_DonHang
             // 
             this.pn_DonHang.BackColor = System.Drawing.Color.White;
+            this.pn_DonHang.Controls.Add(this.dataGridView1);
             this.pn_DonHang.Location = new System.Drawing.Point(17, 85);
             this.pn_DonHang.Name = "pn_DonHang";
             this.pn_DonHang.Size = new System.Drawing.Size(1107, 509);
@@ -55,7 +58,19 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cl_MaDH,
             this.cl_MaKH,
@@ -63,11 +78,12 @@
             this.cl_NgayDatHang,
             this.cl_TrangThai,
             this.cl_PhuongThucTT});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 85);
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1101, 502);
+            this.dataGridView1.Size = new System.Drawing.Size(1085, 502);
             this.dataGridView1.TabIndex = 1;
             // 
             // cl_MaDH
@@ -84,7 +100,7 @@
             this.cl_MaKH.MinimumWidth = 6;
             this.cl_MaKH.Name = "cl_MaKH";
             this.cl_MaKH.ReadOnly = true;
-            this.cl_MaKH.Width = 125;
+            this.cl_MaKH.Width = 140;
             // 
             // cl_MaDC
             // 
@@ -92,7 +108,7 @@
             this.cl_MaDC.MinimumWidth = 6;
             this.cl_MaDC.Name = "cl_MaDC";
             this.cl_MaDC.ReadOnly = true;
-            this.cl_MaDC.Width = 125;
+            this.cl_MaDC.Width = 107;
             // 
             // cl_NgayDatHang
             // 
@@ -100,7 +116,7 @@
             this.cl_NgayDatHang.MinimumWidth = 6;
             this.cl_NgayDatHang.Name = "cl_NgayDatHang";
             this.cl_NgayDatHang.ReadOnly = true;
-            this.cl_NgayDatHang.Width = 125;
+            this.cl_NgayDatHang.Width = 137;
             // 
             // cl_TrangThai
             // 
@@ -108,7 +124,7 @@
             this.cl_TrangThai.MinimumWidth = 6;
             this.cl_TrangThai.Name = "cl_TrangThai";
             this.cl_TrangThai.ReadOnly = true;
-            this.cl_TrangThai.Width = 125;
+            this.cl_TrangThai.Width = 174;
             // 
             // cl_PhuongThucTT
             // 
@@ -116,7 +132,7 @@
             this.cl_PhuongThucTT.MinimumWidth = 6;
             this.cl_PhuongThucTT.Name = "cl_PhuongThucTT";
             this.cl_PhuongThucTT.ReadOnly = true;
-            this.cl_PhuongThucTT.Width = 125;
+            this.cl_PhuongThucTT.Width = 195;
             // 
             // btn_GiaoThanhCong
             // 
@@ -210,10 +226,10 @@
             this.Controls.Add(this.btn_DangGH);
             this.Controls.Add(this.btn_XemChiTietDonHang);
             this.Controls.Add(this.btn_TatCaDH);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pn_DonHang);
             this.Name = "ucDonHangHeThong_Admin";
             this.Size = new System.Drawing.Size(1144, 609);
+            this.pn_DonHang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

@@ -1,6 +1,6 @@
 ﻿namespace PBL.View
 {
-    partial class ucCongCuSanPham_Admin
+    partial class ucCongCuTaiKhoan_Admin
     {
         /// <summary> 
         /// Required designer variable.
@@ -53,7 +53,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1388, 0);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 5;
             // 
             // pnMain
             // 
@@ -79,7 +79,7 @@
             this.pn_0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_0.Name = "pn_0";
             this.pn_0.Size = new System.Drawing.Size(1388, 88);
-            this.pn_0.TabIndex = 2;
+            this.pn_0.TabIndex = 4;
             // 
             // txt_search
             // 
@@ -153,28 +153,28 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(250, 0);
+            this.panel2.Location = new System.Drawing.Point(256, -20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 525);
+            this.panel2.Size = new System.Drawing.Size(778, 582);
             this.panel2.TabIndex = 6;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PBL.Properties.Resources.anh_nen_dang_nhap1;
-            this.pictureBox3.Location = new System.Drawing.Point(-113, -221);
+            this.pictureBox3.Location = new System.Drawing.Point(-77, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(725, 483);
-            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.Size = new System.Drawing.Size(740, 483);
+            this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // ucCongCuSanPham_Admin
+            // ucCongCuTaiKhoan_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_0);
-            this.Name = "ucCongCuSanPham_Admin";
+            this.Name = "ucCongCuTaiKhoan_Admin";
             this.Size = new System.Drawing.Size(1388, 88);
             this.panel1.ResumeLayout(false);
             this.pn_0.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace PBL.View
 {
@@ -26,24 +27,33 @@ namespace PBL.View
             return flpn_HienThi;
         }
 
+        public void Loadpn_0 (UserControl uc)
+        {
+            Main main = (Main)this.ParentForm;
+            LoadPanel(main.pn_0, uc);
+        }
         private void btn_SanPham_Click(object sender, EventArgs e)
         {
             LoadPanel(flpn_HienThi, new ucHienThiSanPham_Admin());
+            Loadpn_0(new ucCongCuSanPham_Admin());
         }
 
         private void btn_TaiKhoan_Click(object sender, EventArgs e)
         {
             LoadPanel(flpn_HienThi, new ucHienThiTaiKhoan());
+            Loadpn_0(new ucCongCuTaiKhoan_Admin());
         }
 
         private void btn_KhoHang_Click(object sender, EventArgs e)
         {
             LoadPanel(flpn_HienThi, new ucHienThiKhoHang());
+            Loadpn_0(new ucCongCuKhoHang_Admin());
         }
 
         private void btn_DonHang_Click(object sender, EventArgs e)
         {
             LoadPanel(flpn_HienThi, new ucDonHangHeThong_Admin());
+            Loadpn_0(new ucCongCuDonHang_Admin());
         }
 
         private void btn_DoanhSo_Click(object sender, EventArgs e)
@@ -54,11 +64,18 @@ namespace PBL.View
         private void btn_CaNhan_Click(object sender, EventArgs e)
         {
             LoadPanel(flpn_HienThi, new ucCaNhan_Admin());
+            Loadpn_0(new ucCongCuCaNhan_Admin());
         }
 
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
-            //flpn_HienThi.Controls.Add();
+            LoadPanel(flpn_HienThi, new ucTrangChu_Admin("0395471811"));//load lại mã người dùng
+            Loadpn_0(new ucConCuTrangChu_Admin());
+        }
+
+        private void ucAdmin_Load(object sender, EventArgs e)
+        {
+            Loadpn_0(new ucCongCu());
         }
     }
 }
