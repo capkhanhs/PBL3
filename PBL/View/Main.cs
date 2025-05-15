@@ -14,15 +14,18 @@ namespace PBL.View
     public partial class Main : Form
     {
         string Manguoidung;
-        string Vaitro;
+        string maVaitro;
         public Main(string username)
         {
             InitializeComponent();
             Manguoidung = username;
-            pnMain.Controls.Add(new ucAdmin());
-            pn_0.Controls.Clear();
-            pn_0.Controls.Add(new ucCongCuSanPham_Admin());
-            //pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
+            //pnMain.Controls.Add(new ucAdmin());
+            if(NguoidungBLL.Instance.Find(Manguoidung).Ma_vai_tro == "AD")
+            {
+                quảnTrịViênToolStripMenuItem.Enabled = true;
+                quảnTrịViênToolStripMenuItem.Visible = true;
+            }    
+            pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
 
         private void LoadpnMain(UserControl uc)
@@ -59,6 +62,11 @@ namespace PBL.View
 
         private void btn_gh_Click(object sender, EventArgs e)
         {
+            if(GioHangBLL.Instance.CheckGioHang(Manguoidung) == false)
+            {
+                MessageBox.Show("Giỏ hàng của bạn đang trống");
+                return;
+            }
             LoadpnMain(new ucGioHang_Main(Manguoidung));
         }
 
@@ -75,6 +83,23 @@ namespace PBL.View
         private void btn_cn_Click(object sender, EventArgs e)
         {
             LoadpnMain(new ucTrangCaNhan_Main(Manguoidung));
+        }
+
+        private void lb_name_Click(object sender, EventArgs e)
+        {
+            LoadpnMain(new ucTrangChu_Main(Manguoidung));
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoadpnMain(new ucTrangChu_Main(Manguoidung));
+        }
+
+        private void quảnTrịViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ucAdmin ucad = new ucAdmin();
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(ucad);
         }
     }
 }

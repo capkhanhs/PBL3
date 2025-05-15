@@ -31,9 +31,12 @@ namespace PBL.View
                 List<Dia_Chi> diachi = NguoiDungDiaChiBLL.Instace.LoadAddress(manguoidung);
                 foreach (Dia_Chi item in diachi)
                 {
-                    ucDiaChi uc = new ucDiaChi(item.Ma_dia_chi);
-                    uc.Dock = DockStyle.Top;
-                    pndiachi.Controls.Add(uc);
+                    if(item != null)
+                    {
+                        ucDiaChi uc = new ucDiaChi(item.Ma_dia_chi);
+                        uc.Dock = DockStyle.Top;
+                        pndiachi.Controls.Add(uc);
+                    }
                 }
             }
             else

@@ -154,12 +154,24 @@ namespace PBL.BLL
             chiTietDonHang.Ma_don_hang = madonhang;
             chiTietDonHang.Ma_san_pham = masanpham;
             chiTietDonHang.So_luong = soluong;
-            chiTietDonHang.Gia_ban = (double.Parse(SanphamBLL.Instance.Find(masanpham).Gia_sp)*soluong).ToString();
+            chiTietDonHang.Gia_ban = SanphamBLL.Instance.Find(masanpham).Gia_sp;
+            chiTietDonHang.Thanh_tien = (double.Parse(chiTietDonHang.Gia_ban)*soluong).ToString();
             ChiTietDonHangDAL.Add(chiTietDonHang);
             ChiTietDonHangDAL.Save();
         }
 
-
+        //Lấy chi tiết đơn hàng theo mã đơn hàng
+        public List<Chi_Tiet_Don_Hang> GetChiTietDonHangByMaDH(string madonhang)
+        {
+            try { 
+            return ChiTietDonHangDAL.GetAll().Where(x => x.Ma_don_hang == madonhang).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lấy chi tiết đơn hàng theo mã đơn hàng: " + ex.Message);
+                return null;
+            }
+        }
 
     }
 }

@@ -37,20 +37,20 @@
             this.btnSignin = new System.Windows.Forms.Button();
             this.btnSignup = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pic_pw = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pic_0 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_pw = new System.Windows.Forms.PictureBox();
             this.pn_login.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_login
@@ -116,7 +116,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(345, 34);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Text = "ND001";
+            this.txtUsername.Text = "0395471811";
             // 
             // btnSignin
             // 
@@ -156,16 +156,15 @@
             this.panel1.Size = new System.Drawing.Size(734, 565);
             this.panel1.TabIndex = 9;
             // 
-            // label1
+            // pictureBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(895, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 32);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Đăng Nhập";
+            this.pictureBox3.BackColor = System.Drawing.Color.Gold;
+            this.pictureBox3.Image = global::PBL.Properties.Resources.anh_nen_dang_nhap;
+            this.pictureBox3.Location = new System.Drawing.Point(-76, -27);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(807, 386);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
             // label2
             // 
@@ -177,38 +176,6 @@
             this.label2.Size = new System.Drawing.Size(389, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mua dễ dàng - thanh toán thuận tiện - sở hữu nhanh chóng";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(755, 219);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 27);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pic_pw
-            // 
-            this.pic_pw.BackgroundImage = global::PBL.Properties.Resources.Password;
-            this.pic_pw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_pw.Location = new System.Drawing.Point(755, 273);
-            this.pic_pw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_pw.Name = "pic_pw";
-            this.pic_pw.Size = new System.Drawing.Size(45, 28);
-            this.pic_pw.TabIndex = 3;
-            this.pic_pw.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox3.Image = global::PBL.Properties.Resources.anh_nen_dang_nhap;
-            this.pictureBox3.Location = new System.Drawing.Point(-76, -27);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(807, 386);
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -234,6 +201,39 @@
             this.pic_0.TabIndex = 1;
             this.pic_0.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Location = new System.Drawing.Point(895, 123);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 32);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Đăng Nhập";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(755, 219);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 27);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pic_pw
+            // 
+            this.pic_pw.BackgroundImage = global::PBL.Properties.Resources.Password;
+            this.pic_pw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_pw.Location = new System.Drawing.Point(755, 273);
+            this.pic_pw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_pw.Name = "pic_pw";
+            this.pic_pw.Size = new System.Drawing.Size(45, 28);
+            this.pic_pw.TabIndex = 3;
+            this.pic_pw.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,11 +256,11 @@
             this.pn_login.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_pw)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

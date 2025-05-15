@@ -25,6 +25,7 @@ namespace PBL.BLL
             private set { }
         }
 
+        //Tính tổng tiền của giỏ hàng
         public long Tinhtong(string manguoidung)
         {
             long total = 0;
@@ -47,6 +48,8 @@ namespace PBL.BLL
             return total;
         }
 
+
+        //Tạo giỏ hàng mới
         public void CreateGioHang(string manguoidung)
         {
             Gio_hang gh = new Gio_hang();
@@ -54,6 +57,24 @@ namespace PBL.BLL
             gh.Ma_nguoi_dung = manguoidung;
             ghDAL.Add(gh);
             ghDAL.Save();
+        }
+
+
+        //Xóa toàn bộ giỏ hàng
+        public void ResetGH(string manguoidung)
+        {
+            CartItemBLL.Instance.DeleteRange( CartItemBLL.Instance.GetAllCart(manguoidung));
+        }
+
+        //Check giỏ hàng đã có gì chưa
+        public bool CheckGioHang(string manguoidung)
+        {
+            var gh = CartItemBLL.Instance.GetAllCart(manguoidung).FirstOrDefault();
+            if (gh != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

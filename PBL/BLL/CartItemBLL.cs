@@ -24,6 +24,7 @@ namespace PBL.BLL
             }
         }
 
+        //Tạo 1 chi tiết giỏ hàng mới, nếu đã có thì tăng số lượng lên 1
         public void AddCart(string cartId, string SPID, int soluong)
         {
             if (string.IsNullOrEmpty(cartId) || string.IsNullOrEmpty(SPID))
@@ -44,6 +45,7 @@ namespace PBL.BLL
             ciDAL.Save();
         }
 
+        //Cập nhật số lượng sản phẩm trong giỏ hàng
         public void UpdateCart(string cartId, string SPID, int soluong)
         {
             CartItem cartItem = ciDAL.GetAll().FirstOrDefault(x => x.Ma_gio_hang == cartId && x.Ma_san_pham == SPID);
@@ -55,6 +57,18 @@ namespace PBL.BLL
             }
         }
 
+        //Cập nhật số lượng sản phẩm trong giỏ hàng với đối tượng CartItem
+        public void UpdateCart(CartItem cartItem, int soluong)
+        {
+            if (cartItem != null)
+            {
+                cartItem.Quantity = soluong;
+                ciDAL.Update(cartItem);
+                ciDAL.Save();
+            }
+        }
+
+        //Tăng giảm số lượng 1 đơn vị
         public void UpdateCart_In_Des(string magiohang, string masp, bool tang)
         {
             CartItem cartItem = ciDAL.GetAll().FirstOrDefault(x => x.Ma_gio_hang == magiohang && x.Ma_san_pham == masp);
@@ -81,21 +95,55 @@ namespace PBL.BLL
             ciDAL.Save();
         }
 
+        //Cũng là tăng giảm số lượng 1 đơn vị nhưng Overloading
+        public void UpdateCart_In_Des(CartItem cartItem, bool tang)
+        {
+            if (cartItem != null)
+            {
+                if (tang)
+                {
+                    cartItem.Quantity++;
+                }
+                else
+                {
+                    if (cartItem.Quantity > 1)
+                    {
+                        cartItem.Quantity--;
+                    }
+                    ciDAL.Update(cartItem);
+                }
+            }
+            ciDAL.Save();
+        }
+
+        //Xóa 1 chi tiết giỏ hàng
         public void DeleteIteminCart(string magiohang, string masp)
         {
             CartItem cartItem = ciDAL.GetAll().FirstOrDefault(x => x.Ma_gio_hang == magiohang && x.Ma_san_pham == masp);
             if (cartItem != null)
             {
-                ciDAL.Delete(cartItem);
+                ciDAL.Delete(cartItem.Ma_san_pham, cartItem.Ma_gio_hang);
                 ciDAL.Save();
             }
         }
 
+        //Xóa 1 chi tiết giỏ hàng với đối tượng CartItem
+        public void DeleteIteminCart(CartItem cartItem)
+        {
+            if (cartItem != null)
+            {
+                ciDAL.Delete(cartItem.Ma_gio_hang,cartItem.Ma_san_pham);
+                ciDAL.Save();
+            }
+        }
+
+        //Lấy tất cả chi tiết giỏ hàng của 1 người dùng 
         public List<CartItem> GetAllCart(string manguoidung)
         {
             return ciDAL.GetAll().Where(x => x.Ma_gio_hang == manguoidung).ToList();
         }
 
+        //Lấy 1 chi tiết giỏ hàng theo khóa chính (mã giỏ hàng, mã sản phẩm)
         public CartItem GetById (List<string> id)
         {
             try
@@ -110,6 +158,16 @@ namespace PBL.BLL
                 throw new Exception("Error getting cart item by ID: " + ex.Message);
             }
             return ciDAL.GetById(id);
+        }
+
+        //Xóa tất cả các sản phẩm trong giỏ hàng
+        public void DeleteRange(List<CartItem> ci)
+        {
+            foreach(var i in ci)
+            {
+                ciDAL.Delete(i.Ma_gio_hang, i.Ma_san_pham);
+            }
+            ciDAL.Save();
         }
     }
 }

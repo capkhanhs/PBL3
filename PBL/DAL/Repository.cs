@@ -44,14 +44,15 @@ namespace PBL.DAL
         }
 
         //Xóa đối tượng T khỏi DB
-        public void Delete(object id)
+        public void Delete(params object[] keyValues)
         {
-            T entity = dbSet.Find(id);
+            T entity = dbSet.Find(keyValues);
             if (entity != null)
             {
                 dbSet.Remove(entity);
             }
         }
+
 
         //Lưu thay đổi vào DB
         public void Save()

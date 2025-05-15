@@ -99,10 +99,9 @@
             this.lbl_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_giamgia.Location = new System.Drawing.Point(1022, 123);
             this.lbl_giamgia.Name = "lbl_giamgia";
-            this.lbl_giamgia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_giamgia.Size = new System.Drawing.Size(76, 20);
+            this.lbl_giamgia.Size = new System.Drawing.Size(58, 20);
             this.lbl_giamgia.TabIndex = 5;
-            this.lbl_giamgia.Text = "Giảm giá";
+            this.lbl_giamgia.Text = "0 VNĐ";
             // 
             // panel1
             // 

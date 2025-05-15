@@ -14,6 +14,8 @@ namespace PBL.View
 {
     public partial class DatHang_ThanhToan : UserControl
     {
+        public delegate void btnDatHangClickHandler(object sender, EventArgs e);
+        public event btnDatHangClickHandler btnDatHangClick;
         private string manguoidung;
         private string madiachi;
         private string phuongthucnhanhang;
@@ -31,10 +33,28 @@ namespace PBL.View
             lbl_gia.Text = string.Format("{0:0,0}", GioHangBLL.Instance.Tinhtong(manguoidung)) + " VNĐ";
             lbl_tong.Text = string.Format("{0:0,0}", GioHangBLL.Instance.Tinhtong(manguoidung)) + " VNĐ";
         }
+        public void Loadpttt(string pttt)
+        {
+            this.phuongthucnhanhang = pttt; 
+        }
 
         private void btnDatHang_Click(object sender, EventArgs e)
         {
-            DonHangBLL.Instance.DatHang(manguoidung, madiachi, phuongthucnhanhang);
+            if (string.IsNullOrEmpty(phuongthucnhanhang))
+            {
+                MessageBox.Show("Bạn chưa chọn phương thức thanh toán", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            if (MessageBox.Show("Bạn có chắc chắn muốn đặt hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                btnDatHangClick?.Invoke(this, EventArgs.Empty);
+                DonHangBLL.Instance.DatHang(manguoidung, madiachi, phuongthucnhanhang);
+            }
+        }
+
+        private void DatHang_ThanhToan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

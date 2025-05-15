@@ -15,6 +15,7 @@ namespace PBL.View
     public partial class DatHang : Form
     {
         private string manguoidung;
+        public DatHang_ThanhToan dh;
         public DatHang(string manguoidung)
         {
             InitializeComponent();
@@ -27,19 +28,20 @@ namespace PBL.View
             txtHoTen.Text = user.Ho_va_ten;
             txtSDT.Text = user.Ma_nguoi_dung;
             List<Dia_Chi> diachi = NguoiDungDiaChiBLL.Instace.LoadAddress(manguoidung);
-            var diachiView = diachi.Select(d => new
-            {
-                Ma_dia_chi = d.Ma_dia_chi,
-                DiaChiDayDu = string.Join(", ", new string[] {
-                d.Chi_tiet,
-                d.Xa_Phuong,
-                d.Quan_Huyen,
-                d.Tinh_ThanhPho
-            }.Where(s => !string.IsNullOrWhiteSpace(s)))
-            }).ToList();
             if (diachi.Count > 0)
             {
-                cbbDiaChi.DataSource = diachi;
+                var diachiView = diachi.Select(d => new
+                {
+                    Ma_dia_chi = d.Ma_dia_chi,
+                    DiaChiDayDu = string.Join(", ", new string[] {
+                    d.Chi_tiet,
+                    d.Xa_Phuong,
+                    d.Quan_Huyen,
+                    d.Tinh_ThanhPho
+                }.Where(s => !string.IsNullOrWhiteSpace(s)))
+                }).ToList();
+
+                cbbDiaChi.DataSource = diachiView; //Dùng danh sách đã định dạng
                 cbbDiaChi.DisplayMember = "DiaChiDayDu";
                 cbbDiaChi.ValueMember = "Ma_dia_chi";
             }
@@ -47,24 +49,42 @@ namespace PBL.View
             {
                 MessageBox.Show("Bạn chưa có địa chỉ nào, hãy thêm địa chỉ mới");
             }
+
             var cartItems = CartItemBLL.Instance.GetAllCart(manguoidung);
             foreach (var item in cartItems)
             {
-                ucGioHangItem_GioHang_Main ucGioHangItem = new ucGioHangItem_GioHang_Main(item);
-                flpnmain.Controls.Add(ucGioHangItem);
+                ucDonHangItem_DatHang uc = new ucDonHangItem_DatHang(item);
+                flpnmain.Controls.Add(uc);
             }
-            string pttt;
-            if(rdbThanhtoanonline.Checked)
+            string pttt = null;
+            try
             {
-                 pttt = "Thanh toán online";
+                dh = new DatHang_ThanhToan(manguoidung, cbbDiaChi.SelectedValue.ToString(), pttt);
+                dh.btnDatHangClick += DatHangThanhCong;
+                flpnmain.Controls.Add(dh);
             }
-            else
+            catch (Exception ex)
             {
-                 pttt = "Thanh toán khi nhận hàng";
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
+        }
 
-            //DatHang_ThanhToan dh = new DatHang_ThanhToan(manguoidung, cbbDiaChi.SelectedValue.ToString(), pttt);
-            //flpnmain.Controls.Add(dh);
+        public void DatHangThanhCong(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void rdbThanhtoankhinhan_CheckedChanged(object sender, EventArgs e)
+        {
+            string pttt = "Thanh toán khi nhận hàng";
+            dh.Loadpttt(pttt);
+        }
+
+        private void rdbThanhtoanonline_CheckedChanged(object sender, EventArgs e)
+        {
+            string pttt = "Thanh toán online";
+            dh.Loadpttt(pttt);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace PBL.DAL
         T GetById(params object[] keyValues);
         void Add(T entity);
         void Update(T entity);
-        void Delete(object id);
+        void Delete(params object[] keyValues );
         void Save();
     }
 }
