@@ -38,24 +38,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mniTrangChu = new System.Windows.Forms.ToolStripMenuItem();
-            this.mni_mb = new System.Windows.Forms.ToolStripMenuItem();
-            this.xiaoMiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.samSungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iphoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mni_tb = new System.Windows.Forms.ToolStripMenuItem();
-            this.xiaoMiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.samSungToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.iphoneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_lt = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.taiNgheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mni_sw = new System.Windows.Forms.ToolStripMenuItem();
-            this.xiaoMiToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.appleWatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_pk = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_dc = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_lh = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +50,18 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.xiaoMiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.samSungToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.iphoneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mni_tb = new System.Windows.Forms.ToolStripMenuItem();
+            this.xiaoMiToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.appleWatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mni_sw = new System.Windows.Forms.ToolStripMenuItem();
+            this.xiaoMiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.samSungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iphoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mni_mb = new System.Windows.Forms.ToolStripMenuItem();
             this.pn_0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -209,83 +206,8 @@
             this.mniTrangChu.Text = "Trang Chủ";
             this.mniTrangChu.Click += new System.EventHandler(this.mniTrangChu_Click);
             // 
-            // mni_mb
-            // 
-            this.mni_mb.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xiaoMiToolStripMenuItem,
-            this.samSungToolStripMenuItem,
-            this.iphoneToolStripMenuItem});
-            this.mni_mb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mni_mb.Image = global::PBL.Properties.Resources.Mobile;
-            this.mni_mb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mni_mb.Name = "mni_mb";
-            this.mni_mb.Size = new System.Drawing.Size(143, 32);
-            this.mni_mb.Text = "Điện Thoại";
-            this.mni_mb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.mni_mb.Click += new System.EventHandler(this.mni_mb_Click);
-            // 
-            // xiaoMiToolStripMenuItem
-            // 
-            this.xiaoMiToolStripMenuItem.Image = global::PBL.Properties.Resources.XiaoMi;
-            this.xiaoMiToolStripMenuItem.Name = "xiaoMiToolStripMenuItem";
-            this.xiaoMiToolStripMenuItem.Size = new System.Drawing.Size(181, 32);
-            this.xiaoMiToolStripMenuItem.Text = "XiaoMi";
-            // 
-            // samSungToolStripMenuItem
-            // 
-            this.samSungToolStripMenuItem.Image = global::PBL.Properties.Resources.Samsung;
-            this.samSungToolStripMenuItem.Name = "samSungToolStripMenuItem";
-            this.samSungToolStripMenuItem.Size = new System.Drawing.Size(181, 32);
-            this.samSungToolStripMenuItem.Text = "SamSung";
-            // 
-            // iphoneToolStripMenuItem
-            // 
-            this.iphoneToolStripMenuItem.Image = global::PBL.Properties.Resources.Apple;
-            this.iphoneToolStripMenuItem.Name = "iphoneToolStripMenuItem";
-            this.iphoneToolStripMenuItem.Size = new System.Drawing.Size(181, 32);
-            this.iphoneToolStripMenuItem.Text = "Iphone";
-            // 
-            // mni_tb
-            // 
-            this.mni_tb.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xiaoMiToolStripMenuItem1,
-            this.samSungToolStripMenuItem1,
-            this.iphoneToolStripMenuItem1});
-            this.mni_tb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mni_tb.Image = global::PBL.Properties.Resources.Tablet;
-            this.mni_tb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mni_tb.Name = "mni_tb";
-            this.mni_tb.Size = new System.Drawing.Size(179, 32);
-            this.mni_tb.Text = "Máy Tính Bảng";
-            this.mni_tb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // xiaoMiToolStripMenuItem1
-            // 
-            this.xiaoMiToolStripMenuItem1.Image = global::PBL.Properties.Resources.XiaoMi;
-            this.xiaoMiToolStripMenuItem1.Name = "xiaoMiToolStripMenuItem1";
-            this.xiaoMiToolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.xiaoMiToolStripMenuItem1.Text = "XiaoMi";
-            // 
-            // samSungToolStripMenuItem1
-            // 
-            this.samSungToolStripMenuItem1.Image = global::PBL.Properties.Resources.Samsung;
-            this.samSungToolStripMenuItem1.Name = "samSungToolStripMenuItem1";
-            this.samSungToolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.samSungToolStripMenuItem1.Text = "SamSung";
-            // 
-            // iphoneToolStripMenuItem1
-            // 
-            this.iphoneToolStripMenuItem1.Image = global::PBL.Properties.Resources.Apple;
-            this.iphoneToolStripMenuItem1.Name = "iphoneToolStripMenuItem1";
-            this.iphoneToolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.iphoneToolStripMenuItem1.Text = "Iphone";
-            // 
             // mni_lt
             // 
-            this.mni_lt.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
             this.mni_lt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mni_lt.Image = global::PBL.Properties.Resources.Laptop;
             this.mni_lt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,27 +215,6 @@
             this.mni_lt.Size = new System.Drawing.Size(112, 32);
             this.mni_lt.Text = "Laptop";
             this.mni_lt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::PBL.Properties.Resources.Apple;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.toolStripMenuItem1.Text = "Macbook";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = global::PBL.Properties.Resources.Dell;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(181, 32);
-            this.toolStripMenuItem2.Text = "Dell";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Image = global::PBL.Properties.Resources.Lenovo;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(181, 32);
-            this.toolStripMenuItem3.Text = "Lenovo";
             // 
             // taiNgheToolStripMenuItem
             // 
@@ -333,41 +234,6 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(165, 32);
             this.toolStripMenuItem4.Text = "AirPods";
-            // 
-            // mni_sw
-            // 
-            this.mni_sw.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xiaoMiToolStripMenuItem2,
-            this.toolStripMenuItem5,
-            this.appleWatchToolStripMenuItem});
-            this.mni_sw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mni_sw.Image = global::PBL.Properties.Resources.SmartWatch;
-            this.mni_sw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mni_sw.Name = "mni_sw";
-            this.mni_sw.Size = new System.Drawing.Size(157, 32);
-            this.mni_sw.Text = "SmartWatch";
-            this.mni_sw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // xiaoMiToolStripMenuItem2
-            // 
-            this.xiaoMiToolStripMenuItem2.Image = global::PBL.Properties.Resources.XiaoMi;
-            this.xiaoMiToolStripMenuItem2.Name = "xiaoMiToolStripMenuItem2";
-            this.xiaoMiToolStripMenuItem2.Size = new System.Drawing.Size(205, 32);
-            this.xiaoMiToolStripMenuItem2.Text = "XiaoMi";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Image = global::PBL.Properties.Resources.Samsung;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(205, 32);
-            this.toolStripMenuItem5.Text = "SamSung";
-            // 
-            // appleWatchToolStripMenuItem
-            // 
-            this.appleWatchToolStripMenuItem.Image = global::PBL.Properties.Resources.Apple;
-            this.appleWatchToolStripMenuItem.Name = "appleWatchToolStripMenuItem";
-            this.appleWatchToolStripMenuItem.Size = new System.Drawing.Size(205, 32);
-            this.appleWatchToolStripMenuItem.Text = "AppleWatch";
             // 
             // mni_pk
             // 
@@ -454,6 +320,112 @@
             this.pnMain.Size = new System.Drawing.Size(1388, 609);
             this.pnMain.TabIndex = 1;
             // 
+            // xiaoMiToolStripMenuItem1
+            // 
+            this.xiaoMiToolStripMenuItem1.Image = global::PBL.Properties.Resources.XiaoMi;
+            this.xiaoMiToolStripMenuItem1.Name = "xiaoMiToolStripMenuItem1";
+            this.xiaoMiToolStripMenuItem1.Size = new System.Drawing.Size(228, 32);
+            this.xiaoMiToolStripMenuItem1.Text = "XiaoMi";
+            // 
+            // samSungToolStripMenuItem1
+            // 
+            this.samSungToolStripMenuItem1.Image = global::PBL.Properties.Resources.Samsung;
+            this.samSungToolStripMenuItem1.Name = "samSungToolStripMenuItem1";
+            this.samSungToolStripMenuItem1.Size = new System.Drawing.Size(228, 32);
+            this.samSungToolStripMenuItem1.Text = "SamSung";
+            // 
+            // iphoneToolStripMenuItem1
+            // 
+            this.iphoneToolStripMenuItem1.Image = global::PBL.Properties.Resources.Apple;
+            this.iphoneToolStripMenuItem1.Name = "iphoneToolStripMenuItem1";
+            this.iphoneToolStripMenuItem1.Size = new System.Drawing.Size(228, 32);
+            this.iphoneToolStripMenuItem1.Text = "Iphone";
+            // 
+            // mni_tb
+            // 
+            this.mni_tb.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xiaoMiToolStripMenuItem1,
+            this.samSungToolStripMenuItem1,
+            this.iphoneToolStripMenuItem1});
+            this.mni_tb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mni_tb.Image = global::PBL.Properties.Resources.Tablet;
+            this.mni_tb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mni_tb.Name = "mni_tb";
+            this.mni_tb.Size = new System.Drawing.Size(179, 32);
+            this.mni_tb.Text = "Máy Tính Bảng";
+            this.mni_tb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // xiaoMiToolStripMenuItem2
+            // 
+            this.xiaoMiToolStripMenuItem2.Image = global::PBL.Properties.Resources.XiaoMi;
+            this.xiaoMiToolStripMenuItem2.Name = "xiaoMiToolStripMenuItem2";
+            this.xiaoMiToolStripMenuItem2.Size = new System.Drawing.Size(228, 32);
+            this.xiaoMiToolStripMenuItem2.Text = "XiaoMi";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Image = global::PBL.Properties.Resources.Samsung;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(228, 32);
+            this.toolStripMenuItem5.Text = "SamSung";
+            // 
+            // appleWatchToolStripMenuItem
+            // 
+            this.appleWatchToolStripMenuItem.Image = global::PBL.Properties.Resources.Apple;
+            this.appleWatchToolStripMenuItem.Name = "appleWatchToolStripMenuItem";
+            this.appleWatchToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
+            this.appleWatchToolStripMenuItem.Text = "AppleWatch";
+            // 
+            // mni_sw
+            // 
+            this.mni_sw.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xiaoMiToolStripMenuItem2,
+            this.toolStripMenuItem5,
+            this.appleWatchToolStripMenuItem});
+            this.mni_sw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mni_sw.Image = global::PBL.Properties.Resources.SmartWatch;
+            this.mni_sw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mni_sw.Name = "mni_sw";
+            this.mni_sw.Size = new System.Drawing.Size(157, 32);
+            this.mni_sw.Text = "SmartWatch";
+            this.mni_sw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // xiaoMiToolStripMenuItem
+            // 
+            this.xiaoMiToolStripMenuItem.Image = global::PBL.Properties.Resources.XiaoMi;
+            this.xiaoMiToolStripMenuItem.Name = "xiaoMiToolStripMenuItem";
+            this.xiaoMiToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
+            this.xiaoMiToolStripMenuItem.Text = "XiaoMi";
+            // 
+            // samSungToolStripMenuItem
+            // 
+            this.samSungToolStripMenuItem.Image = global::PBL.Properties.Resources.Samsung;
+            this.samSungToolStripMenuItem.Name = "samSungToolStripMenuItem";
+            this.samSungToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
+            this.samSungToolStripMenuItem.Text = "SamSung";
+            // 
+            // iphoneToolStripMenuItem
+            // 
+            this.iphoneToolStripMenuItem.Image = global::PBL.Properties.Resources.Apple;
+            this.iphoneToolStripMenuItem.Name = "iphoneToolStripMenuItem";
+            this.iphoneToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
+            this.iphoneToolStripMenuItem.Text = "Iphone";
+            // 
+            // mni_mb
+            // 
+            this.mni_mb.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xiaoMiToolStripMenuItem,
+            this.samSungToolStripMenuItem,
+            this.iphoneToolStripMenuItem});
+            this.mni_mb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mni_mb.Image = global::PBL.Properties.Resources.Mobile;
+            this.mni_mb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mni_mb.Name = "mni_mb";
+            this.mni_mb.Size = new System.Drawing.Size(143, 32);
+            this.mni_mb.Text = "Điện Thoại";
+            this.mni_mb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.mni_mb.Click += new System.EventHandler(this.mni_mb_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,27 +457,12 @@
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_gh;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem mni_mb;
-        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem samSungToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mni_tb;
-        private System.Windows.Forms.ToolStripMenuItem mni_sw;
         private System.Windows.Forms.ToolStripMenuItem mni_pk;
         private System.Windows.Forms.ToolStripMenuItem mni_lt;
         private System.Windows.Forms.ToolStripMenuItem mni_dc;
         private System.Windows.Forms.ToolStripMenuItem mni_lh;
-        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem samSungToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem appleWatchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem taiNgheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
@@ -514,6 +471,18 @@
         private System.Windows.Forms.FlowLayoutPanel pnMain;
         private System.Windows.Forms.Button btn_cn;
         private System.Windows.Forms.ToolStripMenuItem mniTrangChu;
+        private System.Windows.Forms.ToolStripMenuItem mni_mb;
+        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem samSungToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mni_tb;
+        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem samSungToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mni_sw;
+        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem appleWatchToolStripMenuItem;
     }
 }
 

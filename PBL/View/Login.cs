@@ -55,5 +55,10 @@ namespace PBL.View
                 btn_hienmk.Text = "Ẩn";           // đổi chữ nút nếu muốn
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
