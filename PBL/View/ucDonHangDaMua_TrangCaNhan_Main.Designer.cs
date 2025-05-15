@@ -144,6 +144,7 @@
             // 
             // flpnMainDonHangDaMua
             // 
+            this.flpnMainDonHangDaMua.AutoScroll = true;
             this.flpnMainDonHangDaMua.BackColor = System.Drawing.Color.White;
             this.flpnMainDonHangDaMua.Location = new System.Drawing.Point(3, 88);
             this.flpnMainDonHangDaMua.Name = "flpnMainDonHangDaMua";

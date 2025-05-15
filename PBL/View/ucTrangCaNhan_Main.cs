@@ -17,7 +17,7 @@ namespace PBL.View
         {
             InitializeComponent();
             this.manguoidung = manguoidung;
-            Load_Page(new ucDonHangDaMua_TrangCaNhan_Main());
+            Load_Page(new ucDonHangDaMua_TrangCaNhan_Main(manguoidung));
         }
 
         public void Load_Page(UserControl uc)
@@ -29,7 +29,7 @@ namespace PBL.View
 
         private void btn_DonHang_Click(object sender, EventArgs e)
         {
-            Load_Page(new ucDonHangDaMua_TrangCaNhan_Main());
+            Load_Page(new ucDonHangDaMua_TrangCaNhan_Main(manguoidung));
         }
 
         private void btn_TT_DC_Click(object sender, EventArgs e)

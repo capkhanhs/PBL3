@@ -179,6 +179,12 @@
     <Compile Include="View\DatHang.Designer.cs">
       <DependentUpon>DatHang.cs</DependentUpon>
     </Compile>
+<Compile Include="View\DatHang_ThanhToan.cs">
+  <SubType>UserControl</SubType>
+</Compile>
+<Compile Include="View\DatHang_ThanhToan.Designer.cs">
+  <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
+</Compile>
     <Compile Include="View\NhapSanPhamVaoKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,14 +236,13 @@
       <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucChitietdonhang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="View\ucCongCuSanPham_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucCongCuSanPham_Admin.Designer.cs">
       <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ucDatHang_GioHang_Main.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\ucChitietdonhang.Designer.cs">
       <DependentUpon>ucChitietdonhang.cs</DependentUpon>
@@ -430,10 +435,7 @@
     <EmbeddedResource Include="View\ucCongCuSanPham_Admin.resx">
       <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ucDatHang_GioHang_Main.resx">
-      <DependentUpon>ucDatHang_GioHang_Main.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="View\ucChitietdonhang.resx">
+    <EmbeddedResource Include="View\ucChitietdonhang.resx">
       <DependentUpon>ucChitietdonhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucDonHangHeThong_Admin.resx">
