@@ -20,7 +20,7 @@ namespace PBL.View
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             ChinhSua_ThemSanPham_Admin ad = (ChinhSua_ThemSanPham_Admin)this.ParentForm;
-            ad.LoadPanel(ad.pn_SanPham, new ucXemChiTietSanPham_Admin());
+            //ad.LoadPanel(ad.pn_SanPham, new ucXemChiTietSanPham_Admin());
         }
 
         private void btn_ChonAnhThayThe_Click(object sender, EventArgs e)

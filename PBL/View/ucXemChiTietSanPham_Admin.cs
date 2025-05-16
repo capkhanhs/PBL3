@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.Model;
 
 namespace PBL.View
 {
     public partial class ucXemChiTietSanPham_Admin: UserControl
     {
-        public ucXemChiTietSanPham_Admin()
+        public ucXemChiTietSanPham_Admin(San_Pham sp)
         {
             InitializeComponent();
         }
