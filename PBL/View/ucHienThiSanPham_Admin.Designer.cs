@@ -48,7 +48,7 @@
             this.Controls.Add(this.flpn_HienThiSanPham);
             this.Name = "ucHienThiSanPham_Admin";
             this.Size = new System.Drawing.Size(1144, 609);
-            this.Load += new System.EventHandler(this.ucHienThiSanPham_Admin_Load_1);
+            //this.Load += new System.EventHandler(this.ucHienThiSanPham_Admin_Load_1);
             this.ResumeLayout(false);
 
         }

@@ -13,9 +13,11 @@ namespace PBL.View
     public partial class ucTrangCaNhan_Main : UserControl
     {
         private string manguoidung;
-        public ucTrangCaNhan_Main(string manguoidung)
+        Main ma;
+        public ucTrangCaNhan_Main(string manguoidung, Main ma)
         {
             InitializeComponent();
+            this.ma = ma;
             this.manguoidung = manguoidung;
             Load_Page(new ucDonHangDaMua_TrangCaNhan_Main(manguoidung));
         }
@@ -35,6 +37,12 @@ namespace PBL.View
         private void btn_TT_DC_Click(object sender, EventArgs e)
         {
             Load_Page(new ucThongTin_TrangCaNhan_Main(manguoidung));
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                ma.DialogResult = DialogResult.Cancel;
         }
     }
 }

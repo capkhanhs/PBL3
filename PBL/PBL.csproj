@@ -179,12 +179,18 @@
     <Compile Include="View\DatHang.Designer.cs">
       <DependentUpon>DatHang.cs</DependentUpon>
     </Compile>
-<Compile Include="View\DatHang_ThanhToan.cs">
-  <SubType>UserControl</SubType>
-</Compile>
-<Compile Include="View\DatHang_ThanhToan.Designer.cs">
-  <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
-</Compile>
+    <Compile Include="View\DatHang_ThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DatHang_ThanhToan.Designer.cs">
+      <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HoaDonMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HoaDonMuaHang.Designer.cs">
+      <DependentUpon>HoaDonMuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\NhapSanPhamVaoKho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     <Compile Include="View\ucChitietdonhang.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="View\ucChitietdonhang_Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucChitietdonhang_Item.Designer.cs">
+      <DependentUpon>ucChitietdonhang_Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucCongCuSanPham_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -283,6 +295,12 @@
     <Compile Include="View\ucNhanVienBanHang.Designer.cs">
       <DependentUpon>ucNhanVienBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ucQuanlyvanchuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucQuanlyvanchuyen.Designer.cs">
+      <DependentUpon>ucQuanlyvanchuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ucSanPhamDonHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -300,6 +318,12 @@
     </Compile>
     <Compile Include="View\ucTaiKhoan_Admin.Designer.cs">
       <DependentUpon>ucTaiKhoan_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucThemSanPham_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucThemSanPham_Admin.Designer.cs">
+      <DependentUpon>ucThemSanPham_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ucTinhtong_GioHang_Main.cs">
       <SubType>UserControl</SubType>
@@ -391,6 +415,12 @@
     <Compile Include="View\ucXemChiTietSanPham_Admin.Designer.cs">
       <DependentUpon>ucXemChiTietSanPham_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\XemChitietdonhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\XemChitietdonhang.Designer.cs">
+      <DependentUpon>XemChitietdonhang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\CapNhatDiaChi.resx">
       <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +435,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\DatHang_ThanhToan.resx">
       <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HoaDonMuaHang.resx">
+      <DependentUpon>HoaDonMuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -432,6 +465,9 @@
     <EmbeddedResource Include="View\ucChinhSua_ThemSanPham.resx">
       <DependentUpon>ucChinhSua_ThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucChitietdonhang_Item.resx">
+      <DependentUpon>ucChitietdonhang_Item.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucCongCuSanPham_Admin.resx">
       <DependentUpon>ucCongCuSanPham_Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +492,9 @@
     <EmbeddedResource Include="View\ucNhanVienBanHang.resx">
       <DependentUpon>ucNhanVienBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ucQuanlyvanchuyen.resx">
+      <DependentUpon>ucQuanlyvanchuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ucSanPhamDonHang.resx">
       <DependentUpon>ucSanPhamDonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -464,6 +503,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucTaiKhoan_Admin.resx">
       <DependentUpon>ucTaiKhoan_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucThemSanPham_Admin.resx">
+      <DependentUpon>ucThemSanPham_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucTinhtong_GioHang_Main.resx">
       <DependentUpon>ucTinhtong_GioHang_Main.cs</DependentUpon>
@@ -509,6 +551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ucXemChiTietSanPham_Admin.resx">
       <DependentUpon>ucXemChiTietSanPham_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\XemChitietdonhang.resx">
+      <DependentUpon>XemChitietdonhang.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\PBL3_azure_databaseEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

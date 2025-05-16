@@ -38,34 +38,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mni_mb = new System.Windows.Forms.ToolStripMenuItem();
-            this.xiaoMiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.samSungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iphoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_tb = new System.Windows.Forms.ToolStripMenuItem();
-            this.xiaoMiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.samSungToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.iphoneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_lt = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.taiNgheToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_sw = new System.Windows.Forms.ToolStripMenuItem();
-            this.xiaoMiToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.appleWatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mni_lh = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.quảnLýVậnChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnTrịViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênBánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýVậnChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnMain = new System.Windows.Forms.FlowLayoutPanel();
             this.pn_0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -143,6 +130,7 @@
             this.btn_search.Text = "Search";
             this.btn_search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
@@ -193,10 +181,10 @@
             this.taiNgheToolStripMenuItem,
             this.mni_sw,
             this.mni_lh,
+            this.quảnLýVậnChuyểnToolStripMenuItem,
             this.quảnTrịViênToolStripMenuItem,
             this.nhânViênBánHàngToolStripMenuItem,
-            this.quảnLýKhoToolStripMenuItem,
-            this.quảnLýVậnChuyểnToolStripMenuItem});
+            this.quảnLýKhoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 53);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -207,10 +195,6 @@
             // 
             // mni_mb
             // 
-            this.mni_mb.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xiaoMiToolStripMenuItem,
-            this.samSungToolStripMenuItem,
-            this.iphoneToolStripMenuItem});
             this.mni_mb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mni_mb.Image = global::PBL.Properties.Resources.Mobile;
             this.mni_mb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,33 +204,8 @@
             this.mni_mb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mni_mb.Click += new System.EventHandler(this.mni_mb_Click);
             // 
-            // xiaoMiToolStripMenuItem
-            // 
-            this.xiaoMiToolStripMenuItem.Image = global::PBL.Properties.Resources.XiaoMi;
-            this.xiaoMiToolStripMenuItem.Name = "xiaoMiToolStripMenuItem";
-            this.xiaoMiToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
-            this.xiaoMiToolStripMenuItem.Text = "XiaoMi";
-            // 
-            // samSungToolStripMenuItem
-            // 
-            this.samSungToolStripMenuItem.Image = global::PBL.Properties.Resources.Samsung;
-            this.samSungToolStripMenuItem.Name = "samSungToolStripMenuItem";
-            this.samSungToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
-            this.samSungToolStripMenuItem.Text = "SamSung";
-            // 
-            // iphoneToolStripMenuItem
-            // 
-            this.iphoneToolStripMenuItem.Image = global::PBL.Properties.Resources.Apple;
-            this.iphoneToolStripMenuItem.Name = "iphoneToolStripMenuItem";
-            this.iphoneToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
-            this.iphoneToolStripMenuItem.Text = "Iphone";
-            // 
             // mni_tb
             // 
-            this.mni_tb.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xiaoMiToolStripMenuItem1,
-            this.samSungToolStripMenuItem1,
-            this.iphoneToolStripMenuItem1});
             this.mni_tb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mni_tb.Image = global::PBL.Properties.Resources.Tablet;
             this.mni_tb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,34 +213,10 @@
             this.mni_tb.Size = new System.Drawing.Size(179, 32);
             this.mni_tb.Text = "Máy Tính Bảng";
             this.mni_tb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // xiaoMiToolStripMenuItem1
-            // 
-            this.xiaoMiToolStripMenuItem1.Image = global::PBL.Properties.Resources.XiaoMi;
-            this.xiaoMiToolStripMenuItem1.Name = "xiaoMiToolStripMenuItem1";
-            this.xiaoMiToolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.xiaoMiToolStripMenuItem1.Text = "XiaoMi";
-            // 
-            // samSungToolStripMenuItem1
-            // 
-            this.samSungToolStripMenuItem1.Image = global::PBL.Properties.Resources.Samsung;
-            this.samSungToolStripMenuItem1.Name = "samSungToolStripMenuItem1";
-            this.samSungToolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.samSungToolStripMenuItem1.Text = "SamSung";
-            // 
-            // iphoneToolStripMenuItem1
-            // 
-            this.iphoneToolStripMenuItem1.Image = global::PBL.Properties.Resources.Apple;
-            this.iphoneToolStripMenuItem1.Name = "iphoneToolStripMenuItem1";
-            this.iphoneToolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.iphoneToolStripMenuItem1.Text = "Iphone";
+            this.mni_tb.Click += new System.EventHandler(this.mni_tb_Click);
             // 
             // mni_lt
             // 
-            this.mni_lt.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3});
             this.mni_lt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mni_lt.Image = global::PBL.Properties.Resources.Laptop;
             this.mni_lt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -289,32 +224,10 @@
             this.mni_lt.Size = new System.Drawing.Size(112, 32);
             this.mni_lt.Text = "Laptop";
             this.mni_lt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::PBL.Properties.Resources.Apple;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(181, 32);
-            this.toolStripMenuItem1.Text = "Macbook";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Image = global::PBL.Properties.Resources.Dell;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(181, 32);
-            this.toolStripMenuItem2.Text = "Dell";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Image = global::PBL.Properties.Resources.Lenovo;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(181, 32);
-            this.toolStripMenuItem3.Text = "Lenovo";
+            this.mni_lt.Click += new System.EventHandler(this.mni_lt_Click);
             // 
             // taiNgheToolStripMenuItem
             // 
-            this.taiNgheToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4});
             this.taiNgheToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taiNgheToolStripMenuItem.Image = global::PBL.Properties.Resources.AirPod;
             this.taiNgheToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,20 +235,10 @@
             this.taiNgheToolStripMenuItem.Size = new System.Drawing.Size(126, 32);
             this.taiNgheToolStripMenuItem.Text = "Tai Nghe";
             this.taiNgheToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Image = global::PBL.Properties.Resources.Apple;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(165, 32);
-            this.toolStripMenuItem4.Text = "AirPods";
+            this.taiNgheToolStripMenuItem.Click += new System.EventHandler(this.taiNgheToolStripMenuItem_Click);
             // 
             // mni_sw
             // 
-            this.mni_sw.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xiaoMiToolStripMenuItem2,
-            this.toolStripMenuItem5,
-            this.appleWatchToolStripMenuItem});
             this.mni_sw.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mni_sw.Image = global::PBL.Properties.Resources.SmartWatch;
             this.mni_sw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -343,27 +246,7 @@
             this.mni_sw.Size = new System.Drawing.Size(157, 32);
             this.mni_sw.Text = "SmartWatch";
             this.mni_sw.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // xiaoMiToolStripMenuItem2
-            // 
-            this.xiaoMiToolStripMenuItem2.Image = global::PBL.Properties.Resources.XiaoMi;
-            this.xiaoMiToolStripMenuItem2.Name = "xiaoMiToolStripMenuItem2";
-            this.xiaoMiToolStripMenuItem2.Size = new System.Drawing.Size(205, 32);
-            this.xiaoMiToolStripMenuItem2.Text = "XiaoMi";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Image = global::PBL.Properties.Resources.Samsung;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(205, 32);
-            this.toolStripMenuItem5.Text = "SamSung";
-            // 
-            // appleWatchToolStripMenuItem
-            // 
-            this.appleWatchToolStripMenuItem.Image = global::PBL.Properties.Resources.Apple;
-            this.appleWatchToolStripMenuItem.Name = "appleWatchToolStripMenuItem";
-            this.appleWatchToolStripMenuItem.Size = new System.Drawing.Size(205, 32);
-            this.appleWatchToolStripMenuItem.Text = "AppleWatch";
+            this.mni_sw.Click += new System.EventHandler(this.mni_sw_Click);
             // 
             // mni_lh
             // 
@@ -410,25 +293,15 @@
             this.toolStripMenuItem9.Size = new System.Drawing.Size(271, 32);
             this.toolStripMenuItem9.Text = "Nguyễn Văn Nhuận";
             // 
-            // panel1
+            // quảnLýVậnChuyểnToolStripMenuItem
             // 
-            this.panel1.Controls.Add(this.pnMain);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 89);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1388, 608);
-            this.panel1.TabIndex = 1;
-            // 
-            // pnMain
-            // 
-            this.pnMain.AutoScroll = true;
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMain.Location = new System.Drawing.Point(0, 0);
-            this.pnMain.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
-            this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1388, 608);
-            this.pnMain.TabIndex = 1;
+            this.quảnLýVậnChuyểnToolStripMenuItem.Enabled = false;
+            this.quảnLýVậnChuyểnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quảnLýVậnChuyểnToolStripMenuItem.Name = "quảnLýVậnChuyểnToolStripMenuItem";
+            this.quảnLýVậnChuyểnToolStripMenuItem.Size = new System.Drawing.Size(196, 32);
+            this.quảnLýVậnChuyểnToolStripMenuItem.Text = "Quản lý vận chuyển";
+            this.quảnLýVậnChuyểnToolStripMenuItem.Visible = false;
+            this.quảnLýVậnChuyểnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýVậnChuyểnToolStripMenuItem_Click);
             // 
             // quảnTrịViênToolStripMenuItem
             // 
@@ -448,6 +321,7 @@
             this.nhânViênBánHàngToolStripMenuItem.Size = new System.Drawing.Size(201, 32);
             this.nhânViênBánHàngToolStripMenuItem.Text = "Nhân viên bán hàng";
             this.nhânViênBánHàngToolStripMenuItem.Visible = false;
+            this.nhânViênBánHàngToolStripMenuItem.Click += new System.EventHandler(this.nhânViênBánHàngToolStripMenuItem_Click);
             // 
             // quảnLýKhoToolStripMenuItem
             // 
@@ -457,15 +331,27 @@
             this.quảnLýKhoToolStripMenuItem.Size = new System.Drawing.Size(131, 32);
             this.quảnLýKhoToolStripMenuItem.Text = "Quản lý kho";
             this.quảnLýKhoToolStripMenuItem.Visible = false;
+            this.quảnLýKhoToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKhoToolStripMenuItem_Click);
             // 
-            // quảnLýVậnChuyểnToolStripMenuItem
+            // panel1
             // 
-            this.quảnLýVậnChuyểnToolStripMenuItem.Enabled = false;
-            this.quảnLýVậnChuyểnToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quảnLýVậnChuyểnToolStripMenuItem.Name = "quảnLýVậnChuyểnToolStripMenuItem";
-            this.quảnLýVậnChuyểnToolStripMenuItem.Size = new System.Drawing.Size(196, 32);
-            this.quảnLýVậnChuyểnToolStripMenuItem.Text = "Quản lý vận chuyển";
-            this.quảnLýVậnChuyểnToolStripMenuItem.Visible = false;
+            this.panel1.Controls.Add(this.pnMain);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 89);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1388, 608);
+            this.panel1.TabIndex = 1;
+            // 
+            // pnMain
+            // 
+            this.pnMain.AutoScroll = true;
+            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMain.Location = new System.Drawing.Point(0, 0);
+            this.pnMain.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(1388, 608);
+            this.pnMain.TabIndex = 1;
             // 
             // Main
             // 
@@ -499,24 +385,11 @@
         private System.Windows.Forms.Button btn_gh;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mni_mb;
-        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem samSungToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mni_tb;
         private System.Windows.Forms.ToolStripMenuItem mni_sw;
         private System.Windows.Forms.ToolStripMenuItem mni_lt;
         private System.Windows.Forms.ToolStripMenuItem mni_lh;
-        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem samSungToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem iphoneToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem xiaoMiToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem appleWatchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem taiNgheToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;

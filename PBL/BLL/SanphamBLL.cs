@@ -26,8 +26,6 @@ namespace PBL.BLL
             }
         }
 
-        public object DanhMucBLL { get; private set; }
-
         public List<San_Pham> GetAll()
         {
             return spDAL.GetAll();
@@ -98,10 +96,52 @@ namespace PBL.BLL
             }
         }
 
-
-        public void ThemSP(string masp, string tensp, string mancc, string tenDM, string giaSP, string Mo_ta_sp, string chi_tiet_sp, string picfilename)
+        public List<San_Pham> TimKiemGanDung(string keyword)
         {
-            if (string.IsNullOrEmpty(masp) || string.IsNullOrEmpty(tensp) || string.IsNullOrEmpty(mancc) || string.IsNullOrEmpty(tenDM) || string.IsNullOrEmpty(giaSP))
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                throw new Exception("Từ khóa tìm kiếm không được để trống");
+            }
+
+            // Lấy danh sách tất cả sản phẩm
+            var ds = spDAL.GetAll();
+
+            // Lọc theo tên gần đúng (không phân biệt hoa thường)
+            var ketQua = ds
+                .Where(sp => sp.Ten_sp != null && sp.Ten_sp.ToLower().Contains(keyword.Trim().ToLower()))
+                .ToList();
+
+            if (ketQua.Count == 0)
+            {
+                throw new Exception("Không tìm thấy sản phẩm nào phù hợp");
+            }
+
+            return ketQua;
+        }
+
+
+        //Hàm tạo mã sản phẩm tự động
+        private string GenerateNewMaSP(List<San_Pham> list)
+        {
+            int maxNumber = 0;
+            foreach (var sp in list)
+            {
+                if (sp.Ma_san_pham != null && sp.Ma_san_pham.StartsWith("SP"))
+                {
+                    string numPart = sp.Ma_san_pham.Substring(2);
+                    if (int.TryParse(numPart, out int number))
+                    {
+                        if (number > maxNumber)
+                            maxNumber = number;
+                    }
+                }
+            }
+            return "SP" + (maxNumber + 1).ToString("D2");
+        }
+        //Thêm sản phẩm mới
+        public bool ThemSP( string tensp, string tenDM, string giaSP, string Mo_ta_sp, string chi_tiet_sp, string picfilename)
+        {
+            if ( string.IsNullOrEmpty(tensp) || string.IsNullOrEmpty(tenDM) || string.IsNullOrEmpty(giaSP) || string.IsNullOrEmpty(picfilename))
             {
                 throw new Exception("Thông tin sản phẩm không được để trống");
             }
@@ -117,25 +157,58 @@ namespace PBL.BLL
             {
                 throw new Exception("Giá sản phẩm không hợp lệ");
             }
-            if (spDAL.GetById(masp) == null)
-            {
                 San_Pham sp = new San_Pham();
-                sp.Ma_san_pham = masp;
+                sp.Ma_san_pham = GenerateNewMaSP(GetAll());
                 sp.Ten_sp = tensp;
                 sp.Ten_danh_muc = tenDM;
                 sp.Gia_sp = giaSP;
                 sp.Mo_ta_sp = Mo_ta_sp;
                 sp.Chi_tiet_san_pham = chi_tiet_sp;
                 sp.So_luong = 0;
+                sp.PictureFileName = picfilename;
                 spDAL.Add(sp);
                 spDAL.Save();
-            }
-            else
-            {
-                throw new Exception("Mã sản phẩm đã tồn tại");
-            }
+                MessageBox.Show("Thêm sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
         }
-        
+
+        //Hàm sửa sản phẩm
+        public bool SuaSP(string maSP, string tensp, string tenDM, string giaSP, string mo_ta_sp, string chi_tiet_sp, string picfilename)
+        {
+            if (string.IsNullOrEmpty(maSP) || string.IsNullOrEmpty(tensp) || string.IsNullOrEmpty(tenDM) || string.IsNullOrEmpty(giaSP) || string.IsNullOrEmpty(picfilename))
+            {
+                throw new Exception("Thông tin sản phẩm không được để trống");
+            }
+
+            if (!decimal.TryParse(giaSP, out decimal gia) || gia < 0)
+            {
+                throw new Exception("Giá sản phẩm không hợp lệ");
+            }
+
+            // Tìm sản phẩm theo mã
+            San_Pham sp = spDAL.GetById(maSP); // Giả sử bạn có hàm GetById trong DAL
+
+            if (sp == null)
+            {
+                throw new Exception("Không tìm thấy sản phẩm cần sửa");
+            }
+
+            // Cập nhật thông tin
+            sp.Ten_sp = tensp;
+            sp.Ten_danh_muc = tenDM;
+            sp.Gia_sp = giaSP;
+            sp.Mo_ta_sp = mo_ta_sp;
+            sp.Chi_tiet_san_pham = chi_tiet_sp;
+            sp.PictureFileName = picfilename;
+
+            spDAL.Update(sp);  // Hoặc nếu dùng Entity Framework thì không cần gọi Update, chỉ cần Save()
+            spDAL.Save();
+
+            MessageBox.Show("Cập nhật sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
+        }
+
+
         //Hàm nhận vào 1 List sản phẩm và đưa ra tên sản phẩm bán chạy nhất -> sử dụng bên thống kê
         public string GetSPBanChay(List<San_Pham> list)
         {

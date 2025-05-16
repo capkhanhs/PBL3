@@ -24,8 +24,23 @@ namespace PBL.View
             {
                 quảnTrịViênToolStripMenuItem.Enabled = true;
                 quảnTrịViênToolStripMenuItem.Visible = true;
+            }
+            else if(NguoidungBLL.Instance.Find(Manguoidung).Ma_vai_tro == "QLK")
+            {
+                quảnLýKhoToolStripMenuItem.Enabled = true;
+                quảnLýKhoToolStripMenuItem.Visible = true;
             }    
-            pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
+            else if(NguoidungBLL.Instance.Find(Manguoidung).Ma_vai_tro == "NVBH")
+            {
+                nhânViênBánHàngToolStripMenuItem.Enabled = true;
+                nhânViênBánHàngToolStripMenuItem.Visible = true;
+            }
+            else if(NguoidungBLL.Instance.Find(Manguoidung).Ma_vai_tro == "QLVC")
+            {
+                quảnLýVậnChuyểnToolStripMenuItem.Enabled = true;
+                quảnLýVậnChuyểnToolStripMenuItem.Visible = true;
+            }    
+                pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
 
         private void LoadpnMain(UserControl uc)
@@ -43,6 +58,11 @@ namespace PBL.View
         private void mni_mb_Click(object sender, EventArgs e)
         {
             pnMain.Controls.Clear();
+            foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Điện thoại"))
+            {
+                ucSanPhamItem_TrangChu_Main uc = new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung);
+                pnMain.Controls.Add(uc);    
+            }
         }
 
         private void pn_0_Paint(object sender, PaintEventArgs e)
@@ -82,7 +102,7 @@ namespace PBL.View
 
         private void btn_cn_Click(object sender, EventArgs e)
         {
-            LoadpnMain(new ucTrangCaNhan_Main(Manguoidung));
+            LoadpnMain(new ucTrangCaNhan_Main(Manguoidung, this));
         }
 
         private void lb_name_Click(object sender, EventArgs e)
@@ -100,6 +120,104 @@ namespace PBL.View
             ucAdmin ucad = new ucAdmin();
             pnMain.Controls.Clear();
             pnMain.Controls.Add(ucad);
+        }
+
+        private void quảnLýKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(new ucQuanLyNhapXuatKho_Main());
+        }
+
+        private void nhânViênBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(new ucNhanVienBanHang());
+        }
+
+        private void quảnLýVậnChuyểnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(new ucQuanlyvanchuyen());
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnMain.Controls.Clear();
+                foreach (var item in SanphamBLL.Instance.TimKiemGanDung(txt_search.Text))
+                {
+                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+            }
+        }
+
+        private void mni_tb_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnMain.Controls.Clear();
+                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Máy tính bảng"))
+                {
+                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+            }
+        }
+
+        private void mni_lt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnMain.Controls.Clear();
+                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Laptop"))
+                {
+                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+            }
+        }
+
+        private void taiNgheToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnMain.Controls.Clear();
+                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Tai nghe"))
+                {
+                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+            }
+        }
+
+        private void mni_sw_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pnMain.Controls.Clear();
+                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("SmartWatch"))
+                {
+                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+            }
         }
     }
 }

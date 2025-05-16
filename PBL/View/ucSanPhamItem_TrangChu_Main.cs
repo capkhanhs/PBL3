@@ -30,7 +30,7 @@ namespace PBL.View
             if (sp != null)
             {
                 lblTenSP.Text = sp.Ten_sp;
-                lblGiaSP.Text = sp.Gia_sp.ToString();
+                lblGiaSP.Text = string.Format("{0:0,0}", long.Parse(sp.Gia_sp)) + " VNĐ";
                 lbl_Mota.Text = sp.Mo_ta_sp;
                 lbl_soluong.Text = sp.So_luong.ToString();
                 string imagePath = Path.Combine(Application.StartupPath, "Resources", sp.PictureFileName);

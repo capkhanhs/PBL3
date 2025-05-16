@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.lb_GiaSP = new System.Windows.Forms.Label();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Chinhsua = new System.Windows.Forms.Button();
             this.btn_XemChiTiet = new System.Windows.Forms.Button();
@@ -47,26 +46,14 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(787, 35);
+            this.label2.Location = new System.Drawing.Point(749, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 25);
+            this.label2.Size = new System.Drawing.Size(239, 25);
             this.label2.TabIndex = 31;
             this.label2.Text = "29.999.000đ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lb_GiaSP
-            // 
-            this.lb_GiaSP.BackColor = System.Drawing.Color.White;
-            this.lb_GiaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_GiaSP.ForeColor = System.Drawing.Color.DarkGray;
-            this.lb_GiaSP.Location = new System.Drawing.Point(877, 37);
-            this.lb_GiaSP.Name = "lb_GiaSP";
-            this.lb_GiaSP.Size = new System.Drawing.Size(226, 25);
-            this.lb_GiaSP.TabIndex = 30;
-            this.lb_GiaSP.Text = "31.000.000đ";
-            this.lb_GiaSP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Xoa
             // 
@@ -186,7 +173,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lb_GiaSP);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_Chinhsua);
             this.Controls.Add(this.btn_XemChiTiet);
@@ -209,7 +195,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lb_GiaSP;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Chinhsua;
         private System.Windows.Forms.Button btn_XemChiTiet;

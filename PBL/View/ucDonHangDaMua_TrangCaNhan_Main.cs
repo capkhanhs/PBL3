@@ -38,5 +38,25 @@ namespace PBL.View
         {
             LoadDHTheoTrangThai("Tất cả");
         }
+
+        private void btn_XL_Click(object sender, EventArgs e)
+        {
+            LoadDHTheoTrangThai("Đang xử lý");
+        }
+
+        private void btn_XN_Click(object sender, EventArgs e)
+        {
+            LoadDHTheoTrangThai("Đã xác nhận");
+        }
+
+        private void btn_GH_Click(object sender, EventArgs e)
+        {
+            LoadDHTheoTrangThai("Đang giao hàng");
+        }
+
+        private void btn_TC_Click(object sender, EventArgs e)
+        {
+            LoadDHTheoTrangThai("Thành công");
+        }
     }
 }

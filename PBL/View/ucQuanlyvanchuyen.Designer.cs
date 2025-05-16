@@ -1,6 +1,6 @@
 ﻿namespace PBL.View
 {
-    partial class ucNhanVienBanHang
+    partial class ucQuanlyvanchuyen
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pn_DonHang = new System.Windows.Forms.Panel();
-            this.btn_DonHangChoXuLy = new System.Windows.Forms.Button();
-            this.btn_DonHangDaXuLy = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_XemChiTiet = new System.Windows.Forms.Button();
             this.btn_HuyDonHang = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDanggiao = new System.Windows.Forms.Button();
+            this.btnDaxacnhan = new System.Windows.Forms.Button();
+            this.pn_DonHang = new System.Windows.Forms.Panel();
+            this.btn_XemChiTiet = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DTP_NgayHienTai = new System.Windows.Forms.DateTimePicker();
             this.lb_SoLuongDonHang = new System.Windows.Forms.Label();
@@ -42,61 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pn_DonHang
-            // 
-            this.pn_DonHang.Location = new System.Drawing.Point(135, 71);
-            this.pn_DonHang.Name = "pn_DonHang";
-            this.pn_DonHang.Size = new System.Drawing.Size(875, 450);
-            this.pn_DonHang.TabIndex = 0;
-            // 
-            // btn_DonHangChoXuLy
-            // 
-            this.btn_DonHangChoXuLy.BackColor = System.Drawing.Color.Silver;
-            this.btn_DonHangChoXuLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DonHangChoXuLy.ForeColor = System.Drawing.Color.Black;
-            this.btn_DonHangChoXuLy.Location = new System.Drawing.Point(135, 26);
-            this.btn_DonHangChoXuLy.Name = "btn_DonHangChoXuLy";
-            this.btn_DonHangChoXuLy.Size = new System.Drawing.Size(184, 43);
-            this.btn_DonHangChoXuLy.TabIndex = 1;
-            this.btn_DonHangChoXuLy.Text = "Chưa xử lý";
-            this.btn_DonHangChoXuLy.UseVisualStyleBackColor = false;
-            // 
-            // btn_DonHangDaXuLy
-            // 
-            this.btn_DonHangDaXuLy.BackColor = System.Drawing.Color.Silver;
-            this.btn_DonHangDaXuLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DonHangDaXuLy.ForeColor = System.Drawing.Color.Black;
-            this.btn_DonHangDaXuLy.Location = new System.Drawing.Point(325, 26);
-            this.btn_DonHangDaXuLy.Name = "btn_DonHangDaXuLy";
-            this.btn_DonHangDaXuLy.Size = new System.Drawing.Size(184, 43);
-            this.btn_DonHangDaXuLy.TabIndex = 2;
-            this.btn_DonHangDaXuLy.Text = "Đã xử lý";
-            this.btn_DonHangDaXuLy.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(135, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(872, 443);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btn_XemChiTiet
-            // 
-            this.btn_XemChiTiet.BackColor = System.Drawing.Color.Red;
-            this.btn_XemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XemChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btn_XemChiTiet.Location = new System.Drawing.Point(945, 71);
-            this.btn_XemChiTiet.Name = "btn_XemChiTiet";
-            this.btn_XemChiTiet.Size = new System.Drawing.Size(184, 43);
-            this.btn_XemChiTiet.TabIndex = 3;
-            this.btn_XemChiTiet.Text = "Xem chi tiết";
-            this.btn_XemChiTiet.UseVisualStyleBackColor = false;
-            this.btn_XemChiTiet.Click += new System.EventHandler(this.btn_XemChiTiet_Click);
             // 
             // btn_HuyDonHang
             // 
@@ -110,7 +55,62 @@
             this.btn_HuyDonHang.Text = "Hủy đơn hàng";
             this.btn_HuyDonHang.UseVisualStyleBackColor = false;
             this.btn_HuyDonHang.Visible = false;
-            this.btn_HuyDonHang.Click += new System.EventHandler(this.btn_HuyDonHang_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(67, 74);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(872, 443);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnDanggiao
+            // 
+            this.btnDanggiao.BackColor = System.Drawing.Color.Silver;
+            this.btnDanggiao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDanggiao.ForeColor = System.Drawing.Color.Black;
+            this.btnDanggiao.Location = new System.Drawing.Point(257, 25);
+            this.btnDanggiao.Name = "btnDanggiao";
+            this.btnDanggiao.Size = new System.Drawing.Size(184, 43);
+            this.btnDanggiao.TabIndex = 9;
+            this.btnDanggiao.Text = "Đang giao hàng";
+            this.btnDanggiao.UseVisualStyleBackColor = false;
+            this.btnDanggiao.Click += new System.EventHandler(this.btnDanggiao_Click);
+            // 
+            // btnDaxacnhan
+            // 
+            this.btnDaxacnhan.BackColor = System.Drawing.Color.Silver;
+            this.btnDaxacnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaxacnhan.ForeColor = System.Drawing.Color.Black;
+            this.btnDaxacnhan.Location = new System.Drawing.Point(67, 25);
+            this.btnDaxacnhan.Name = "btnDaxacnhan";
+            this.btnDaxacnhan.Size = new System.Drawing.Size(184, 43);
+            this.btnDaxacnhan.TabIndex = 8;
+            this.btnDaxacnhan.Text = "Đã xác nhận";
+            this.btnDaxacnhan.UseVisualStyleBackColor = false;
+            this.btnDaxacnhan.Click += new System.EventHandler(this.btnDaxacnhan_Click);
+            // 
+            // pn_DonHang
+            // 
+            this.pn_DonHang.Location = new System.Drawing.Point(67, 70);
+            this.pn_DonHang.Name = "pn_DonHang";
+            this.pn_DonHang.Size = new System.Drawing.Size(875, 450);
+            this.pn_DonHang.TabIndex = 7;
+            // 
+            // btn_XemChiTiet
+            // 
+            this.btn_XemChiTiet.BackColor = System.Drawing.Color.Red;
+            this.btn_XemChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_XemChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btn_XemChiTiet.Location = new System.Drawing.Point(945, 71);
+            this.btn_XemChiTiet.Name = "btn_XemChiTiet";
+            this.btn_XemChiTiet.Size = new System.Drawing.Size(184, 43);
+            this.btn_XemChiTiet.TabIndex = 3;
+            this.btn_XemChiTiet.Text = "Xem chi tiết";
+            this.btn_XemChiTiet.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -121,10 +121,10 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btn_XemChiTiet);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(71, 4);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1159, 602);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 10;
             // 
             // DTP_NgayHienTai
             // 
@@ -163,18 +163,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng số lượng đơn hàng:";
             // 
-            // ucNhanVienBanHang
+            // ucQuanlyvanchuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_DonHangDaXuLy);
-            this.Controls.Add(this.btn_DonHangChoXuLy);
+            this.Controls.Add(this.btnDanggiao);
+            this.Controls.Add(this.btnDaxacnhan);
             this.Controls.Add(this.pn_DonHang);
             this.Controls.Add(this.panel2);
-            this.Name = "ucNhanVienBanHang";
-            this.Size = new System.Drawing.Size(1388, 609);
-            this.Load += new System.EventHandler(this.ucNhanVienBanHang_Load);
+            this.Name = "ucQuanlyvanchuyen";
+            this.Size = new System.Drawing.Size(1169, 611);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -184,16 +183,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pn_DonHang;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_DonHangChoXuLy;
-        private System.Windows.Forms.Button btn_DonHangDaXuLy;
-        private System.Windows.Forms.Button btn_XemChiTiet;
         private System.Windows.Forms.Button btn_HuyDonHang;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnDanggiao;
+        private System.Windows.Forms.Button btnDaxacnhan;
+        private System.Windows.Forms.Panel pn_DonHang;
+        private System.Windows.Forms.Button btn_XemChiTiet;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker DTP_NgayHienTai;
         private System.Windows.Forms.Label lb_SoLuongDonHang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker DTP_NgayHienTai;
     }
 }

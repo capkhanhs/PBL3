@@ -101,6 +101,7 @@
             this.btn_XL.TabIndex = 1;
             this.btn_XL.Text = "Chờ xử lý";
             this.btn_XL.UseVisualStyleBackColor = true;
+            this.btn_XL.Click += new System.EventHandler(this.btn_XL_Click);
             // 
             // btn_XN
             // 
@@ -111,6 +112,7 @@
             this.btn_XN.TabIndex = 2;
             this.btn_XN.Text = "Đã xác nhận";
             this.btn_XN.UseVisualStyleBackColor = true;
+            this.btn_XN.Click += new System.EventHandler(this.btn_XN_Click);
             // 
             // btn_GH
             // 
@@ -121,6 +123,7 @@
             this.btn_GH.TabIndex = 4;
             this.btn_GH.Text = "Đang giao hàng";
             this.btn_GH.UseVisualStyleBackColor = true;
+            this.btn_GH.Click += new System.EventHandler(this.btn_GH_Click);
             // 
             // btn_TC
             // 
@@ -131,6 +134,7 @@
             this.btn_TC.TabIndex = 5;
             this.btn_TC.Text = "Thành công";
             this.btn_TC.UseVisualStyleBackColor = true;
+            this.btn_TC.Click += new System.EventHandler(this.btn_TC_Click);
             // 
             // btn_Huy
             // 
