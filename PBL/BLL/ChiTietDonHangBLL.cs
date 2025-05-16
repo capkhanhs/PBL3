@@ -173,5 +173,17 @@ namespace PBL.BLL
             }
         }
 
+        public void Xoatoanbodonhang(string madonhang)
+        {
+            try
+            {
+                foreach (var item in GetChiTietDonHangByMaDH(madonhang)) ;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xóa chi tiết đơn hàng: " + ex.Message);
+            }
+        }
+
     }
 }

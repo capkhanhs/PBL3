@@ -33,25 +33,21 @@
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
             this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.txt_MaiGiamGia = new System.Windows.Forms.TextBox();
             this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btn_Thoat = new System.Windows.Forms.Button();
-            this.btn_Chinhsua = new System.Windows.Forms.Button();
             this.lb_ThongTinSP = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pic_AnhSP = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_TenNCC = new System.Windows.Forms.TextBox();
             this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Chinhsua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -62,15 +58,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_TenDanhMuc);
             this.panel1.Controls.Add(this.txt_SoLuong);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txt_MaSP);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.txt_MaiGiamGia);
             this.panel1.Controls.Add(this.txt_TenSP);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 466);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 134);
@@ -111,18 +107,6 @@
             this.textBox2.Size = new System.Drawing.Size(178, 17);
             this.textBox2.TabIndex = 32;
             this.textBox2.Text = "31.000.000\r\n";
-            // 
-            // txt_MaiGiamGia
-            // 
-            this.txt_MaiGiamGia.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_MaiGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_MaiGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaiGiamGia.Location = new System.Drawing.Point(54, 40);
-            this.txt_MaiGiamGia.Name = "txt_MaiGiamGia";
-            this.txt_MaiGiamGia.ReadOnly = true;
-            this.txt_MaiGiamGia.Size = new System.Drawing.Size(206, 17);
-            this.txt_MaiGiamGia.TabIndex = 31;
-            this.txt_MaiGiamGia.Text = "Mã giảm giá";
             // 
             // txt_TenSP
             // 
@@ -167,35 +151,15 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Số lượng: ";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Sale: ";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 17);
+            this.label7.Location = new System.Drawing.Point(5, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 18);
             this.label7.TabIndex = 27;
             this.label7.Text = "Danh mục:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 51);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 20);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Nhà cung cấp:";
             // 
             // btn_Thoat
             // 
@@ -209,19 +173,6 @@
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
-            // 
-            // btn_Chinhsua
-            // 
-            this.btn_Chinhsua.BackColor = System.Drawing.Color.Red;
-            this.btn_Chinhsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Chinhsua.ForeColor = System.Drawing.Color.White;
-            this.btn_Chinhsua.Location = new System.Drawing.Point(293, 86);
-            this.btn_Chinhsua.Name = "btn_Chinhsua";
-            this.btn_Chinhsua.Size = new System.Drawing.Size(133, 44);
-            this.btn_Chinhsua.TabIndex = 19;
-            this.btn_Chinhsua.Text = "Chỉnh sửa";
-            this.btn_Chinhsua.UseVisualStyleBackColor = false;
-            this.btn_Chinhsua.Click += new System.EventHandler(this.btn_Chinhsua_Click);
             // 
             // lb_ThongTinSP
             // 
@@ -273,10 +224,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txt_TenNCC);
-            this.panel3.Controls.Add(this.txt_TenDanhMuc);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.btn_Thoat);
             this.panel3.Controls.Add(this.btn_Chinhsua);
             this.panel3.Location = new System.Drawing.Point(572, 466);
@@ -284,27 +231,15 @@
             this.panel3.Size = new System.Drawing.Size(563, 134);
             this.panel3.TabIndex = 19;
             // 
-            // txt_TenNCC
-            // 
-            this.txt_TenNCC.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_TenNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TenNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenNCC.Location = new System.Drawing.Point(152, 51);
-            this.txt_TenNCC.Name = "txt_TenNCC";
-            this.txt_TenNCC.ReadOnly = true;
-            this.txt_TenNCC.Size = new System.Drawing.Size(276, 17);
-            this.txt_TenNCC.TabIndex = 29;
-            this.txt_TenNCC.Text = "Nhà cung cấp 102";
-            // 
             // txt_TenDanhMuc
             // 
             this.txt_TenDanhMuc.BackColor = System.Drawing.SystemColors.Control;
             this.txt_TenDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_TenDanhMuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenDanhMuc.Location = new System.Drawing.Point(112, 17);
+            this.txt_TenDanhMuc.Location = new System.Drawing.Point(100, 40);
             this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
             this.txt_TenDanhMuc.ReadOnly = true;
-            this.txt_TenDanhMuc.Size = new System.Drawing.Size(276, 17);
+            this.txt_TenDanhMuc.Size = new System.Drawing.Size(114, 17);
             this.txt_TenDanhMuc.TabIndex = 28;
             this.txt_TenDanhMuc.Text = "Danh mục 101";
             // 
@@ -325,6 +260,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 603);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // btn_Chinhsua
+            // 
+            this.btn_Chinhsua.BackColor = System.Drawing.Color.Red;
+            this.btn_Chinhsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Chinhsua.ForeColor = System.Drawing.Color.White;
+            this.btn_Chinhsua.Location = new System.Drawing.Point(293, 86);
+            this.btn_Chinhsua.Name = "btn_Chinhsua";
+            this.btn_Chinhsua.Size = new System.Drawing.Size(133, 44);
+            this.btn_Chinhsua.TabIndex = 19;
+            this.btn_Chinhsua.Text = "Chỉnh sửa";
+            this.btn_Chinhsua.UseVisualStyleBackColor = false;
+            this.btn_Chinhsua.Click += new System.EventHandler(this.btn_Chinhsua_Click);
+            // 
             // ucXemChiTietSanPham_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -339,7 +287,6 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhSP)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -351,11 +298,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_Thoat;
-        private System.Windows.Forms.Button btn_Chinhsua;
         private System.Windows.Forms.Label lb_ThongTinSP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
@@ -365,10 +309,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_TenDanhMuc;
         private System.Windows.Forms.TextBox txt_TenSP;
-        private System.Windows.Forms.TextBox txt_TenNCC;
         private System.Windows.Forms.TextBox txt_SoLuong;
         private System.Windows.Forms.TextBox txt_MaSP;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txt_MaiGiamGia;
+        private System.Windows.Forms.Button btn_Chinhsua;
     }
 }
