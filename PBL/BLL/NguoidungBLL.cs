@@ -177,8 +177,24 @@ namespace PBL.BLL
                 user.password = hash;
                 usDAL.Update(user);
                 usDAL.Save();
-
             }
+        }
+
+        //Hàm cập nhật vai trò người dùng
+        public void UpdateRole(string ma, string mavaitro)
+        {
+            if (string.IsNullOrEmpty(ma) || string.IsNullOrEmpty(mavaitro))
+            {
+                throw new ArgumentException("Vui lòng nhập đầy đủ thông tin");
+            }
+            var user = usDAL.GetById(ma);
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User not found.");
+            }
+            user.Ma_vai_tro = mavaitro;
+            usDAL.Update(user);
+            usDAL.Save();
         }
     }
 }

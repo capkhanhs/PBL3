@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using PBL.DAL;
 using PBL.Model;
 
@@ -33,6 +34,10 @@ namespace PBL.BLL
             }
             if (ciDAL.GetAll().Any(x => x.Ma_gio_hang == cartId && x.Ma_san_pham == SPID))
             {
+                if( SanphamBLL.Instance.Find(SPID).So_luong == 0)
+                {
+                    throw new Exception("Sản phẩm đã hết hàng");
+                }
                 UpdateCart_In_Des(cartId, SPID, true);
                 ciDAL.Save();
                 return;
@@ -62,6 +67,11 @@ namespace PBL.BLL
         {
             if (cartItem != null)
             {
+                if(soluong > SanphamBLL.Instance.Find(cartItem.Ma_san_pham).So_luong)
+                {
+                    MessageBox.Show("Số lượng sản phẩm trong kho không đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 cartItem.Quantity = soluong;
                 ciDAL.Update(cartItem);
                 ciDAL.Save();
@@ -76,6 +86,11 @@ namespace PBL.BLL
             {
                 if (tang)
                 {
+                    if(cartItem.Quantity >= SanphamBLL.Instance.Find(cartItem.Ma_san_pham).So_luong)
+                    {
+                        MessageBox.Show("Số lượng sản phẩm trong kho không đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     cartItem.Quantity++;
                 }
                 else
@@ -102,6 +117,11 @@ namespace PBL.BLL
             {
                 if (tang)
                 {
+                    if (cartItem.Quantity >= SanphamBLL.Instance.Find(cartItem.Ma_san_pham).So_luong)
+                    {
+                        MessageBox.Show("Số lượng sản phẩm trong kho không đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     cartItem.Quantity++;
                 }
                 else

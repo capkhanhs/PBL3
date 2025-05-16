@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.BLL;
+using PBL.Model;
 
 namespace PBL.View
 {
@@ -15,13 +18,17 @@ namespace PBL.View
         public ucNhanVienBanHang()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void ucNhanVienBanHang_Load(object sender, EventArgs e)
         {
             DTP_NgayHienTai.Value = DateTime.Now;
-            btn_DonHangChoXuLy.Text = "Chưa xử lý " + "3"; //trạng thái đơn hàng chờ xử lý trong database
-            btn_DonHangDaXuLy.Text = "Đã xử lý " + "10"; //trạng thái đơn hàng không phải chờ xử lý và không phải đã giao thành công 
+        }
+
+        public void LoadData()
+        {
+            dataGridView1.DataSource = DonHangBLL.Instance.Get_DH_TheoTrangThai("Đang xử lý");
         }
 
         private void btn_HuyDonHang_Click(object sender, EventArgs e)
@@ -32,6 +39,23 @@ namespace PBL.View
                 MessageBoxButtons.OKCancel,           // Các nút: OK và Cancel
                 MessageBoxIcon.Question               // Icon hình dấu hỏi
             );
+        }
+
+        private void btn_XemChiTiet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn xác nhận đơn hàng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                DonHangBLL.Instance.ChuyenTrangThai(row.DataBoundItem as Don_Hang); 
+                LoadData(); // Tải lại dữ liệu sau khi xác nhận đơn hàng
+            } 
+                
+
         }
     }
 }

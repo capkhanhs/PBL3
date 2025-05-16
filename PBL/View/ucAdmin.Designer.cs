@@ -29,45 +29,33 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_CaNhan = new System.Windows.Forms.Button();
             this.btn_DonHang = new System.Windows.Forms.Button();
             this.btn_KhoHang = new System.Windows.Forms.Button();
             this.btn_SanPham = new System.Windows.Forms.Button();
             this.btn_DoanhSo = new System.Windows.Forms.Button();
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
-            this.btn_TrangChu = new System.Windows.Forms.Button();
             this.flpn_HienThi = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnThemSP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.btn_CaNhan);
+            this.panel1.Controls.Add(this.btnThemSP);
             this.panel1.Controls.Add(this.btn_DonHang);
             this.panel1.Controls.Add(this.btn_KhoHang);
             this.panel1.Controls.Add(this.btn_SanPham);
             this.panel1.Controls.Add(this.btn_DoanhSo);
             this.panel1.Controls.Add(this.btn_TaiKhoan);
-            this.panel1.Controls.Add(this.btn_TrangChu);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(247, 609);
             this.panel1.TabIndex = 0;
             // 
-            // btn_CaNhan
-            // 
-            this.btn_CaNhan.Location = new System.Drawing.Point(0, 546);
-            this.btn_CaNhan.Name = "btn_CaNhan";
-            this.btn_CaNhan.Size = new System.Drawing.Size(238, 46);
-            this.btn_CaNhan.TabIndex = 14;
-            this.btn_CaNhan.Text = "Cá nhân";
-            this.btn_CaNhan.UseVisualStyleBackColor = true;
-            this.btn_CaNhan.Click += new System.EventHandler(this.btn_CaNhan_Click);
-            // 
             // btn_DonHang
             // 
-            this.btn_DonHang.Location = new System.Drawing.Point(0, 206);
+            this.btn_DonHang.Location = new System.Drawing.Point(0, 205);
             this.btn_DonHang.Name = "btn_DonHang";
             this.btn_DonHang.Size = new System.Drawing.Size(238, 46);
             this.btn_DonHang.TabIndex = 13;
@@ -77,7 +65,7 @@
             // 
             // btn_KhoHang
             // 
-            this.btn_KhoHang.Location = new System.Drawing.Point(0, 154);
+            this.btn_KhoHang.Location = new System.Drawing.Point(0, 153);
             this.btn_KhoHang.Name = "btn_KhoHang";
             this.btn_KhoHang.Size = new System.Drawing.Size(238, 46);
             this.btn_KhoHang.TabIndex = 12;
@@ -87,7 +75,7 @@
             // 
             // btn_SanPham
             // 
-            this.btn_SanPham.Location = new System.Drawing.Point(0, 54);
+            this.btn_SanPham.Location = new System.Drawing.Point(0, 3);
             this.btn_SanPham.Name = "btn_SanPham";
             this.btn_SanPham.Size = new System.Drawing.Size(238, 44);
             this.btn_SanPham.TabIndex = 9;
@@ -97,7 +85,7 @@
             // 
             // btn_DoanhSo
             // 
-            this.btn_DoanhSo.Location = new System.Drawing.Point(0, 258);
+            this.btn_DoanhSo.Location = new System.Drawing.Point(0, 257);
             this.btn_DoanhSo.Name = "btn_DoanhSo";
             this.btn_DoanhSo.Size = new System.Drawing.Size(238, 46);
             this.btn_DoanhSo.TabIndex = 11;
@@ -107,7 +95,7 @@
             // 
             // btn_TaiKhoan
             // 
-            this.btn_TaiKhoan.Location = new System.Drawing.Point(0, 104);
+            this.btn_TaiKhoan.Location = new System.Drawing.Point(0, 103);
             this.btn_TaiKhoan.Name = "btn_TaiKhoan";
             this.btn_TaiKhoan.Size = new System.Drawing.Size(238, 44);
             this.btn_TaiKhoan.TabIndex = 10;
@@ -115,22 +103,22 @@
             this.btn_TaiKhoan.UseVisualStyleBackColor = true;
             this.btn_TaiKhoan.Click += new System.EventHandler(this.btn_TaiKhoan_Click);
             // 
-            // btn_TrangChu
-            // 
-            this.btn_TrangChu.Location = new System.Drawing.Point(0, 3);
-            this.btn_TrangChu.Name = "btn_TrangChu";
-            this.btn_TrangChu.Size = new System.Drawing.Size(238, 47);
-            this.btn_TrangChu.TabIndex = 8;
-            this.btn_TrangChu.Text = "Trang chủ";
-            this.btn_TrangChu.UseVisualStyleBackColor = true;
-            this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
-            // 
             // flpn_HienThi
             // 
             this.flpn_HienThi.Location = new System.Drawing.Point(244, 0);
             this.flpn_HienThi.Name = "flpn_HienThi";
             this.flpn_HienThi.Size = new System.Drawing.Size(1144, 609);
             this.flpn_HienThi.TabIndex = 1;
+            // 
+            // btnThemSP
+            // 
+            this.btnThemSP.Location = new System.Drawing.Point(0, 53);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(238, 44);
+            this.btnThemSP.TabIndex = 14;
+            this.btnThemSP.Text = "Thêm Sản Phẩm";
+            this.btnThemSP.UseVisualStyleBackColor = true;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // ucAdmin
             // 
@@ -154,7 +142,6 @@
         private System.Windows.Forms.Button btn_SanPham;
         private System.Windows.Forms.Button btn_DoanhSo;
         private System.Windows.Forms.Button btn_TaiKhoan;
-        private System.Windows.Forms.Button btn_TrangChu;
-        private System.Windows.Forms.Button btn_CaNhan;
+        private System.Windows.Forms.Button btnThemSP;
     }
 }

@@ -195,5 +195,33 @@ namespace PBL.BLL
             }
         }
 
+        //Hàm chuyển đơn hàng sang trạng thái tiếp theo
+        public void ChuyenTrangThai(Don_Hang dh)
+        {
+            string trangthaihientai = dh.Trang_thai_don_hang;
+            switch (trangthaihientai)
+            {
+                case "Đang xử lý":
+                    dh.Trang_thai_don_hang = "Đã xác nhận";
+                    break;
+
+                case "Đã xác nhận":
+                    dh.Trang_thai_don_hang = "Đang giao hàng";
+                    break;
+
+                case "Đang giao hàng":
+                    dh.Trang_thai_don_hang = "Thành công";
+                    break;
+                case "Thành công":
+                    MessageBox.Show("Đơn hàng đã hoàn tất không thể thay đổi trạng thái nữa!");
+                    break;
+
+                default:
+                    throw new ArgumentException("Trạng thái không hợp lệ: " + trangthaihientai);
+            }
+            dhdal.Update(dh);
+            dhdal.Save();
+        }
+
     }
 }

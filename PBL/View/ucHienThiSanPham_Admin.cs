@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.BLL;
 
 namespace PBL.View
 {
@@ -15,16 +16,17 @@ namespace PBL.View
         public ucHienThiSanPham_Admin()
         {
             InitializeComponent();
+            Load();
         }
-        private void ucHienThiSanPham_Admin_Load_1(object sender, EventArgs e)
+        private void Load()
         {
             flpn_HienThiSanPham.Controls.Clear();
             // thay đổi dòng for theo database
-            for (int i = 0; i < 10; i++)
+            foreach(var i in SanphamBLL.Instance.GetAll())
             {
-                ucSanPham_Admin ucsp = new ucSanPham_Admin();
-                flpn_HienThiSanPham.Controls.Add(ucsp);
-            }
+                ucSanPham_Admin uc = new ucSanPham_Admin(i);
+                flpn_HienThiSanPham.Controls.Add(uc);
+            }    
         }
     }
 }

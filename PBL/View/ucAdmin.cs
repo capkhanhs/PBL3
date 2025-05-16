@@ -48,7 +48,9 @@ namespace PBL.View
 
         private void btn_DoanhSo_Click(object sender, EventArgs e)
         {
-            
+            flpn_HienThi.Controls.Clear();
+            ucThongKeDoanhSo_Main uc = new ucThongKeDoanhSo_Main();
+            flpn_HienThi.Controls.Add(uc);
         }
 
         private void btn_CaNhan_Click(object sender, EventArgs e)
@@ -59,6 +61,12 @@ namespace PBL.View
         private void btn_TrangChu_Click(object sender, EventArgs e)
         {
             //flpn_HienThi.Controls.Add();
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            ucThemSanPham_Admin uc = new ucThemSanPham_Admin();
+            flpn_HienThi.Controls.Add(uc);
         }
     }
 }

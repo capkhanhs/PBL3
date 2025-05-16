@@ -1,33 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.Model;
 
 namespace PBL.View
 {
     public partial class ucSanPham_Admin: UserControl
     {
-        public ucSanPham_Admin()
+        San_Pham SP;
+        public ucSanPham_Admin(San_Pham sp)
         {
             InitializeComponent();
-            this.Paint += ucSanPham_Admin_Paint;
+            LoadData(sp);
+            SP = sp;
         }
 
-        private void ucSanPham_Admin_Paint(object sender, PaintEventArgs e)
+        public void LoadData(San_Pham sp)
         {
-            Pen p = new Pen(Color.Gray, 1);
-            e.Graphics.DrawLine(p, 20, 40, 830, 40);
+            lb_TenSP.Text = sp.Ten_sp;
+            label2.Text = string.Format("{0:0,0}", long.Parse(sp.Gia_sp)) + " VNĐ";
+            lb_maSP.Text = sp.Ma_san_pham;
+            lb_SL.Text = sp.So_luong.ToString();
+            string imagePath = Path.Combine(Application.StartupPath, "Resources", sp.PictureFileName);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            if (File.Exists(imagePath))
+            {
+                pictureBox1.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy ảnh tại: " + imagePath);
+            }
         }
 
         private void btn_Chinhsua_Click(object sender, EventArgs e)
         {
-            ChinhSua_ThemSanPham_Admin f = new ChinhSua_ThemSanPham_Admin(Reload);
-            f.Show();
+            ChinhSua_ThemSanPham_Admin f = new ChinhSua_ThemSanPham_Admin(SP);
+            f.ShowDialog();
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -45,8 +61,8 @@ namespace PBL.View
         }
         private void btn_XemChiTiet_Click(object sender, EventArgs e)
         {
-            ChinhSua_ThemSanPham_Admin f = new ChinhSua_ThemSanPham_Admin(Reload);
-            f.Show();
+            //ChinhSua_ThemSanPham_Admin f = new ChinhSua_ThemSanPham_Admin(Reload);
+            //f.Show();
         }
     }
 }

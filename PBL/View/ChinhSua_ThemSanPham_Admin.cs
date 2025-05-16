@@ -7,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.Model;
 
 namespace PBL.View
 {
     public partial class ChinhSua_ThemSanPham_Admin: Form
     {
-        public delegate void MyDel();
-        public MyDel d { get; set; }
-        public ChinhSua_ThemSanPham_Admin(MyDel d)
+
+        public ChinhSua_ThemSanPham_Admin(San_Pham sp)
         {
             InitializeComponent();
-            this.d = d;
+            pn_SanPham.Controls.Clear();
+            pn_SanPham.Controls.Add(new ucThemSanPham_Admin(sp));
         }
         public void LoadPanel(Panel pn, UserControl uc)
         {
@@ -26,8 +27,7 @@ namespace PBL.View
         }
         private void ChinhSua_ThemSanPham_Admin_Load(object sender, EventArgs e)
         {
-            pn_SanPham.Controls.Clear();
-            pn_SanPham.Controls.Add( new ucXemChiTietSanPham_Admin());
+
         }
 
     }
