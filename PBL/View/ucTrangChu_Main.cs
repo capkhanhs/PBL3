@@ -27,11 +27,11 @@ namespace PBL.View
         private void ucTrangChu_Load()
         {
             flpnLoadSanPham.Controls.Clear();
-            sp.GetAll().ForEach(x =>
+            foreach (var item in sp.GetAll().Where(x => x.So_luong > 0).ToList())
             {
-                ucSanPhamItem_TrangChu_Main item = new ucSanPhamItem_TrangChu_Main(x.Ma_san_pham,manguoidung);
-                flpnLoadSanPham.Controls.Add(item);
-            });
+                ucSanPhamItem_TrangChu_Main a = new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, manguoidung);
+                flpnLoadSanPham.Controls.Add(a);
+            }    
         }
 
         private void flpnLoadSanPham_Paint(object sender, PaintEventArgs e)
