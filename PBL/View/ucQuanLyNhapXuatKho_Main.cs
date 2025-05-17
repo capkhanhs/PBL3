@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL.Model;
 using System.Security.Cryptography;
+using System.Data.Entity.Infrastructure;
 
 namespace PBL.View
 {
@@ -29,6 +30,11 @@ namespace PBL.View
         {
             themSP = true;
             LoadData();
+
+            //Test
+            button5.Visible = true;
+            button4.Text = "Hủy phiếu";
+
             try
             {
                 //Tạo 1 phiếu tạm -> để tránh trường hợp mở thêm sản phẩm r hủy -> 1 phiếu tạo kho vô nghĩa đc tạo
@@ -120,17 +126,6 @@ namespace PBL.View
         {
             try
             {
-                if (!themSP)
-                {
-                    MessageBox.Show(
-                        "Không thể sử dụng chức năng này khi đang xem tất cả phiếu nhập kho!",
-                        "Lỗi!",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                        );
-                    return;
-                }
-
                 if (listCTPN.Count == 0)
                 {
                     MessageBox.Show(
@@ -150,22 +145,21 @@ namespace PBL.View
                 {
                     PBL.BLL.ChiTietPhieuNhapBLL.Instance.them_ChiTietPhieuNhap(item);
                     PBL.BLL.SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, Convert.ToInt32(item.So_luong));
+                    PBL.BLL.SanphamBLL.Instance.update_giaSP(item.Ma_san_pham, item.Gia_nhap);//Test chỉnh giá nhập
                 }
                 // Reset cả UC
                 listCTPN.Clear();
                 phieu_nhapKho = null;
                 LoadData();
-
-                MessageBox.Show(
-                    "Nhập kho thành công!",
-                    "Thông Báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                    );
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Lỗi khi thêm sản phẩm: " + ex.Message,
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                    );
             }
         }
 
@@ -173,12 +167,8 @@ namespace PBL.View
         {
             if (!themSP)
             {
-                MessageBox.Show(
-                    "Không thể sử dụng chức năng này khi đang xem tất cả phiếu nhập kho!",
-                    "Lỗi!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                    );
+                LoadData();
+                button4.Text = "Hủy phiếu";
                 return;
             }
 
@@ -212,7 +202,10 @@ namespace PBL.View
             themSP = false;
             khoiTao_datagridview_PNK();
 
-            //Add toàn bộ phiếu nhập
+            button5.Visible = false;
+            button4.Text = "Quay Lại";
+
+            //Add toàn bộ phiếu nhập để hiển thị trên DGV PNK
             try
             {
                 List<Phieu_Nhap_Kho> listPNK = PBL.BLL.PhieuNhapKhoBLL.Instance.GetAll();
@@ -224,17 +217,12 @@ namespace PBL.View
             }
         }
 
+        //Hàm xử lí khi doubleClick vào 1 hàng trong DGV ở phần tất cả phiếu nhập -> hiển thị các chi tiết phiếu nhập có trong mã phiếu nhập đó
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             if (!themSP)
             {
                 String maPN = dataGridView1.CurrentRow.Cells["Ma_phieu"].Value.ToString();
-                //MessageBox.Show(
-                //    "Mã phiếu nhập: " + maPN,
-                //    "Thông Báo",
-                //    MessageBoxButtons.OK,
-                //    MessageBoxIcon.Information
-                //    );
 
                 khoiTao_datagridview_CTPN();
                 List<Chi_Tiet_Phieu_Nhap> listCTPN = PBL.BLL.ChiTietPhieuNhapBLL.Instance.getCTPN_byMPN(maPN);
@@ -264,7 +252,7 @@ namespace PBL.View
             }
         }
 
-        // Tách thành hai hàm khác nhau cho rõ ràng hơn
+        //Khởi tạo DGV hiển thị phiếu nhập Kho
         public void khoiTao_datagridview_PNK()
         {
             dataGridView1.Columns.Clear();
@@ -304,6 +292,7 @@ namespace PBL.View
             dataGridView1.Columns.Add(colTongTien);
         }
 
+        //Khởi tạo DGV hiển thị chi tiết phiếu nhập
         public void khoiTao_datagridview_CTPN()
         {
             dataGridView1.Columns.Clear();

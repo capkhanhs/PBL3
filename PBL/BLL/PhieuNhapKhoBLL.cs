@@ -60,7 +60,11 @@ namespace PBL.BLL
         {
             Phieu_Nhap_Kho new_pmk = new Phieu_Nhap_Kho();
             String maPNK = TaoMaPhieuNhapMoi();
-            String maND = "ND01"; //Tạo cố định, phải sửa khi merge form
+
+
+            String maND = "056789408"; //Tạo cố định, phải sửa khi merge form
+
+
             DateTime dateTime = DateTime.Now;
             String tongTien = "0"; //tăng theo số lượng sản phẩm add vào 
 

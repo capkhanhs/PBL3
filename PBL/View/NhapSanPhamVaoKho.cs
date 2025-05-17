@@ -64,8 +64,9 @@ namespace PBL.View
                 if (selectedSP != null)
                 {
                     San_Pham sp = PBL.BLL.SanphamBLL.Instance.Find_byName(selectedSP.Ten_sp);
-                    if (sp != null)
+                    if (sp != null && sp.So_luong == 0) //Khi sản phẩm trong kho hết thì có thể chỉnh lại giá toàn bộ trong cửa hàng!
                     {
+                        textBox1.Enabled = true;
                         textBox1.Text = sp.Gia_sp.ToString();
                     }
                 }
@@ -107,12 +108,6 @@ namespace PBL.View
                 MyEvent?.Invoke(ctpn); // Gọi sự kiện để thông báo và truyền 1 ctpn về cho form cha
 
                 //PBL.BLL.SanphamBLL.Instance.themSoLuong(sp.Ma_san_pham, int.Parse(soLuong));
-                MessageBox.Show(
-                    "Thêm sản phẩm vào kho thành công!",
-                    "Thông báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information
-                    );
 
                 this.Close();
             }

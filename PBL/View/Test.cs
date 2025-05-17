@@ -17,7 +17,7 @@ namespace PBL.View
         {
             InitializeComponent();
             // Ensure 'UCQuanLyNhapXuatKho_Main' is defined in the 'PBL.View.UC' namespace  
-            ucQuanLyNhapXuatKho_Main uc = new PBL.View.ucQuanLyNhapXuatKho_Main();
+            ucThongKeDoanhSo_Main uc = new ucThongKeDoanhSo_Main();
             this.Controls.Add(uc);
         }
     }
