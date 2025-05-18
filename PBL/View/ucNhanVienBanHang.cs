@@ -52,10 +52,6 @@ namespace PBL.View
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 DonHangBLL.Instance.ChuyenTrangThai(row.DataBoundItem as Don_Hang);
-                foreach (var item in ChiTietDonHangBLL.Instance.GetChiTietDonHangByMaDH((row.DataBoundItem as Don_Hang).Ma_don_hang))
-                {
-                    SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, Convert.ToInt32(-item.So_luong));
-                }
                 LoadData(); // Tải lại dữ liệu sau khi xác nhận đơn hàng
             } 
                 
