@@ -3,6 +3,7 @@ using PBL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,7 +33,7 @@ namespace PBL.BLL
                 return ChiTietDonHangDAL.GetAll();
         }
 
-        //Lấy danh sách chi tiết đơn hàng theo mã đơn hàng và đã gom theo ma SanPham
+        //Lấy danh sách sản phẩm và tổng sản phẩm đó đã bán theo mã đơn hàng thành công và đã gom theo ma SanPham
         public List<Model.San_Pham> GetSP_grByMaDH(List<Don_Hang> dh, DateTime start, DateTime end)
         {
             List<Model.Chi_Tiet_Don_Hang> list_ctdh = new List<Model.Chi_Tiet_Don_Hang>();
@@ -107,7 +108,7 @@ namespace PBL.BLL
                         }
                     }
 
-                    //Nhóm lại theo danh mục cho tháng đó
+                     //Nhóm lại theo danh mục cho tháng đó
                     List<San_Pham> li_sp = list_ctdh.GroupBy(x => x.San_Pham.Ten_danh_muc).Select(g =>
                     {
                         var first = g.First(); // lấy sản phẩm đầu tiên của nhóm
@@ -183,6 +184,19 @@ namespace PBL.BLL
             {
                 MessageBox.Show("Lỗi xóa chi tiết đơn hàng: " + ex.Message);
             }
+        }
+
+        //Hàm nhận vào 1 list các đơn hàng và lấy toàn bộ chi tiết đơn hàng theo thời gian start và end
+        public List<Chi_Tiet_Don_Hang> get_ListCTDH_byListDH(List<Don_Hang> li_dh, DateTime start, DateTime end)
+        {
+            // Lọc các đơn hàng trong khoảng thời gian hợp lệ
+            var maDHs = li_dh
+                .Where(dh => dh.Ngay_dat_hang >= start && dh.Ngay_dat_hang <= end)
+                .Select(dh => dh.Ma_don_hang)
+                .ToHashSet();
+
+            // Lấy danh sách CTDH có mã đơn hàng thuộc danh sách trên
+            return this.GetAll().Where(ctdh => maDHs.Contains(ctdh.Ma_don_hang)).ToList();
         }
 
     }

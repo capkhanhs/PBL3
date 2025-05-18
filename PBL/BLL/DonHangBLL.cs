@@ -223,5 +223,9 @@ namespace PBL.BLL
             dhdal.Save();
         }
 
+        public int Count_DH_inTime(List<Don_Hang> donHang, DateTime dt_bd, DateTime dt_kt)
+        {
+            return donHang.Count(x => x.Ngay_dat_hang >= dt_bd && x.Ngay_dat_hang <= dt_kt);
+        }
     }
 }

@@ -115,6 +115,7 @@
     <Compile Include="Model\Chi_Tiet_Phieu_Nhap.cs">
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ThongKeSanPham.cs" />
     <Compile Include="Model\Danh_Muc.cs">
       <DependentUpon>PBL3_azure_databaseEntities.tt</DependentUpon>
     </Compile>

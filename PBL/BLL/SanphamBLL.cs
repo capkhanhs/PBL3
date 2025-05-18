@@ -208,30 +208,6 @@ namespace PBL.BLL
             return true;
         }
 
-
-        //Hàm nhận vào 1 List sản phẩm và đưa ra tên sản phẩm bán chạy nhất -> sử dụng bên thống kê
-        public string GetSPBanChay(List<San_Pham> list)
-        {
-            if (list == null || list.Count == 0)
-            {
-                return "";
-            }
-            try
-            {
-                //Sx ds theo số lượng giảm dần, lấy sản phẩm đầu tiên
-                var spBanChay = list.OrderByDescending(x => x.So_luong).FirstOrDefault();
-                if (spBanChay != null && !string.IsNullOrWhiteSpace(spBanChay.Ten_sp))
-                {
-                    return spBanChay.Ten_sp;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi khi lấy sản phẩm bán chạy: " + ex.Message);
-            }
-            return "";
-        }
-
         //Hàm thêm số lượng tùy theo mã sản phẩm
         public void themSoLuong(String maSP, int soLuong)
         {
@@ -255,7 +231,7 @@ namespace PBL.BLL
             }
         }
 
-        //Dùng để update giá sản phẩm theo mã sản phẩm
+        //Dùng để update giá sản phẩm theo mã sản phẩm khi nhập hàng -> tùy thuộc vào giá nhập sản phẩm
         public void update_giaSP(String maSP, String Gia)
         {
             if (string.IsNullOrEmpty(Gia))
@@ -265,10 +241,25 @@ namespace PBL.BLL
             else
             {
                 San_Pham sp = spDAL.GetById(maSP);
-                sp.Gia_sp = Gia;
+                sp.Gia_sp = set_giaBan(Gia);
                 spDAL.Update(sp);
                 spDAL.Save();
             }
+        }
+
+        public String set_giaBan(String giaNhap)
+        {
+            if(string.IsNullOrEmpty(giaNhap))
+            {
+                throw new Exception("Giá nhập trống");
+            }
+
+            double tileLai = 120.0;
+
+            long giaBan = Convert.ToInt64((Convert.ToDouble(giaNhap) * tileLai / 100.0));
+            giaBan = ((giaBan + 99999 ) / 100000 ) * 100000;
+
+            return giaBan.ToString();  
         }
     }
 }

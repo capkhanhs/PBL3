@@ -80,5 +80,18 @@ namespace PBL.BLL
         {
             return chiTietPhieuNhapDAL.GetAll().Where(x => x.Ma_phieu == ma_PNK).ToList();
         }
+
+        //Vì các giá nhập là như nhau cho mỗi sản phẩm
+        public String get_giaNhap(string maSP)
+        {
+            if (string.IsNullOrEmpty(maSP))
+                throw new Exception("Mã sản phẩm trống!");
+
+            var item = this.GetAll().FirstOrDefault(x => x.Ma_san_pham == maSP);
+            if (item == null)
+                throw new Exception("Không có sản phẩm nào có mã sp: " + maSP);
+
+            return item.Gia_nhap;
+        }
     }
 }
