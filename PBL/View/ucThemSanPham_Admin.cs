@@ -112,7 +112,6 @@ namespace PBL.View
                             if (!File.Exists(destPath))
                             {
                                 File.Copy(selectedFilePath, destPath);
-                                MessageBox.Show("Copy thanh cong");
                             }
                         
                         if (SanphamBLL.Instance.ThemSP(txtTen.Text, comboBox1.SelectedItem.ToString(), txtGia.Text, txtMota.Text, txtChiTiet.Text, fileName))

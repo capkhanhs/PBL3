@@ -19,11 +19,13 @@ namespace PBL.View
         private List<Chi_Tiet_Phieu_Nhap> listCTPN = new List<Chi_Tiet_Phieu_Nhap>();
 
         private bool themSP = true;
+        string ma_nguoidung;
 
         private String tongTien = "0";
-        public ucQuanLyNhapXuatKho_Main()
+        public ucQuanLyNhapXuatKho_Main(string manguoidung)
         {
             InitializeComponent();
+            this.ma_nguoidung = manguoidung;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,7 +108,7 @@ namespace PBL.View
                     foreach (var item in listCTPN)
                     {
                         //Tính tổng tiền
-                        tongTien = (int.Parse(tongTien) + int.Parse(item.Gia_nhap) * item.So_luong).ToString();
+                        tongTien = (long.Parse(tongTien) + long.Parse(item.Gia_nhap) * item.So_luong).ToString();
                         //Tính tổng số lượng sản phẩm
                         tongSP = (int.Parse(tongSP) + item.So_luong).ToString();
                     }
@@ -138,9 +140,11 @@ namespace PBL.View
                 }
 
                 phieu_nhapKho.Tongtien = tongTien;
+                phieu_nhapKho.Ma_nguoi_dung = ma_nguoidung;
                 //Add vào Phiếu Nhập
                 PBL.BLL.PhieuNhapKhoBLL.Instance.them_phieuNhapKho(phieu_nhapKho);
                 //Add chi tiết phiếu nhập và số lượng vào sản phẩm
+                string a = "";
                 foreach (var item in listCTPN)
                 {
                     PBL.BLL.ChiTietPhieuNhapBLL.Instance.them_ChiTietPhieuNhap(item);
@@ -155,7 +159,7 @@ namespace PBL.View
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Lỗi khi thêm sản phẩm: " + ex.Message,
+                    "Lỗi khi thêm sản phẩm: " + ex.Message + ex.InnerException.InnerException + phieu_nhapKho.Ma_nguoi_dung,
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
