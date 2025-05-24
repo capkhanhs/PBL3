@@ -101,7 +101,6 @@
             // 
             // panel5
             // 
-            this.panel5.AutoScroll = true;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lbl_soluong);
             this.panel5.Controls.Add(this.label1);

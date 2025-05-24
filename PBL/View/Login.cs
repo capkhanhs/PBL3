@@ -23,6 +23,7 @@ namespace PBL.View
         {
             Register register = new Register();
             register.ShowDialog();
+            this.AcceptButton = this.btnSignin; // Đặt nút đăng nhập là nút mặc định khi nhấn Enter
         }
 
         private void btnSignin_Click(object sender, EventArgs e)
@@ -56,5 +57,8 @@ namespace PBL.View
             }
         }
 
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }
