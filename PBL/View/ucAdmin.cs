@@ -66,7 +66,7 @@ namespace PBL.View
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             ucThemSanPham_Admin uc = new ucThemSanPham_Admin();
-            flpn_HienThi.Controls.Add(uc);
+            LoadPanel(flpn_HienThi, uc);
         }
     }
 }

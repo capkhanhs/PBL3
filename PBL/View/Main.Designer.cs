@@ -138,7 +138,7 @@
             this.txt_search.Location = new System.Drawing.Point(387, 7);
             this.txt_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(467, 34);
+            this.txt_search.Size = new System.Drawing.Size(478, 34);
             this.txt_search.TabIndex = 2;
             this.txt_search.Tag = "";
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
@@ -268,7 +268,7 @@
             // 
             this.toolStripMenuItem6.Image = global::PBL.Properties.Resources.Icons8_Windows_8_Numbers_1_512;
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(271, 32);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(267, 32);
             this.toolStripMenuItem6.Text = "Cáp Kim Khánh";
             // 
             // toolStripMenuItem7
@@ -276,21 +276,21 @@
             this.toolStripMenuItem7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripMenuItem7.Image = global::PBL.Properties.Resources.Icons8_Windows_8_Numbers_2_512;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(271, 32);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(267, 32);
             this.toolStripMenuItem7.Text = "Nguyễn Văn Kỳ";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Image = global::PBL.Properties.Resources.Icons8_Windows_8_Numbers_3_512;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(271, 32);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(267, 32);
             this.toolStripMenuItem8.Text = "Nguyễn Công Nhật";
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Image = global::PBL.Properties.Resources.Icons8_Windows_8_Numbers_4_512;
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(271, 32);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(267, 32);
             this.toolStripMenuItem9.Text = "Nguyễn Văn Nhuận";
             // 
             // quảnLýVậnChuyểnToolStripMenuItem
@@ -307,8 +307,9 @@
             // 
             this.quảnTrịViênToolStripMenuItem.Enabled = false;
             this.quảnTrịViênToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quảnTrịViênToolStripMenuItem.Image = global::PBL.Properties.Resources.administrator;
             this.quảnTrịViênToolStripMenuItem.Name = "quảnTrịViênToolStripMenuItem";
-            this.quảnTrịViênToolStripMenuItem.Size = new System.Drawing.Size(138, 32);
+            this.quảnTrịViênToolStripMenuItem.Size = new System.Drawing.Size(162, 32);
             this.quảnTrịViênToolStripMenuItem.Text = "Quản trị viên";
             this.quảnTrịViênToolStripMenuItem.Visible = false;
             this.quảnTrịViênToolStripMenuItem.Click += new System.EventHandler(this.quảnTrịViênToolStripMenuItem_Click);
@@ -346,12 +347,12 @@
             // pnMain
             // 
             this.pnMain.AutoScroll = true;
-            this.pnMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnMain.Location = new System.Drawing.Point(0, 0);
             this.pnMain.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(1388, 608);
+            this.pnMain.Size = new System.Drawing.Size(1370, 608);
             this.pnMain.TabIndex = 1;
+            this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
             // 
             // Main
             // 
@@ -365,6 +366,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "Trang Chủ TGDT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.pn_0.ResumeLayout(false);
             this.pn_0.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

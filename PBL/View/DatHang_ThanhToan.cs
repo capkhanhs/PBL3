@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,10 @@ namespace PBL.View
             {
                 btnDatHangClick?.Invoke(this, EventArgs.Empty);
                 DonHangBLL.Instance.DatHang(manguoidung, madiachi, phuongthucnhanhang);
+                foreach (var item in CartItemBLL.Instance.GetAllCart(manguoidung))
+                {
+                    SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, Convert.ToInt32(-item.Quantity));
+                }
             }
         }
 

@@ -15,6 +15,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -185,6 +200,12 @@
     </Compile>
     <Compile Include="View\DatHang_ThanhToan.Designer.cs">
       <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Formxemchitietdonhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Formxemchitietdonhang.Designer.cs">
+      <DependentUpon>Formxemchitietdonhang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HoaDonMuaHang.cs">
       <SubType>Form</SubType>
@@ -437,6 +458,9 @@
     <EmbeddedResource Include="View\DatHang_ThanhToan.resx">
       <DependentUpon>DatHang_ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Formxemchitietdonhang.resx">
+      <DependentUpon>Formxemchitietdonhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HoaDonMuaHang.resx">
       <DependentUpon>HoaDonMuaHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -589,6 +613,7 @@
       <LastGenOutput>PBL3_azure_databaseEntities.cs</LastGenOutput>
     </Content>
     <None Include="Resources\anh_nen_dang_nhap.png" />
+    <None Include="Resources\administrator.png" />
     <Content Include="tinh_tp.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -736,7 +761,18 @@
     <None Include="Resources\thongtin.png" />
     <None Include="Resources\Erix-Subyarko-Medical-Invoice-Bill-Payment-Billing-Hospital.32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

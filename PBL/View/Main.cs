@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL.BLL;
+using PBL.Model;
 
 namespace PBL.View
 {
@@ -15,6 +16,7 @@ namespace PBL.View
     {
         string Manguoidung;
         string maVaitro;
+        List<San_Pham> spHienTai = new List<San_Pham>();
         public Main(string username)
         {
             InitializeComponent();
@@ -43,6 +45,16 @@ namespace PBL.View
                 pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
         }
 
+
+        public void Loadsp()
+        {
+            pnMain.Controls.Clear();
+            foreach (var item in spHienTai)
+            {
+                ucSanPhamItem_TrangChu_Main uc = new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung);
+                pnMain.Controls.Add(uc);
+            }
+        }
         private void LoadpnMain(UserControl uc)
         {
             pnMain.Controls.Clear();
@@ -125,7 +137,7 @@ namespace PBL.View
         private void quảnLýKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnMain.Controls.Clear();
-            pnMain.Controls.Add(new ucQuanLyNhapXuatKho_Main());
+            pnMain.Controls.Add(new ucQuanLyNhapXuatKho_Main(Manguoidung));
         }
 
         private void nhânViênBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,11 +156,8 @@ namespace PBL.View
         {
             try
             {
-                pnMain.Controls.Clear();
-                foreach (var item in SanphamBLL.Instance.TimKiemGanDung(txt_search.Text))
-                {
-                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
-                }
+                spHienTai = SanphamBLL.Instance.TimKiemGanDung(txt_search.Text);
+                Loadsp();
             }
             catch (Exception ex)
             {
@@ -218,6 +227,20 @@ namespace PBL.View
             {
                 MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
             }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.DialogResult = DialogResult.Cancel;
+            else { 
+                e.Cancel = true;
+            }
+        }
+
+        private void pnMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
