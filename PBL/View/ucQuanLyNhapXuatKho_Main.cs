@@ -106,7 +106,7 @@ namespace PBL.View
                     foreach (var item in listCTPN)
                     {
                         //Tính tổng tiền
-                        tongTien = (int.Parse(tongTien) + int.Parse(item.Gia_nhap) * item.So_luong).ToString();
+                        tongTien = (long.Parse(tongTien) + long.Parse(item.Gia_nhap) * item.So_luong).ToString();
                         //Tính tổng số lượng sản phẩm
                         tongSP = (int.Parse(tongSP) + item.So_luong).ToString();
                     }
@@ -141,6 +141,7 @@ namespace PBL.View
                 //Add vào Phiếu Nhập
                 PBL.BLL.PhieuNhapKhoBLL.Instance.them_phieuNhapKho(phieu_nhapKho);
                 //Add chi tiết phiếu nhập và số lượng vào sản phẩm
+                string a = "";
                 foreach (var item in listCTPN)
                 {
                     PBL.BLL.ChiTietPhieuNhapBLL.Instance.them_ChiTietPhieuNhap(item);
@@ -155,7 +156,7 @@ namespace PBL.View
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Lỗi khi thêm sản phẩm: " + ex.Message,
+                    "Lỗi khi thêm sản phẩm: " + ex.Message + ex.InnerException.InnerException + phieu_nhapKho.Ma_nguoi_dung,
                     "Thông báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
