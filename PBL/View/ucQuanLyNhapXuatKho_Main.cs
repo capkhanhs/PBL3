@@ -19,11 +19,13 @@ namespace PBL.View
         private List<Chi_Tiet_Phieu_Nhap> listCTPN = new List<Chi_Tiet_Phieu_Nhap>();
 
         private bool themSP = true;
+        string ma_nguoidung;
 
         private String tongTien = "0";
-        public ucQuanLyNhapXuatKho_Main()
+        public ucQuanLyNhapXuatKho_Main(string manguoidung)
         {
             InitializeComponent();
+            this.ma_nguoidung = manguoidung;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -138,6 +140,7 @@ namespace PBL.View
                 }
 
                 phieu_nhapKho.Tongtien = tongTien;
+                phieu_nhapKho.Ma_nguoi_dung = ma_nguoidung;
                 //Add vào Phiếu Nhập
                 PBL.BLL.PhieuNhapKhoBLL.Instance.them_phieuNhapKho(phieu_nhapKho);
                 //Add chi tiết phiếu nhập và số lượng vào sản phẩm

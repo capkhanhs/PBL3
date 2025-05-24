@@ -48,6 +48,17 @@ namespace PBL.View
             else
             {
                 MessageBox.Show("Bạn chưa có địa chỉ nào, hãy thêm địa chỉ mới");
+                CapNhatDiaChi cn = new CapNhatDiaChi(manguoidung);
+                cn.ShowDialog();
+                if(cn.DialogResult == DialogResult.OK)
+                {
+                    LoadData();
+                }
+                else
+                {
+                    this.Close();
+                    return;
+                }
             }
 
             var cartItems = CartItemBLL.Instance.GetAllCart(manguoidung);

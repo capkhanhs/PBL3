@@ -137,7 +137,7 @@ namespace PBL.View
         private void quảnLýKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnMain.Controls.Clear();
-            pnMain.Controls.Add(new ucQuanLyNhapXuatKho_Main());
+            pnMain.Controls.Add(new ucQuanLyNhapXuatKho_Main(Manguoidung));
         }
 
         private void nhânViênBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
