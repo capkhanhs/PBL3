@@ -17,7 +17,6 @@ namespace PBL.View
         {
             InitializeComponent();
             //cbb_vaitro.SelectedIndex = 0;
-            LoadCbbVaitro();
         }
 
         public void LoadCbbVaitro()
@@ -37,7 +36,7 @@ namespace PBL.View
                 }    
                 NguoidungBLL.Instance.Register(txtusername.Text, txtpassword.Text,"KH", txtname.Text, rdb_male.Checked);
 
-                MessageBox.Show("Đăng ký thành công");
+                MessageBox.Show("Đăng ký thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 GioHangBLL.Instance.CreateGioHang(txtusername.Text);
                 this.Close();
             }
@@ -47,6 +46,10 @@ namespace PBL.View
             }
         }
 
+
+
+        // Trong form Register:
+
         private void cbb_vaitro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -54,7 +57,19 @@ namespace PBL.View
 
         private void label6_Click(object sender, EventArgs e)
         {
-                    }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void Register_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.KeyPreview = false; 
+    }
     }
 }

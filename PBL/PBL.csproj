@@ -613,6 +613,7 @@
       <LastGenOutput>PBL3_azure_databaseEntities.cs</LastGenOutput>
     </Content>
     <None Include="Resources\anh_nen_dang_nhap.png" />
+    <None Include="Resources\administrator.png" />
     <Content Include="tinh_tp.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

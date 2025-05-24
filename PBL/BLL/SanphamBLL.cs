@@ -261,5 +261,45 @@ namespace PBL.BLL
 
             return giaBan.ToString();  
         }
+
+        //Hàm lọc sản phẩm theo giá
+        public List<San_Pham> locSPTheoGia(string dau, string cuoi)
+        {
+
+            long a = string.IsNullOrEmpty(dau) ? 0 : long.Parse(dau);
+            long b = string.IsNullOrEmpty(cuoi) ? long.MaxValue : long.Parse(cuoi);
+            if(a <= 0)
+                throw new Exception("Giá không hợp lệ");
+            if(a > b)
+            {
+                throw new Exception("Giá không hợp lệ");
+            }
+            List<San_Pham> list = new List<San_Pham>();
+            foreach (var item in spDAL.GetAll())
+            {
+                if (item.Gia_sp != null && long.Parse(item.Gia_sp) >= a && long.Parse(item.Gia_sp) <= b)
+                {
+                    list.Add(item);
+                }
+            }
+            if (list.Count == 0)
+            {
+                throw new Exception("Không có sản phẩm nào trong khoảng giá này");
+            }
+            return list;
+        }
+
+        //Ham sap xep san pham theo gia
+        public List<San_Pham> SapXepSPTheoGia(List<San_Pham> list , bool tangDan)
+        {
+            if (tangDan)
+            {
+                return list.OrderBy(sp => long.Parse(sp.Gia_sp)).ToList();
+            }
+            else
+            {
+                return list.OrderByDescending(sp => long.Parse(sp.Gia_sp)).ToList();
+            }
+        }
     }
 }
