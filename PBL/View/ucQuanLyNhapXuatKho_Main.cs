@@ -144,7 +144,6 @@ namespace PBL.View
                 //Add vào Phiếu Nhập
                 PBL.BLL.PhieuNhapKhoBLL.Instance.them_phieuNhapKho(phieu_nhapKho);
                 //Add chi tiết phiếu nhập và số lượng vào sản phẩm
-                string a = "";
                 foreach (var item in listCTPN)
                 {
                     PBL.BLL.ChiTietPhieuNhapBLL.Instance.them_ChiTietPhieuNhap(item);
