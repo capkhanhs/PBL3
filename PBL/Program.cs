@@ -44,7 +44,7 @@ namespace PBL.View
             //            break;
             //        }
             //    }
-                Application.Run(new Test());
+                Application.Run(new Main(""));
                 //Application.Run(new Main("ND001"));
             //}
         }

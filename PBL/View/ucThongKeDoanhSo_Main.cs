@@ -139,9 +139,8 @@ namespace PBL.View
                 this.chart.ChartAreas[0].AxisX.Maximum = 13;
                 this.chart.ChartAreas[0].AxisX.Interval = 1;
 
-                // Cấu hình lề biểu đồ
                 this.chart.ChartAreas[0].InnerPlotPosition = new ElementPosition(10, 5, 80, 85);
-                this.chart.ChartAreas[0].AxisX.IsMarginVisible = false; // Phải để false khi dùng điểm ảo
+                this.chart.ChartAreas[0].AxisX.IsMarginVisible = false; // để tự thiết kế
 
                 // Xóa nhãn cũ nếu có
                 this.chart.ChartAreas[0].AxisX.CustomLabels.Clear();
