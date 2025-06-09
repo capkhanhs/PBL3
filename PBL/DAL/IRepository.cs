@@ -15,6 +15,6 @@ namespace PBL.DAL
         void Delete(params object[] keyValues );
         void Save();
 
-        void Reload();
+        List<T> GetFreshAll();
     }
 }
