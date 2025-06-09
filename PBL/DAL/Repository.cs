@@ -19,6 +19,15 @@ namespace PBL.DAL
             context = new PBL3_azure_databaseEntities2();
             dbSet = context.Set<T>();
         }
+
+        public List<T> GetFreshAll()
+        {
+            using (var newContext = new PBL3_azure_databaseEntities2())
+            {
+                return newContext.Set<T>().ToList();
+            }
+        }
+
         //Lấy tất cả dữ liệu theo kiểu T
         public List<T> GetAll()
         {

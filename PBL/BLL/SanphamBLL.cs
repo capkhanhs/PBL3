@@ -287,18 +287,5 @@ namespace PBL.BLL
             }
             return list;
         }
-
-        //Ham sap xep san pham theo gia
-        public List<San_Pham> SapXepSPTheoGia(List<San_Pham> list , bool tangDan)
-        {
-            if (tangDan)
-            {
-                return list.OrderBy(sp => long.Parse(sp.Gia_sp)).ToList();
-            }
-            else
-            {
-                return list.OrderByDescending(sp => long.Parse(sp.Gia_sp)).ToList();
-            }
-        }
     }
 }

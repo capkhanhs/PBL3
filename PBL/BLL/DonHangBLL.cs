@@ -80,7 +80,7 @@ namespace PBL.BLL
             {
                 if (trangthai == "Tất cả")
                 {
-                    return dhdal.GetAll().Where(dh => dh.Ma_nguoi_dung == manguoidung).ToList();
+                    return dhdal.GetFreshAll().Where(dh => dh.Ma_nguoi_dung == manguoidung).ToList();
                 }
                 return dhdal.GetAll().Where(dh => dh.Trang_thai_don_hang == trangthai && dh.Ma_nguoi_dung == manguoidung).ToList();
             }
@@ -244,5 +244,6 @@ namespace PBL.BLL
         {
             return donHang.Count(x => x.Ngay_dat_hang >= dt_bd && x.Ngay_dat_hang <= dt_kt);
         }
+
     }
 }

@@ -14,5 +14,7 @@ namespace PBL.DAL
         void Update(T entity);
         void Delete(params object[] keyValues );
         void Save();
+
+        void Reload();
     }
 }

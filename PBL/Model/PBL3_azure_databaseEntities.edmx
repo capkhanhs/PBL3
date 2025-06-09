@@ -110,6 +110,7 @@
           <Property Name="Chi_tiet_san_pham" Type="nvarchar(max)" />
           <Property Name="So_luong" Type="int" />
           <Property Name="PictureFileName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Da_ban" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -633,6 +634,7 @@
           <NavigationProperty Name="Chi_Tiet_Don_Hang" Relationship="PBL3_db_ef.FK__Chi_Tiet___Ma_sa__02FC7413" FromRole="San_Pham" ToRole="Chi_Tiet_Don_Hang" />
           <NavigationProperty Name="Chi_Tiet_Phieu_Nhap" Relationship="PBL3_db_ef.FK__Chi_Tiet___Ma_sa__0D7A0286" FromRole="San_Pham" ToRole="Chi_Tiet_Phieu_Nhap" />
           <NavigationProperty Name="Danh_Muc" Relationship="PBL3_db_ef.FK__San_Pham__Ten_da__7A672E12" FromRole="San_Pham" ToRole="Danh_Muc" />
+          <Property Name="Da_ban" Type="Int32" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -971,6 +973,7 @@
           <EntitySetMapping Name="San_Pham">
             <EntityTypeMapping TypeName="PBL3_db_ef.San_Pham">
               <MappingFragment StoreEntitySet="San_Pham">
+                <ScalarProperty Name="Da_ban" ColumnName="Da_ban" />
                 <ScalarProperty Name="PictureFileName" ColumnName="PictureFileName" />
                 <ScalarProperty Name="So_luong" ColumnName="So_luong" />
                 <ScalarProperty Name="Chi_tiet_san_pham" ColumnName="Chi_tiet_san_pham" />
