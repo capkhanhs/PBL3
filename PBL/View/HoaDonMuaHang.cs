@@ -37,8 +37,20 @@ namespace PBL.View
             }
             diachitxt += diachi.Xa_Phuong + ", " + diachi.Quan_Huyen + ", " + diachi.Tinh_ThanhPho;
             textBox3.Text = diachitxt;
-            textBox6.Text = DonHangBLL.Instance.TinhTongGiaTriDonHang(dh.Ma_don_hang).ToString("C0") + " VNĐ";
-            dataGridView1.DataSource = ChiTietDonHangBLL.Instance.GetChiTietDonHangByMaDH(dh.Ma_don_hang);
+            textBox6.Text = string.Format("{0:0:0}", DonHangBLL.Instance.TinhTongGiaTriDonHang(dh.Ma_don_hang)) + " VNĐ";
+            dataGridView1.Columns.Add("SanPham", "Sản phẩm");
+            dataGridView1.Columns.Add("Soluong", "Số lượng");
+            dataGridView1.Columns.Add("GiaBan", "Giá bán lẻ");
+            dataGridView1.Columns.Add("Thanh tien", "Thành tiền");
+            List<Chi_Tiet_Don_Hang> ci = ChiTietDonHangBLL.Instance.GetChiTietDonHangByMaDH(dh.Ma_don_hang);
+            foreach (var item in ci)
+            {
+                San_Pham sp = SanphamBLL.Instance.Find(item.Ma_san_pham);
+                if (sp != null)
+                {
+                    dataGridView1.Rows.Add(sp.Ten_sp, item.So_luong, string.Format("{0:0,0}", long.Parse(sp.Gia_sp)) + " VNĐ", string.Format("{0:0,0}", long.Parse(sp.Gia_sp) * item.So_luong) + " VNĐ");
+                }
+            }
             textBox7.Text = textBox6.Text;
         }
     }

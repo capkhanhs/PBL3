@@ -165,6 +165,7 @@ namespace PBL.BLL
                 sp.Mo_ta_sp = Mo_ta_sp;
                 sp.Chi_tiet_san_pham = chi_tiet_sp;
                 sp.So_luong = 0;
+                sp.Da_ban = 0;
                 sp.PictureFileName = picfilename;
                 spDAL.Add(sp);
                 spDAL.Save();

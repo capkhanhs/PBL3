@@ -87,7 +87,8 @@ namespace PBL.View
 
         private void ptbox_sp_Click(object sender, EventArgs e)
         {
-
+            Chitiet ct = new Chitiet(SanphamBLL.Instance.Find(msp));
+            ct.ShowDialog();
         }
     }
 }

@@ -246,12 +246,14 @@
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.Lime;
             this.textBox4.Location = new System.Drawing.Point(188, 96);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(200, 22);
+            this.textBox4.Size = new System.Drawing.Size(200, 25);
             this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "0";
+            this.textBox4.Text = "Miễn phí";
             // 
             // label10
             // 

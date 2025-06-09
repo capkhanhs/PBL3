@@ -16,6 +16,7 @@ namespace PBL.View
         public ucAdmin()
         {
             InitializeComponent();
+            btn_SanPham.PerformClick(); // Mặc định hiển thị sản phẩm khi load
         }
         private void LoadPanel(Panel pn, UserControl uc)
         {

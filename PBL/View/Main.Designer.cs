@@ -148,10 +148,10 @@
             // txt_search
             // 
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.Location = new System.Drawing.Point(319, 7);
+            this.txt_search.Location = new System.Drawing.Point(360, 7);
             this.txt_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(546, 34);
+            this.txt_search.Size = new System.Drawing.Size(505, 34);
             this.txt_search.TabIndex = 2;
             this.txt_search.Tag = "";
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
@@ -195,10 +195,10 @@
             this.mni_sw,
             this.mni_lh,
             this.toolStripMenuItem1,
+            this.quảnLýKhoToolStripMenuItem,
             this.nhânViênBánHàngToolStripMenuItem,
             this.quảnTrịViênToolStripMenuItem,
-            this.quảnLýVậnChuyểnToolStripMenuItem,
-            this.quảnLýKhoToolStripMenuItem});
+            this.quảnLýVậnChuyểnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 53);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -451,8 +451,9 @@
             // 
             this.quảnLýKhoToolStripMenuItem.Enabled = false;
             this.quảnLýKhoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quảnLýKhoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýKhoToolStripMenuItem.Image")));
             this.quảnLýKhoToolStripMenuItem.Name = "quảnLýKhoToolStripMenuItem";
-            this.quảnLýKhoToolStripMenuItem.Size = new System.Drawing.Size(131, 32);
+            this.quảnLýKhoToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
             this.quảnLýKhoToolStripMenuItem.Text = "Quản lý kho";
             this.quảnLýKhoToolStripMenuItem.Visible = false;
             this.quảnLýKhoToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKhoToolStripMenuItem_Click);
