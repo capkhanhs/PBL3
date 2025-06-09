@@ -34,12 +34,13 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.llblSua = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnthemdiachi = new System.Windows.Forms.Button();
             this.pndiachi = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.llblSua = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -107,6 +108,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(735, 71);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
@@ -114,10 +116,24 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.lbl_thongtincanhan);
             this.flowLayoutPanel1.Controls.Add(this.llblSua);
+            this.flowLayoutPanel1.Controls.Add(this.linkLabel1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 38);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(729, 30);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // llblSua
+            // 
+            this.llblSua.AutoSize = true;
+            this.llblSua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblSua.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.llblSua.Location = new System.Drawing.Point(373, 0);
+            this.llblSua.Name = "llblSua";
+            this.llblSua.Size = new System.Drawing.Size(40, 23);
+            this.llblSua.TabIndex = 8;
+            this.llblSua.TabStop = true;
+            this.llblSua.Text = "Sửa";
+            this.llblSua.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblSua_LinkClicked);
             // 
             // panel1
             // 
@@ -170,18 +186,18 @@
             this.label1.Text = "ĐỊA CHỈ NHẬN HÀNG";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // llblSua
+            // linkLabel1
             // 
-            this.llblSua.AutoSize = true;
-            this.llblSua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblSua.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.llblSua.Location = new System.Drawing.Point(373, 0);
-            this.llblSua.Name = "llblSua";
-            this.llblSua.Size = new System.Drawing.Size(40, 23);
-            this.llblSua.TabIndex = 8;
-            this.llblSua.TabStop = true;
-            this.llblSua.Text = "Sửa";
-            this.llblSua.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblSua_LinkClicked);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.linkLabel1.Location = new System.Drawing.Point(419, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(119, 23);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Đổi mật khẩu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // ucThongTin_TrangCaNhan_Main
             // 
@@ -215,5 +231,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnthemdiachi;
         private System.Windows.Forms.LinkLabel llblSua;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -242,9 +242,9 @@ namespace PBL.BLL
                 {
                     SanphamBLL.Instance.themdaban(item.Ma_san_pham, (int)item.So_luong);
                 }
-                dhdal.Update(dh);
-                dhdal.Save();
             }
+            dhdal.Update(dh);
+            dhdal.Save();
         }
 
         public int Count_DH_inTime(List<Don_Hang> donHang, DateTime dt_bd, DateTime dt_kt)

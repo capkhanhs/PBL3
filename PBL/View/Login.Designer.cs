@@ -94,6 +94,7 @@
             this.lblForgPw.TabIndex = 5;
             this.lblForgPw.TabStop = true;
             this.lblForgPw.Text = "Quên Mật Khẩu?";
+            this.lblForgPw.Visible = false;
             // 
             // txtPassword
             // 

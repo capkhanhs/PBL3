@@ -84,12 +84,26 @@ namespace PBL.View
 
         private void button4_Click(object sender, EventArgs e)
         {
+            List<Nguoi_Dung> nd = NguoidungBLL.Instance.Nguoidungtheovaitro("NVVC");
+            foreach (var item in VanChuyenBLL.Instance.GetAll())
+            {
+                if (item.Trang_thai == "Đang giao hàng")
+                    nd.Remove(NguoidungBLL.Instance.Find(item.Ma_nguoi_dung));
+            }
+            if (nd.Count == 0)
+            {
+                MessageBox.Show("Không có nhân viên vận chuyển nào để phân công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             formPhanCongGiao f = new formPhanCongGiao(dh);
             if (f.ShowDialog() == DialogResult.OK)
             {
                 this.Parent.Controls.Remove(this); // Xóa điều khiển khỏi bố cục cha
             }
-            f.Close();
+            else if(f.DialogResult == DialogResult.Cancel)
+            {
+                f.Close();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

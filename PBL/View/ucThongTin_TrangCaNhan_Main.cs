@@ -65,5 +65,11 @@ namespace PBL.View
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            changePassword changePasswordForm = new changePassword(manguoidung);
+            changePasswordForm.ShowDialog();
+        }
     }
 }

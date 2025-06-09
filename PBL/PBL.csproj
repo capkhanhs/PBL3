@@ -185,6 +185,12 @@
     <Compile Include="View\CapNhatDiaChi.Designer.cs">
       <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\changePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\changePassword.Designer.cs">
+      <DependentUpon>changePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChinhSua_ThemSanPham_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -483,6 +489,9 @@
     </Compile>
     <EmbeddedResource Include="View\CapNhatDiaChi.resx">
       <DependentUpon>CapNhatDiaChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\changePassword.resx">
+      <DependentUpon>changePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChinhSua_ThemSanPham_Admin.resx">
       <DependentUpon>ChinhSua_ThemSanPham_Admin.cs</DependentUpon>

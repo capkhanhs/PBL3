@@ -20,6 +20,7 @@ namespace PBL.View
             InitializeComponent();
             donHang = dh;
             LoadData();
+            comboBox1.SelectedIndex = 0;
         }
 
         public void LoadData()
@@ -34,7 +35,6 @@ namespace PBL.View
             {
                 MessageBox.Show("Không có nhân viên vận chuyển nào để phân công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.Cancel;
-                return;
             }
             comboBox1.DataSource = nd;
             comboBox1.DisplayMember = "Ho_va_ten";
