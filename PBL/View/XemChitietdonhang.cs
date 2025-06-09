@@ -20,6 +20,11 @@ namespace PBL.View
             InitializeComponent();
             this.dh = dh;
             LoadData();
+            if(dh.Trang_thai_don_hang == "Giao hàng thất bại")
+            {
+                button1.Visible = true;
+                button1.Enabled = true;
+            }
         }
 
 
@@ -55,6 +60,13 @@ namespace PBL.View
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string lido = VanChuyenBLL.Instance.GetAll().FirstOrDefault(x => x.Ma_don_hang == dh.Ma_don_hang).Ghi_chu;
+
+            MessageBox.Show(lido, "Lí do giao thất bại", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

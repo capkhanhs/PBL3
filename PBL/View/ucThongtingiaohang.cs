@@ -23,8 +23,11 @@ namespace PBL.View
                 label3.Text = vc.Ngay_du_kien.ToString();
                 label6.Text = vc.Ngay_bat_dau.ToString();
                 Nguoi_Dung nd = vc.Nguoi_Dung;
+                if (nd != null)
+                {
                     label4.Text = nd.Ho_va_ten;
                     label5.Text = nd.Ma_nguoi_dung;
+                }
             }    
         }
     }

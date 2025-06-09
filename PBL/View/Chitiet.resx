@@ -117,28 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lb_ThongTinSP.Text" xml:space="preserve">
-    <value>Cấu hình &amp; Bộ nhớ:
-Hệ điều hành: iOS 18
-CPU: Apple A18 Pro (6 nhân)
-Tốc độ CPU: Hãng không công bố
-GPU: Apple GPU (6 nhân)
-RAM: 8 GB
-Bộ nhớ trong: 128 GB
-Dung lượng khả dụng: Khoảng 113 GB
-Danh bạ: Không giới hạn
-Camera &amp; Màn hình:
-Độ phân giải camera sau:
-Camera chính: 48 MP
-Camera phụ: 48 MP và 12 MP
-Công nghệ màn hình:	OLED
-Độ phân giải màn hình:	Super Retina XDR (1206 x 2622 Pixels)
-Màn hình rộng:	6.3" - Tần số quét 120 Hz
-Độ sáng tối đa:	2000 nits
-Mặt kính cảm ứng: 	Kính cường lực Ceramic Shield
-Pin &amp; Sạc
-Dung lượng pin:	27 giờ
-Loại pin:	Li-Ion
-Hỗ trợ sạc tối đa:	20 W</value>
-  </data>
 </root>

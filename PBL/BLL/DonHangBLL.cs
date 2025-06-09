@@ -122,14 +122,12 @@ namespace PBL.BLL
         {
             if (dhdal.GetById(madonhang) != null)
             {
-                //dhdal.Delete(madonhang);
-                //ChiTietDonHangBLL.Instance.Xoatoanbodonhang(madonhang);
-                //dhdal.Save();
                 foreach (var item in CartItemBLL.Instance.GetAllCart(dhdal.GetById(madonhang).Ma_nguoi_dung))
                 {
                     SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, Convert.ToInt32(item.Quantity));
                 }
                 dhdal.GetById(madonhang).Trang_thai_don_hang = "Đã hủy";
+                dhdal.Update(dhdal.GetById(madonhang));
                 dhdal.Save();
             }
             else
@@ -235,9 +233,18 @@ namespace PBL.BLL
 
                 default:
                     throw new ArgumentException("Trạng thái không hợp lệ: " + trangthaihientai);
+
+
             }
-            dhdal.Update(dh);
-            dhdal.Save();
+            if (dh.Trang_thai_don_hang == "Thành công")
+            {
+                foreach (var item in ChiTietDonHangBLL.Instance.GetChiTietDonHangByMaDH(dh.Ma_don_hang))
+                {
+                    SanphamBLL.Instance.themdaban(item.Ma_san_pham, (int)item.So_luong);
+                }
+                dhdal.Update(dh);
+                dhdal.Save();
+            }
         }
 
         public int Count_DH_inTime(List<Don_Hang> donHang, DateTime dt_bd, DateTime dt_kt)

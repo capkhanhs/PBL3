@@ -37,6 +37,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_soluong = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbox_sp)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +105,8 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.lbl_soluong);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.btn_themvaogio);
@@ -135,6 +139,24 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Số lượng:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(273, 427);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(204, 427);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Đã bán:";
+            // 
             // ucSanPhamItem_TrangChu_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,5 +181,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_soluong;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -33,6 +33,15 @@ namespace PBL.BLL
                 return ChiTietDonHangDAL.GetAll();
         }
 
+        public void tinhdaban()
+        {
+            List<Chi_Tiet_Don_Hang> li = ChiTietDonHangDAL.GetAll();
+            foreach (var item in li)
+            {
+                SanphamBLL.Instance.themdaban(item.Ma_san_pham, (int)item.So_luong);
+            }
+        }
+
         //Lấy danh sách sản phẩm và tổng sản phẩm đó đã bán theo mã đơn hàng thành công và đã gom theo ma SanPham
         public List<Model.San_Pham> GetSP_grByMaDH(List<Don_Hang> dh, DateTime start, DateTime end)
         {

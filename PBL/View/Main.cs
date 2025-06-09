@@ -299,5 +299,42 @@ namespace PBL.View
             spHienTai = spHienTai.OrderByDescending(x => x.Ten_sp).ToList();
             Loadsp();
         }
+
+        private void sảnPhẩmBánChạyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.OrderByDescending(x => x.Da_ban).ToList();
+            Loadsp();
+
+        }
+
+        private void m20mToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.Where(x => decimal.Parse(x.Gia_sp) >= 10000000 && decimal.Parse(x.Gia_sp) < 20000000).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.Where(x => decimal.Parse(x.Gia_sp) < 10000000).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.Where(x => decimal.Parse(x.Gia_sp) >= 20000000 && decimal.Parse(x.Gia_sp) < 30000000).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.Where(x => decimal.Parse(x.Gia_sp) >= 30000000 && decimal.Parse(x.Gia_sp) < 40000000).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.Where(x => decimal.Parse(x.Gia_sp) >= 40000000 && decimal.Parse(x.Gia_sp) < 50000000).ToList();
+            Loadsp();
+        }
     }
 }

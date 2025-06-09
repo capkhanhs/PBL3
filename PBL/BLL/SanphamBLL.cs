@@ -262,7 +262,7 @@ namespace PBL.BLL
         }
 
         //Hàm lọc sản phẩm theo giá
-        public List<San_Pham> locSPTheoGia(string dau, string cuoi)
+        public List<San_Pham> locSPTheoGia(List<San_Pham> sp, string dau, string cuoi)
         {
 
             long a = string.IsNullOrEmpty(dau) ? 0 : long.Parse(dau);
@@ -274,7 +274,7 @@ namespace PBL.BLL
                 throw new Exception("Giá không hợp lệ");
             }
             List<San_Pham> list = new List<San_Pham>();
-            foreach (var item in spDAL.GetAll())
+            foreach (var item in sp)
             {
                 if (item.Gia_sp != null && long.Parse(item.Gia_sp) >= a && long.Parse(item.Gia_sp) <= b)
                 {
@@ -286,6 +286,12 @@ namespace PBL.BLL
                 throw new Exception("Không có sản phẩm nào trong khoảng giá này");
             }
             return list;
+        }
+
+        public void themdaban(string msp, int souong)
+        {
+            spDAL.GetById(msp).Da_ban += souong;
+            spDAL.Save();
         }
     }
 }

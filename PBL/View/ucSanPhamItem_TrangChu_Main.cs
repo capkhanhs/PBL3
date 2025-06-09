@@ -33,6 +33,7 @@ namespace PBL.View
                 lblGiaSP.Text = string.Format("{0:0,0}", long.Parse(sp.Gia_sp)) + " VNĐ";
                 lbl_Mota.Text = sp.Mo_ta_sp;
                 lbl_soluong.Text = sp.So_luong.ToString();
+                label2.Text = sp.Da_ban.ToString();
                 string imagePath = Path.Combine(Application.StartupPath, "Resources", sp.PictureFileName);
                 ptbox_sp.SizeMode = PictureBoxSizeMode.StretchImage;
                 if (File.Exists(imagePath))

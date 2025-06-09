@@ -21,8 +21,9 @@ namespace PBL.View
             txt_TenDanhMuc.Text = sp.Danh_Muc.Ten_danh_muc;
             txt_SoLuong.Text = sp.So_luong.ToString();
             txt_MaSP.Text = sp.Ma_san_pham;
-            textBox2.Text = sp.Gia_sp;
-            lb_ThongTinSP.Text = sp.Chi_tiet_san_pham;
+            textBox2.Text = string.Format("{0:0,0}", long.Parse(sp.Gia_sp)) + " VNĐ";
+            textBox1.Text = sp.Da_ban.ToString();
+            richTextBox1.Text = sp.Chi_tiet_san_pham;
             string imagePath = Path.Combine(Application.StartupPath, "Resources", sp.PictureFileName);
             pic_AnhSP.SizeMode = PictureBoxSizeMode.StretchImage;
             if (File.Exists(imagePath))
@@ -38,6 +39,16 @@ namespace PBL.View
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close(); // Đóng form hiện tại
+        }
+
+        private void lb_ThongTinSP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TenSP_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
