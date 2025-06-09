@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PBL.BLL;
 
 namespace PBL.View
 {
@@ -43,7 +44,7 @@ namespace PBL.View
 
         private void btn_DonHang_Click(object sender, EventArgs e)
         {
-            LoadPanel(flpn_HienThi, new ucDonHangHeThong_Admin());
+            LoadPanel(flpn_HienThi, new ucQuanlydonhang_Admin());
         }
 
         private void btn_DoanhSo_Click(object sender, EventArgs e)

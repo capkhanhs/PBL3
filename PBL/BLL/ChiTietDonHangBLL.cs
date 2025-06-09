@@ -178,7 +178,11 @@ namespace PBL.BLL
         {
             try
             {
-                foreach (var item in GetChiTietDonHangByMaDH(madonhang)) ;
+                foreach (var item in GetChiTietDonHangByMaDH(madonhang))
+                {
+                    ChiTietDonHangDAL.Delete(item.Ma_don_hang,item.Ma_san_pham);
+                    ChiTietDonHangDAL.Save();
+                };
             }
             catch (Exception ex)
             {

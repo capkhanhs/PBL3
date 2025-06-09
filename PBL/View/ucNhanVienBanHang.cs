@@ -18,44 +18,67 @@ namespace PBL.View
         public ucNhanVienBanHang()
         {
             InitializeComponent();
-            LoadData();
+            btn_DonHangChoXuLy.PerformClick(); // Mặc định hiển thị đơn hàng đang xử lý khi load
         }
+
+
 
         private void ucNhanVienBanHang_Load(object sender, EventArgs e)
         {
-            DTP_NgayHienTai.Value = DateTime.Now;
         }
 
-        public void LoadData()
-        {
-            dataGridView1.DataSource = DonHangBLL.Instance.Get_DH_TheoTrangThai("Đang xử lý");
-        }
 
-        private void btn_HuyDonHang_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(
-                "Bạn chắc chắn muốn hủy đơn hàng này không?",     // Nội dung
-                "Xác nhận",                          // Tiêu đề
-                MessageBoxButtons.OKCancel,           // Các nút: OK và Cancel
-                MessageBoxIcon.Question               // Icon hình dấu hỏi
-            );
-        }
-
-        private void btn_XemChiTiet_Click(object sender, EventArgs e)
+        private void DTP_NgayHienTai_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_DonHangChoXuLy_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn xác nhận đơn hàng này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            flowLayoutPanel1.Controls.Clear();
+            List<Don_Hang> li = DonHangBLL.Instance.Get_DH_TheoTrangThai("Đang xử lý");
+            if( li.Count == 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                DonHangBLL.Instance.ChuyenTrangThai(row.DataBoundItem as Don_Hang);
-                LoadData(); // Tải lại dữ liệu sau khi xác nhận đơn hàng
-            } 
-                
+                MessageBox.Show("Không có đơn hàng nào đang xử lý.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            foreach (var item in li)
+            {
+                ucChitietdonhang uc = new ucChitietdonhang(item,true);
+                flowLayoutPanel1.Controls.Add(uc);
+            }
+        }
 
+        private void btn_DonHangDaXuLy_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<Don_Hang> li = DonHangBLL.Instance.Get_DH_TheoTrangThai("Đã xác nhận");
+            if (li.Count == 0)
+            {
+                MessageBox.Show("Không có đơn hàng nào đã xác nhận.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            foreach (var item in li)
+            {
+                ucChitietdonhang uc = new ucChitietdonhang(item, true);
+                flowLayoutPanel1.Controls.Add(uc);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<Don_Hang> li = DonHangBLL.Instance.Get_DH_TheoTrangThai("Đang giao hàng");
+            if (li.Count == 0)
+            {
+                MessageBox.Show("Không có đơn hàng nào đang giao.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            foreach (var item in li)
+            {
+                ucKetThucDonHang_Item uc = new ucKetThucDonHang_Item(item);
+                flowLayoutPanel1.Controls.Add(uc);
+            }
         }
     }
 }

@@ -139,6 +139,9 @@
           <Property Name="Ngay_du_kien" Type="datetime" />
           <Property Name="Phi_van_chuyen" Type="nvarchar" MaxLength="100" />
           <Property Name="Ghi_chu" Type="nvarchar(max)" />
+          <Property Name="Ma_nguoi_dung" Type="nvarchar" MaxLength="10" />
+          <Property Name="Trang_thai" Type="nvarchar(max)" />
+          <Property Name="Ngay_ket_thuc" Type="datetime" />
         </EntityType>
         <Association Name="FK__CartItems__Ma_gi__42E1EEFE">
           <End Role="Gio_hang" Type="Self.Gio_hang" Multiplicity="1" />
@@ -320,6 +323,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_VanChuyen_NguoiDung">
+          <End Role="Nguoi_Dung" Type="Self.Nguoi_Dung" Multiplicity="0..1" />
+          <End Role="Van_Chuyen" Type="Self.Van_Chuyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nguoi_Dung">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Principal>
+            <Dependent Role="Van_Chuyen">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="PBL3_db_efStoreContainer">
           <EntitySet Name="CartItems" EntityType="Self.CartItems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Chi_Tiet_Don_Hang" EntityType="Self.Chi_Tiet_Don_Hang" Schema="dbo" store:Type="Tables" />
@@ -395,6 +410,10 @@
             <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
             <End Role="Phieu_Nhap_Kho" EntitySet="Phieu_Nhap_Kho" />
           </AssociationSet>
+          <AssociationSet Name="FK_VanChuyen_NguoiDung" Association="Self.FK_VanChuyen_NguoiDung">
+            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
+            <End Role="Van_Chuyen" EntitySet="Van_Chuyen" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -414,7 +433,6 @@
           <EntitySet Name="San_Pham" EntityType="PBL3_db_ef.San_Pham" />
           <EntitySet Name="sysdiagrams" EntityType="PBL3_db_ef.sysdiagram" />
           <EntitySet Name="Vai_Tro" EntityType="PBL3_db_ef.Vai_Tro" />
-          <EntitySet Name="Van_Chuyen" EntityType="PBL3_db_ef.Van_Chuyen" />
           <AssociationSet Name="FK__CartItems__Ma_gi__42E1EEFE" Association="PBL3_db_ef.FK__CartItems__Ma_gi__42E1EEFE">
             <End Role="Gio_hang" EntitySet="Gio_hang" />
             <End Role="CartItem" EntitySet="CartItems" />
@@ -451,10 +469,6 @@
             <End Role="Dia_Chi" EntitySet="Dia_Chi" />
             <End Role="nguoiDung_diaChi" EntitySet="nguoiDung_diaChi" />
           </AssociationSet>
-          <AssociationSet Name="FK__Van_Chuye__Ma_do__05D8E0BE" Association="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE">
-            <End Role="Don_Hang" EntitySet="Don_Hang" />
-            <End Role="Van_Chuyen" EntitySet="Van_Chuyen" />
-          </AssociationSet>
           <AssociationSet Name="FK_DonHang_NguoiDung" Association="PBL3_db_ef.FK_DonHang_NguoiDung">
             <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
             <End Role="Don_Hang" EntitySet="Don_Hang" />
@@ -474,6 +488,15 @@
           <AssociationSet Name="FK_PhieuNhapKho_NguoiDung" Association="PBL3_db_ef.FK_PhieuNhapKho_NguoiDung">
             <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
             <End Role="Phieu_Nhap_Kho" EntitySet="Phieu_Nhap_Kho" />
+          </AssociationSet>
+          <EntitySet Name="Van_Chuyen" EntityType="PBL3_db_ef.Van_Chuyen" />
+          <AssociationSet Name="FK__Van_Chuye__Ma_do__05D8E0BE" Association="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE">
+            <End Role="Don_Hang" EntitySet="Don_Hang" />
+            <End Role="Van_Chuyen" EntitySet="Van_Chuyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VanChuyen_NguoiDung" Association="PBL3_db_ef.FK_VanChuyen_NguoiDung">
+            <End Role="Nguoi_Dung" EntitySet="Nguoi_Dung" />
+            <End Role="Van_Chuyen" EntitySet="Van_Chuyen" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="CartItem">
@@ -545,8 +568,8 @@
           <Property Name="Phuong_thuc_thanh_toan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Chi_Tiet_Don_Hang" Relationship="PBL3_db_ef.FK__Chi_Tiet___Ma_do__02084FDA" FromRole="Don_Hang" ToRole="Chi_Tiet_Don_Hang" />
           <NavigationProperty Name="Dia_Chi" Relationship="PBL3_db_ef.FK__Don_Hang__Ma_dia__7F2BE32F" FromRole="Don_Hang" ToRole="Dia_Chi" />
-          <NavigationProperty Name="Van_Chuyen" Relationship="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" FromRole="Don_Hang" ToRole="Van_Chuyen" />
           <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_db_ef.FK_DonHang_NguoiDung" FromRole="Don_Hang" ToRole="Nguoi_Dung" />
+          <NavigationProperty Name="Van_Chuyen" Relationship="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" FromRole="Don_Hang" ToRole="Van_Chuyen" />
         </EntityType>
         <EntityType Name="Gio_hang">
           <Key>
@@ -571,6 +594,7 @@
           <NavigationProperty Name="Vai_Tro" Relationship="PBL3_db_ef.FK_NguoiDung_VaiTro" FromRole="Nguoi_Dung" ToRole="Vai_Tro" />
           <NavigationProperty Name="nguoiDung_diaChi" Relationship="PBL3_db_ef.FK_NguoiDungDiaChi_NguoiDung" FromRole="Nguoi_Dung" ToRole="nguoiDung_diaChi" />
           <NavigationProperty Name="Phieu_Nhap_Kho" Relationship="PBL3_db_ef.FK_PhieuNhapKho_NguoiDung" FromRole="Nguoi_Dung" ToRole="Phieu_Nhap_Kho" />
+          <NavigationProperty Name="Van_Chuyen" Relationship="PBL3_db_ef.FK_VanChuyen_NguoiDung" FromRole="Nguoi_Dung" ToRole="Van_Chuyen" />
         </EntityType>
         <EntityType Name="nguoiDung_diaChi">
           <Key>
@@ -628,18 +652,6 @@
           <Property Name="Ten_vai_tro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Mo_ta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_db_ef.FK_NguoiDung_VaiTro" FromRole="Vai_Tro" ToRole="Nguoi_Dung" />
-        </EntityType>
-        <EntityType Name="Van_Chuyen">
-          <Key>
-            <PropertyRef Name="Ma_van_don" />
-          </Key>
-          <Property Name="Ma_van_don" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Ma_don_hang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Ngay_bat_dau" Type="DateTime" Precision="3" />
-          <Property Name="Ngay_du_kien" Type="DateTime" Precision="3" />
-          <Property Name="Phi_van_chuyen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Ghi_chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Don_Hang" Relationship="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" FromRole="Van_Chuyen" ToRole="Don_Hang" />
         </EntityType>
         <Association Name="FK__CartItems__Ma_gi__42E1EEFE">
           <End Type="PBL3_db_ef.Gio_hang" Role="Gio_hang" Multiplicity="1" />
@@ -749,18 +761,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Van_Chuye__Ma_do__05D8E0BE">
-          <End Type="PBL3_db_ef.Don_Hang" Role="Don_Hang" Multiplicity="0..1" />
-          <End Type="PBL3_db_ef.Van_Chuyen" Role="Van_Chuyen" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Don_Hang">
-              <PropertyRef Name="Ma_don_hang" />
-            </Principal>
-            <Dependent Role="Van_Chuyen">
-              <PropertyRef Name="Ma_don_hang" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_DonHang_NguoiDung">
           <End Type="PBL3_db_ef.Nguoi_Dung" Role="Nguoi_Dung" Multiplicity="0..1" />
           <End Type="PBL3_db_ef.Don_Hang" Role="Don_Hang" Multiplicity="*" />
@@ -817,6 +817,46 @@
               <PropertyRef Name="Ma_nguoi_dung" />
             </Principal>
             <Dependent Role="Phieu_Nhap_Kho">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Van_Chuyen">
+          <Key>
+            <PropertyRef Name="Ma_van_don" />
+          </Key>
+          <Property Name="Ma_van_don" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ma_don_hang" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ngay_bat_dau" Type="DateTime" Precision="3" />
+          <Property Name="Ngay_du_kien" Type="DateTime" Precision="3" />
+          <Property Name="Phi_van_chuyen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Ghi_chu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ma_nguoi_dung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Trang_thai" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Don_Hang" Relationship="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" FromRole="Van_Chuyen" ToRole="Don_Hang" />
+          <NavigationProperty Name="Nguoi_Dung" Relationship="PBL3_db_ef.FK_VanChuyen_NguoiDung" FromRole="Van_Chuyen" ToRole="Nguoi_Dung" />
+          <Property Name="Ngay_ket_thuc" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK__Van_Chuye__Ma_do__05D8E0BE">
+          <End Type="PBL3_db_ef.Don_Hang" Role="Don_Hang" Multiplicity="0..1" />
+          <End Type="PBL3_db_ef.Van_Chuyen" Role="Van_Chuyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Don_Hang">
+              <PropertyRef Name="Ma_don_hang" />
+            </Principal>
+            <Dependent Role="Van_Chuyen">
+              <PropertyRef Name="Ma_don_hang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VanChuyen_NguoiDung">
+          <End Type="PBL3_db_ef.Nguoi_Dung" Role="Nguoi_Dung" Multiplicity="0..1" />
+          <End Type="PBL3_db_ef.Van_Chuyen" Role="Van_Chuyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nguoi_Dung">
+              <PropertyRef Name="Ma_nguoi_dung" />
+            </Principal>
+            <Dependent Role="Van_Chuyen">
               <PropertyRef Name="Ma_nguoi_dung" />
             </Dependent>
           </ReferentialConstraint>
@@ -965,6 +1005,9 @@
           <EntitySetMapping Name="Van_Chuyen">
             <EntityTypeMapping TypeName="PBL3_db_ef.Van_Chuyen">
               <MappingFragment StoreEntitySet="Van_Chuyen">
+                <ScalarProperty Name="Ngay_ket_thuc" ColumnName="Ngay_ket_thuc" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+                <ScalarProperty Name="Ma_nguoi_dung" ColumnName="Ma_nguoi_dung" />
                 <ScalarProperty Name="Ghi_chu" ColumnName="Ghi_chu" />
                 <ScalarProperty Name="Phi_van_chuyen" ColumnName="Phi_van_chuyen" />
                 <ScalarProperty Name="Ngay_du_kien" ColumnName="Ngay_du_kien" />

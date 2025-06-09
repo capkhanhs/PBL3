@@ -55,8 +55,13 @@ namespace PBL.View
         {
             try
             {
+                if(SanphamBLL.Instance.Find(msp).So_luong < 1)
+                {
+                    MessageBox.Show("Sản phẩm đã hết hàng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }    
                 CartItemBLL.Instance.AddCart(mnd, msp, 1);
-                MessageBox.Show("Thêm vào giỏ hàng thành công");
+                MessageBox.Show("Thêm vào giỏ hàng thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

@@ -42,10 +42,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 612);
+            this.ClientSize = new System.Drawing.Size(1101, 589);
             this.Controls.Add(this.pn_SanPham);
             this.Name = "ChinhSua_ThemSanPham_Admin";
-            this.Text = "ChinhSua_ThemSanPham_Admin";
+            this.Text = "Sản phẩm";
             this.Load += new System.EventHandler(this.ChinhSua_ThemSanPham_Admin_Load);
             this.ResumeLayout(false);
 

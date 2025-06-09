@@ -64,7 +64,7 @@ namespace PBL.BLL
             ct.Ma_san_pham = maSP;
             ct.So_luong = int.Parse(soLuong);
             ct.Gia_nhap = giaNhap;
-            ct.Thanh_tien = (int.Parse(soLuong) * int.Parse(giaNhap)).ToString();
+            ct.Thanh_tien = (long.Parse(soLuong) * long.Parse(giaNhap)).ToString();
 
             return ct;
         }

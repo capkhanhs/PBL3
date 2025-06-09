@@ -51,7 +51,7 @@
             this.flowLayoutPanel1.Controls.Add(this.lbl_diachinhanhang);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 13);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1383, 37);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1319, 37);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -61,7 +61,7 @@
             this.pnMainGioHang.BackColor = System.Drawing.Color.White;
             this.pnMainGioHang.Location = new System.Drawing.Point(3, 56);
             this.pnMainGioHang.Name = "pnMainGioHang";
-            this.pnMainGioHang.Size = new System.Drawing.Size(1383, 572);
+            this.pnMainGioHang.Size = new System.Drawing.Size(1319, 552);
             this.pnMainGioHang.TabIndex = 2;
             // 
             // ucGioHang_Main
@@ -71,7 +71,7 @@
             this.Controls.Add(this.pnMainGioHang);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ucGioHang_Main";
-            this.Size = new System.Drawing.Size(1389, 631);
+            this.Size = new System.Drawing.Size(1325, 612);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

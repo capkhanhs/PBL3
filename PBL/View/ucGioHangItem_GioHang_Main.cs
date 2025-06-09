@@ -99,10 +99,18 @@ namespace PBL.View
                 {
                     if (newQuantity > 0)
                     {
-                        CartItemBLL.Instance.UpdateCart(cartitem, newQuantity);
-                        long giaban = (long.Parse(sp.Gia_sp) * newQuantity);
-                        label1.Text = string.Format("{0:0,0}", giaban) + " VNĐ";
-                        OnSoLuongThayDoi?.Invoke(this, EventArgs.Empty);
+                        try
+                        {
+                            CartItemBLL.Instance.UpdateCart(cartitem, newQuantity);
+                            long giaban = (long.Parse(sp.Gia_sp) * newQuantity);
+                            label1.Text = string.Format("{0:0,0}", giaban) + " VNĐ";
+                            OnSoLuongThayDoi?.Invoke(this, EventArgs.Empty);
+                        }
+                        catch (Exception ex)
+                        {
+                            txt_soluong.Text = cartitem.Quantity.ToString();
+                            MessageBox.Show( ex.Message, "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

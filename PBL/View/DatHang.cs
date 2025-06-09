@@ -56,8 +56,7 @@ namespace PBL.View
                 }
                 else
                 {
-                    this.Close();
-                    return;
+                    throw new Exception("Bạn chưa có địa chỉ nào, hãy thêm địa chỉ mới");
                 }
             }
 
@@ -76,14 +75,13 @@ namespace PBL.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message,"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public void DatHangThanhCong(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            this.Close();
         }
 
         private void rdbThanhtoankhinhan_CheckedChanged(object sender, EventArgs e)

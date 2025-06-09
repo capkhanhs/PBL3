@@ -12,26 +12,29 @@ using PBL.Model;
 
 namespace PBL.View
 {
-    public partial class ucDonHangDaMua_TrangCaNhan_Main : UserControl
+    public partial class ucQuanlydonhang_Admin : UserControl
     {
-        string manguoidung;
-        public ucDonHangDaMua_TrangCaNhan_Main(string manguoidung)
+        public ucQuanlydonhang_Admin()
         {
             InitializeComponent();
-            this.manguoidung = manguoidung;
             LoadDHTheoTrangThai("Tất cả");
         }
 
         public void LoadDHTheoTrangThai(string trangthai)
         {
             flpnMainDonHangDaMua.Controls.Clear();
-            List<Don_Hang> donhang = DonHangBLL.Instance.Get_DH_TheoTrangThai(trangthai, manguoidung);
-            foreach(var item in donhang)
+            List<Don_Hang> donhang = DonHangBLL.Instance.Get_DH_TheoTrangThai(trangthai);
+            foreach (var item in donhang)
             {
                 ucChitietdonhang uc = new ucChitietdonhang(item, false);
                 uc.LoadData(item);
                 flpnMainDonHangDaMua.Controls.Add(uc);
             }
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            LoadDHTheoTrangThai("Đã hủy");
         }
 
         private void btn_AllDH_Click(object sender, EventArgs e)
@@ -57,11 +60,6 @@ namespace PBL.View
         private void btn_TC_Click(object sender, EventArgs e)
         {
             LoadDHTheoTrangThai("Thành công");
-        }
-
-        private void btn_Huy_Click(object sender, EventArgs e)
-        {
-            LoadDHTheoTrangThai("Đã hủy");
         }
     }
 }

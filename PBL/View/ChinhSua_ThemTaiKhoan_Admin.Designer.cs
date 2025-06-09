@@ -42,14 +42,14 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_ChinhSuaAnhDD = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txt_Ten = new System.Windows.Forms.TextBox();
             this.txt_Vaitro = new System.Windows.Forms.TextBox();
             this.txt_Sodt = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.txt_Ma = new System.Windows.Forms.TextBox();
-            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhND)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -212,6 +212,35 @@
             this.panel1.Size = new System.Drawing.Size(886, 286);
             this.panel1.TabIndex = 5;
             // 
+            // txt_GioiTinh
+            // 
+            this.txt_GioiTinh.BackColor = System.Drawing.Color.Lavender;
+            this.txt_GioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_GioiTinh.Location = new System.Drawing.Point(509, 127);
+            this.txt_GioiTinh.Name = "txt_GioiTinh";
+            this.txt_GioiTinh.Size = new System.Drawing.Size(296, 24);
+            this.txt_GioiTinh.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label4.Location = new System.Drawing.Point(506, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 16);
+            this.label4.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(437, 131);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 16);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Giới tính:";
+            // 
             // txt_Ten
             // 
             this.txt_Ten.BackColor = System.Drawing.Color.Lavender;
@@ -258,35 +287,6 @@
             this.txt_Ma.Size = new System.Drawing.Size(296, 24);
             this.txt_Ma.TabIndex = 26;
             // 
-            // txt_GioiTinh
-            // 
-            this.txt_GioiTinh.BackColor = System.Drawing.Color.Lavender;
-            this.txt_GioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_GioiTinh.Location = new System.Drawing.Point(509, 127);
-            this.txt_GioiTinh.Name = "txt_GioiTinh";
-            this.txt_GioiTinh.Size = new System.Drawing.Size(296, 24);
-            this.txt_GioiTinh.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(506, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 16);
-            this.label4.TabIndex = 32;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(437, 131);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 16);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Giới tính:";
-            // 
             // ChinhSua_ThemTaiKhoan_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(911, 310);
             this.Controls.Add(this.panel1);
             this.Name = "ChinhSua_ThemTaiKhoan_Admin";
-            this.Text = "ChinhSua_ThemTaiKhoan_Admin";
+            this.Text = "Tài khoản";
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhND)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

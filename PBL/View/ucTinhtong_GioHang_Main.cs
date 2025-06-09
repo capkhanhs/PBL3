@@ -41,12 +41,19 @@ namespace PBL.View
 
         private void btn_thanhtoan_Click(object sender, EventArgs e)
         {
-            DatHang dh = new DatHang(_manguoidung);
-            dh.ShowDialog();
-            if (dh.DialogResult == DialogResult.OK)
+            try
             {
-                // Gọi sự kiện khi thanh toán thành công
-                OnThanhToanThanhCong?.Invoke(this, EventArgs.Empty);
+                DatHang dh = new DatHang(_manguoidung);
+                dh.ShowDialog();
+                if (dh.DialogResult == DialogResult.OK)
+                {
+                    // Gọi sự kiện khi thanh toán thành công
+                    OnThanhToanThanhCong?.Invoke(this, EventArgs.Empty);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

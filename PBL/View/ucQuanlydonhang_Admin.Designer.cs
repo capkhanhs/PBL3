@@ -1,6 +1,6 @@
 ﻿namespace PBL.View
 {
-    partial class ucDonHangDaMua_TrangCaNhan_Main
+    partial class ucQuanlydonhang_Admin
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,45 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_Huy = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_AllDH = new System.Windows.Forms.Button();
             this.btn_XL = new System.Windows.Forms.Button();
             this.btn_XN = new System.Windows.Forms.Button();
             this.btn_GH = new System.Windows.Forms.Button();
             this.btn_TC = new System.Windows.Forms.Button();
-            this.btn_Huy = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flpnMainDonHangDaMua = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel2
+            // btn_Huy
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.flpnMainDonHangDaMua, 0, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 8);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.04167F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.95833F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 373F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(806, 459);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(446, 43);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Đơn hàng đã mua";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Huy.Location = new System.Drawing.Point(616, 3);
+            this.btn_Huy.Name = "btn_Huy";
+            this.btn_Huy.Size = new System.Drawing.Size(114, 38);
+            this.btn_Huy.TabIndex = 6;
+            this.btn_Huy.Text = "Đã hủy";
+            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -76,9 +60,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btn_GH);
             this.flowLayoutPanel1.Controls.Add(this.btn_TC);
             this.flowLayoutPanel1.Controls.Add(this.btn_Huy);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 46);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 36);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(755, 35);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btn_AllDH
@@ -130,56 +114,59 @@
             this.btn_TC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TC.Location = new System.Drawing.Point(500, 3);
             this.btn_TC.Name = "btn_TC";
-            this.btn_TC.Size = new System.Drawing.Size(138, 38);
+            this.btn_TC.Size = new System.Drawing.Size(110, 38);
             this.btn_TC.TabIndex = 5;
             this.btn_TC.Text = "Thành công";
             this.btn_TC.UseVisualStyleBackColor = true;
             this.btn_TC.Click += new System.EventHandler(this.btn_TC_Click);
             // 
-            // btn_Huy
+            // tableLayoutPanel2
             // 
-            this.btn_Huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huy.Location = new System.Drawing.Point(644, 3);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(114, 38);
-            this.btn_Huy.TabIndex = 6;
-            this.btn_Huy.Text = "Đã hủy";
-            this.btn_Huy.UseVisualStyleBackColor = true;
-            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.flpnMainDonHangDaMua, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(189, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 565F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(809, 606);
+            this.tableLayoutPanel2.TabIndex = 4;
             // 
             // flpnMainDonHangDaMua
             // 
             this.flpnMainDonHangDaMua.AutoScroll = true;
             this.flpnMainDonHangDaMua.BackColor = System.Drawing.Color.White;
-            this.flpnMainDonHangDaMua.Location = new System.Drawing.Point(3, 88);
+            this.flpnMainDonHangDaMua.Location = new System.Drawing.Point(3, 44);
             this.flpnMainDonHangDaMua.Name = "flpnMainDonHangDaMua";
-            this.flpnMainDonHangDaMua.Size = new System.Drawing.Size(800, 363);
+            this.flpnMainDonHangDaMua.Size = new System.Drawing.Size(803, 559);
             this.flpnMainDonHangDaMua.TabIndex = 2;
             // 
-            // ucDonHangDaMua_TrangCaNhan_Main
+            // ucQuanlydonhang_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Name = "ucDonHangDaMua_TrangCaNhan_Main";
-            this.Size = new System.Drawing.Size(817, 470);
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.Name = "ucQuanlydonhang_Admin";
+            this.Size = new System.Drawing.Size(1144, 609);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Huy;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btn_AllDH;
         private System.Windows.Forms.Button btn_XL;
         private System.Windows.Forms.Button btn_XN;
         private System.Windows.Forms.Button btn_GH;
         private System.Windows.Forms.Button btn_TC;
-        private System.Windows.Forms.Button btn_Huy;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flpnMainDonHangDaMua;
     }
 }

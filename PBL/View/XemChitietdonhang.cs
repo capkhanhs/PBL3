@@ -45,6 +45,11 @@ namespace PBL.View
                 uc.LoadData(item);
                 flowLayoutPanel2.Controls.Add(uc);
             }
+            if(dh.Trang_thai_don_hang == "Đang giao hàng")
+            {
+                ucThongtingiaohang uc = new ucThongtingiaohang(dh);
+                flowLayoutPanel1.Controls.Add(uc);
+            }
             label9.Text = string.Format("{0:0,0}", DonHangBLL.Instance.TinhTongGiaTriDonHang(dh.Ma_don_hang)) + " VNĐ";
         }
         private void label6_Click(object sender, EventArgs e)

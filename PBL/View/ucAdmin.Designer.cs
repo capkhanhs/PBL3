@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThemSP = new System.Windows.Forms.Button();
             this.btn_DonHang = new System.Windows.Forms.Button();
             this.btn_KhoHang = new System.Windows.Forms.Button();
             this.btn_SanPham = new System.Windows.Forms.Button();
             this.btn_DoanhSo = new System.Windows.Forms.Button();
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
             this.flpn_HienThi = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnThemSP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,16 @@
             this.panel1.Size = new System.Drawing.Size(247, 609);
             this.panel1.TabIndex = 0;
             // 
+            // btnThemSP
+            // 
+            this.btnThemSP.Location = new System.Drawing.Point(0, 53);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Size = new System.Drawing.Size(238, 44);
+            this.btnThemSP.TabIndex = 14;
+            this.btnThemSP.Text = "Thêm Sản Phẩm";
+            this.btnThemSP.UseVisualStyleBackColor = true;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
+            // 
             // btn_DonHang
             // 
             this.btn_DonHang.Location = new System.Drawing.Point(0, 205);
@@ -65,12 +75,14 @@
             // 
             // btn_KhoHang
             // 
-            this.btn_KhoHang.Location = new System.Drawing.Point(0, 153);
+            this.btn_KhoHang.Enabled = false;
+            this.btn_KhoHang.Location = new System.Drawing.Point(0, 257);
             this.btn_KhoHang.Name = "btn_KhoHang";
             this.btn_KhoHang.Size = new System.Drawing.Size(238, 46);
             this.btn_KhoHang.TabIndex = 12;
             this.btn_KhoHang.Text = "Kho hàng";
             this.btn_KhoHang.UseVisualStyleBackColor = true;
+            this.btn_KhoHang.Visible = false;
             this.btn_KhoHang.Click += new System.EventHandler(this.btn_KhoHang_Click);
             // 
             // btn_SanPham
@@ -85,7 +97,7 @@
             // 
             // btn_DoanhSo
             // 
-            this.btn_DoanhSo.Location = new System.Drawing.Point(0, 257);
+            this.btn_DoanhSo.Location = new System.Drawing.Point(0, 153);
             this.btn_DoanhSo.Name = "btn_DoanhSo";
             this.btn_DoanhSo.Size = new System.Drawing.Size(238, 46);
             this.btn_DoanhSo.TabIndex = 11;
@@ -105,20 +117,11 @@
             // 
             // flpn_HienThi
             // 
+            this.flpn_HienThi.AutoScroll = true;
             this.flpn_HienThi.Location = new System.Drawing.Point(244, 0);
             this.flpn_HienThi.Name = "flpn_HienThi";
             this.flpn_HienThi.Size = new System.Drawing.Size(1144, 609);
             this.flpn_HienThi.TabIndex = 1;
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Location = new System.Drawing.Point(0, 53);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(238, 44);
-            this.btnThemSP.TabIndex = 14;
-            this.btnThemSP.Text = "Thêm Sản Phẩm";
-            this.btnThemSP.UseVisualStyleBackColor = true;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // ucAdmin
             // 

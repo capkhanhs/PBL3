@@ -66,7 +66,7 @@ namespace PBL.BLL
         //Hàm lấy đơn hàng theo trạng thái
         public List<Don_Hang> Get_DH_TheoTrangThai(string trangthai)
         {
-            if (string.Compare(trangthai, "Tất cả") > 0)
+            if (trangthai == "Tất cả")
             {
                 return dhdal.GetAll();
             }
@@ -92,6 +92,15 @@ namespace PBL.BLL
             }
         }
 
+        public Don_Hang GetDonHangById(string madonhang)
+        {
+            Don_Hang donHang = dhdal.GetById(madonhang);
+            if (donHang == null)
+            {
+                throw new Exception("Đơn hàng không tồn tại");
+            }
+            return donHang;
+        }
 
         public void Thaydoitrangthai(string madonhang, string trangthai)
         {
@@ -100,6 +109,7 @@ namespace PBL.BLL
             {
                 don_Hang.Trang_thai_don_hang = trangthai;
                 dhdal.Update(don_Hang);
+                dhdal.Save();
             }
             else
             {
@@ -108,12 +118,19 @@ namespace PBL.BLL
         }
 
         //Hàm xóa đơn hàng
-        public void XoaDonHang(string madonhang)
+        public void HuyDonHang(string madonhang)
         {
-            Don_Hang don_Hang = dhdal.GetById(madonhang);
-            if (don_Hang != null)
+            if (dhdal.GetById(madonhang) != null)
             {
-                dhdal.Delete(don_Hang);
+                //dhdal.Delete(madonhang);
+                //ChiTietDonHangBLL.Instance.Xoatoanbodonhang(madonhang);
+                //dhdal.Save();
+                foreach (var item in CartItemBLL.Instance.GetAllCart(dhdal.GetById(madonhang).Ma_nguoi_dung))
+                {
+                    SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, Convert.ToInt32(item.Quantity));
+                }
+                dhdal.GetById(madonhang).Trang_thai_don_hang = "Đã hủy";
+                dhdal.Save();
             }
             else
             {
@@ -146,7 +163,7 @@ namespace PBL.BLL
                         giaban.ToString()
                     );
                 }
-                MessageBox.Show("Đặt hàng thành công");
+                MessageBox.Show("Đặt hàng thành công","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CartItemBLL.Instance.DeleteRange(CartItemBLL.Instance.GetAllCart(manguoidung));
             }
             catch (Exception ex)

@@ -12,9 +12,9 @@ using PBL.Model;
 
 namespace PBL.View
 {
-    public partial class ucXemChiTietSanPham_Admin: UserControl
+    public partial class Chitiet : Form
     {
-        public ucXemChiTietSanPham_Admin(San_Pham sp)
+        public Chitiet(San_Pham sp)
         {
             InitializeComponent();
             txt_TenSP.Text = sp.Ten_sp;
@@ -35,17 +35,9 @@ namespace PBL.View
             }
         }
 
-
-
-        private void btn_Chinhsua_Click(object sender, EventArgs e)
-        {
-            ChinhSua_ThemSanPham_Admin ad = (ChinhSua_ThemSanPham_Admin)this.ParentForm;
-            ad.LoadPanel(ad.pn_SanPham, new ucChinhSua_ThemSanPham());
-        }
-
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
-            this.Parent.Controls.Remove(this); // Xóa điều khiển khỏi bố cục cha
+            this.Close(); // Đóng form hiện tại
         }
     }
 }

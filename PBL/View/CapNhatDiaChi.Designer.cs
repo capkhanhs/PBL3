@@ -154,7 +154,7 @@
             this.ClientSize = new System.Drawing.Size(755, 215);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Name = "CapNhatDiaChi";
-            this.Text = "Cập nhật địa chỉ";
+            this.Text = "Địa chỉ";
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();

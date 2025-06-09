@@ -31,8 +31,8 @@ namespace PBL.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_Tiet_Don_Hang> Chi_Tiet_Don_Hang { get; set; }
         public virtual Dia_Chi Dia_Chi { get; set; }
+        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Van_Chuyen> Van_Chuyen { get; set; }
-        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }

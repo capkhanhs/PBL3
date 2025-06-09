@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PBL.View
 {
-    public partial class Formxemchitietdonhang : Form
+    public partial class ucGoiychoban : UserControl
     {
-        public Formxemchitietdonhang()
+        public ucGoiychoban()
         {
             InitializeComponent();
         }

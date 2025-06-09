@@ -196,5 +196,19 @@ namespace PBL.BLL
             usDAL.Update(user);
             usDAL.Save();
         }
+
+        public List<Nguoi_Dung> Nguoidungtheovaitro(string mavaitro)
+        {
+            if (string.IsNullOrEmpty(mavaitro))
+            {
+                throw new ArgumentException("Vui lòng nhập mã vai trò");
+            }
+            List<Nguoi_Dung> users = usDAL.GetAll().Where(u => u.Ma_vai_tro == mavaitro).ToList();
+            if (users.Count == 0)
+            {
+                throw new KeyNotFoundException("No users found with the specified role.");
+            }
+            return users;
+        }
     }
 }

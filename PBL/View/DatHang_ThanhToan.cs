@@ -49,11 +49,11 @@ namespace PBL.View
             if (MessageBox.Show("Bạn có chắc chắn muốn đặt hàng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 btnDatHangClick?.Invoke(this, EventArgs.Empty);
-                DonHangBLL.Instance.DatHang(manguoidung, madiachi, phuongthucnhanhang);
                 foreach (var item in CartItemBLL.Instance.GetAllCart(manguoidung))
                 {
-                    SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, Convert.ToInt32(-item.Quantity));
+                    SanphamBLL.Instance.themSoLuong(item.Ma_san_pham, -Convert.ToInt32(item.Quantity));
                 }
+                DonHangBLL.Instance.DatHang(manguoidung, madiachi, phuongthucnhanhang);
             }
         }
 

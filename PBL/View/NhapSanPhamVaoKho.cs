@@ -63,11 +63,11 @@ namespace PBL.View
 
                 if (selectedSP != null)
                 {
-                    San_Pham sp = PBL.BLL.SanphamBLL.Instance.Find_byName(selectedSP.Ten_sp);
-                    if (sp != null && sp.So_luong == 0) //Khi sản phẩm trong kho hết thì có thể chỉnh lại giá toàn bộ trong cửa hàng!
+                    //San_Pham sp = PBL.BLL.SanphamBLL.Instance.Find_byName(selectedSP.Ten_sp);
+                    textBox1.Text = selectedSP.Gia_sp.ToString();
+                    if (selectedSP.So_luong <= 0) //Khi sản phẩm trong kho hết thì có thể chỉnh lại giá toàn bộ trong cửa hàng!
                     {
-                        textBox1.Enabled = true;
-                        textBox1.Text = sp.Gia_sp.ToString();
+                        textBox1.ReadOnly = false;
                     }
                 }
             }

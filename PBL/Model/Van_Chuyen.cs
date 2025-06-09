@@ -20,7 +20,11 @@ namespace PBL.Model
         public Nullable<System.DateTime> Ngay_du_kien { get; set; }
         public string Phi_van_chuyen { get; set; }
         public string Ghi_chu { get; set; }
+        public string Ma_nguoi_dung { get; set; }
+        public string Trang_thai { get; set; }
+        public Nullable<System.DateTime> Ngay_ket_thuc { get; set; }
     
         public virtual Don_Hang Don_Hang { get; set; }
+        public virtual Nguoi_Dung Nguoi_Dung { get; set; }
     }
 }

@@ -1,13 +1,13 @@
 ﻿namespace PBL.View
 {
-    partial class ucXemChiTietSanPham_Admin
+    partial class Chitiet
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,15 +20,16 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucXemChiTietSanPham_Admin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chitiet));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
@@ -39,21 +40,37 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lb_ThongTinSP = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pic_AnhSP = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhSP)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.875F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.125F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 603);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
             // 
@@ -172,18 +189,15 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Số lượng: ";
             // 
-            // btn_Thoat
+            // panel2
             // 
-            this.btn_Thoat.BackColor = System.Drawing.Color.Red;
-            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thoat.ForeColor = System.Drawing.Color.White;
-            this.btn_Thoat.Location = new System.Drawing.Point(427, 90);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(133, 44);
-            this.btn_Thoat.TabIndex = 20;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = false;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.lb_ThongTinSP);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(572, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(563, 457);
+            this.panel2.TabIndex = 18;
             // 
             // lb_ThongTinSP
             // 
@@ -206,15 +220,26 @@
             this.label4.Text = "Thông Số:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.lb_ThongTinSP);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(572, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(563, 457);
-            this.panel2.TabIndex = 18;
+            this.panel3.Controls.Add(this.btn_Thoat);
+            this.panel3.Location = new System.Drawing.Point(572, 466);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(563, 134);
+            this.panel3.TabIndex = 19;
+            // 
+            // btn_Thoat
+            // 
+            this.btn_Thoat.BackColor = System.Drawing.Color.Red;
+            this.btn_Thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Thoat.ForeColor = System.Drawing.Color.White;
+            this.btn_Thoat.Location = new System.Drawing.Point(427, 90);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(133, 44);
+            this.btn_Thoat.TabIndex = 20;
+            this.btn_Thoat.Text = "Thoát";
+            this.btn_Thoat.UseVisualStyleBackColor = false;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // panel4
             // 
@@ -233,69 +258,45 @@
             this.pic_AnhSP.TabIndex = 0;
             this.pic_AnhSP.TabStop = false;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btn_Thoat);
-            this.panel3.Location = new System.Drawing.Point(572, 466);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(563, 134);
-            this.panel3.TabIndex = 19;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.875F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.125F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 603);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // ucXemChiTietSanPham_Admin
+            // Chitiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1143, 605);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "ucXemChiTietSanPham_Admin";
-            this.Size = new System.Drawing.Size(1144, 609);
+            this.Name = "Chitiet";
+            this.Text = "Chi tiết sản phẩm";
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_AnhSP)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pic_AnhSP;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btn_Thoat;
-        private System.Windows.Forms.Label lb_ThongTinSP;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_TenDanhMuc;
-        private System.Windows.Forms.TextBox txt_TenSP;
         private System.Windows.Forms.TextBox txt_SoLuong;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_MaSP;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_TenSP;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lb_ThongTinSP;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pic_AnhSP;
     }
 }

@@ -26,9 +26,9 @@ namespace PBL.BLL
         }
 
         //Tính tổng tiền của giỏ hàng
-        public long Tinhtong(string manguoidung)
+        public decimal Tinhtong(string manguoidung)
         {
-            long total = 0;
+            decimal total = 0;
             foreach (var item in CartItemBLL.Instance.GetAllCart(manguoidung))
             {
                 try
@@ -36,12 +36,12 @@ namespace PBL.BLL
                     var sanpham = SanphamBLL.Instance.GetAll().FirstOrDefault(x => x.Ma_san_pham == item.Ma_san_pham);
                     if (sanpham != null)
                     {
-                        total += (long)(item.Quantity * int.Parse(sanpham.Gia_sp));
+                        total += (decimal)item.Quantity * decimal.Parse(sanpham.Gia_sp);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(item.Ma_san_pham, item.Ma_gio_hang);
+                    MessageBox.Show( ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

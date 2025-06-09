@@ -21,8 +21,8 @@ namespace PBL.View
         {
             InitializeComponent();
             Manguoidung = username;
-            //pnMain.Controls.Add(new ucAdmin());
-            if(NguoidungBLL.Instance.Find(Manguoidung).Ma_vai_tro == "AD")
+            SetPlaceholder(txt_search, "Tìm kiếm sản phẩm...");
+            if (NguoidungBLL.Instance.Find(Manguoidung).Ma_vai_tro == "AD")
             {
                 quảnTrịViênToolStripMenuItem.Enabled = true;
                 quảnTrịViênToolStripMenuItem.Visible = true;
@@ -42,9 +42,44 @@ namespace PBL.View
                 quảnLýVậnChuyểnToolStripMenuItem.Enabled = true;
                 quảnLýVậnChuyểnToolStripMenuItem.Visible = true;
             }    
-                pnMain.Controls.Add(new ucTrangChu_Main(Manguoidung));
+            LoadTrangChu();
         }
 
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.ForeColor = Color.Gray;
+            textBox.Text = placeholder;
+
+            textBox.GotFocus += (sender, e) =>
+            {
+                if (textBox.Text == placeholder)
+                {
+                    textBox.Text = "";
+                    textBox.ForeColor = Color.Black;
+                }
+            };
+
+            textBox.LostFocus += (sender, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = Color.Gray;
+                }
+            };
+        }
+
+        private void LoadTrangChu()
+        {
+            pnMain.Controls.Clear();
+            pnMain.Controls.Add(new ucGoiychoban());
+            spHienTai = SanphamBLL.Instance.GetAll().Where(x => x.So_luong > 0).ToList();
+            foreach (var item in spHienTai)
+            {
+                ucSanPhamItem_TrangChu_Main uc = new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung);
+                pnMain.Controls.Add(uc);
+            }
+        }
 
         public void Loadsp()
         {
@@ -70,7 +105,7 @@ namespace PBL.View
         private void mni_mb_Click(object sender, EventArgs e)
         {
             pnMain.Controls.Clear();
-            foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Điện thoại"))
+            foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Điện thoại").Where(x => x.So_luong > 0))
             {
                 ucSanPhamItem_TrangChu_Main uc = new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung);
                 pnMain.Controls.Add(uc);    
@@ -96,7 +131,7 @@ namespace PBL.View
         {
             if(GioHangBLL.Instance.CheckGioHang(Manguoidung) == false)
             {
-                MessageBox.Show("Giỏ hàng của bạn đang trống");
+                MessageBox.Show("Giỏ hàng của bạn đang trống","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             LoadpnMain(new ucGioHang_Main(Manguoidung));
@@ -119,7 +154,7 @@ namespace PBL.View
 
         private void lb_name_Click(object sender, EventArgs e)
         {
-            LoadpnMain(new ucTrangChu_Main(Manguoidung));
+            LoadTrangChu();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -156,12 +191,12 @@ namespace PBL.View
         {
             try
             {
-                spHienTai = SanphamBLL.Instance.TimKiemGanDung(txt_search.Text);
+                spHienTai = SanphamBLL.Instance.TimKiemGanDung(txt_search.Text).Where(x => x.So_luong > 0).ToList();
                 Loadsp();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message);
+                MessageBox.Show( ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -169,11 +204,8 @@ namespace PBL.View
         {
             try
             {
-                pnMain.Controls.Clear();
-                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Máy tính bảng"))
-                {
-                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
-                }
+                spHienTai = SanphamBLL.Instance.LocTheoDanhMuc("Máy tính bảng").Where(x => x.So_luong > 0).ToList();
+                Loadsp();
             }
             catch (Exception ex)
             {
@@ -185,11 +217,8 @@ namespace PBL.View
         {
             try
             {
-                pnMain.Controls.Clear();
-                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Laptop"))
-                {
-                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
-                }
+                spHienTai = SanphamBLL.Instance.LocTheoDanhMuc("Laptop").Where(x => x.So_luong > 0).ToList();
+                Loadsp();
             }
             catch (Exception ex)
             {
@@ -201,11 +230,8 @@ namespace PBL.View
         {
             try
             {
-                pnMain.Controls.Clear();
-                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("Tai nghe"))
-                {
-                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
-                }
+                spHienTai = SanphamBLL.Instance.LocTheoDanhMuc("Tai nghe").Where(x => x.So_luong > 0).ToList();
+                Loadsp();
             }
             catch (Exception ex)
             {
@@ -217,11 +243,8 @@ namespace PBL.View
         {
             try
             {
-                pnMain.Controls.Clear();
-                foreach (var item in SanphamBLL.Instance.LocTheoDanhMuc("SmartWatch"))
-                {
-                    pnMain.Controls.Add(new ucSanPhamItem_TrangChu_Main(item.Ma_san_pham, Manguoidung));
-                }
+                spHienTai = SanphamBLL.Instance.LocTheoDanhMuc("SmartWatch").Where(x => x.So_luong > 0).ToList();
+                Loadsp();
             }
             catch (Exception ex)
             {
@@ -241,6 +264,40 @@ namespace PBL.View
         private void pnMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void tăngDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.OrderBy(x => decimal.Parse(x.Gia_sp)).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void giảmDầnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.OrderByDescending(x => decimal.Parse(x.Gia_sp)).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aZToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.OrderBy(x => x.Ten_sp).ToList();
+            Loadsp();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            spHienTai = spHienTai.OrderByDescending(x => x.Ten_sp).ToList();
+            Loadsp();
         }
     }
 }

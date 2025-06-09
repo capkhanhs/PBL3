@@ -225,7 +225,6 @@ namespace PBL.BLL
                 else
                 {
                     sp.So_luong += soLuong;
-                    spDAL.Update(sp);
                     spDAL.Save();
                 }
             }

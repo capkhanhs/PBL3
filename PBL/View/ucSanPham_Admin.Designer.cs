@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Chinhsua = new System.Windows.Forms.Button();
             this.btn_XemChiTiet = new System.Windows.Forms.Button();
             this.lb_TenSP = new System.Windows.Forms.Label();
@@ -55,25 +54,12 @@
             this.label2.Text = "29.999.000đ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.BackColor = System.Drawing.Color.Red;
-            this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.ForeColor = System.Drawing.Color.White;
-            this.btn_Xoa.Location = new System.Drawing.Point(970, 108);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(133, 44);
-            this.btn_Xoa.TabIndex = 29;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = false;
-            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
-            // 
             // btn_Chinhsua
             // 
             this.btn_Chinhsua.BackColor = System.Drawing.Color.Red;
             this.btn_Chinhsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Chinhsua.ForeColor = System.Drawing.Color.White;
-            this.btn_Chinhsua.Location = new System.Drawing.Point(831, 110);
+            this.btn_Chinhsua.Location = new System.Drawing.Point(943, 108);
             this.btn_Chinhsua.Name = "btn_Chinhsua";
             this.btn_Chinhsua.Size = new System.Drawing.Size(133, 44);
             this.btn_Chinhsua.TabIndex = 28;
@@ -153,6 +139,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btn_Chinhsua);
             this.panel1.Location = new System.Drawing.Point(27, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1087, 163);
@@ -173,8 +160,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_Xoa);
-            this.Controls.Add(this.btn_Chinhsua);
             this.Controls.Add(this.btn_XemChiTiet);
             this.Controls.Add(this.lb_TenSP);
             this.Controls.Add(this.lb_SL);
@@ -195,7 +180,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Chinhsua;
         private System.Windows.Forms.Button btn_XemChiTiet;
         private System.Windows.Forms.Label lb_TenSP;

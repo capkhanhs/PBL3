@@ -1,6 +1,6 @@
 ﻿namespace PBL.View
 {
-    partial class ucTrangChu_Main
+    partial class ucGoiychoban
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,17 +30,16 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.flpnLoadSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1362, 38);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -52,23 +51,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Gợi ý cho bạn";
             // 
-            // flpnLoadSanPham
-            // 
-            this.flpnLoadSanPham.AutoScroll = true;
-            this.flpnLoadSanPham.Location = new System.Drawing.Point(9, 44);
-            this.flpnLoadSanPham.Name = "flpnLoadSanPham";
-            this.flpnLoadSanPham.Size = new System.Drawing.Size(1353, 572);
-            this.flpnLoadSanPham.TabIndex = 1;
-            this.flpnLoadSanPham.Paint += new System.Windows.Forms.PaintEventHandler(this.flpnLoadSanPham_Paint);
-            // 
-            // ucTrangChu_Main
+            // ucGoiychoban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flpnLoadSanPham);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "ucTrangChu_Main";
-            this.Size = new System.Drawing.Size(1365, 619);
+            this.Name = "ucGoiychoban";
+            this.Size = new System.Drawing.Size(1361, 44);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -79,6 +68,5 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flpnLoadSanPham;
     }
 }

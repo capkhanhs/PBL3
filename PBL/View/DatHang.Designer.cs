@@ -269,7 +269,7 @@
             this.ClientSize = new System.Drawing.Size(1393, 675);
             this.Controls.Add(this.flpnmain);
             this.Name = "DatHang";
-            this.Text = "DatHang";
+            this.Text = "Đặt hàng";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

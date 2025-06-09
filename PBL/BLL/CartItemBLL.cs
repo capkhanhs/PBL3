@@ -69,8 +69,7 @@ namespace PBL.BLL
             {
                 if(soluong > SanphamBLL.Instance.Find(cartItem.Ma_san_pham).So_luong)
                 {
-                    MessageBox.Show("Số lượng sản phẩm trong kho không đủ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    throw new Exception("Của hàng chỉ còn " + SanphamBLL.Instance.Find(cartItem.Ma_san_pham).So_luong + " sản phẩm, mong quý khách thông cảm!");
                 }
                 cartItem.Quantity = soluong;
                 ciDAL.Update(cartItem);

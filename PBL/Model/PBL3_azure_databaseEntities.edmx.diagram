@@ -18,7 +18,6 @@
         <EntityTypeShape EntityType="PBL3_db_ef.San_Pham" Width="1.5" PointX="6.125" PointY="3.25" />
         <EntityTypeShape EntityType="PBL3_db_ef.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" />
         <EntityTypeShape EntityType="PBL3_db_ef.Vai_Tro" Width="1.5" PointX="0.75" PointY="7.75" />
-        <EntityTypeShape EntityType="PBL3_db_ef.Van_Chuyen" Width="1.5" PointX="13.375" PointY="12.375" />
         <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_gi__42E1EEFE" />
         <AssociationConnector Association="PBL3_db_ef.FK__CartItems__Ma_sa__43D61337" ManuallyRouted="false" >
         </AssociationConnector>
@@ -29,12 +28,14 @@
         <AssociationConnector Association="PBL3_db_ef.FK__San_Pham__Ten_da__7A672E12" />
         <AssociationConnector Association="PBL3_db_ef.FK__Don_Hang__Ma_dia__7F2BE32F" />
         <AssociationConnector Association="PBL3_db_ef.FK__nguoiDung__Ma_di__114A936A" />
-        <AssociationConnector Association="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" />
         <AssociationConnector Association="PBL3_db_ef.FK_DonHang_NguoiDung" />
         <AssociationConnector Association="PBL3_db_ef.FK_GioHang_NguoiDung" />
         <AssociationConnector Association="PBL3_db_ef.FK_NguoiDung_VaiTro" />
         <AssociationConnector Association="PBL3_db_ef.FK_NguoiDungDiaChi_NguoiDung" />
         <AssociationConnector Association="PBL3_db_ef.FK_PhieuNhapKho_NguoiDung" />
+        <EntityTypeShape EntityType="PBL3_db_ef.Van_Chuyen" Width="1.5" PointX="10.5" PointY="8.75" />
+        <AssociationConnector Association="PBL3_db_ef.FK__Van_Chuye__Ma_do__05D8E0BE" />
+        <AssociationConnector Association="PBL3_db_ef.FK_VanChuyen_NguoiDung" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

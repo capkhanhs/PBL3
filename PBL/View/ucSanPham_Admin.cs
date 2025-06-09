@@ -61,8 +61,8 @@ namespace PBL.View
         }
         private void btn_XemChiTiet_Click(object sender, EventArgs e)
         {
-            //ChinhSua_ThemSanPham_Admin f = new ChinhSua_ThemSanPham_Admin(Reload);
-            //f.Show();
+            Chitiet f = new Chitiet(SP);    
+            f.ShowDialog();
         }
     }
 }

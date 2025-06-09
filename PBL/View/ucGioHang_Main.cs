@@ -37,7 +37,7 @@ namespace PBL.View
             }
             if (GioHangBLL.Instance.CheckGioHang(manguoidung) == false)
             {
-                MessageBox.Show("Giỏ hàng trống");
+                MessageBox.Show("Giỏ hàng trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             uctt = new ucTinhtong_GioHang_Main(manguoidung);
