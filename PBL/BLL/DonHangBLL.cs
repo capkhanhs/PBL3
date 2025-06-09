@@ -82,7 +82,7 @@ namespace PBL.BLL
                 {
                     return dhdal.GetFreshAll().Where(dh => dh.Ma_nguoi_dung == manguoidung).ToList();
                 }
-                return dhdal.GetAll().Where(dh => dh.Trang_thai_don_hang == trangthai && dh.Ma_nguoi_dung == manguoidung).ToList();
+                return dhdal.GetFreshAll().Where(dh => dh.Trang_thai_don_hang == trangthai && dh.Ma_nguoi_dung == manguoidung).ToList();
             }
 
             catch (Exception ex)
